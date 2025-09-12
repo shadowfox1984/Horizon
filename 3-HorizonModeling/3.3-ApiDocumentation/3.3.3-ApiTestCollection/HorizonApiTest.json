@@ -1,13 +1,13 @@
 {
-  "v": 9,
+  "v": 10,
   "name": "HorizonApiTest",
   "folders": [
     {
-      "v": 9,
+      "v": 10,
       "name": "Basic",
       "folders": [
         {
-          "v": 9,
+          "v": 10,
           "name": "EducationLevel",
           "folders": [],
           "requests": [
@@ -222,10 +222,11 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_memqlihu_85485ee5-0944-4abf-b9ce-85e3b0352454"
         },
         {
-          "v": 9,
+          "v": 10,
           "name": "Priority",
           "folders": [],
           "requests": [
@@ -452,10 +453,11 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_memtk9zj_d60b2a47-e998-4a9e-9395-ac372104fa1d"
         },
         {
-          "v": 9,
+          "v": 10,
           "name": "IssueType",
           "folders": [],
           "requests": [
@@ -575,8 +577,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -676,10 +678,11 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_memuiw9c_839a25df-5808-4afb-98f2-6ba8946a8673"
         },
         {
-          "v": 9,
+          "v": 10,
           "name": "Status",
           "folders": [],
           "requests": [
@@ -906,10 +909,11 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_meob0zbj_bcb960ee-d10d-488a-95de-99ef0e135e5e"
         },
         {
-          "v": 9,
+          "v": 10,
           "name": "Resolvation",
           "folders": [],
           "requests": [
@@ -1136,10 +1140,11 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_meobu7lb_2e54d54c-3f2d-437c-92cf-a401e9407f2b"
         },
         {
-          "v": 9,
+          "v": 10,
           "name": "MeetingType",
           "folders": [],
           "requests": [
@@ -1354,10 +1359,11 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_meooce82_b5303b0a-9e69-4f1f-a8e0-923a8f853b24"
         },
         {
-          "v": 9,
+          "v": 10,
           "name": "DocumentType",
           "folders": [],
           "requests": [
@@ -1449,7 +1455,7 @@
               "v": "15",
               "name": "InactiveDocumentType",
               "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/basic/documentType/active/[id]",
+              "endpoint": "https://[MainDomian]/api/basic/documentType/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -1572,10 +1578,11 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_meoov8lw_c8c1dc6e-3d25-40e3-a178-88ed452a1ed6"
         },
         {
-          "v": 9,
+          "v": 10,
           "name": "FileExtension",
           "folders": [],
           "requests": [
@@ -1790,10 +1797,11 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_meoovl1g_e60cd73e-36e9-47f4-b793-b3769b57e512"
         },
         {
-          "v": 9,
+          "v": 10,
           "name": "ContractType",
           "folders": [],
           "requests": [
@@ -2008,10 +2016,11 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_meoovyz7_4765e3da-9232-4950-9dff-e1dcb0e0480e"
         },
         {
-          "v": 9,
+          "v": 10,
           "name": "TestApproval",
           "folders": [],
           "requests": [
@@ -2238,10 +2247,11 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_meoow7w3_2e32eaf2-d7b8-4ce3-a7cc-1943bd3c5984"
         },
         {
-          "v": 9,
+          "v": 10,
           "name": "TestComplexityLevel",
           "folders": [],
           "requests": [
@@ -2468,10 +2478,11 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_meoowgf8_d130fd24-0fe9-43c4-aaf9-42c8a7b3d6dd"
         },
         {
-          "v": 9,
+          "v": 10,
           "name": "TimeUnit",
           "folders": [],
           "requests": [
@@ -2698,10 +2709,11 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_meooxjlf_e48377a6-d66b-4794-98c0-47fc5f490fcc"
         },
         {
-          "v": 9,
+          "v": 10,
           "name": "Currency",
           "folders": [],
           "requests": [
@@ -2922,6 +2934,7 @@
             "authActive": true
           },
           "headers": [],
+          "variables": [],
           "_ref_id": "coll_meooxsez_e26cc8d3-b812-4e7b-a21d-a84631f684d6"
         }
       ],
@@ -2931,7 +2944,924 @@
         "authActive": true
       },
       "headers": [],
+      "variables": [],
       "_ref_id": "coll_memnr3km_045f4300-df86-4293-9ac4-7f1de4373be7"
+    },
+    {
+      "v": 10,
+      "name": "User Management",
+      "folders": [
+        {
+          "v": 10,
+          "name": "Auth",
+          "folders": [],
+          "requests": [
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/auth/login",
+              "name": "Login",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"username\": \"test\",\n  \"password\": \"Test@123\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/auth/refreshToken",
+              "name": "RefreshToken",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/auth/signOut",
+              "name": "SignOut",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/auth/changePassword",
+              "name": "ChangePassword",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"currentPassword\": \"Test@123\",\n  \"newPassword\": \"Test@123456\",\n  \"confirmPassword\": \"Test@123456\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/auth/changePasswordByAdmin",
+              "name": "ChangePasswordByAdmin",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\": 123,\n  \"newPassword\": \"Test@123456\",\n  \"confirmPassword\": \"Test@123456\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/auth/getCaptcha",
+              "name": "GetCaptcha",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "_ref_id": "coll_mfgy2m4h_c672681c-9c4e-451e-9740-f74f45594b46"
+        },
+        {
+          "v": 10,
+          "name": "Role",
+          "folders": [],
+          "requests": [
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/role",
+              "name": "AddRole",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [123, 456, 789],\n  \"permissionId\": [123, 456, 789]\n}"
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/role/[id]",
+              "name": "UpdateRole",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [123, 456, 789],\n  \"permissionId\": [123, 456, 789]\n}"
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/role/[id]",
+              "name": "DeleteRole",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/role/active/[id]",
+              "name": "ActiveRole",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/role/inactive/[id]",
+              "name": "InactiveRole",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/role/[id]",
+              "name": "GetSpecificRole",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/role/getAll",
+              "name": "GetAllRole",
+              "params": [
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "code",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "permissionId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/role/getComboList",
+              "name": "GetComboListOfRole",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "_ref_id": "coll_mfgy047e_25f33766-bfcd-447e-ab19-4db35eef7e13"
+        },
+        {
+          "v": 10,
+          "name": "Group",
+          "folders": [],
+          "requests": [
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/group",
+              "name": "AddGroup",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [123, 456, 789],\n  \"permissionId\": [123, 456, 789]\n}"
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/group/[id]",
+              "name": "UpdateGroup",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [123, 456, 789],\n  \"permissionId\": [123, 456, 789]\n}"
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/group/[id]",
+              "name": "DeleteGroup",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/group/active/[id]",
+              "name": "ActiveGroup",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/group/inactive/[id]",
+              "name": "InactiveGroup",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/group/[id]",
+              "name": "GetSpecificGroup",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/group/getAll",
+              "name": "GetAllGroup",
+              "params": [
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "code",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "permissionId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/group/getComboList",
+              "name": "GetComboListOfGroup",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "_ref_id": "coll_mfgy2c7u_1cf89c86-d54a-4320-91c1-b40a18124724"
+        },
+        {
+          "v": 10,
+          "name": "Profile",
+          "folders": [],
+          "requests": [
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/profile",
+              "name": "AddProfile",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"test\",\n  \"gender\": \"Male/Female\",\n  \"staffNumber\": \"4456123\",\n  \"activeTo\" : \"2026-09-10 12:00:00\",\n  \"positionId\": 123,\n  \"avatar\": \"/files/avatars/01.jpg\",\n  \"birthday\": \"1984-07-01\",\n  \"phoneNumber\": \"0018881515\",\n  \"mobileNumber\": \"0018881515\",\n  \"emailAddress\": \"test@gmail.com\",\n  \"address\": \"test\",\n  \"postalCode\": \"123456\",\n  \"username\": \"test\",\n  \"pass\": \"Test@123\",\n  \"roleId\": [123, 456, 789],\n  \"groupId\": [123, 456, 789],\n  \"permissionId\": [123, 456, 789]\n}"
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/profile/[id]",
+              "name": "UpdateProfile",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"test\",\n  \"gender\": \"Male/Female\",\n  \"staffNumber\": \"4456123\",\n  \"activeTo\" : \"2026-09-10 12:00:00\",\n  \"positionId\": 123,\n  \"avatar\": \"/files/avatars/01.jpg\",\n  \"birthday\": \"1984-07-01\",\n  \"phoneNumber\": \"0018881515\",\n  \"mobileNumber\": \"0018881515\",\n  \"emailAddress\": \"test@gmail.com\",\n  \"address\": \"test\",\n  \"postalCode\": \"123456\",\n  \"roleId\": [123, 456, 789],\n  \"groupId\": [123, 456, 789],\n  \"permissionId\": [123, 456, 789]\n}"
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/profile/[id]",
+              "name": "DeleteProfile",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/profile/active/[id]",
+              "name": "ActiveProfile",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/profile/inactive/[id]",
+              "name": "InactiveProfile",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/profile/[id]",
+              "name": "GetSpecificProfile",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/profile/getAll",
+              "name": "GetAllProfile",
+              "params": [
+                {
+                  "key": "firstName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "lastName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "gender",
+                  "value": "Male/Female",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "staffNumber",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "activeFrom",
+                  "value": "2025-10-12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "activeTo",
+                  "value": "2025-10-12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "positionId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "birthday",
+                  "value": "1984-07-10",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "phoneNumber",
+                  "value": "0018881515",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "mobileNumber",
+                  "value": "0018881515",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "emailAddress",
+                  "value": "test@gmail.com",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "address",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "postallCode",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "username",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "roleId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "groupId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "permissionId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            },
+            {
+              "v": "15",
+              "endpoint": "https://[MainDomian]/api/user/profile/getComboList",
+              "name": "GetComboListOfProfile",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {}
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "_ref_id": "coll_mfgxzlbe_091a5f26-8aa9-43a2-a928-c08f384156db"
+        }
+      ],
+      "requests": [],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "_ref_id": "coll_mfgxz9xm_da12e3a1-5b5c-42e7-94cb-f3955f6fefd7"
     }
   ],
   "requests": [],
@@ -2940,5 +3870,6 @@
     "authActive": true
   },
   "headers": [],
+  "variables": [],
   "_ref_id": "coll_memnqpfs_d099e791-24b9-48f8-aa5f-b7cd80e90857"
 }
