@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/mahyaresteki/Horizon/master/logo.png" width="120" height="120" style="margin-left:auto; margin-right:auto">
+<img src="https://raw.githubusercontent.com/shadowfox1984/Horizon/master/logo.png" width="120" height="120" style="margin-left:auto; margin-right:auto">
 
 <h1>Horizon Research Project (HRP)</h1>
 <p style="font-style: italic;">Organizational Productivity and Justice Management System</p>
@@ -45,14 +45,14 @@ With Horizon Extension Engine, you can effortlessly sync data from popular platf
 The Extension Engine allows Horizon to act not as another siloed system, but as a holistic analytical layer over your organization’s existing infrastructure — combining HR, financial, and project metrics into one coherent picture.
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/mahyaresteki/Horizon/refs/heads/master/3-HorizonModeling/3.1-HorizonUml/out/Architecture/ProjectSchemaDiagram.png" style="margin-left:auto; margin-right:auto">
+<img src="https://raw.githubusercontent.com/shadowfox1984/Horizon/refs/heads/master/3-HorizonModeling/3.1-HorizonUml/out/Architecture/ProjectSchemaDiagram.png" style="margin-left:auto; margin-right:auto">
 </div>
 
 ## Mindsets
 The following articles are available to the public as mindsets of the project.
-1. **Worldview Mindset:** [Social-Oriented Philosophy](https://github.com/mahyaresteki/Horizon/raw/refs/heads/master/1-Minesets/1.1-WorldviewMindset/Social_Oriented_Philosophy.odt)
-2. **Mindset for the Problem:** [Deceptive Virtualization Theory](https://github.com/mahyaresteki/Horizon/raw/refs/heads/master/1-Minesets/1.2-MindsetForTheProblem/Deceptive_Virtualization_Theory.odt)
-3. **Mindset for the Solution:** [Theory of Endurance Software Development Methodology](https://github.com/mahyaresteki/Horizon/raw/refs/heads/master/1-Minesets/1.3-MindsetForTheSolution/Theory_of_Endurance_Software_Development_Methodology.odt)
+1. **Worldview Mindset:** [Social-Oriented Philosophy](https://github.com/shadowfox1984/Horizon/raw/refs/heads/master/1-Minesets/1.1-WorldviewMindset/Social_Oriented_Philosophy.odt)
+2. **Mindset for the Problem:** [Deceptive Virtualization Theory](https://github.com/shadowfox1984/Horizon/raw/refs/heads/master/1-Minesets/1.2-MindsetForTheProblem/Deceptive_Virtualization_Theory.odt)
+3. **Mindset for the Solution:** [Theory of Endurance Software Development Methodology](https://github.com/shadowfox1984/Horizon/raw/refs/heads/master/1-Minesets/1.3-MindsetForTheSolution/Theory_of_Endurance_Software_Development_Methodology.odt)
 
 ## Objectives
 1. **Enhancing Employee Satisfaction**
