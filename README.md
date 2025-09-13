@@ -75,7 +75,7 @@ The following articles are available to the public as mindsets of the project.
 	* Establishing a reliable data source for management decision-making
 
 ## Documentation
-The Horizon Research Project has one of the most complete technical documentations among free and open source software. In this project, even the system modeling is free so that developers can based on it to present ideas for creating more advanced systems. From the perspective of the Horizon Project developers, science is not a proprietary commodity and should be freely available to the public. To view the project documentation, you can read the [Wiki](https://github.com/mahyaresteki/Horizon/wiki) section.
+The Horizon Research Project has one of the most complete technical documentations among free and open source software. In this project, even the system modeling is free so that developers can based on it to present ideas for creating more advanced systems. From the perspective of the Horizon Project developers, science is not a proprietary commodity and should be freely available to the public. To view the project documentation, you can read the [Wiki](https://github.com/shadowfox1984/Horizon/wiki) section.
 
 ## Project Additional Info
 ### Current Status
