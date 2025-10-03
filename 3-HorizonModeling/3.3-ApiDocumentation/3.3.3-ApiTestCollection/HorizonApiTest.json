@@ -12,7 +12,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddEducationLevel",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/educationLevel",
@@ -30,10 +30,11 @@
                 "body": "{\n  \t\"Code\" : \"[code]\",\n  \t\"Title\" : \"[title]\",\n  \t\"Decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqp_f193e550-d6ec-485d-ad46-750c2f456ca6"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateEducationLevel",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/educationLevel/[id]",
@@ -51,10 +52,11 @@
                 "body": "{\n  \t\"Code\" : \"[code]\",\n  \t\"Title\" : \"[title]\",\n  \t\"Decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqp_3cab923e-323c-4ac5-975c-f8c6c8e79cc3"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteEducationLevel",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/educationLevel/[id]",
@@ -72,10 +74,11 @@
                 "body": ""
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqp_f18326ee-4e5f-4d6a-9978-a1a8cb0e2ead"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveEducationLevel",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/educationLevel/active/[id]",
@@ -93,10 +96,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqp_26257592-e4b8-452c-8aba-a76eee711e4e"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveEducationLevel",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/educationLevel/inactive/[id]",
@@ -114,10 +118,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqp_87b3542e-db75-48f5-badd-6d689aeee856"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificEducationLevel",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/educationLevel/[id]",
@@ -135,10 +140,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqp_31d7b803-1387-4c6b-a30a-4cd7045443ab"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllEducationLevel",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/educationLevel/getAll",
@@ -193,10 +199,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqp_13cb7d23-f663-4665-972f-0d4bfd241e38"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfEducationLevel",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/educationLevel/getComboList",
@@ -214,7 +221,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqp_2aab4c38-45e2-4f4c-a9d9-425551b710d9"
             }
           ],
           "auth": {
@@ -231,7 +239,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddPriority",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/priority",
@@ -249,10 +257,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"ordering\" : 0, //integer number\n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_bd7925e8-22e1-4749-b731-bfa2a4d60078"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdatePriority",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/priority/[id]",
@@ -270,10 +279,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"ordering\" : 0, //integer number\n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_7fdbecba-e43e-4e06-8f58-1491e4c74eb1"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeletePriority",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/priority/[id]",
@@ -291,10 +301,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_a0dae1dd-9cd2-4492-8d13-a4f2d15a0b62"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActivePriority",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/priority/active/[id]",
@@ -312,10 +323,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_c764f04d-6ce4-47fe-bcb2-0924b49755b8"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactivePriority",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/priority/inactive/[id]",
@@ -333,10 +345,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_f37f9f26-699c-4045-8785-5629c797e7b9"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificPriority",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/priority/[id]",
@@ -354,10 +367,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_a621ada9-c602-452b-b53d-e7d696ccf77d"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllPriority",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/priority/getAll",
@@ -424,10 +438,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_d3245a4d-2a2f-4807-a50f-d8bda9eeb7e5"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfPriority",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/priority/getComboList",
@@ -445,7 +460,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_e162be20-0c94-476e-bb76-ff281f696d5f"
             }
           ],
           "auth": {
@@ -462,7 +478,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddIssueType",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/issueType",
@@ -480,10 +496,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"iconAddress\" : \"[Icon URL]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_71eaa31d-4d4d-434a-a45e-6b173d71312c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateIssueType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/issueType/[id]",
@@ -501,10 +518,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"iconAddress\" : \"[Icon URL]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_c94f906a-f1cd-4a2e-baf0-7a5cc8dc1eeb"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteIssueType",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/issueType/[id]",
@@ -522,10 +540,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_be7370f8-80eb-46cd-abc2-0b54c9b951a1"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveIssueType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/issueType/active/[id]",
@@ -543,10 +562,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_8847fb41-c856-4a60-afe9-5a622e91ab08"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveIssueStatus",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/issueType/inactive/[id]",
@@ -564,10 +584,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_7b803e98-a8cb-4253-9e7e-220a0e3ab763"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificIssueType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/issueType/[id]",
@@ -585,10 +606,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqq_508732fd-98c8-4a6c-94d5-3f8a849f721b"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllIssueType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/issueType/getAll",
@@ -649,10 +671,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqr_c92ebfcf-e7c2-4100-9ada-5df374f80531"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfIssueType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/issueType/getComboList",
@@ -670,7 +693,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqr_d2044164-669b-4f01-a813-db62a4fef7c1"
             }
           ],
           "auth": {
@@ -687,7 +711,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddStatus",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/status",
@@ -705,10 +729,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"statusEffect\" : \"[ENUM (To Do, In Progress, Done)]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqr_11285917-69db-41cd-9e14-ece9ae707b91"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateStatus",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/status/[id]",
@@ -726,10 +751,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"statusEffect\" : \"[ENUM (To Do, In Progress, Done)]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_4ccbf061-1e1c-42af-a34a-5cda5c70407b"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteStatus",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/status/[id]",
@@ -747,10 +773,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_a5d44c14-5220-475b-ba72-99ff4019443c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveStatus",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/status/active/[id]",
@@ -768,10 +795,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_2a67eece-a906-433f-be01-090ec4751a26"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveStatus",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/status/inactive/[id]",
@@ -789,10 +817,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_cacbf927-29e9-4ceb-9e6f-e067b96a20ef"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificStatus",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/status/[id]",
@@ -810,10 +839,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_3fa46edd-9644-40df-9faa-dc873e96d4bb"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllStatus",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/status/getAll",
@@ -880,10 +910,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_c6b28db7-6cba-4f55-bfc0-3ded8eb8d0d9"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfStatus",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/status/getComboList",
@@ -901,7 +932,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_2ed97e64-2275-4ebc-af38-e93ec4f70ca3"
             }
           ],
           "auth": {
@@ -918,7 +950,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddResolvation",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/resolvation",
@@ -936,10 +968,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"isResolved\" : true/false, \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_aa361e87-b6a8-48bd-9b79-40c7a2140585"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateResolvation",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/resolvation/[id]",
@@ -957,10 +990,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"isResolved\" : true/false, \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_8378838b-19e6-48f9-b565-2c6846b5214a"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteResolvation",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/resolvation/[id]",
@@ -978,10 +1012,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_e6252874-d818-4ffa-9ae5-fdac48513932"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveResolvation",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/resolvation/active/[id]",
@@ -999,10 +1034,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_a1505669-0ead-4a42-9e4b-50cddb3ecbc2"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveResolvation",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/resolvation/inactive/[id]",
@@ -1020,10 +1056,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_7d9efd79-fb2e-4670-9182-2cf61ee0027e"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificResolvation",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/resolvation/[id]",
@@ -1041,10 +1078,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqu_f526f04f-244a-4c28-9fe1-121c1539b29f"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllResolvation",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/resolvation/getAll",
@@ -1111,10 +1149,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqv_34eb00d5-b7d0-48fb-88ee-b4b75bb82186"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfResolvation",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/resolvation/getComboList",
@@ -1132,7 +1171,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqv_9a428d85-3f68-40c8-8b71-6170a2e2ad40"
             }
           ],
           "auth": {
@@ -1149,7 +1189,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddMeetingType",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/meetingType",
@@ -1167,10 +1207,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqv_4ac79484-6a43-4c10-95b6-a15f5a6a581e"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateMeetingType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/meetingType/[id]",
@@ -1188,10 +1229,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqv_e763550b-678a-417c-95e7-51e02534c7e0"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteMeetingType",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/meetingType/[id]",
@@ -1209,10 +1251,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqv_02ebbc80-705c-4d88-86ac-948037add524"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveMeetingType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/meetingType/active/[id]",
@@ -1230,10 +1273,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqv_0f0780de-e573-45ce-b588-deadb27ebcd4"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveMeetingType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/meetingType/inactive/[id]",
@@ -1251,10 +1295,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqv_28908d8c-e2f8-4057-8f98-9e0799e3020e"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificMeetingType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/meetingType/[id]",
@@ -1272,10 +1317,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqv_553f3b55-3e62-4c79-bdb2-1371db06694a"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllMeetingType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/meetingType/getAll",
@@ -1330,10 +1376,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqv_9f25514a-f973-4061-b774-a03d79704a6c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfMeetingType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/meetingType/getComboList",
@@ -1351,7 +1398,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqv_237c28f6-35a3-4dfe-988d-8acbd9b60d6d"
             }
           ],
           "auth": {
@@ -1368,7 +1416,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddDocumentType",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/documentType",
@@ -1386,10 +1434,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_e5c2eb99-3a1c-4aeb-b1d2-0ca0ba17e2ce"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateDocumentType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/documentType/[id]",
@@ -1407,10 +1456,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_e627a068-cdf1-48ee-948a-d5e77e081a3a"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteDocumentType",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/documentType/[id]",
@@ -1428,10 +1478,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_acd24511-66c6-4edd-8f8a-c603c6032756"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveDocumentType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/documentType/active/[id]",
@@ -1449,10 +1500,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_1331efa9-c109-444b-bfa5-3255aad34816"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveDocumentType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/documentType/inactive/[id]",
@@ -1470,10 +1522,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_7276b38a-8fb8-4c22-bde4-418a91d63af3"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificDocumentType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/documentType/[id]",
@@ -1491,10 +1544,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_cc6c79e1-88c2-4866-8544-585add33882b"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllDocumentType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/fileExtension/getAll",
@@ -1549,10 +1603,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_cddbba2a-9807-4a81-97a1-89b17991c1a4"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfDocumentType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/documentType/getComboList",
@@ -1570,7 +1625,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_192e3456-585d-4abd-b223-8d652545294a"
             }
           ],
           "auth": {
@@ -1587,7 +1643,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddFileExtension",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/fileExtension",
@@ -1605,10 +1661,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_027e5adf-87a6-47b0-884a-98bbb8ca8ffd"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateFileExtension",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/fileExtension/[id]",
@@ -1626,10 +1683,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_b6fcc010-8046-475d-88d7-a1f24c3d94a9"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteFileExtension",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/fileExtension/[id]",
@@ -1647,10 +1705,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_a8e1a5c7-204d-45de-a81a-2b56657be710"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveFileExtension",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/fileExtension/active/[id]",
@@ -1668,10 +1727,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_807b590b-ea54-4b62-b5f6-0b778cb9a2f7"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveFileExtension",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/fileExtension/inactive/[id]",
@@ -1689,10 +1749,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_c4424ec7-c4be-4f07-8a8c-5915e948c874"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificFileExtension",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/fileExtension/[id]",
@@ -1710,10 +1771,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_a0320e60-fbad-452d-b1ee-f9aec79f3557"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllFileExtension",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/educationLevel/getAll",
@@ -1768,10 +1830,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_6cc50f6f-851a-41f6-ad7b-8d5cf71426be"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfFileExtension",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/fileExtension/getComboList",
@@ -1789,7 +1852,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqw_9e92e732-c546-43f9-bf52-dca674a61be1"
             }
           ],
           "auth": {
@@ -1806,7 +1870,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddContractType",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/contractType",
@@ -1824,10 +1888,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_e7d5059c-c3f2-4adb-8319-522cd25bdede"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateContractType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/contractType/[id]",
@@ -1845,10 +1910,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_740b054b-bd64-4865-9ed6-0cfbbd3e685c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteContractType",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/contractType/[id]",
@@ -1866,10 +1932,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_a48141d8-5505-4067-b805-41e1f1c3fbc6"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveContractType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/contractType/active/[id]",
@@ -1887,10 +1954,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_f89a9638-ba1b-463a-ab46-c44967f0c8f2"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveContractType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/contractType/inactive/[id]",
@@ -1908,10 +1976,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_d95c5aa3-d15f-464c-8f38-9773a7f9a94f"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificContractType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/contractType/[id]",
@@ -1929,10 +1998,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_dbbe7a3c-2228-4feb-ac79-2613f359fd4f"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllContractType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/contractType/getAll",
@@ -1987,10 +2057,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_aa899833-f13d-4173-a69d-d2bff7604169"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfContractType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/contractType/getComboList",
@@ -2008,7 +2079,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_cfd9e595-55de-4d10-9fc0-476c9412fc14"
             }
           ],
           "auth": {
@@ -2025,7 +2097,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddTestApproval",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/testApproval",
@@ -2043,10 +2115,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"isApproved\" : true/false, \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_f1baa7b3-c64b-46d6-a776-359a4d75bc40"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateTestApproval",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/testApproval/[id]",
@@ -2064,10 +2137,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"isApproved\" : true/false, \n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_51ad9507-19e8-49ac-8a08-6333c0dad37c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteTestApproval",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/testApproval/[id]",
@@ -2085,10 +2159,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_8f45ec32-7ed9-43d1-893a-fccbf241ae72"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveContractType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/testApproval/active/[id]",
@@ -2106,10 +2181,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_9250ae3b-032b-4f8f-84ed-8493a184b103"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "inactiveContractType",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/testApproval/incative/[id]",
@@ -2127,10 +2203,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_823bfafd-c176-403d-b838-a3ba29ccb53d"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificContractType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/testApproval/[id]",
@@ -2148,10 +2225,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqx_fcee7efb-b534-4927-905e-6c4fd29a1b87"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllTestApproval",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/testApproval/getAll",
@@ -2218,10 +2296,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_95530d67-6d36-41fa-9d42-84f34da8e525"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfContractType",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/testApproval/getComboList",
@@ -2239,7 +2318,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_5b7f44a4-1160-4c0a-9336-72b771a647b5"
             }
           ],
           "auth": {
@@ -2256,7 +2336,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddTestComplexityLevel",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/testComplexityLevel",
@@ -2274,10 +2354,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"valueNumber\" : 1.0,\n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_89736479-c5b0-4a12-aea4-756f8366cf2a"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateTestComplexityLevel",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/testComplexityLevel/[id]",
@@ -2295,10 +2376,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"valueNumber\" : 1.0,\n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_864a0255-97f4-438e-94be-792d38933d23"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteTestComplexityLevel",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/testComplexityLevel/[id]",
@@ -2316,10 +2398,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_1803fa5f-b788-4e80-82dc-ab76e2329379"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveTestComplexityLevel",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/testComplexityLevel/active/[id]",
@@ -2337,10 +2420,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_fb7a02b7-326a-4c13-a143-090b7cf16318"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveTestComplexityLevel",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/testComplexityLevel/incative/[id]",
@@ -2358,10 +2442,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_ab793630-d720-4fc7-aa15-c6d5846d7cad"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificTestComplexityLevel",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/testComplexityLevel/[id]",
@@ -2379,10 +2464,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_3a45dcea-dbe7-4e44-a450-954c72857903"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllTestComplexityLevel",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/testComplexityLevel/getAll",
@@ -2449,10 +2535,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_42963072-9ebe-420d-a585-d9ad73ef2e74"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfTestComplexityLevel",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/testComplexityLevel/getComboList",
@@ -2470,7 +2557,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_7ddbf906-9b83-47a4-a252-1441a7fbfea2"
             }
           ],
           "auth": {
@@ -2487,7 +2575,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddTimeUnit",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/timeUnit",
@@ -2505,10 +2593,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"valueBasedOnMillisecond\" : 1000,\n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_88080fa0-db79-4f48-9cb0-73c4dbee6b14"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateTimeUnit",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/timeUnit/[id]",
@@ -2526,10 +2615,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"valueBasedOnMillisecond\" : 1000,\n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_1a20f890-3954-4880-8521-f84570f1b376"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteTimeUnit",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/timeUnit/[id]",
@@ -2547,10 +2637,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqy_b9c5159e-bd89-4c7c-ab2e-fba8347a13b3"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveTimeUnit",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/timeUnit/active/[id]",
@@ -2568,10 +2659,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_391c70d1-98aa-4c51-8c2b-fb9e50e0c61c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveTimeUnit",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/timeUnit/incative/[id]",
@@ -2589,10 +2681,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_77ec9ca2-7bb3-4575-95df-b050d9390c8c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificTimeUnit",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/timeUnit/[id]",
@@ -2610,10 +2703,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_4cfb3a00-89ab-495b-9286-56554c526126"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllTimeUnit",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/currency/getAll",
@@ -2680,10 +2774,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_cb620d16-5d6c-4849-a32d-cd778a78554e"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfTimeUnit",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/timeUnit/getComboList",
@@ -2701,7 +2796,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_449688f8-a546-4982-810a-ef6f0a5366fc"
             }
           ],
           "auth": {
@@ -2718,7 +2814,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddCurrency",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/basic/currency",
@@ -2736,10 +2832,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"symbol\" : \"[currency symbol]\",\n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_89eaf871-3efd-45df-8759-c79e902cafa0"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateCurrency",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/currency/[id]",
@@ -2757,10 +2854,11 @@
                 "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"valueBasedOnMillisecond\" : 1000,\n  \t\"decription\" : \"[description (optional)]\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_35850e8d-b4f4-4e0a-aedd-5595256b6708"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteCurrency",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/basic/currency/[id]",
@@ -2778,10 +2876,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_a9e5a0f9-d6e3-46be-b38c-fb68f991eefd"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveCurrency",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/currency/active/[id]",
@@ -2799,10 +2898,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_efea122f-0e10-46f3-a1d1-a713b3e84ae4"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveCurrency",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/basic/currency/incative/[id]",
@@ -2820,10 +2920,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_88ab9ecd-89bb-404f-ac61-f75c374e7b3b"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificCurrency",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/currency/[id]",
@@ -2841,10 +2942,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_087d2cdb-2c3d-4927-97b4-8d9a28ecff55"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllCurrency",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/currency/getAll",
@@ -2905,10 +3007,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_13589b08-7581-4e09-a47c-9358d3cc363a"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfCurrency",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/currency/getComboList",
@@ -2926,7 +3029,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyqz_a7158bc9-6adf-49db-b737-0e05e67afffd"
             }
           ],
           "auth": {
@@ -2957,7 +3061,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "Login",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/user/auth/login",
@@ -2974,10 +3078,11 @@
                 "body": "{\n  \"username\": \"test\",\n  \"password\": \"Test@123\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_aa7696d3-a52b-4a49-9a1b-d6ceecc762ef"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "RefreshToken",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/auth/refreshToken",
@@ -2995,10 +3100,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_b0038159-b83c-4736-afa8-d6edd64b1017"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "SignOut",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/auth/signOut",
@@ -3016,10 +3122,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_02283738-9078-43a7-ad70-599819043f1e"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ChangePassword",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/auth/changePassword",
@@ -3037,10 +3144,11 @@
                 "body": "{\n  \"currentPassword\": \"Test@123\",\n  \"newPassword\": \"Test@123456\",\n  \"confirmPassword\": \"Test@123456\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_d8fe75ec-e676-4d36-8822-1949e7c29941"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ChangePasswordByAdmin",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/auth/changePasswordByAdmin",
@@ -3058,10 +3166,11 @@
                 "body": "{\n  \"profileId\": 123,\n  \"newPassword\": \"Test@123456\",\n  \"confirmPassword\": \"Test@123456\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_1c38a1b5-2a23-44ec-b5d4-eeff63307bea"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetCaptcha",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/user/auth/getCaptcha",
@@ -3078,7 +3187,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_6dd61e48-017a-4a67-aeb3-06a6e7bbf133"
             }
           ],
           "auth": {
@@ -3095,7 +3205,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddRole",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/user/role",
@@ -3113,10 +3223,11 @@
                 "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [123, 456, 789],\n  \"formPermissionId\": [123, 456, 789]\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_c9ecba3c-65e5-4140-a0b9-1906d5884d6c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateRole",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/role/[id]",
@@ -3134,10 +3245,11 @@
                 "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [123, 456, 789],\n  \"formPermissionId\": [123, 456, 789]\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_e736c7db-5016-4a21-9047-291dd0491650"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteRole",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/user/role/[id]",
@@ -3155,10 +3267,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_7dea5bd8-670e-4fa0-b004-d2742b147f12"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveRole",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/role/active/[id]",
@@ -3176,10 +3289,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_3c9e71fb-c25b-4e41-bdd0-e27b87130932"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveRole",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/role/inactive/[id]",
@@ -3197,10 +3311,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_b4e3c8cf-c08f-4f15-a44f-905a72dfb448"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificRole",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/user/role/[id]",
@@ -3218,10 +3333,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_42a226a1-1e6b-4707-9c8d-8f5c5a7a3a80"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllRole",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/user/role/getAll",
@@ -3288,10 +3404,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr2_577ad161-39ba-4feb-9856-fd3dedc2b35c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfRole",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/user/role/getComboList",
@@ -3309,7 +3426,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr3_922f52fa-1d44-4b23-9f05-95abdf119889"
             }
           ],
           "auth": {
@@ -3326,7 +3444,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddGroup",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/user/group",
@@ -3344,10 +3462,11 @@
                 "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [123, 456, 789],\n  \"formPermissionId\": [123, 456, 789]\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr3_e0a88baa-457d-4c11-86c2-ba23376361af"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateGroup",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/group/[id]",
@@ -3365,10 +3484,11 @@
                 "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [123, 456, 789],\n  \"formPermissionId\": [123, 456, 789]\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr3_a5d809a5-6639-4ee6-9f6c-c346fd2a6e8a"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteGroup",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/user/group/[id]",
@@ -3386,10 +3506,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr3_7f212a7f-627d-4496-8700-59dc5df35138"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveGroup",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/group/active/[id]",
@@ -3407,10 +3528,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr3_76bd6dd0-c905-4104-b56a-fdb3255ce567"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveGroup",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/group/inactive/[id]",
@@ -3428,10 +3550,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr3_90032fc9-2302-43b7-84d8-ff23dd4a7206"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificGroup",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/user/group/[id]",
@@ -3449,10 +3572,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr3_935492f3-5ff3-4bc7-8d92-051aa67f4286"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllGroup",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/user/group/getAll",
@@ -3519,10 +3643,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr3_7171a059-3372-43f8-bd63-2d121e4ccaa1"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfGroup",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/user/group/getComboList",
@@ -3540,7 +3665,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr3_08422a04-a4ea-423b-8330-3629675ddd69"
             }
           ],
           "auth": {
@@ -3557,7 +3683,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddProfile",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/user/profile",
@@ -3575,10 +3701,11 @@
                 "body": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"test\",\n  \"gender\": \"Male/Female\",\n  \"staffNumber\": \"4456123\",\n  \"activeTo\" : \"2026-09-10 12:00:00\",\n  \"positionId\": 123,\n  \"avatar\": \"/files/avatars/01.jpg\",\n  \"birthday\": \"1984-07-01\",\n  \"phoneNumber\": \"0018881515\",\n  \"mobileNumber\": \"0018881515\",\n  \"emailAddress\": \"test@gmail.com\",\n  \"address\": \"test\",\n  \"postalCode\": \"123456\",\n  \"username\": \"test\",\n  \"pass\": \"Test@123\",\n  \"roleId\": [123, 456, 789],\n  \"groupId\": [123, 456, 789],\n  \"permissionId\": [123, 456, 789]\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr4_1c4a92a0-98e3-4053-9366-5277a66a53b5"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateProfile",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/profile/[id]",
@@ -3596,10 +3723,11 @@
                 "body": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"test\",\n  \"gender\": \"Male/Female\",\n  \"staffNumber\": \"4456123\",\n  \"activeTo\" : \"2026-09-10 12:00:00\",\n  \"positionId\": 123,\n  \"avatar\": \"/files/avatars/01.jpg\",\n  \"birthday\": \"1984-07-01\",\n  \"phoneNumber\": \"0018881515\",\n  \"mobileNumber\": \"0018881515\",\n  \"emailAddress\": \"test@gmail.com\",\n  \"address\": \"test\",\n  \"postalCode\": \"123456\",\n  \"roleId\": [123, 456, 789],\n  \"groupId\": [123, 456, 789],\n  \"permissionId\": [123, 456, 789]\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr4_a9133a05-d1cc-4e91-983c-83f437f5d5f5"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteProfile",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/user/profile/[id]",
@@ -3617,10 +3745,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr4_da60ae82-ad76-4358-a523-8543b590ec25"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveProfile",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/profile/active/[id]",
@@ -3638,10 +3767,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr4_de5bb71e-4afe-4595-bba8-3856ec9018ad"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveProfile",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/user/profile/inactive/[id]",
@@ -3659,10 +3789,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr4_9d4131be-0e80-4ae9-a05f-5b5234a353b5"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificProfile",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/user/profile/[id]",
@@ -3680,10 +3811,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr4_43b50669-0f88-4d48-98bd-abc7f85811f2"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllProfile",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/user/profile/getAll",
@@ -3822,10 +3954,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr4_575799af-aff1-4f4b-8385-add95476153a"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListOfProfile",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/user/profile/getComboList",
@@ -3843,7 +3976,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr4_5d154439-ca6f-4d5f-a1f4-d3da1344b49e"
             }
           ],
           "auth": {
@@ -3874,7 +4008,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "DocumentFileUpload",
               "method": "POST",
               "endpoint": "https://[MainDomian]/api/documentMangement/document",
@@ -3884,18 +4018,19 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \"entity\": \"test\",\n  \"recordId\": 123,\n  \"FileBase64\": \"[base64String]\",\n  \"documentTypeId\": 123\n}\n"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_6474f869-7ba2-423a-aeb5-d28d538fda5a"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DocumentDelete",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/documentMangement/document/[id]",
@@ -3905,18 +4040,19 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_f06d3991-e96e-4c38-9262-497a2fb01216"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DocumentActive",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/documentMangement/document/active/[id]",
@@ -3926,18 +4062,19 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_1faa2763-281e-4ffa-99b8-05ea45e07cf3"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DocumentInactive",
               "method": "PUT",
               "endpoint": "https://[MainDomian]/api/documentMangement/document/inactive/[id]",
@@ -3947,27 +4084,7 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {}
-            },
-            {
-              "v": "15",
-              "name": "GetSpecificDocumentById",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "inherit",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -3975,10 +4092,33 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_1661fee0-eba2-46b8-ae94-2c770bc957fb"
             },
             {
-              "v": "15",
+              "v": "16",
+              "name": "GetSpecificDocumentById",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/documentMangement/document/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_60388268-4246-452b-af5b-30039e48d7ca"
+            },
+            {
+              "v": "16",
               "name": "GetDocumentListOfSpecificRecord",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -3995,10 +4135,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_3504eb63-1650-42c5-b547-8e20cd82682b"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllDocument",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -4015,7 +4156,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_ad1b86f0-8e6f-4cb8-a7e5-c38448feb773"
             }
           ],
           "auth": {
@@ -4032,56 +4174,61 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddWorkflowEligibleFileExtension",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"FileExtensionId\": 123,\n  \"ProjectWorkflowId\": 123,\n  \"MaxFileSizeForUpload\": 4\n}\n"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_30e363cb-3cda-4b81-8682-7e40871e9e9f"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateWorkflowEligibleFileExtension",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"FileExtensionId\": 123,\n  \"ProjectWorkflowId\": 123,\n  \"MaxFileSizeForUpload\": 4\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_ab570139-eecd-475c-b2f7-cd89af325891"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteWorkflowEligibleFileExtension",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4089,19 +4236,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_9f72049b-e560-4ac6-ae68-dc2da8a43cda"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveWorkflowEligibleFileExtension",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4109,19 +4258,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_16989ef7-8cdd-4ecb-8dc7-3c21843528f9"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveWorkflowEligibleFileExtension",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4129,19 +4280,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_a81b5ef7-cf49-45f1-8fc8-32c0bdb0e595"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificWorkflowEligibleFileExtension",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4149,10 +4302,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr7_259119c9-487d-4fa0-ae0e-401ac9cd9b3c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllWorkflowEligibleFileExtension",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -4169,19 +4323,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr7_c2e81d55-bdec-4aeb-a3ae-44f32fde87e1"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetWorkflowEligibleFileExtensionComboList",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4189,19 +4345,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr7_c575fc23-2983-44fa-8cad-960694998534"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetWorkflowEligibleFileExtensionComboListByWorflowId",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/getComboListByWorkflowId/[workflowId]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4209,7 +4367,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr7_e042ca2c-9f61-4653-9d82-ea897a19545e"
             }
           ],
           "auth": {
@@ -4226,56 +4385,61 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddWorkflowEligibleDocumentType",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"DocumentTypeId\": 123,\n  \"ProjectWorkflowId\": 123 \n}\n"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_9470fdfb-d1e8-44dd-85f7-d179f5f29807"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateWorkflowEligibleDocumentType",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"DocumentTypeId\": 123,\n  \"ProjectWorkflowId\": 123 \n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_26d07ec1-60e5-4d45-9d62-e46c500736d6"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteWorkflowEligibleDocumentType",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4283,19 +4447,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_f35cad53-1633-47bd-a56c-5effb085fd76"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveWorkflowEligibleDocumentType",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4303,19 +4469,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_51237dd2-d3ec-4bb8-877d-8a5ddff2b199"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveWorkflowEligibleDocumentType",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4323,19 +4491,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_81596609-587d-410f-9631-ec8ef3a3c74b"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificWorkflowEligibleDocumentType",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4343,10 +4513,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_6ae4b724-28b2-4c6c-86b0-68246eecdbe2"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllWorkflowEligibleDocumentType",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -4363,19 +4534,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_ebd29a53-74e1-41ec-be58-123eba0ab4cd"
             },
             {
-              "v": "15",
-              "name": "GetComboListWorkflowEligibleDocumentTypeById",
+              "v": "16",
+              "name": "GetComboListWorkflowEligibleDocumentType",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4383,19 +4556,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_3e20a031-02b5-4dd8-977e-c6fbfe025420"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListWorkflowEligibleDocumentTypeByWorkflowId",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://echo.hoppscotch.iohttps://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/getComboListByWorkflowId/[workflowId]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4403,7 +4578,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_78a8b1c6-e475-41e1-9581-fed65f1aea80"
             }
           ],
           "auth": {
@@ -4434,56 +4610,61 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddDepartment",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/humanResource/department",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"parentId\": 123,\n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_3f5e5b6f-5fd4-4c6b-ae6b-6689b2e166db"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateDepartment",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/department/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"parentId\": 123,\n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_6c731376-d73e-49b0-87c6-90263b260766"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteDepartment",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/humanResource/department/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4491,19 +4672,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_c66f1fc9-147c-4f6f-9d6c-43954742715c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveDepartment",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/department/active[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4511,19 +4694,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_a4fcd1dc-d430-4983-8f38-cd42e86c1a49"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveDepartment",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/department/inactive[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4531,19 +4716,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_18a32825-b6fa-461c-a352-690ffd17d4e2"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificDepartment",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/department/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4551,10 +4738,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_bb779bb9-0f90-4d25-a0db-503644bd12be"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllDepartment",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -4571,19 +4759,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_5aede931-fb7d-403a-bbe4-51f98844acbf"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListDepartment",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/department/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4591,7 +4781,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_0d38ed49-985d-4203-84d7-4eb80fb40212"
             }
           ],
           "auth": {
@@ -4608,56 +4799,61 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddPosition",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/humanResource/position",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"code\" : \"123\",\n  \"title\" : \"test\",\n  \"parentId\": 123,\n  \"departmentId\": 123,\n  \"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_c00398e0-54c9-489c-8b54-66306e2a56b1"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdatePosition",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/position/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"code\" : \"123\",\n  \"title\" : \"test\",\n  \"parentId\": 123,\n  \"departmentId\": 123,\n  \"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_038c7d8b-3886-4198-b8a5-8a40e97a0175"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeletePosition",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/humanResource/position/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4665,19 +4861,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_93c83757-92e3-44bd-a2e7-4ba7a828d81d"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActivePosition",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/position/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4685,19 +4883,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_80373d22-e43d-421d-aa05-052ff876f543"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactivePosition",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/position/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4705,19 +4905,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_35ff561e-8e85-4c97-aae0-b36af394e885"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificPosition",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/position/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4725,10 +4927,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_d73dfd93-68f5-4bfe-96dd-a7fbf3999850"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllPosition",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -4745,19 +4948,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_d9df8e71-bbeb-499d-9a7d-42c93f90246c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListPosition",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/position/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4765,19 +4970,21 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_65307bdf-c54b-471c-874f-ccaaf81dded5"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListPositionByDepartmentId",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/position/getComboListByDepartmentId/[departmentId]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
@@ -4785,7 +4992,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrf_e2326a9c-6250-4966-8a4d-2ba0d86b194d"
             }
           ],
           "auth": {
@@ -4802,127 +5010,139 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddProfileEducation",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileEducation",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\": 123,\n  \"educationLevelId\": 123,\n  \"documentId\":  123,\n  \"title\": \"test\",\n  \"collageName\": \"test\",\n  \"startDate\": \"2025-10-3\",\n  \"endDate\": \"2025-10-3\",\n  \"description\": \"test\",\n  \"certificateFileAddress\": \"test\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_b2cecb1a-c20a-42a9-92b3-f7792435f03f"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateProfileEducation",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileEducation/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\": 123,\n  \"educationLevelId\": 123,\n  \"documentId\":  123,\n  \"title\": \"test\",\n  \"collageName\": \"test\",\n  \"startDate\": \"2025-10-3\",\n  \"endDate\": \"2025-10-3\",\n  \"description\": \"test\",\n  \"certificateFileAddress\": \"test\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_190b79f8-7558-49c3-97b1-48566ed07366"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteProfileEducation",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileEducation/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_e3dd7971-5e94-429b-86d0-a508573abf88"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveProfileEducation",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileEducation/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_43c09bd3-5dd5-4a15-ab58-160a5bf4ba59"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveProfileEducation",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileEducation/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_0a46c624-6e82-4bca-912f-1499b0459d64"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificProfileEducation",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileEducation/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_ba99b449-ce5a-4867-bbb4-c1222997aec2"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllProfileEducation",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -4939,47 +5159,52 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_52c9678b-524c-4e1e-86bd-7d993d971653"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListProfileEducation",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileEducation/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_7a5c3a98-940b-4b9e-a848-bec061545b9b"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListProfileEducationByProfileId",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileEducation/getComboListByProfileId/[profileId]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_adf53490-6990-447a-b8f0-0155ff5dc784"
             }
           ],
           "auth": {
@@ -4996,127 +5221,139 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddProfileJobExperience",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileJobExperience",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\": 123,\n  \"jobTitle\": \"test\",\n  \"companyName\": \"test\",\n  \"startDate\": \"2025-10-3\",\n  \"endDate\": \"2025-10-3\",\n  \"description\": \"test\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_fac938a1-46d4-4fea-a06d-3746860d18c3"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateProfileJobExperience",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileJobExperience/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\": 123,\n  \"jobTitle\": \"test\",\n  \"companyName\": \"test\",\n  \"startDate\": \"2025-10-3\",\n  \"endDate\": \"2025-10-3\",\n  \"description\": \"test\"\n}"
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_a91fd1f0-db98-4755-bc9f-256cd3a89fc2"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteProfileJobExperience",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileJobExperience/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_748e9769-295d-4ad7-a513-3e42c8844a63"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveProfileJobExperience",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileJobExperience/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_fb8db066-098b-4d6c-9114-5843fdf0077a"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeactiveProfileJobExperience",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileJobExperience/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_78399f6d-0c75-416a-b7e8-3e77702b9b2c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificProfileJobExperience",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileJobExperience/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_1283723d-f596-445c-a03a-7272362c94ec"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllProfileJobExperience",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5133,47 +5370,52 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_5e68823e-8877-4481-b174-3a39da9bdcf3"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListProfileJobExperience",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileJobExperience/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_27d956b1-47be-4e5a-88a1-3a36424493ba"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListProfileJobExperienceByProfileId",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileJobExperience/getComboListByProfileId/[profileId]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_a3a1e446-edd8-4fd7-97d3-ad31426d2ab2"
             }
           ],
           "auth": {
@@ -5190,7 +5432,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddProfileCertificate",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5207,10 +5449,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_d3dda87a-fc37-41a5-95cf-e60693e46db4"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateProfileCertificate",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5227,10 +5470,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_740415c2-2534-4744-bf3e-bb0f6a004470"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteProfileCertificate",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5247,10 +5491,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_ef31f4f4-41bf-4a57-a1f0-cd195ebc1e7d"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveProfileCertificate",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5267,10 +5512,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_e270210f-7a2a-4379-8fa7-6d7584644fb1"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveProfileCertificate",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5287,10 +5533,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_fe2b8b01-4cfb-4a6d-92b8-99f3a2eed531"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificProfileCertificate",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5307,10 +5554,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrg_b019ea28-6c53-4762-833e-0b544a8df40b"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllProfileCertificate",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5327,10 +5575,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_771c4e90-4e2c-4d2b-9dcf-8b36d7afad0f"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListProfileCertificate",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5347,10 +5596,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_96e77c78-4922-4df6-a461-9ec08bd56493"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListProfileCertificateByProfileId",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5367,7 +5617,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_537b2b31-9932-4039-a302-fbde2f442290"
             }
           ],
           "auth": {
@@ -5384,7 +5635,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddWorkingTimetable",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5401,10 +5652,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_8ab5c56c-5f98-4038-905c-afb7c2ba17bc"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateWorkingTimetable",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5421,10 +5673,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_1eabf171-f08f-40b2-9052-c5536a895a35"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteWorkingTimetable",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5441,10 +5694,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_722cba76-2296-49eb-9e52-24418dc6e3ba"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveWorkingTimetable",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5461,10 +5715,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_9646aa05-1278-4a57-bc92-81d80487ce49"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveWorkingTimetable",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5481,10 +5736,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_88df3cea-790a-4c17-9f5c-24c6673e0106"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificWorkingTimetable",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5501,10 +5757,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_debe04b1-e26d-4fbc-803c-82df6d7a49f9"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllWorkingTimetable",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5521,10 +5778,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_2bdd063f-d575-45c2-a2d4-b7c375b72630"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListWorkingTimetable",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5541,7 +5799,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_0e4bf033-ee26-454c-8254-09447765d36b"
             }
           ],
           "auth": {
@@ -5558,7 +5817,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddHoliday",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5575,10 +5834,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_e3f2c326-3749-42bd-981b-28f458481568"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateHoliday",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5595,10 +5855,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_d396b458-17b3-402e-9557-7c0a26623bea"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteHoliday",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5615,10 +5876,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_036f702a-b87f-462a-8299-36f935b9d49c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveHoliday",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5635,10 +5897,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_3046adaf-956d-43e7-b484-0d90d328cfdf"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveHoliday",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5655,10 +5918,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_dd40e9b5-cdfb-437c-998c-21598c232f94"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificHoliday",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5675,10 +5939,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_90fae434-f924-4a64-af2e-c0943ebd62c4"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllHoliday",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5695,10 +5960,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_a352cb19-ddcf-4c16-ae30-539409226380"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetComboListHoliday",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5715,7 +5981,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_a023ac1b-4d6b-4002-9640-13dd2615401f"
             }
           ],
           "auth": {
@@ -5732,7 +5999,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddAttendance",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5749,10 +6016,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_92e0d65b-0bdd-4dc2-9bb4-04937d42b8c4"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateAttendance",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5769,10 +6037,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyrh_35ea993f-991f-492f-8381-37f207acf60c"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteAttendance",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5789,10 +6058,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_6a077c96-b5af-4ec3-a172-a206af8b2f84"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveAttendance",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5809,10 +6079,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_8519c7c2-f979-4ea1-9eb3-4261fbb780d1"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveAttendance",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5829,10 +6100,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_ce41e28c-5fcc-42be-b069-cafee0bf3627"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificAttendance",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5849,10 +6121,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_ed5498af-957f-49f8-9773-6a78234f0b3d"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllAttendance",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5869,7 +6142,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_ea8f90b0-a98f-40a6-a112-dd418fc83e8e"
             }
           ],
           "auth": {
@@ -5886,7 +6160,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddMission",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5903,10 +6177,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_8d9ffb09-7ed8-40f6-bf57-4c176a76b086"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateMission",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5923,10 +6198,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_b579c63e-c00c-493c-bdba-1d0831e1872a"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteMission",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5943,10 +6219,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_145534ac-4999-4118-a64d-8fba29cb81e3"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveMission",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5963,10 +6240,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_3652b012-46fa-4671-b3a7-d274bff75b62"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveMission",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -5983,10 +6261,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_bd0f3cc7-fa06-4e91-88a3-9dc46fc8a1d1"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificMission",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -6003,10 +6282,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_02256457-f68a-4343-93e0-af154d5b2999"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllMission",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -6023,7 +6303,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_16db0795-a8ad-4fa1-b987-b71d0dbefc9d"
             }
           ],
           "auth": {
@@ -6040,7 +6321,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "AddLeave",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -6057,10 +6338,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_52cf4ab8-dfbe-4f02-9f04-4187e4ccf11e"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "UpdateLeave",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -6077,10 +6359,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_747559f6-db4f-4a10-809e-58de72efd741"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "DeleteLeave",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -6097,10 +6380,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_98660021-b5d6-4b98-a255-3c982d75dcee"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "ActiveLeave",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -6117,10 +6401,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_acd505dc-6dcb-497f-a2d7-21ce4de4a593"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "InactiveLeave",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -6137,10 +6422,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_582f711f-3d83-4e03-ab4b-fb72b77a6178"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetSpecificLeave",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -6157,10 +6443,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_33ead3b4-b449-43bd-8960-4f74cafa7e0f"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetAllLeave",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -6177,7 +6464,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_feb17289-4544-4f76-ab61-d16551b92afb"
             }
           ],
           "auth": {
@@ -6194,7 +6482,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "GetStaffTimesheet",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -6211,10 +6499,11 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_34eb7e18-48c1-46b6-b058-51b1060c9683"
             },
             {
-              "v": "15",
+              "v": "16",
               "name": "GetStaffTimesheetPerformance",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -6231,7 +6520,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_eaf92b58-1d06-469a-80c4-964a48d68d67"
             }
           ],
           "auth": {
@@ -6248,7 +6538,7 @@
           "folders": [],
           "requests": [
             {
-              "v": "15",
+              "v": "16",
               "name": "GetProfileResume",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
@@ -6265,7 +6555,8 @@
                 "body": null
               },
               "requestVariables": [],
-              "responses": {}
+              "responses": {},
+              "_ref_id": "req_mgbahyri_36951fe8-a45e-4d1b-a422-b231d89c3b60"
             }
           ],
           "auth": {
