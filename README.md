@@ -5,76 +5,38 @@
 </div>
 
 ## What is Horizon System?
-**Horizon System** is an integrated **Enterprise Project Management (EPM)** platform that unifies project oversight, financial tracking, and employee performance evaluation.
-It helps organizations measure both **operational efficiency** and **team well-being**, aligning productivity with ethical and human-centered values.
-Horizon empowers decision-makers to enhance outcomes while promoting transparency, fairness, and human dignity in the workplace.
+**Horizon** is an **Enterprise Project Management (EPM) platform** that unifies project oversight, financial tracking, team performance, and employee satisfaction into a single, integrated system.
+By connecting to your existing tools (GitHub, Jira, Trello, spreadsheets), Horizon automatically collects operational and human feedback data and provides actionable insights to improve productivity, collaboration, and well-being.
+In short: Horizon helps organizations deliver projects efficiently while keeping employees motivated, satisfied, and fairly treated.
 
 ## How Does Horizon System Work?
-Horizon System evaluates both job satisfaction and performance through a balanced blend of **qualitative** and **quantitative** analysis. Its core methods include:
+Horizon combines quantitative and qualitative analysis to generate meaningful insights for both managers and teams:
 
-1. **Employee Surveys & Feedback** – Regular, anonymous surveys capture insights about workplace culture, motivation, and team dynamics.
-2. **Project Workflow Analysis** – By monitoring task progress, collaboration patterns, and workload distribution, Horizon identifies inefficiencies and potential risks in real time.
-3. **Performance & Engagement Metrics** – The system analyzes productivity trends and engagement levels using actual operational data, ensuring that evaluation is based on measurable outcomes.
-4. **Ethical & Social Impact Indicators** – Dimensions such as inclusivity, work-life balance, and compliance with labor rights standards are assessed to maintain a fair and supportive environment.
+1. **Employee Surveys & Feedback** – Captures structured insights on motivation, team dynamics, and workplace culture.
+2. **Project Workflow Analysis** – Monitors tasks, collaboration, and workload distribution to spot inefficiencies.
+3. **Performance & Engagement Metrics** – Evaluates productivity trends and engagement using real project data.
+4. **Ethical & Social Impact Indicators** – Assesses inclusivity, work-life balance, and adherence to labor rights standards.
 
-By integrating these dimensions, Horizon System delivers actionable, data-driven insights that empower both employees and managers to improve collaboration, performance, and overall well-being.
+These analyses are translated into clear, actionable recommendations, such as workload balancing, resource prioritization, or improving team collaboration.
 
-## Horizon Extension Engine
-To minimize redundant manual input and maximize interoperability, Horizon introduces the Extension Engine — a lightweight, pluggable integration system that connects your existing tools and workflows directly to Horizon’s core analytics platform.
+## Why Horizon?
+1. **Unified EPM Approach:** Combines project, financial, and human performance management in one platform.
+2. **Human-Centered Insight:** Measures well-being alongside operational efficiency.
+3. **Actionable Results:** Delivers recommendations based on real data.
+3. **Ethical by Design:** Promotes fairness, transparency, and dignity at work.
 
-With Horizon Extension Engine, you can effortlessly sync data from popular platforms, such as:
-
-1. GitLab, GitHub, Bitbucket – for project and development metrics
-2. Jira, Trello, Asana – for task and workflow tracking
-3. Google Sheets, Excel, Notion – for financial or resource-related data
-4. Email & Calendar tools – to estimate communication loads and time allocation
-5. Custom APIs & internal systems – for tailored enterprise integrations
-
-**Key Features:**
-1. Modular Plug-ins: Install only what you need. Each connector works independently.
-2. Auto-sync & On-demand Pulling: Keep Horizon updated in real time or via scheduled syncs.
-3. Secure & Minimal Footprint: Built with privacy and lightweight deployment in mind.
-4. Customizable & Open Source: Easily extend with your own scripts or data adapters.
-
-The Extension Engine allows Horizon to act not as another siloed system, but as a holistic analytical layer over your organization’s existing infrastructure — combining HR, financial, and project metrics into one coherent picture.
+## Extension Engine
+Horizon includes an Extension Engine for integrating external tools or custom modules. Developers can connect services like Jira, Slack, or payroll systems, or create plugins to extend Horizon for organization-specific needs.
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/shadowfox1984/Horizon/refs/heads/master/3-HorizonModeling/3.1-HorizonUml/out/Architecture/ProjectSchemaDiagram.png" style="margin-left:auto; margin-right:auto">
 </div>
 
-## Mindsets
-The following articles are available to the public as mindsets of the project.
-1. **Worldview Mindset:** [Social-Oriented Philosophy](https://github.com/shadowfox1984/Horizon/raw/refs/heads/master/1-Minesets/1.1-WorldviewMindset/Social_Oriented_Philosophy.odt)
-2. **Mindset for the Problem:** [Deceptive Virtualization Theory](https://github.com/shadowfox1984/Horizon/raw/refs/heads/master/1-Minesets/1.2-MindsetForTheProblem/Deceptive_Virtualization_Theory.odt)
-3. **Mindset for the Solution:** [Theory of Endurance Software Development Methodology](https://github.com/shadowfox1984/Horizon/raw/refs/heads/master/1-Minesets/1.3-MindsetForTheSolution/Theory_of_Endurance_Software_Development_Methodology.odt)
+## Vision
+Horizon aims to redefine Enterprise Project Management by aligning business success with ethical labor practices and human dignity. Through transparency and shared understanding between teams and management, Horizon fosters a fair, collaborative, and high-performing work culture.
 
-## Objectives
-1. **Enhancing Employee Satisfaction**
-	* Providing transparency in processes and information	
-	* Preventing confusion in task and resource allocation
-2. **Facilitating and Accelerating Project Progress**
-	* Centralized management of project-related information
-	* Improving coordination between teams and project members
-3. **Increasing Productivity in Task Management**
-	* Minimizing resource and time waste
-	* Providing tools for performance monitoring and evaluation
-4. **Optimizing the Management of Human Resources and Project Resources**
-	* Smart allocation of resources (human, time, equipment, and budget)
-	* Monitoring resource usage throughout project execution
-5. **Balancing Individual and Collective Interests within the Organization**
-	* Reducing conflicts caused by poor resource and information management
-	* Strengthening the sense of belonging and contribution among employees
-6. **Improving Transparency and Access to Project and Resource Information**
-	* Reducing human errors and rework
-	* Establishing a reliable data source for management decision-making
+## Open Source Philosophy
+Horizon is an open-source research initiative under the Horizon Project. It invites developers, researchers, and human rights advocates to collaborate in creating technology that enhances productivity while respecting people.
 
-## Documentation
-The Horizon Research Project has one of the most complete technical documentations among free and open source software. In this project, even the system modeling is free so that developers can based on it to present ideas for creating more advanced systems. From the perspective of the Horizon Project developers, science is not a proprietary commodity and should be freely available to the public. To view the project documentation, you can read the [Wiki](https://github.com/shadowfox1984/Horizon/wiki) section.
 
-## Project Additional Info
-### Current Status
-This project is currently in the research and documentation phase. No coding tasks are open yet.
-
-### How to Contribute
-At this stage, contributions are welcome in the form of research, documentation, and theoretical discussion.
 
