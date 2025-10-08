@@ -1,13 +1,11 @@
 <div align="center">
 <img src="https://raw.githubusercontent.com/shadowfox1984/Horizon/master/logo.png" width="120" height="120" style="margin-left:auto; margin-right:auto">
-<h1>Horizon Research Project (HRP)</h1>
+<h1>Horizon</h1>
 <p style="font-style: italic;">Human-Centered Enterprise Project Management (EPM) Platform</p>
 </div>
 
 ## What is Horizon System?
-**Horizon** is an **Enterprise Project Management (EPM) platform** that unifies project oversight, financial tracking, team performance, and employee satisfaction into a single, integrated system.
-By connecting to your existing tools (GitHub, Jira, Trello, spreadsheets), Horizon automatically collects operational and human feedback data and provides actionable insights to improve productivity, collaboration, and well-being.
-In short: Horizon helps organizations deliver projects efficiently while keeping employees motivated, satisfied, and fairly treated.
+**Horizon** is an **Enterprise Project Management (EPM) platform** that combines project management, financial tracking, team performance evaluation, and employee satisfaction analysis in one system.It connects to your existing tools (GitHub, Jira, Trello, spreadsheets) to automatically collect project and team data and provide clear, actionable recommendations. In short: Horizon helps organizations deliver projects efficiently while keeping employees motivated, satisfied, and fairly treated.
 
 ## How Does Horizon System Work?
 Horizon combines quantitative and qualitative analysis to generate meaningful insights for both managers and teams:
