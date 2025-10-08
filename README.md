@@ -3,6 +3,7 @@
 <h1>Horizon Research Project (HRP)</h1>
 <p style="font-style: italic;">Organizational Productivity and Justice Management System</p>
 </div>
+
 ## What is Horizon System?
 **Horizon System** is an integrated **Enterprise Project Management (EPM)** platform that unifies project oversight, financial tracking, and employee performance evaluation.
 It helps organizations measure both **operational efficiency** and **team well-being**, aligning productivity with ethical and human-centered values.
