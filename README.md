@@ -10,14 +10,14 @@ It helps organizations measure both **operational efficiency** and **team well-b
 Horizon empowers decision-makers to enhance outcomes while promoting transparency, fairness, and human dignity in the workplace.
 
 ## How Does Horizon System Work?
-Horizon System assesses job satisfaction and performance using a combination of qualitative and quantitative methods. Key approaches include:
+Horizon System evaluates both job satisfaction and performance through a balanced blend of **qualitative** and **quantitative** analysis. Its core methods include:
 
-1. **Employee Surveys & Feedback:** Regular surveys help gather insights on job satisfaction, workplace culture, and team dynamics.
-2. **Project Workflow Analysis:** By tracking task completion times, collaboration patterns, and workload distribution, the system identifies areas for improvement.
-3. **Performance Metrics:** The system evaluates productivity trends and employee engagement based on real work data.
-Ethical & Social Impact Indicators – Workplace inclusivity, work-life balance, and adherence to labor rights standards are measured to ensure a fair work environment.
+1. **Employee Surveys & Feedback** – Regular, anonymous surveys capture insights about workplace culture, motivation, and team dynamics.
+2. **Project Workflow Analysis** – By monitoring task progress, collaboration patterns, and workload distribution, Horizon identifies inefficiencies and potential risks in real time.
+3. **Performance & Engagement Metrics** – The system analyzes productivity trends and engagement levels using actual operational data, ensuring that evaluation is based on measurable outcomes.
+4. **Ethical & Social Impact Indicators** – Dimensions such as inclusivity, work-life balance, and compliance with labor rights standards are assessed to maintain a fair and supportive environment.
 
-By integrating these methods, Horizon System provides actionable insights for both employees and managers, fostering a healthier and more efficient work environment.
+By integrating these dimensions, Horizon System delivers actionable, data-driven insights that empower both employees and managers to improve collaboration, performance, and overall well-being.
 
 ## Horizon Extension Engine
 To minimize redundant manual input and maximize interoperability, Horizon introduces the Extension Engine — a lightweight, pluggable integration system that connects your existing tools and workflows directly to Horizon’s core analytics platform.
