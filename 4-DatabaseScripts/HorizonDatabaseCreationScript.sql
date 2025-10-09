@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.7.31
+	Last Version : 25.10.9
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -469,7 +469,7 @@ CREATE TABLE HumanResource.ProfileCertificate(
     Id serial PRIMARY KEY NOT NULL, 
 	ProfileId bigint NOt Null,
 	Title varchar(255) NOT NULL,
-	InstituteNmae varchar(255) NOT NULL,
+	InstituteName varchar(255) NOT NULL,
 	HasCertificate boolean NOT NULL,
 	StartDate date,
 	EndDate date,
@@ -502,7 +502,7 @@ CREATE TABLE HumanResource.WorkingTimeTable(
 	FOREIGN KEY (ContractTypeId) REFERENCES Basic.ContractType(Id)
 );
 
-CREATE TABLE HumanResource.Holidaies(
+CREATE TABLE HumanResource.Holiday(
     Id serial PRIMARY KEY NOT NULL, 
 	Title varchar(255) NOT NULL,
 	HolidayType holidayType NOT NULL,

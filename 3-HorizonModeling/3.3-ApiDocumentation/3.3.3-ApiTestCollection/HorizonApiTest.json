@@ -5020,8 +5020,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -5042,8 +5042,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -5064,8 +5064,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5086,8 +5086,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5108,8 +5108,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5130,8 +5130,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5173,8 +5173,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5195,8 +5195,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5231,8 +5231,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -5253,8 +5253,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -5275,8 +5275,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5297,8 +5297,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5319,8 +5319,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5341,8 +5341,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5384,8 +5384,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5406,8 +5406,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5434,19 +5434,20 @@
             {
               "v": "16",
               "name": "AddProfileCertificate",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileCertificate",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\" : 123,\n  \"title\" : \"test\",\n  \"instituteName\" : \"test\",\n  \"hasCertificate\" : true,\n  \"startDate\" : \"2025-10-08\",\n  \"endDate\" : \"2025-10-08\",\n  \"description\" : \"test\"\n}\n\n"
               },
               "requestVariables": [],
               "responses": {},
@@ -5455,19 +5456,20 @@
             {
               "v": "16",
               "name": "UpdateProfileCertificate",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileCertificate/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\" : 123,\n  \"title\" : \"test\",\n  \"instituteName\" : \"test\",\n  \"hasCertificate\" : true,\n  \"startDate\" : \"2025-10-08\",\n  \"endDate\" : \"2025-10-08\",\n  \"description\" : \"test\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -5476,15 +5478,16 @@
             {
               "v": "16",
               "name": "DeleteProfileCertificate",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileCertificate/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5497,15 +5500,16 @@
             {
               "v": "16",
               "name": "ActiveProfileCertificate",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileCertificate/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5518,15 +5522,16 @@
             {
               "v": "16",
               "name": "InactiveProfileCertificate",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileCertificate/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5540,14 +5545,15 @@
               "v": "16",
               "name": "GetSpecificProfileCertificate",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileCertificate/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5582,14 +5588,15 @@
               "v": "16",
               "name": "GetComboListProfileCertificate",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileCertificate/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5603,14 +5610,15 @@
               "v": "16",
               "name": "GetComboListProfileCertificateByProfileId",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileCertificate/getComboListByProfileId/[profileId]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5637,19 +5645,20 @@
             {
               "v": "16",
               "name": "AddWorkingTimetable",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/humanResource/workingTimeTable",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"contractTypeId\" : 123,\n  \"workingDay\" : \"Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday\",\n  \"startTime\" : \"08:00:00\",\n  \"endTime\" : \"15:00:00\",\n  \"floatingStartTime\" : \"00:30:00\",\n  \"description\" : \"test\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -5658,19 +5667,20 @@
             {
               "v": "16",
               "name": "UpdateWorkingTimetable",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/workingTimeTable/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"contractTypeId\" : 123,\n  \"workingDay\" : \"Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday\",\n  \"startTime\" : \"08:00:00\",\n  \"endTime\" : \"15:00:00\",\n  \"floatingStartTime\" : \"00:30:00\",\n  \"description\" : \"test\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -5679,15 +5689,16 @@
             {
               "v": "16",
               "name": "DeleteWorkingTimetable",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/humanResource/workingTimeTable/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5700,15 +5711,16 @@
             {
               "v": "16",
               "name": "ActiveWorkingTimetable",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/workingTimeTable/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5721,15 +5733,16 @@
             {
               "v": "16",
               "name": "InactiveWorkingTimetable",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/workingTimeTable/incative/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5743,14 +5756,15 @@
               "v": "16",
               "name": "GetSpecificWorkingTimetable",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/workingTimeTable/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5785,14 +5799,15 @@
               "v": "16",
               "name": "GetComboListWorkingTimetable",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/workingTimeTable/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5819,19 +5834,20 @@
             {
               "v": "16",
               "name": "AddHoliday",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/humanResource/holiday",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"title\" : \"test\",\n  \"holidayType\" : \"'National|Government or Federal|Provincial or State|Organizational\",\n  \"holidayDate\" : \"2025-10-08\",\n  \"description\" : \"test\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -5840,15 +5856,16 @@
             {
               "v": "16",
               "name": "UpdateHoliday",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/holiday/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5861,15 +5878,16 @@
             {
               "v": "16",
               "name": "DeleteHoliday",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/humanResource/holiday/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5882,15 +5900,16 @@
             {
               "v": "16",
               "name": "ActiveHoliday",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/holiday/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5903,15 +5922,16 @@
             {
               "v": "16",
               "name": "InactiveHoliday",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/holiday/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5925,14 +5945,15 @@
               "v": "16",
               "name": "GetSpecificHoliday",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/holiday/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5967,14 +5988,15 @@
               "v": "16",
               "name": "GetComboListHoliday",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/holiday/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6001,19 +6023,20 @@
             {
               "v": "16",
               "name": "AddAttendance",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/humanResource/attendance",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\" : 123,\n  \"workingDate\" : \"2025-10-09\",\n  \"enteranceType\" : \"Enter|Exit\",\n  \"enternaceTime\" : \"08:00:00\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -6022,19 +6045,20 @@
             {
               "v": "16",
               "name": "UpdateAttendance",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/attendance/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\" : 123,\n  \"workingDate\" : \"2025-10-09\",\n  \"enteranceType\" : \"Enter|Exit\",\n  \"enternaceTime\" : \"08:00:00\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -6043,15 +6067,16 @@
             {
               "v": "16",
               "name": "DeleteAttendance",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/humanResource/attendance/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6064,15 +6089,16 @@
             {
               "v": "16",
               "name": "ActiveAttendance",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/attendance/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6085,15 +6111,16 @@
             {
               "v": "16",
               "name": "InactiveAttendance",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/attendance/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6107,14 +6134,15 @@
               "v": "16",
               "name": "GetSpecificAttendance",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/attendance/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6156,25 +6184,26 @@
         },
         {
           "v": 10,
-          "name": "Mission",
+          "name": "WorkMission",
           "folders": [],
           "requests": [
             {
               "v": "16",
-              "name": "AddMission",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "name": "AddWorkMission",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/humanResource/workMission",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\" : 123,\n  \"missionStartDate\" : \"2025-10-09\",\n  \"missionEndDate\" : \"2025-10-09\",\n  \"missionStartTime\" : \"08:00:00\",\n  \"missionEndTime\" : \"17:00:00\",\n  \"missionLocation\" : \"Los Angeles\",\n  \"description\" : \"test\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -6182,20 +6211,21 @@
             },
             {
               "v": "16",
-              "name": "UpdateMission",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "name": "UpdateWorkMission",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/workMission/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\" : 123,\n  \"missionStartDate\" : \"2025-10-09\",\n  \"missionEndDate\" : \"2025-10-09\",\n  \"missionStartTime\" : \"08:00:00\",\n  \"missionEndTime\" : \"17:00:00\",\n  \"missionLocation\" : \"Los Angeles\",\n  \"description\" : \"test\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -6203,16 +6233,17 @@
             },
             {
               "v": "16",
-              "name": "DeleteMission",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "name": "DeleteWorkMission",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/humanResource/workMission/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6224,16 +6255,17 @@
             },
             {
               "v": "16",
-              "name": "ActiveMission",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "name": "ActiveWorkMission",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/workMission/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6245,16 +6277,17 @@
             },
             {
               "v": "16",
-              "name": "InactiveMission",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "name": "InactiveWorkMission",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/workMission/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6266,16 +6299,17 @@
             },
             {
               "v": "16",
-              "name": "GetSpecificMission",
+              "name": "GetSpecificWorkMission",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/workMission/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6287,7 +6321,7 @@
             },
             {
               "v": "16",
-              "name": "GetAllMission",
+              "name": "GetAllWorkMission",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
               "params": [],
