@@ -5442,8 +5442,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -5464,8 +5464,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -5486,8 +5486,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5508,8 +5508,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5530,8 +5530,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5552,8 +5552,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5595,8 +5595,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5617,8 +5617,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5653,8 +5653,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -5675,8 +5675,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -5697,8 +5697,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5719,8 +5719,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5741,8 +5741,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5763,8 +5763,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5806,8 +5806,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5842,8 +5842,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -5864,8 +5864,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5886,8 +5886,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5908,8 +5908,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5930,8 +5930,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5952,8 +5952,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -5995,8 +5995,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6031,8 +6031,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -6053,8 +6053,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -6075,8 +6075,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6097,8 +6097,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6119,8 +6119,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6141,8 +6141,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6198,8 +6198,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -6220,8 +6220,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -6242,8 +6242,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6264,8 +6264,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6286,8 +6286,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6308,8 +6308,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6357,19 +6357,20 @@
             {
               "v": "16",
               "name": "AddLeave",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/humanResource/leave",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\" : 123,\n  \"leaveType\" : \"FullDay|PartOfDay\",\n  \"leavingStartDate\" : \"2025-10-13\",\n  \"leavingEndDate\"  : \"2025-10-13\",\n  \"leavingStartTime\" : \"08:00:00\",\n  \"leavingEndTime\" : \"17:00:00\",\n  \"description\" : \"test\",\n}\n\n"
               },
               "requestVariables": [],
               "responses": {},
@@ -6378,8 +6379,8 @@
             {
               "v": "16",
               "name": "UpdateLeave",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/leave/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -6389,8 +6390,8 @@
                 "authActive": true
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\" : 123,\n  \"leaveType\" : \"FullDay|PartOfDay\",\n  \"leavingStartDate\" : \"2025-10-13\",\n  \"leavingEndDate\"  : \"2025-10-13\",\n  \"leavingStartTime\" : \"08:00:00\",\n  \"leavingEndTime\" : \"17:00:00\",\n  \"description\" : \"test\",\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -6399,15 +6400,16 @@
             {
               "v": "16",
               "name": "DeleteLeave",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/humanResource/leave/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6420,15 +6422,16 @@
             {
               "v": "16",
               "name": "ActiveLeave",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/leave/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6441,15 +6444,16 @@
             {
               "v": "16",
               "name": "InactiveLeave",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/humanResource/leave/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6463,14 +6467,15 @@
               "v": "16",
               "name": "GetSpecificLeave",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/leave/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6519,14 +6524,15 @@
               "v": "16",
               "name": "GetStaffTimesheet",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/timesheet/getStaffTimesheet/[staffId]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6575,14 +6581,15 @@
               "v": "16",
               "name": "GetProfileResume",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/profileResume/[profileId]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
