@@ -4128,8 +4128,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -4391,8 +4391,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -4634,8 +4634,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -4853,7 +4853,7 @@
               "v": "16",
               "name": "GetAllDepartment",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/humanResource/department/getAll",
               "params": [
                 {
                   "key": "code",
@@ -5085,14 +5085,64 @@
               "v": "16",
               "name": "GetAllPosition",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/humanResource/position/getAll",
+              "params": [
+                {
+                  "key": "code",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "parentId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "departmentId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "decription",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5296,14 +5346,82 @@
               "v": "16",
               "name": "GetAllProfileEducation",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/humanResource/profileEducation/getAll",
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "educationLevelId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "documentId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "collageName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2025-10-18",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2025-10-18",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5507,14 +5625,70 @@
               "v": "16",
               "name": "GetAllProfileJobExperience",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/humanResource/profileJobExperience/getAll",
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "jobTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "companyName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2025-10-18",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2025-10-18",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5718,14 +5892,76 @@
               "v": "16",
               "name": "GetAllProfileCertificate",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/humanResource/profileCertificate/getAll",
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "instituteName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "hasCertificate",
+                  "value": "true",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2025-10-18",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2025-10-18",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -5929,14 +6165,70 @@
               "v": "16",
               "name": "GetAllWorkingTimetable",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/humanResource/workingTimeTable/getAll",
+              "params": [
+                {
+                  "key": "contractTypeId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "workingDay",
+                  "value": "enum",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "startTime",
+                  "value": "08:00:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "endTime",
+                  "value": "17:00:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "floatingStartTimefloatingStartTime",
+                  "value": "00:30:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6118,8 +6410,51 @@
               "v": "16",
               "name": "GetAllHoliday",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/humanResource/holiday/getAll",
+              "params": [
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "holidayType",
+                  "value": "enum",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "holidayDate",
+                  "value": "2025-10-18",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -6307,14 +6642,58 @@
               "v": "16",
               "name": "GetAllAttendance",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/humanResource/attendance/getAll",
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "workingDate",
+                  "value": "2025-10-18",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "enteranceType",
+                  "value": "enum",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "enternaceTime",
+                  "value": "08:00:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6474,14 +6853,76 @@
               "v": "16",
               "name": "GetAllWorkMission",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/humanResource/workMission/getAll",
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "missionStartDate",
+                  "value": "2025-10-18",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "missionEndDate",
+                  "value": "2025-10-18",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "missionStartTime",
+                  "value": "08:00:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "missionEndTime",
+                  "value": "17:00:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "missionLocation",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -6640,14 +7081,76 @@
               "v": "16",
               "name": "GetAllLeave",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/humanResource/leave/getAll",
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "leaveType",
+                  "value": "enum",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "leavingStartDate",
+                  "value": "2025-10-18",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "leavingEndDate",
+                  "value": "2025-10-18",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "leavingStartTime",
+                  "value": "08:00:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "leavingEndTime",
+                  "value": "17:00:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
