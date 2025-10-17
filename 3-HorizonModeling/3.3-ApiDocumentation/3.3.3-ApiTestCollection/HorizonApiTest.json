@@ -4121,14 +4121,15 @@
               "v": "16",
               "name": "GetDocumentListOfSpecificRecord",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/documentMangement/document/getDocumentList/[entity]/[recordId]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -4142,8 +4143,45 @@
               "v": "16",
               "name": "GetAllDocument",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/documentMangement/document/getAll",
+              "params": [
+                {
+                  "key": "entity",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "recordId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "documentTypeId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -4309,14 +4347,52 @@
               "v": "16",
               "name": "GetAllWorkflowEligibleFileExtension",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/getAll",
+              "params": [
+                {
+                  "key": "FileExtensionId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "ProjectWorkflowId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "MaxFileSizeForUpload",
+                  "value": "4",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -4520,14 +4596,46 @@
               "v": "16",
               "name": "GetAllWorkflowEligibleDocumentType",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/getAll",
+              "params": [
+                {
+                  "key": "DocumentTypeId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "ProjectWorkflowId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
               },
               "body": {
                 "contentType": null,
@@ -4746,7 +4854,50 @@
               "name": "GetAllDepartment",
               "method": "GET",
               "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "params": [
+                {
+                  "key": "code",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "parentId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "decription",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -6365,8 +6516,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": "application/json",
@@ -6408,8 +6559,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6430,8 +6581,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6452,8 +6603,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6474,8 +6625,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6531,8 +6682,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -6588,8 +6739,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
+                "token": "[token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
