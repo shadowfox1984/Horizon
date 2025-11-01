@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.10.13
+	Last Version : 25.11.2
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -436,7 +436,6 @@ CREATE TABLE HumanResource.ProfileEducation(
 	StartDate date,
 	EndDate date,
 	Description varchar(4000),
-	CertificateFileAddress varchar(4000),
     IsActive boolean NOT NULL DEFAULT true,
     IsDeleted boolean NOT NULL DEFAULT false,
     CreateDate timestamp NOT NULL DEFAULT NOW(),
@@ -471,6 +470,7 @@ CREATE TABLE HumanResource.ProfileCertificate(
 	Title varchar(255) NOT NULL,
 	InstituteName varchar(255) NOT NULL,
 	HasCertificate boolean NOT NULL,
+	DocumentId bigint,
 	StartDate date,
 	EndDate date,
 	Description varchar(4000),
@@ -481,7 +481,8 @@ CREATE TABLE HumanResource.ProfileCertificate(
 	CreatorId bigint NOT NULL,
     ModifyDate timestamp,
 	ModifierId bigint,
-	FOREIGN KEY (ProfileId) REFERENCES UserManagement.Profile(Id)
+	FOREIGN KEY (ProfileId) REFERENCES UserManagement.Profile(Id),
+	FOREIGN KEY (DocumentId) REFERENCES DocumentManagement.Document(Id)
 );
 
 
