@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.11.2
+	Last Version : 25.11.3
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -24,7 +24,7 @@ CREATE TYPE enteranceType AS ENUM ('Enter', 'Exit');
 CREATE TYPE leaveType AS ENUM ('FullDay', 'PartOfDay');
 CREATE TYPE calculationType AS ENUM ('Percentage', 'FixedAmount');
 CREATE TYPE statusLevel AS ENUM ('To Do', 'In Progress', 'Done');
-CREATE TYPE holidayType AS ENUM ('National', 'Government or Federal', 'Provincial or State', 'Organizational');
+CREATE TYPE holidayType AS ENUM ('National', 'GovernmentOrFederal', 'ProvincialOrState', 'Organizational');
 
 
 

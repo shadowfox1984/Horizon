@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Human Resource Schema Diagram \n Version 25.11.2
+title Horizon Research Project (HRP) \n Human Resource Schema Diagram \n Version 25.11.3
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -192,7 +192,7 @@ entity "HumanResource.Holidaies" as holidaies #Lavender{
   --
   *Title : varchar(255)
   *HolidayDate : date <<unique>> 
-  *HolidayType : enum <<National, Government or Federal, Provincial or State, Organizational>>
+  *HolidayType : enum <<National, GovernmentOrFederal, ProvincialOrState, Organizational>>
   Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>

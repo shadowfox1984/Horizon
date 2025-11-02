@@ -6290,7 +6290,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"title\" : \"test\",\n  \"holidayType\" : \"'National|Government or Federal|Provincial or State|Organizational\",\n  \"holidayDate\" : \"2025-10-08\",\n  \"description\" : \"test\"\n}"
+                "body": "{\n  \"title\" : \"test\",\n  \"holidayType\" : \"National|GovernmentOrFederal|ProvincialOrState|Organizational\",\n  \"holidayDate\" : \"2025-10-08\",\n  \"description\" : \"test\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -6311,8 +6311,8 @@
                 "authActive": true
               },
               "body": {
-                "contentType": null,
-                "body": null
+                "contentType": "application/json",
+                "body": "{\n  \"title\" : \"test\",\n  \"holidayType\" : \"National|GovernmentOrFederal|ProvincialOrState|Organizational\",\n  \"holidayDate\" : \"2025-10-08\",\n  \"description\" : \"test\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -6962,7 +6962,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"profileId\" : 123,\n  \"leaveType\" : \"FullDay|PartOfDay\",\n  \"leavingStartDate\" : \"2025-10-13\",\n  \"leavingEndDate\"  : \"2025-10-13\",\n  \"leavingStartTime\" : \"08:00:00\",\n  \"leavingEndTime\" : \"17:00:00\",\n  \"description\" : \"test\",\n}\n\n"
+                "body": "{\n  \"profileId\" : 123,\n  \"leaveType\" : \"FullDay|PartOfDay\",\n  \"leavingStartDate\" : \"2025-10-13\",\n  \"leavingEndDate\"  : \"2025-10-13\",\n  \"leavingStartTime\" : \"08:00:00\",\n  \"leavingEndTime\" : \"17:00:00\",\n  \"description\" : \"test\",\n}"
               },
               "requestVariables": [],
               "responses": {},
