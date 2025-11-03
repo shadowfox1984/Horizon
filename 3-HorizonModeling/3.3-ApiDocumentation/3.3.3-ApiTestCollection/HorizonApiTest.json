@@ -7176,10 +7176,29 @@
           "requests": [
             {
               "v": "16",
-              "name": "GetStaffTimesheet",
+              "name": "GetStaffTimeSheet",
               "method": "GET",
-              "endpoint": "https://[MainDomian]/api/humanResource/timesheet/getStaffTimesheet/[staffId]",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/humanResource/timesheet/getStaffTimeSheet",
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "123",
+                  "active": true,
+                  "description": "mandatory"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2025-07-01",
+                  "active": true,
+                  "description": "mandatory"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2025-07-31",
+                  "active": true,
+                  "description": "mandatory"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -7200,8 +7219,27 @@
               "v": "16",
               "name": "GetStaffTimesheetPerformance",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/humanResource/timesheet/getStaffTimeSheetPerformance",
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "123",
+                  "active": true,
+                  "description": "mandatory"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2025-07-01",
+                  "active": true,
+                  "description": "mandatory"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2025-07-31",
+                  "active": true,
+                  "description": "mandatory"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
