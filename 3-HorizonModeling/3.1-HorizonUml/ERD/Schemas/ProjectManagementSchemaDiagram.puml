@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Project Management Schema Diagram \n Version 25.7.10
+title Horizon Research Project (HRP) \n Project Management Schema Diagram \n Version 25.11.8
 
 entity "Basic.Priority" as priority #LightPink{
   *Id : bigint(19) <<serial>>
@@ -46,7 +46,7 @@ entity "Basic.Status" as status #LightPink{
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
   *Color : varchar(7)
-  *StatusEffect : enum <<To Do, In Progress, Done>>
+  *StatusEffect : enum <<ToDo, InProgress, Done>>
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
   *CreateDate : timestamp <<default: now()>>
@@ -341,7 +341,8 @@ entity "ProjectManagement.Issue" as issue #Orange{
   DueDate : date
   PriorityId : bigint(19) <<FK>>
   *IssueTypeId : bigint(19) <<FK>>
-  *CuurentStatusId : bigint(19) <<FK>>
+  IssueSize : enum <<XS, S, M , L , XL>>
+  *CurrentStatusId : bigint(19) <<FK>>
   *CurrentResolvationId : bigint(19) <<FK>>
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>

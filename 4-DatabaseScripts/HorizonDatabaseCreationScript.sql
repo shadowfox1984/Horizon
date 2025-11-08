@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.11.3
+	Last Version : 25.11.8
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -21,6 +21,7 @@ CREATE SCHEMA QualityControl;
 CREATE TYPE gender AS ENUM ('Male', 'Female');
 CREATE TYPE weekday AS ENUM ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
 CREATE TYPE enteranceType AS ENUM ('Enter', 'Exit');
+CREATE TYPE issueSize AS ENUM ('XS', 'S', 'M', 'L', 'XL');
 CREATE TYPE leaveType AS ENUM ('FullDay', 'PartOfDay');
 CREATE TYPE calculationType AS ENUM ('Percentage', 'FixedAmount');
 CREATE TYPE statusLevel AS ENUM ('To Do', 'In Progress', 'Done');
@@ -729,9 +730,11 @@ CREATE TABLE ProjectManagement.Issue(
 	Code varchar(20) NOT NULL UNIQUE,
     Title varchar(200) NOT NULL,
 	Description varchar(4000),
+	IssueSize issueSize,
 	PriorityId bigint,
+	DueDate date,
 	IssueTypeId bigint NOT NULL,
-	CuurentStatusId bigint NOT NULL,
+	CurrentStatusId bigint NOT NULL,
 	CurrentResolvationId bigint NOT NULL,
     IsActive boolean NOT NULL DEFAULT true,
     IsDeleted boolean NOT NULL DEFAULT false,
