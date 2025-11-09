@@ -1,0 +1,188 @@
+@startuml
+hide circle
+skinparam classBackgroundColor #Business
+skinparam linetype ortho
+skinparam Shadowing True
+skinparam TitleFontSize 72pt
+
+title Horizon Research Project (HRP) \n Basic Schema Diagram \n Version 25.11.10
+
+entity "Basic.ContractType" as contractType #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  Description : varchar(4000)
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.EducationLevel" as educationLevel #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  Description : varchar(4000)
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.DocumentType" as documentType #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  Description : varchar(4000)
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.FileExtension" as fileExtension #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  Description : varchar(4000)
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.Priority" as priority #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  *Ordering : integer
+  *Color : varchar(7)
+  Description : varchar(4000)
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.IssueType" as issueType #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  *IconAddress : varchar(1000)
+  *Color : varchar(7)
+  Description : varchar(4000)
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.Status" as status #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  Description : varchar(4000)
+  *Color : varchar(7)
+  *StatusEffect : enum <<ToDo, InProgress, Done>>
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.Resolvation" as resolvation #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  Description : varchar(4000)
+  *Color : varchar(7)
+  *IsResolved : boolean
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.MeetingType" as meetingType #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  Description : varchar(4000)
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.TimeUnit" as timeUnit #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  BasedOnMillisecond : bigint(19)
+  Description : varchar(4000)
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.TestApproval" as testApproval #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  *IsApproved : boolean
+  *Color : varchar(10)
+  Description : varchar(4000)
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.TestComplexityLevel" as testComplexityLevel #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  *ValueNumber : float
+  Description : varchar(4000)
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}

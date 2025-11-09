@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Project Management Schema Diagram \n Version 25.11.8
+title Horizon Research Project (HRP) \n Project Management Schema Diagram \n Version 25.11.10
 
 entity "Basic.Priority" as priority #LightPink{
   *Id : bigint(19) <<serial>>
@@ -342,6 +342,10 @@ entity "ProjectManagement.Issue" as issue #Orange{
   PriorityId : bigint(19) <<FK>>
   *IssueTypeId : bigint(19) <<FK>>
   IssueSize : enum <<XS, S, M , L , XL>>
+  ParentIssueId : bigint(19) <<FK>>
+	EpicLinkedId : bigint(19) <<FK>>
+	LinkedIssueId : bigint(19) <<FK>>
+	LinkedIssueType : enum <<Blocks, RelatesTo, Duplicates, Clones>>
   *CurrentStatusId : bigint(19) <<FK>>
   *CurrentResolvationId : bigint(19) <<FK>>
   *IsActive : boolean <<default: true>>
@@ -514,6 +518,9 @@ project ||..o{ issue
 issueType ||..o{ issue
 priority ||..o{ issue
 profile ||..o{ issue
+issue ||..o{ issue
+issue ||..o{ issue
+issue ||..o{ issue
 projectWorkflowStatus ||..o{ issue
 projectWorkflowResolvation ||..o{ issue
 project ||..o{ projectWorkflow

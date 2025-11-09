@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.11.8
+	Last Version : 25.11.10
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -26,6 +26,7 @@ CREATE TYPE leaveType AS ENUM ('FullDay', 'PartOfDay');
 CREATE TYPE calculationType AS ENUM ('Percentage', 'FixedAmount');
 CREATE TYPE statusLevel AS ENUM ('To Do', 'In Progress', 'Done');
 CREATE TYPE holidayType AS ENUM ('National', 'GovernmentOrFederal', 'ProvincialOrState', 'Organizational');
+CREATE TYPE linkedIssueType AS ENUM ('Blocks', 'RelatesTo', 'Duplicates', 'Clones');
 
 
 
@@ -734,6 +735,10 @@ CREATE TABLE ProjectManagement.Issue(
 	PriorityId bigint,
 	DueDate date,
 	IssueTypeId bigint NOT NULL,
+	ParentIssueId bigint,
+	EpicLinkedId bigint,
+	LinkedIssueId bigint,
+	LinkedIssueType linkedIssueType,
 	CurrentStatusId bigint NOT NULL,
 	CurrentResolvationId bigint NOT NULL,
     IsActive boolean NOT NULL DEFAULT true,
@@ -747,6 +752,7 @@ CREATE TABLE ProjectManagement.Issue(
 	FOREIGN KEY (IssueTypeId) REFERENCES Basic.IssueType(Id),
 	FOREIGN KEY (CuurentStatusId) REFERENCES ProjectManagement.ProjectWorkflowStatus(Id),
 	FOREIGN KEY (CurrentResolvationId) REFERENCES ProjectManagement.ProjectWorkflowResolvation(Id)
+	FOREIGN KEY (IssueTypeId) REFERENCES ProjectManagement.Issue(Id)
 );
 
 CREATE TABLE ProjectManagement.IssueComment(
