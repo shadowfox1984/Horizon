@@ -752,7 +752,9 @@ CREATE TABLE ProjectManagement.Issue(
 	FOREIGN KEY (IssueTypeId) REFERENCES Basic.IssueType(Id),
 	FOREIGN KEY (CuurentStatusId) REFERENCES ProjectManagement.ProjectWorkflowStatus(Id),
 	FOREIGN KEY (CurrentResolvationId) REFERENCES ProjectManagement.ProjectWorkflowResolvation(Id)
-	FOREIGN KEY (IssueTypeId) REFERENCES ProjectManagement.Issue(Id)
+	FOREIGN KEY (LinkedIssueId) REFERENCES ProjectManagement.Issue(Id)
+	FOREIGN KEY (EpicLinkedId) REFERENCES ProjectManagement.Issue(Id)
+	FOREIGN KEY (ParentIssueId) REFERENCES ProjectManagement.Issue(Id)
 );
 
 CREATE TABLE ProjectManagement.IssueComment(
