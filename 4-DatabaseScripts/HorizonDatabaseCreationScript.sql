@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.11.10
+	Last Version : 25.11.29
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -992,12 +992,14 @@ CREATE TABLE Finance.ContractDeductionItem(
 CREATE TABLE Finance.Supplier(
     Id serial PRIMARY KEY NOT NULL,
 	Title varchar(255) NOT NULL,
-	Description varchar(4000),
-	Address varchar(4000),
 	PhoneNumber varchar(20),
 	MobileNumber varchar(20),
+	FaxNumber varchar(20),
 	Email varchar(100),
 	PostalCode varchar(20),
+	City varchar(255),
+	Address varchar(4000),
+	Description varchar(4000),
     IsActive boolean NOT NULL DEFAULT true,
     IsDeleted boolean NOT NULL DEFAULT false,
     CreateDate timestamp NOT NULL DEFAULT NOW(),
