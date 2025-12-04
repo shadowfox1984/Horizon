@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.11.30
+	Last Version : 25.12.5
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1008,13 +1008,13 @@ CREATE TABLE Finance.Supplier(
 	ModifierId bigint
 );
 
-CREATE TABLE Finance.CostReceipt(
+CREATE TABLE Finance.CostInvoice(
     Id serial PRIMARY KEY NOT NULL,
-	ReceiptNumber varchar(20) NOT NULL,
+	InvoiceNumber varchar(20) NOT NULL,
 	SupplierId bigint NOT NULL,
 	DocumentId bigint NOT NULL,
 	CompnayId bigint NOT NULL,
-	ReceiptDate date NOT NULL,
+	InvoiceDate date NOT NULL,
 	TotalAmount numeric(22, 2) NOT NULL,
 	CurrencyId bigint NOT NULL,
 	Description varchar(4000),
@@ -1030,9 +1030,9 @@ CREATE TABLE Finance.CostReceipt(
 	FOREIGN KEY (CompnayId) REFERENCES HumanResource.Compnay(Id)
 );
 
-CREATE TABLE Finance.CostReceiptItem(
+CREATE TABLE Finance.CostInvoiceItem(
     Id serial PRIMARY KEY NOT NULL,
-	CostReceiptId bigint NOT NULL,
+	CostInvoiceId bigint NOT NULL,
 	ItemTitle varchar(255) NOT NULL,
 	UnitAmount numeric(22, 2) NOT NULL,
 	CurrencyId bigint NOT NULL,
@@ -1044,14 +1044,14 @@ CREATE TABLE Finance.CostReceiptItem(
 	CreatorId bigint NOT NULL,
     ModifyDate timestamp,
 	ModifierId bigint,
-	FOREIGN KEY (CostReceiptId) REFERENCES Finance.CostReceipt(Id),
+	FOREIGN KEY (CostInvoiceId) REFERENCES Finance.CostInvoice(Id),
 	FOREIGN KEY (CurrencyId) REFERENCES Basic.Currency(Id)
 );
 
 CREATE TABLE Finance.ProjectDirectCostItem(
     Id serial PRIMARY KEY NOT NULL,
 	ProjectId bigint NOT NULL,
-	CostReceiptItemId bigint NOT NULL,
+	CostInvoiceItemId bigint NOT NULL,
 	Description varchar(4000),
     IsActive boolean NOT NULL DEFAULT true,
     IsDeleted boolean NOT NULL DEFAULT false,
@@ -1060,13 +1060,13 @@ CREATE TABLE Finance.ProjectDirectCostItem(
     ModifyDate timestamp,
 	ModifierId bigint,
 	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id),
-	FOREIGN KEY (CostReceiptItemId) REFERENCES Finance.CostReceiptItem(Id)
+	FOREIGN KEY (CostInvoiceItemId) REFERENCES Finance.CostInvoiceItem(Id)
 );
 
 CREATE TABLE Finance.CostPaymentReceipt(
     Id serial PRIMARY KEY NOT NULL,
 	ReceiptNumber varchar(20) NOT NULL,
-	CostReceiptId bigint NOT NULL,
+	CostInvoiceId bigint NOT NULL,
 	DocumentId bigint NOT NULL,
 	PaymentDate date NOT NULL,
 	Amount numeric(22, 2) NOT NULL,
@@ -1078,7 +1078,7 @@ CREATE TABLE Finance.CostPaymentReceipt(
 	CreatorId bigint NOT NULL,
     ModifyDate timestamp,
 	ModifierId bigint,
-	FOREIGN KEY (CostReceiptId) REFERENCES Finance.CostReceipt(Id),
+	FOREIGN KEY (CostInvoiceId) REFERENCES Finance.CostInvoice(Id),
 	FOREIGN KEY (CurrencyId) REFERENCES Basic.Currency(Id),
 	FOREIGN KEY (DocumentId) REFERENCES DocumentManagement.Document(Id)
 );

@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 25.11.29
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 25.12.5
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -953,12 +953,12 @@ entity "Finance.Supplier" as supplier #Salmon{
   ModifierId : bigint(19)
 }
 
-entity "Finance.CostReceipt" as costReceipt #Salmon{
+entity "Finance.CostInvoice" as costInvoice #Salmon{
   *Id : bigint(19) <<serial>>
   --
   *SupplierId : bigint(19) <<FK>>
   *DocumentId : bigint(19) <<FK>>
-  *ReceiptDate : date
+  *InvoiceDate : date
   *TotalAmount : numeric(22,2)
   *CurrencyId : bigint(19) <<FK>>
   Description : varchar(4000)
@@ -970,10 +970,10 @@ entity "Finance.CostReceipt" as costReceipt #Salmon{
   ModifierId : bigint(19)
 }
 
-entity "Finance.CostReceiptItem" as costReceiptItem #Salmon{
+entity "Finance.CostInvoiceItem" as costInvoiceItem #Salmon{
   *Id : bigint(19) <<serial>>
   --
-  *CostReceiptId : bigint(19) <<FK>>
+  *CostInvoiceId : bigint(19) <<FK>>
   *ItemTitle : varchar(255)
   *UnitAmount : numeric(22,2)
   *CurrencyId : bigint(19) <<FK>>
@@ -991,7 +991,7 @@ entity "Finance.ProjectDirectCostItem" as projectDirectCostItem #Salmon{
   *Id : bigint(19) <<serial>>
   --
   *ProjectId : bigint(19) <<FK>>
-  *CostReceiptItemId : bigint(19) <<FK>>
+  *CostInvoiceItemId : bigint(19) <<FK>>
   Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
@@ -1004,7 +1004,7 @@ entity "Finance.ProjectDirectCostItem" as projectDirectCostItem #Salmon{
 entity "Finance.CostPaymentReceipt" as costPaymentReceipt #Salmon{
   *Id : bigint(19) <<serial>>
   --
-  *CostReceiptId : bigint(19) <<FK>>
+  *CostInvoiceId : bigint(19) <<FK>>
   *DocumentId : bigint(19) <<FK>>
   *Amount : numeric(22,2)
   *CurrencyId : bigint(19) <<FK>>
@@ -1478,15 +1478,15 @@ profile ||..o{ staffContract
 staffContract ||..o{ contractSalaryItem
 timeUnit ||..o{ contractSalaryItem
 currency ||..o{ contractSalaryItem
-supplier ||..o{ costReceipt
-document ||..o{ costReceipt
-currency ||..o{ costReceipt
-costReceipt ||..o{ costReceiptItem
-currency ||..o{ costReceiptItem
-costReceiptItem ||..o{ projectDirectCostItem
+supplier ||..o{ costInvoice
+document ||..o{ costInvoice
+currency ||..o{ costInvoice
+costInvoice ||..o{ costInvoiceItem
+currency ||..o{ costInvoiceItem
+costInvoiceItem ||..o{ projectDirectCostItem
 project ||..o{ projectDirectCostItem
-costReceiptItem ||..o{ projectDirectCostItem
-costReceipt ||..o{ costPaymentReceipt
+costInvoiceItem ||..o{ projectDirectCostItem
+costInvoice ||..o{ costPaymentReceipt
 document ||..o{ costPaymentReceipt
 currency ||..o{ costPaymentReceipt
 staffContract ||..o{ contractDeductionItem
