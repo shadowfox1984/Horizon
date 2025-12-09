@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.12.5
+	Last Version : 25.12.10
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1052,6 +1052,7 @@ CREATE TABLE Finance.ProjectDirectCostItem(
     Id serial PRIMARY KEY NOT NULL,
 	ProjectId bigint NOT NULL,
 	CostInvoiceItemId bigint NOT NULL,
+	AllocatedQuantity float NOT NULL,
 	Description varchar(4000),
     IsActive boolean NOT NULL DEFAULT true,
     IsDeleted boolean NOT NULL DEFAULT false,
