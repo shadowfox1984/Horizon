@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.12.10
+	Last Version : 25.12.11
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1108,6 +1108,7 @@ CREATE TABLE Finance.SalaryPaymentReceipt(
 CREATE TABLE Finance.StaffAdditionalPaymentReceipt(
     Id serial PRIMARY KEY NOT NULL,
 	ProfileId bigint NOT NULL,
+	Title varchar(255) NOT NULL,
 	DocumentId bigint NOT NULL,
 	PaymentDate date NOT NULL,
 	Amount numeric(22, 2) NOT NULL,

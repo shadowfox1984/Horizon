@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Finance Schema Diagram \n Version 25.12.10
+title Horizon Research Project (HRP) \n Finance Schema Diagram \n Version 25.12.11
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -290,6 +290,7 @@ entity "Finance.StaffAdditionalPaymentReceipt" as staffAdditionalPaymentReceipt 
   *Id : bigint(19) <<serial>>
   --
   *ProfileId : bigint(19) <<FK>>
+  *Title : varchar(255)
   *DocumentId : bigint(19) <<FK>>
   *Amount : numeric(22,2)
   *CurrencyId : bigint(19) <<FK>>
