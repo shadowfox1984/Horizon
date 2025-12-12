@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 25.12.11
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 25.12.13
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -1058,12 +1058,12 @@ entity "Finance.Customer" as customer #Salmon{
   *Id : bigint(19) <<serial>>
   --
   *Title : varchar(255)
-  Description : varchar(4000)
-  Address : varchar(4000)
   PhoneNumber : varchar(20)
   MobileNumber : varchar(20)
   Email : varchar(100)
   PostalCode : varchar(20)
+  Address : varchar(4000)
+  Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
   *CreateDate : timestamp <<default: now()>>
