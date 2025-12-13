@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 25.12.13
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 25.12.14
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -1077,6 +1077,7 @@ entity "Finance.Contract" as contract #Salmon{
   --
   *CustomerId : bigint(19) <<FK>>
   *ProjectId : bigint(19) <<FK>>
+  *ContractNumber : varchar(20)
   StartDate : date
   ScheduledEndDate : date
   RealEndDate : date

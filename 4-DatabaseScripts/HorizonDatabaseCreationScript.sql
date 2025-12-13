@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.12.13
+	Last Version : 25.12.14
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1143,9 +1143,10 @@ CREATE TABLE Finance.Customer(
 );
 
 CREATE TABLE Finance.Contract(
-    Id serial PRIMARY KEY NOT NULL, 
-	CustomerId bigint NOT Null,
-	ProjectId bigint NOT Null,
+    Id serial PRIMARY KEY NOT NULL,
+	CustomerId bigint NOT NULL,
+	ProjectId bigint NOT NULL,
+	ContractNumber varchar(20) NOT NULL,
 	StartDate date,
 	ScheduledEndDate date,
 	RealEndDate date,
