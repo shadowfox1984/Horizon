@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Finance Schema Diagram \n Version 25.12.14
+title Horizon Research Project (HRP) \n Finance Schema Diagram \n Version 25.12.15
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -335,6 +335,7 @@ entity "Finance.Contract" as contract #Salmon{
   IsSupportContract : boolean
   *TotalAmount : numeric(22,2)
   *CurrencyId : bigint(19) <<FK>>
+  DocumentId : bigint(19) <<FK>>
   Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
@@ -414,5 +415,6 @@ document ||..o{ contractPaymentReceipt
 customer ||..o{ contract
 project ||..o{ contract
 currency ||..o{ contract
+document |o..o{ contract
 
 @enduml

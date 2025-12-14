@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 25.12.14
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 25.12.15
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -178,6 +178,21 @@ entity "Basic.TestComplexityLevel" as testComplexityLevel #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   *ValueNumber : float
+  Description : varchar(4000)
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.Currency" as currency #LightPink{
+  *Id : bigint(19) <<serial>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  *Symbol : varchar(20) <<unique>>
   Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
@@ -1085,6 +1100,7 @@ entity "Finance.Contract" as contract #Salmon{
   IsSupportContract : boolean
   *TotalAmount : numeric(22,2)
   *CurrencyId : bigint(19) <<FK>>
+  DocumentId : bigint(19) <<FK>>
   Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
@@ -1509,6 +1525,7 @@ document ||..o{ contractPaymentReceipt
 customer ||..o{ contract
 project ||..o{ contract
 currency ||..o{ contract
+document |o..o{ contract
 
 testComplexityLevel |o..o{ testScenario
 testScenario ||..o{ prerequisiteTestScenario
