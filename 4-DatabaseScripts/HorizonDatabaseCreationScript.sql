@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.12.16
+	Last Version : 25.12.17
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1207,7 +1207,8 @@ CREATE TABLE Finance.ContractPaymentReceipt(
 );
 
 CREATE TABLE QualityControl.TestScenario(
-    Id serial PRIMARY KEY NOT NULL, 
+    Id serial PRIMARY KEY NOT NULL,
+	ProjectId bigint NOT Null,
 	TestComplexityLevelId bigint NOT Null,
 	Title varchar(255) NOT NULL,
 	Code varchar(10) NOT NULL,
@@ -1220,6 +1221,7 @@ CREATE TABLE QualityControl.TestScenario(
 	CreatorId bigint NOT NULL,
     ModifyDate timestamp,
 	ModifierId bigint,
+	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id),
 	FOREIGN KEY (TestComplexityLevelId) REFERENCES Finance.TestComplexityLevel(Id)
 );
 

@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Quality Control Schema Diagram \n Version 25.6.19
+title Horizon Research Project (HRP) \n Quality Control Schema Diagram \n Version 25.12.17
 
 entity "Basic.TestApproval" as testApproval #LightPink{
   *Id : bigint(19) <<serial>>
@@ -30,6 +30,22 @@ entity "Basic.TestComplexityLevel" as testComplexityLevel #LightPink{
   *Code : varchar(20) <<unique>>
   *ValueNumber : float
   Description : varchar(4000)
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "ProjectManagement.Project" as project #Orange{
+  *Id : bigint(19) <<serial>>
+  --
+  *Code : varchar(20) <<unique>>
+  *Title : varchar(200)
+  Description : varchar(4000)
+  StartDate : date
+  EndDate : date
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
   *CreateDate : timestamp <<default: now()>>
@@ -77,6 +93,7 @@ entity "ProjectManagement.Issue" as issue #Orange{
 entity "QualityControl.TestScenario" as testScenario #Silver{
   *Id : bigint(19) <<serial>>
   --
+  *ProjectId : bigint(19) <<FK>>
   *Code : varchar(20) <<unique>>
   *Title : varchar(255)
   TestComplexityLevelId : bigint(19) <<FK>>
@@ -175,6 +192,8 @@ entity "QualityControl.TestResultDetail" as testResultDetail #Silver{
   ModifierId : bigint(19)
 }
 
+project ||..o{ release
+project ||..o{ testScenario
 testComplexityLevel |o..o{ testScenario
 testScenario ||..o{ prerequisiteTestScenario
 testScenario ||..o{ prerequisiteTestScenario

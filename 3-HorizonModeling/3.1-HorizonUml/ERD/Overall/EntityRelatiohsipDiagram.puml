@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 25.12.16
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 25.12.17
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -1151,6 +1151,7 @@ entity "Finance.ContractPaymentReceipt" as contractPaymentReceipt #Salmon{
 entity "QualityControl.TestScenario" as testScenario #Silver{
   *Id : bigint(19) <<serial>>
   --
+  *ProjectId : bigint(19) <<FK>>
   *Code : varchar(20) <<unique>>
   *Title : varchar(255)
   TestComplexityLevelId : bigint(19) <<FK>>
@@ -1530,6 +1531,7 @@ project ||..o{ contract
 currency ||..o{ contract
 document |o..o{ contract
 
+project ||..o{ testScenario
 testComplexityLevel |o..o{ testScenario
 testScenario ||..o{ prerequisiteTestScenario
 testScenario ||..o{ prerequisiteTestScenario
