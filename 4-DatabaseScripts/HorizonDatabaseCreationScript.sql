@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.12.17
+	Last Version : 25.12.21
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -27,6 +27,8 @@ CREATE TYPE calculationType AS ENUM ('Percentage', 'FixedAmount');
 CREATE TYPE statusLevel AS ENUM ('To Do', 'In Progress', 'Done');
 CREATE TYPE holidayType AS ENUM ('National', 'GovernmentOrFederal', 'ProvincialOrState', 'Organizational');
 CREATE TYPE linkedIssueType AS ENUM ('Blocks', 'RelatesTo', 'Duplicates', 'Clones');
+CREATE TYPE questionnaireAduience AS ENUM ('Staff', 'Customer');
+CREATE TYPE answerType AS ENUM ('SignleChoice', 'MultiChoice', 'Description');
 
 
 
@@ -1315,10 +1317,41 @@ CREATE TABLE QualityControl.TestResultDetail(
 	FOREIGN KEY (TestApprovalId) REFERENCES Basic.TestApproval(Id)
 );
 
+CREATE TABLE Evaluation.Question(
+    Id serial PRIMARY KEY NOT NULL,
+	Score int NOT NULL,
+	Question varchar(4000) NOT NULL,
+	AnswerType answerType NOT NULL,
+    IsActive boolean NOT NULL DEFAULT true,
+    IsDeleted boolean NOT NULL DEFAULT false,
+    CreateDate timestamp NOT NULL DEFAULT NOW(),
+	CreatorId bigint NOT NULL,
+    ModifyDate timestamp,
+	ModifierId bigint
+);
+
+CREATE TABLE Evaluation.QuestionOption(
+    Id serial PRIMARY KEY NOT NULL, 
+	QuestionId bigint NOT Null,
+	Score int NOT NULL,
+	Title varchar(4000) NOT NULL,
+	IsDescriptionRequired boolean NOT NULL
+	IsSingleChoice boolean NOT NULL,
+	IsMultiChoice boolean NOT NULL,
+    IsActive boolean NOT NULL DEFAULT true,
+    IsDeleted boolean NOT NULL DEFAULT false,
+    CreateDate timestamp NOT NULL DEFAULT NOW(),
+	CreatorId bigint NOT NULL,
+    ModifyDate timestamp,
+	ModifierId bigint,
+	FOREIGN KEY (QuestionId) REFERENCES Evaluation.Question(Id)
+);
+
 CREATE TABLE Evaluation.Questionnaire(
     Id serial PRIMARY KEY NOT NULL,
 	Title varchar(255) NOT NULL,
 	TotalScore int NOT NULL,
+	QuestionnaireAduience questionnaireAduience NOT NULL,
 	AcceptableScore int NOT NULL,
 	WarningScore int NOT NULL,
 	DisasterScore int NOT NULL,
@@ -1345,44 +1378,25 @@ CREATE TABLE Evaluation.QuestionnaireTargetDepartment(
 	FOREIGN KEY (DepartmentId) REFERENCES HumanResource.Department(Id)
 );
 
-CREATE TABLE Evaluation.Question(
+CREATE TABLE Evaluation.QuestionList(
     Id serial PRIMARY KEY NOT NULL, 
 	QuestionnaireId bigint NOT Null,
-	Score int NOT NULL,
-	Question varchar(4000) NOT NULL,
-	IsDescriptive boolean NOT NULL,
-	IsSingleChoice boolean NOT NULL,
-	IsMultiChoice boolean NOT NULL,
-    IsActive boolean NOT NULL DEFAULT true,
-    IsDeleted boolean NOT NULL DEFAULT false,
-    CreateDate timestamp NOT NULL DEFAULT NOW(),
-	CreatorId bigint NOT NULL,
-    ModifyDate timestamp,
-	ModifierId bigint,
-	FOREIGN KEY (QuestionnaireId) REFERENCES Evaluation.Questionnaire(Id)
-);
-
-CREATE TABLE Evaluation.QuestionOption(
-    Id serial PRIMARY KEY NOT NULL, 
 	QuestionId bigint NOT Null,
-	Score int NOT NULL,
-	Title varchar(4000) NOT NULL,
-	IsDescriptionRequired boolean NOT NULL
-	IsSingleChoice boolean NOT NULL,
-	IsMultiChoice boolean NOT NULL,
     IsActive boolean NOT NULL DEFAULT true,
     IsDeleted boolean NOT NULL DEFAULT false,
     CreateDate timestamp NOT NULL DEFAULT NOW(),
 	CreatorId bigint NOT NULL,
     ModifyDate timestamp,
 	ModifierId bigint,
+	FOREIGN KEY (QuestionnaireId) REFERENCES Evaluation.Questionnaire(Id),
 	FOREIGN KEY (QuestionId) REFERENCES Evaluation.Question(Id)
 );
 
 CREATE TABLE Evaluation.QuestionnaireResult(
     Id serial PRIMARY KEY NOT NULL, 
 	QuestionnaireId bigint NOT Null,
-	ProfileId bigint NOT Null,
+	ProfileId bigint,
+	CustomerId bigint,
 	TotalScore int NOT NULL,
     IsActive boolean NOT NULL DEFAULT true,
     IsDeleted boolean NOT NULL DEFAULT false,
@@ -1391,7 +1405,8 @@ CREATE TABLE Evaluation.QuestionnaireResult(
     ModifyDate timestamp,
 	ModifierId bigint,
 	FOREIGN KEY (QuestionnaireId) REFERENCES Evaluation.Questionnaire(Id),
-	FOREIGN KEY (ProfileId) REFERENCES UserManagement.Profile(Id)
+	FOREIGN KEY (ProfileId) REFERENCES UserManagement.Profile(Id),
+	FOREIGN KEY (CustomerId) REFERENCES Finance.Customer(Id)
 );
 
 CREATE TABLE Evaluation.QuestionnaireResultDetail(
@@ -1412,8 +1427,9 @@ CREATE TABLE Evaluation.QuestionnaireResultDetail(
 
 CREATE TABLE Evaluation.QuestionnaireChoosedOptionResultDetail(
     Id serial PRIMARY KEY NOT NULL, 
-	QuestionnaireResultDetailId bigint NOT NULL
+	QuestionnaireResultDetailId bigint NOT NULL,
 	Score int,
+	QuestionOptionId bigint,
 	Description varchar(4000),
     IsActive boolean NOT NULL DEFAULT true,
     IsDeleted boolean NOT NULL DEFAULT false,

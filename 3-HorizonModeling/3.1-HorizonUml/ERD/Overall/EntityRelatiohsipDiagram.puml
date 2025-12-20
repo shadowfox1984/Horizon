@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 25.12.17
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 25.12.21
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -1250,10 +1250,41 @@ entity "QualityControl.TestResultDetail" as testResultDetail #Silver{
   ModifierId : bigint(19)
 }
 
+entity "Evaluation.Question" as question #SkyBlue{
+  *Id : bigint(19) <<serial>>
+  --
+  *QuestionnaireId : bigint(19) <<FK>>
+  *Question : varchar(4000)
+  *AnswerType : enum <<SingleChoice, MultiChoice, Description>>
+  *Score : integer
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Evaluation.QuestionOption" as questionOption #SkyBlue{
+  *Id : bigint(19) <<serial>>
+  --
+  *QuestionId : bigint(19) <<FK>>
+  *Title : varchar(4000)
+  *Score : integer
+  *IsDescriptionRequired : boolean
+  *IsActive : boolean <<default: true>>
+  *IsDeleted : boolean <<default: false>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
 entity "Evaluation.Questionnaire" as questionnaire #SkyBlue{
   *Id : bigint(19) <<serial>>
   --
   *Title : varchar(200)
+  *QuestionnaireAduience : enum <<Staff, Customer>>
   *TotalScore : integer
   *AcceptableScore : integer
   *WarningScore : integer
@@ -1280,30 +1311,11 @@ entity "Evaluation.QuestionnaireTargetDepartment" as questionnaireTargetDepartme
   ModifierId : bigint(19)
 }
 
-entity "Evaluation.Question" as question #SkyBlue{
+entity "Evaluation.QuestionList" as questionList #SkyBlue{
   *Id : bigint(19) <<serial>>
   --
   *QuestionnaireId : bigint(19) <<FK>>
-  *Question : varchar(4000)
-  *Score : integer
-  *ّIsDescriptive : boolean
-  *IsSingleChoice : boolean
-  *IsMultiChoice : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
-entity "Evaluation.QuestionOption" as questionOption #SkyBlue{
-  *Id : bigint(19) <<serial>>
-  --
   *QuestionId : bigint(19) <<FK>>
-  *Title : varchar(4000)
-  *Score : integer
-  *IsDescriptionRequired : boolean
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
   *CreateDate : timestamp <<default: now()>>
@@ -1316,7 +1328,8 @@ entity "Evaluation.QuestionnaireResult" as questionnaireResult #SkyBlue{
   *Id : bigint(19) <<serial>>
   --
   *QuestionnaireId : bigint(19) <<FK>>
-  *ProfileId : bigint(19) <<FK>>
+  ProfileId : bigint(19) <<FK>>
+  CustomerId : bigint(19) <<FK>>
   *TotalScore : integer
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
@@ -1547,10 +1560,12 @@ testApproval ||..o{ testResultDetail
 
 questionnaire ||..o{ questionnaireTargetDepartment
 department ||..o{ questionnaireTargetDepartment
-questionnaire ||..o{ question
+question ||..o{ questionList
+questionnaire ||..o{ questionList
 question ||..o{ questionOption
 questionnaire ||..o{ questionnaireResult
-profile ||..o{ questionnaireResult
+profile |o..o{ questionnaireResult
+customer |o..o{ questionnaireResult
 questionnaireResult ||..o{ questionnaireResultDetail
 question ||..o{ questionnaireResultDetail
 questionnaireResultDetail ||..o{ questionnairChoosedOptionResultDetail
