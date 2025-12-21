@@ -5,11 +5,20 @@
 </div>
 
 ## What is Horizon System?
-**Horizon** is an **Enterprise Project Management (EPM) platform** designed to ensure that organizations remain on a **sustainable development** path, not just in terms of delivery speed or cost control, but across people, performance, and long-term organizational health.
+**Horizon** helps project managers and PMOs detect early signs of employee dissatisfaction before they turn into quality issues, delivery risks, and unhappy customers.
 
-It combines project management, financial tracking, team performance evaluation, and employee satisfaction analysis into a single, integrated system. Horizon connects to existing tools such as GitHub, Jira, Trello, and spreadsheets to automatically collect project and team data and turn them into clear, actionable recommendations.
+Many organizations appear healthy on paper: timelines are met, costs are controlled, and performance metrics look green. Yet beneath these indicators, dissatisfaction and burnout quietly accumulate, eventually undermining quality and long-term stability.
 
-In short, Horizon helps organizations deliver projects efficiently while continuously validating that their practices support sustainable growth, fair treatment of employees, and long-term organizational stability.
+Horizon is an **Enterprise Project Management (EPM) platform** designed to make these hidden risks visible. It **supports sustainable** development not only in terms of delivery speed or cost, but across people, performance, and organizational resilience.
+
+By integrating project management, financial tracking, team performance evaluation, and employee satisfaction analysis into a single system, Horizon helps decision-makers understand the real impact of their practices. It connects to existing tools such as GitHub, Jira, Trello, and spreadsheets to automatically collect data and turn them into clear, actionable insights.
+
+In short, Horizon enables organizations to deliver projects efficiently while continuously validating that their methods support sustainable growth, fair treatment of employees, and long-term organizational stability.
+
+## A Real-World Scenario
+A project portfolio shows strong delivery performance: milestones are met, costs are within budget, and velocity metrics look healthy. However, team turnover increases, code quality slowly degrades, and recurring issues appear across releases.
+
+Horizon correlates delivery, financial, and team-level signals to highlight early patterns of dissatisfaction that are invisible in traditional reports. This allows PMOs to identify structural risks early and adjust practices before quality declines and customer satisfaction is affected.
 
 ## How Does Horizon System Work?
 Horizon combines quantitative and qualitative analysis to generate meaningful insights for both managers and teams:
