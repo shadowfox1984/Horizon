@@ -9,7 +9,7 @@
 
 Many organizations appear healthy on paper: timelines are met, costs are controlled, and performance metrics look green. Yet beneath these indicators, dissatisfaction and burnout quietly accumulate, eventually undermining quality and long-term stability.
 
-Horizon is an **Enterprise Project Management (EPM) platform** designed to make these hidden risks visible. It **supports sustainable** development not only in terms of delivery speed or cost, but across people, performance, and organizational resilience.
+Horizon is an **Enterprise Project Management (EPM) platform** designed to make these hidden risks visible. It supports **sustainable development** not only in terms of delivery speed or cost, but across people, performance, and organizational resilience.
 
 By integrating project management, financial tracking, team performance evaluation, and employee satisfaction analysis into a single system, Horizon helps decision-makers understand the real impact of their practices. It connects to existing tools such as GitHub, Jira, Trello, and spreadsheets to automatically collect data and turn them into clear, actionable insights.
 
