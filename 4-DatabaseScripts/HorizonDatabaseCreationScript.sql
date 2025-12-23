@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.12.21
+	Last Version : 25.12.23
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1335,9 +1335,7 @@ CREATE TABLE Evaluation.QuestionOption(
 	QuestionId bigint NOT Null,
 	Score int NOT NULL,
 	Title varchar(4000) NOT NULL,
-	IsDescriptionRequired boolean NOT NULL
-	IsSingleChoice boolean NOT NULL,
-	IsMultiChoice boolean NOT NULL,
+	IsDescriptionRequired boolean NOT NULL,
     IsActive boolean NOT NULL DEFAULT true,
     IsDeleted boolean NOT NULL DEFAULT false,
     CreateDate timestamp NOT NULL DEFAULT NOW(),
