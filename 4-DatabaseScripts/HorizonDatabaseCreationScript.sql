@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 25.12.23
+	Last Version : 26.2.4
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -27,7 +27,7 @@ CREATE TYPE calculationType AS ENUM ('Percentage', 'FixedAmount');
 CREATE TYPE statusLevel AS ENUM ('To Do', 'In Progress', 'Done');
 CREATE TYPE holidayType AS ENUM ('National', 'GovernmentOrFederal', 'ProvincialOrState', 'Organizational');
 CREATE TYPE linkedIssueType AS ENUM ('Blocks', 'RelatesTo', 'Duplicates', 'Clones');
-CREATE TYPE questionnaireAduience AS ENUM ('Staff', 'Customer');
+CREATE TYPE questionnaireAduience AS ENUM ('Staffs', 'Customers', 'Stackholders', 'SeniorManagers');
 CREATE TYPE answerType AS ENUM ('SignleChoice', 'MultiChoice', 'Description');
 
 
@@ -1245,7 +1245,7 @@ CREATE TABLE QualityControl.TestPlan(
     Id serial PRIMARY KEY NOT NULL, 
 	ProjectReleaseId bigint,
 	Title varchar(255) NOT NULL,
-	Code varchar(10) NOT NULL,
+	Code varchar(20) NOT NULL,
 	PlanningDate date,
 	Description varchar(4000),
     IsActive boolean NOT NULL DEFAULT true,
@@ -1320,6 +1320,7 @@ CREATE TABLE QualityControl.TestResultDetail(
 CREATE TABLE Evaluation.Question(
     Id serial PRIMARY KEY NOT NULL,
 	Score int NOT NULL,
+	Code varchar(20) NOT NULL,
 	Question varchar(4000) NOT NULL,
 	AnswerType answerType NOT NULL,
     IsActive boolean NOT NULL DEFAULT true,
@@ -1348,11 +1349,12 @@ CREATE TABLE Evaluation.QuestionOption(
 CREATE TABLE Evaluation.Questionnaire(
     Id serial PRIMARY KEY NOT NULL,
 	Title varchar(255) NOT NULL,
-	TotalScore int NOT NULL,
+	Code varchar(20) NOT NULL,
 	QuestionnaireAduience questionnaireAduience NOT NULL,
-	AcceptableScore int NOT NULL,
-	WarningScore int NOT NULL,
-	DisasterScore int NOT NULL,
+	TotalScore numeric(22,2) NOT NULL,
+	AcceptableScore numeric(22,2) NOT NULL,
+	WarningScore numeric(22,2) NOT NULL,
+	DisasterScore numeric(22,2) NOT NULL,
 	Description varchar(4000),
     IsActive boolean NOT NULL DEFAULT true,
     IsDeleted boolean NOT NULL DEFAULT false,
