@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.2.4
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.2.5
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -1425,23 +1425,8 @@ entity "Evaluation.QuestionnaireResultDetail" as questionnaireResultDetail #SkyB
   *Id : bigint(19) <<serial>>
   --
   *QuestionnaireResultId : bigint(19) <<FK>>
-  *QuestionId : bigint(19) <<FK>>
-  Score : integer
-  Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
-entity "Evaluation.QuestionnaireChoosedOptionResultDetail" as questionnairChoosedOptionResultDetail #SkyBlue{
-  *Id : bigint(19) <<serial>>
-  --
-  *QuestionnaireResultDetailId : bigint(19) <<FK>>
-  *ChoosedOptionId : bigint(19) <<FK>>
-  Score : integer
+  *QuestionListId : bigint(19) <<FK>>
+  ChoosedQuestionOptionId : bigint(19) <<FK>>
   Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
@@ -1649,9 +1634,8 @@ questionnaire ||..o{ questionnaireResult
 profile |o..o{ questionnaireResult
 customer |o..o{ questionnaireResult
 questionnaireResult ||..o{ questionnaireResultDetail
-question ||..o{ questionnaireResultDetail
-questionnaireResultDetail ||..o{ questionnairChoosedOptionResultDetail
-questionOption ||..o{ questionnairChoosedOptionResultDetail
+questionList ||..o{ questionnaireResultDetail
+questionOption |o..o{ questionnaireResultDetail
 profile ||..o{ staffSatisfactionEvaluation
 project ||..o{ projectProductivityEvaluation
 customer ||..o{ customerSatisfactionEvaluation

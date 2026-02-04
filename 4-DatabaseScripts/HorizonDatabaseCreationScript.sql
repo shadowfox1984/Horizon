@@ -1411,25 +1411,9 @@ CREATE TABLE Evaluation.QuestionnaireResult(
 
 CREATE TABLE Evaluation.QuestionnaireResultDetail(
     Id serial PRIMARY KEY NOT NULL, 
-	QuestionnaireResultId bigint NOT Null,
-	QuestionId bigint NOT Null,
-	Score int,
-	Description varchar(4000),
-    IsActive boolean NOT NULL DEFAULT true,
-    IsDeleted boolean NOT NULL DEFAULT false,
-    CreateDate timestamp NOT NULL DEFAULT NOW(),
-	CreatorId bigint NOT NULL,
-    ModifyDate timestamp,
-	ModifierId bigint,
-	FOREIGN KEY (QuestionnaireResultId) REFERENCES Evaluation.QuestionnaireResult(Id),
-	FOREIGN KEY (QuestionId) REFERENCES Evaluation.Question(Id)
-);
-
-CREATE TABLE Evaluation.QuestionnaireChoosedOptionResultDetail(
-    Id serial PRIMARY KEY NOT NULL, 
 	QuestionnaireResultDetailId bigint NOT NULL,
-	Score int,
-	QuestionOptionId bigint,
+	QuestionListId bigint NOT NULL,
+	ChoosedQuestionOptionId bigint,
 	Description varchar(4000),
     IsActive boolean NOT NULL DEFAULT true,
     IsDeleted boolean NOT NULL DEFAULT false,
@@ -1438,7 +1422,8 @@ CREATE TABLE Evaluation.QuestionnaireChoosedOptionResultDetail(
     ModifyDate timestamp,
 	ModifierId bigint,
 	FOREIGN KEY (QuestionnaireResultDetailId) REFERENCES Evaluation.QuestionnaireResultDetail(Id),
-	FOREIGN KEY (QuestionOptionId) REFERENCES Evaluation.QuestionOption(Id)
+	FOREIGN KEY (QuestionListId) REFERENCES Evaluation.QuestionList(Id),
+	FOREIGN KEY (ChoosedQuestionOptionId) REFERENCES Evaluation.QuestionOption(Id)
 );
 
 CREATE TABLE Evaluation.StaffSatisfactionEvaluation(
