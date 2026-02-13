@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.2.5
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.2.14
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -1366,6 +1366,7 @@ entity "Evaluation.Questionnaire" as questionnaire #SkyBlue{
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
+  ProjectId : bigint(19) <<FK>>
   *QuestionnaireAduience : enum <<Staffs, Customers, SeniorManagers, Stackholders>>
   *TotalScore : integer
   *AcceptableScore : integer
@@ -1628,6 +1629,7 @@ testApproval ||..o{ testResultDetail
 questionnaire ||..o{ questionnaireTargetDepartment
 department ||..o{ questionnaireTargetDepartment
 question ||..o{ questionList
+project ||..o{ questionnaire
 questionnaire ||..o{ questionList
 question ||..o{ questionOption
 questionnaire ||..o{ questionnaireResult

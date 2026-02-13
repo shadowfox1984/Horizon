@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.2.4
+	Last Version : 26.2.13
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1350,6 +1350,7 @@ CREATE TABLE Evaluation.Questionnaire(
     Id serial PRIMARY KEY NOT NULL,
 	Title varchar(255) NOT NULL,
 	Code varchar(20) NOT NULL,
+	ProjectId bigint,
 	QuestionnaireAduience questionnaireAduience NOT NULL,
 	TotalScore numeric(22,2) NOT NULL,
 	AcceptableScore numeric(22,2) NOT NULL,
@@ -1361,7 +1362,8 @@ CREATE TABLE Evaluation.Questionnaire(
     CreateDate timestamp NOT NULL DEFAULT NOW(),
 	CreatorId bigint NOT NULL,
     ModifyDate timestamp,
-	ModifierId bigint
+	ModifierId bigint,
+	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id)
 );
 
 CREATE TABLE Evaluation.QuestionnaireTargetDepartment(

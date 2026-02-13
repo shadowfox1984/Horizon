@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Evaluation Schema Diagram \n Version 26.2.5
+title Horizon Research Project (HRP) \n Evaluation Schema Diagram \n Version 26.2.14
 
 entity "UserManagement.Profile" as profile #Violet{
   *Id : bigint(19) <<serial>>
@@ -123,6 +123,7 @@ entity "Evaluation.Questionnaire" as questionnaire #SkyBlue{
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
+  ProjectId : bigint(19) <<FK>>
   *QuestionnaireAduience : enum <<Staffs, Customers, SeniorManagers, Stackholders>>
   *TotalScore : integer
   *AcceptableScore : integer
@@ -258,6 +259,7 @@ entity "Evaluation.CustomerSatisfactionEvaluation" as customerSatisfactionEvalua
 questionnaire ||..o{ questionnaireTargetDepartment
 department ||..o{ questionnaireTargetDepartment
 question ||..o{ questionList
+project ||..o{ questionnaire
 questionnaire ||..o{ questionList
 question ||..o{ questionOption
 questionnaire ||..o{ questionnaireResult
