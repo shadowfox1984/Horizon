@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.2.13
+	Last Version : 26.5.12
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -835,7 +835,7 @@ CREATE TABLE ProjectManagement.WorkLog(
 	FOREIGN KEY (IssueId) REFERENCES ProjectManagement.Issue(Id)
 );
 
-CREATE TABLE DocumentManagement.WorkflowEligibleFileExtension(
+CREATE TABLE ProjectManagement.WorkflowAllowdedFileExtension(
     Id serial PRIMARY KEY NOT NULL,
 	FileExtensionId bigint NOT NULL,
 	ProjectWorkflowId bigint NOT NULL,
