@@ -7321,18 +7321,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/project/[id]",
               "name": "DeleteProject",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/project/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7343,18 +7343,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/project/active/[id]",
               "name": "ActiveProject",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/project/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7365,18 +7365,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/project/Inactive/[id]",
               "name": "InactiveProject",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/project/Inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7387,18 +7387,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/project/[id]",
               "name": "GetSpecificProject",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/project/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7423,18 +7423,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/[id]",
               "name": "DeleteProjectProfileMember",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7445,18 +7445,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/active/[id]",
               "name": "ActiveProjectProfileMember",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7467,18 +7467,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/inactive/[id]",
               "name": "InactiveProjectProfileMember",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7489,18 +7489,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/[id]",
               "name": "GetSpecificProjectProfileMember",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7525,18 +7525,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/[id]",
               "name": "DeleteProjectGroupMember",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7547,18 +7547,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/active/[id]",
               "name": "ActiveProjectGroupMember",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7569,18 +7569,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/inactive/[id]",
               "name": "InactiveProjectGroupMember",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7591,18 +7591,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/[id]",
               "name": "GetSpecificProjectGroupMember",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7627,18 +7627,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/[id]",
               "name": "DeleteProjectRoleMember",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7649,18 +7649,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/active/[id]",
               "name": "ActiveProjectRoleMember",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7671,18 +7671,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/[id]",
               "name": "InactiveProjectRoleMember",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7693,18 +7693,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/[id]",
               "name": "GetSpecificProjectRoleMember",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7729,18 +7729,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/[id]",
               "name": "DeleteProjectDepartmentMember",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7751,18 +7751,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/active/[id]",
               "name": "ActiveProjectDepartmentMember",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7773,18 +7773,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/inactive/[id]",
               "name": "InactiveProjectDepartmentMember",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7795,18 +7795,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/[id]",
               "name": "GetSpecificProjectDepartmentMember",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7828,7 +7828,96 @@
           "v": 10,
           "name": "ProjectWorkflow",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/[id]",
+              "name": "DeleteProjectWorkflow",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp331e7w_77482919-604f-46ad-b44b-47d2073461b9"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/active/[id]",
+              "name": "ActiveProjectWorkflow",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp3335x8_7d029a15-22ab-4b36-84de-bb23b743c82d"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/inactive/[id]",
+              "name": "InactiveProjectWorkflow",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp334e5x_bb668db0-b3c7-4edb-8e3a-e79938b6936b"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/[id]",
+              "name": "GetSpecificProjectWorkflow",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp335qj0_53f20575-1fd5-4755-a006-d3a60752ca98"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -7841,7 +7930,96 @@
           "v": 10,
           "name": "ProjectWorkflowStatus",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/[id]",
+              "name": "DeleteProjectWorkflowStatus",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp3389zw_551218d1-65b9-4cde-b61d-de43dcbf4b22"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/active/[id]",
+              "name": "ActiveProjectWorkflowStatus",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp33gzo5_38193953-ef70-44bc-94f2-3b715130eb45"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/inactive/[id]",
+              "name": "InactiveProjectWorkflowStatus",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp33i194_dfbaed2f-a1d1-421c-a6c6-845c013387b5"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/[id]",
+              "name": "GetSpecificProjectWorkflowStatus",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp33jcck_641ff4c6-6470-4cff-a8f0-56bd9381fc79"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -7854,7 +8032,96 @@
           "v": 10,
           "name": "ProjectWorkflowResolvation",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/[id]",
+              "name": "DeleteProjectWorkflowResolvation",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp33lcue_bcbf5e47-f46d-4e8f-8e0d-dfd3a7751f5b"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/active/[id]",
+              "name": "ActiveProjectWorkflowResolvation",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp33ndt8_6763c836-196f-4987-95bc-a55909b8a871"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/inactive/[id]",
+              "name": "InactiveProjectWorkflowResolvation",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp33oxmd_d45c8932-bda1-4b91-b473-226ac4f17a23"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/[id]",
+              "name": "GetSpecificProjectWorkflowResolvation",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp33px4s_c8a4efd6-2847-4fdd-83ab-72aad9dc5e83"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
