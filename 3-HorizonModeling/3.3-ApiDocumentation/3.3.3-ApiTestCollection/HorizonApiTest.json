@@ -4205,498 +4205,6 @@
           "headers": [],
           "variables": [],
           "_ref_id": "coll_mfpnvke1_c1a13683-9eee-46d4-925c-0b8842cfed4b"
-        },
-        {
-          "v": 10,
-          "name": "WorkflowEligibleFileExtension",
-          "folders": [],
-          "requests": [
-            {
-              "v": "16",
-              "name": "AddWorkflowEligibleFileExtension",
-              "method": "POST",
-              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": "application/json",
-                "body": "{\n  \"FileExtensionId\": 123,\n  \"ProjectWorkflowId\": 123,\n  \"MaxFileSizeForUpload\": 4\n}\n"
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr6_30e363cb-3cda-4b81-8682-7e40871e9e9f"
-            },
-            {
-              "v": "16",
-              "name": "UpdateWorkflowEligibleFileExtension",
-              "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": "application/json",
-                "body": "{\n  \"FileExtensionId\": 123,\n  \"ProjectWorkflowId\": 123,\n  \"MaxFileSizeForUpload\": 4\n}"
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr6_ab570139-eecd-475c-b2f7-cd89af325891"
-            },
-            {
-              "v": "16",
-              "name": "DeleteWorkflowEligibleFileExtension",
-              "method": "DELETE",
-              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr6_9f72049b-e560-4ac6-ae68-dc2da8a43cda"
-            },
-            {
-              "v": "16",
-              "name": "ActiveWorkflowEligibleFileExtension",
-              "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/active/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr6_16989ef7-8cdd-4ecb-8dc7-3c21843528f9"
-            },
-            {
-              "v": "16",
-              "name": "InactiveWorkflowEligibleFileExtension",
-              "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/inactive/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr6_a81b5ef7-cf49-45f1-8fc8-32c0bdb0e595"
-            },
-            {
-              "v": "16",
-              "name": "GetSpecificWorkflowEligibleFileExtension",
-              "method": "GET",
-              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr7_259119c9-487d-4fa0-ae0e-401ac9cd9b3c"
-            },
-            {
-              "v": "16",
-              "name": "GetAllWorkflowEligibleFileExtension",
-              "method": "GET",
-              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/getAll",
-              "params": [
-                {
-                  "key": "FileExtensionId",
-                  "value": "123",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "ProjectWorkflowId",
-                  "value": "123",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "MaxFileSizeForUpload",
-                  "value": "4",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "offset",
-                  "value": "0",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "limit",
-                  "value": "15",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "sort_by",
-                  "value": "desc(fieldName)",
-                  "active": true,
-                  "description": "optional"
-                }
-              ],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr7_c2e81d55-bdec-4aeb-a3ae-44f32fde87e1"
-            },
-            {
-              "v": "16",
-              "name": "GetWorkflowEligibleFileExtensionComboList",
-              "method": "GET",
-              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/getComboList",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr7_c575fc23-2983-44fa-8cad-960694998534"
-            },
-            {
-              "v": "16",
-              "name": "GetWorkflowEligibleFileExtensionComboListByWorflowId",
-              "method": "GET",
-              "endpoint": "https://[MainDomian]/api/documentMangement/workflowEligibleFileExtension/getComboListByWorkflowId/[workflowId]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr7_e042ca2c-9f61-4653-9d82-ea897a19545e"
-            }
-          ],
-          "auth": {
-            "authType": "inherit",
-            "authActive": true
-          },
-          "headers": [],
-          "variables": [],
-          "_ref_id": "coll_mfpnvb7l_5e17e599-ac6a-4d06-b6c1-eea221bbaff4"
-        },
-        {
-          "v": 10,
-          "name": "WorkflowEligibleDocumentType",
-          "folders": [],
-          "requests": [
-            {
-              "v": "16",
-              "name": "AddWorkflowEligibleDocumentType",
-              "method": "POST",
-              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": "application/json",
-                "body": "{\n  \"DocumentTypeId\": 123,\n  \"ProjectWorkflowId\": 123 \n}\n"
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr8_9470fdfb-d1e8-44dd-85f7-d179f5f29807"
-            },
-            {
-              "v": "16",
-              "name": "UpdateWorkflowEligibleDocumentType",
-              "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": "application/json",
-                "body": "{\n  \"DocumentTypeId\": 123,\n  \"ProjectWorkflowId\": 123 \n}"
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr8_26d07ec1-60e5-4d45-9d62-e46c500736d6"
-            },
-            {
-              "v": "16",
-              "name": "DeleteWorkflowEligibleDocumentType",
-              "method": "DELETE",
-              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr8_f35cad53-1633-47bd-a56c-5effb085fd76"
-            },
-            {
-              "v": "16",
-              "name": "ActiveWorkflowEligibleDocumentType",
-              "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/active/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr8_51237dd2-d3ec-4bb8-877d-8a5ddff2b199"
-            },
-            {
-              "v": "16",
-              "name": "InactiveWorkflowEligibleDocumentType",
-              "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/inactive/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr8_81596609-587d-410f-9631-ec8ef3a3c74b"
-            },
-            {
-              "v": "16",
-              "name": "GetSpecificWorkflowEligibleDocumentType",
-              "method": "GET",
-              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr8_6ae4b724-28b2-4c6c-86b0-68246eecdbe2"
-            },
-            {
-              "v": "16",
-              "name": "GetAllWorkflowEligibleDocumentType",
-              "method": "GET",
-              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/getAll",
-              "params": [
-                {
-                  "key": "DocumentTypeId",
-                  "value": "123",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "ProjectWorkflowId",
-                  "value": "123",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "offset",
-                  "value": "0",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "limit",
-                  "value": "15",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "sort_by",
-                  "value": "desc(fieldName)",
-                  "active": true,
-                  "description": "optional"
-                }
-              ],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr8_ebd29a53-74e1-41ec-be58-123eba0ab4cd"
-            },
-            {
-              "v": "16",
-              "name": "GetComboListWorkflowEligibleDocumentType",
-              "method": "GET",
-              "endpoint": "https://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/getComboList",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr8_3e20a031-02b5-4dd8-977e-c6fbfe025420"
-            },
-            {
-              "v": "16",
-              "name": "GetComboListWorkflowEligibleDocumentTypeByWorkflowId",
-              "method": "GET",
-              "endpoint": "https://echo.hoppscotch.iohttps://[MainDomian]/api/documentMangement/addWorkflowEligibleDocumentType/getComboListByWorkflowId/[workflowId]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "_ref_id": "req_mgbahyr8_78a8b1c6-e475-41e1-9581-fed65f1aea80"
-            }
-          ],
-          "auth": {
-            "authType": "inherit",
-            "authActive": true
-          },
-          "headers": [],
-          "variables": [],
-          "_ref_id": "coll_mfpnwwv5_de7dd2d5-e240-4682-88ca-5bffa6e29fe3"
         }
       ],
       "requests": [],
@@ -7831,18 +7339,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/[id]",
               "name": "DeleteProjectWorkflow",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7853,18 +7361,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/active/[id]",
               "name": "ActiveProjectWorkflow",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7875,18 +7383,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/inactive/[id]",
               "name": "InactiveProjectWorkflow",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7897,18 +7405,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/[id]",
               "name": "GetSpecificProjectWorkflow",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7928,23 +7436,515 @@
         },
         {
           "v": 10,
+          "name": "WorkflowAllowedFileExtension",
+          "folders": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "AddWorkflowAllowedFileExtension",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectMangement/workflowAllowedFileExtension",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"FileExtensionId\": 123,\n  \"ProjectWorkflowId\": 123,\n  \"MaxFileSizeForUpload\": 4\n}\n"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_30e363cb-3cda-4b81-8682-7e40871e9e9f"
+            },
+            {
+              "v": "16",
+              "name": "UpdateWorkflowAllowedFileExtension",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectMangement/workflowAllowedFileExtension/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"FileExtensionId\": 123,\n  \"ProjectWorkflowId\": 123,\n  \"MaxFileSizeForUpload\": 4\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_ab570139-eecd-475c-b2f7-cd89af325891"
+            },
+            {
+              "v": "16",
+              "name": "DeleteWorkflowAllowedFileExtension",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectMangement/workflowAllowedFileExtension/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_9f72049b-e560-4ac6-ae68-dc2da8a43cda"
+            },
+            {
+              "v": "16",
+              "name": "ActiveWorkflowAllowedFileExtension",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectMangement/workflowAllowedFileExtension/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_16989ef7-8cdd-4ecb-8dc7-3c21843528f9"
+            },
+            {
+              "v": "16",
+              "name": "InactiveWorkflowAllowedFileExtension",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectMangement/workflowAllowedFileExtension/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr6_a81b5ef7-cf49-45f1-8fc8-32c0bdb0e595"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificWorkflowAllowedFileExtension",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectMangement/workflowAllowedFileExtension/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr7_259119c9-487d-4fa0-ae0e-401ac9cd9b3c"
+            },
+            {
+              "v": "16",
+              "name": "GetAllWorkflowAllowedFileExtension",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectMangement/workflowAllowedFileExtension/getAll",
+              "params": [
+                {
+                  "key": "FileExtensionId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "ProjectWorkflowId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "MaxFileSizeForUpload",
+                  "value": "4",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr7_c2e81d55-bdec-4aeb-a3ae-44f32fde87e1"
+            },
+            {
+              "v": "16",
+              "name": "GetWorkflowAllowedFileExtensionComboList",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectMangement/workflowAllowedFileExtension/getComboList",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr7_c575fc23-2983-44fa-8cad-960694998534"
+            },
+            {
+              "v": "16",
+              "name": "GetWorkflowAllowedFileExtensionComboListByWorflowId",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectMangement/workflowAllowedFileExtension/getComboListByWorkflowId/[workflowId]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr7_e042ca2c-9f61-4653-9d82-ea897a19545e"
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "_ref_id": "coll_mfpnvb7l_5e17e599-ac6a-4d06-b6c1-eea221bbaff4"
+        },
+        {
+          "v": 10,
+          "name": "WorkflowAllowedDocumentType",
+          "folders": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "AddWorkflowAllowedDocumentType",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"DocumentTypeId\": 123,\n  \"ProjectWorkflowId\": 123 \n}\n"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_9470fdfb-d1e8-44dd-85f7-d179f5f29807"
+            },
+            {
+              "v": "16",
+              "name": "UpdateWorkflowAllowedDocumentType",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"DocumentTypeId\": 123,\n  \"ProjectWorkflowId\": 123 \n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_26d07ec1-60e5-4d45-9d62-e46c500736d6"
+            },
+            {
+              "v": "16",
+              "name": "DeleteWorkflowAllowedDocumentType",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_f35cad53-1633-47bd-a56c-5effb085fd76"
+            },
+            {
+              "v": "16",
+              "name": "ActiveWorkflowAllowedDocumentType",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_51237dd2-d3ec-4bb8-877d-8a5ddff2b199"
+            },
+            {
+              "v": "16",
+              "name": "InactiveWorkflowAllowedDocumentType",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_81596609-587d-410f-9631-ec8ef3a3c74b"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificWorkflowAllowedDocumentType",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_6ae4b724-28b2-4c6c-86b0-68246eecdbe2"
+            },
+            {
+              "v": "16",
+              "name": "GetAllWorkflowAllowedDocumentType",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/getAll",
+              "params": [
+                {
+                  "key": "DocumentTypeId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "ProjectWorkflowId",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_ebd29a53-74e1-41ec-be58-123eba0ab4cd"
+            },
+            {
+              "v": "16",
+              "name": "GetComboListWorkflowAllowedDocumentType",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/getComboList",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_3e20a031-02b5-4dd8-977e-c6fbfe025420"
+            },
+            {
+              "v": "16",
+              "name": "GetComboListWorkflowAllowedDocumentTypeByWorkflowId",
+              "method": "GET",
+              "endpoint": "https://echo.hoppscotch.iohttps://[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/getComboListByWorkflowId/[workflowId]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgbahyr8_78a8b1c6-e475-41e1-9581-fed65f1aea80"
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "_ref_id": "coll_mfpnwwv5_de7dd2d5-e240-4682-88ca-5bffa6e29fe3"
+        },
+        {
+          "v": 10,
           "name": "ProjectWorkflowStatus",
           "folders": [],
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/[id]",
               "name": "DeleteProjectWorkflowStatus",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7955,18 +7955,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/active/[id]",
               "name": "ActiveProjectWorkflowStatus",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7977,18 +7977,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/inactive/[id]",
               "name": "InactiveProjectWorkflowStatus",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7999,18 +7999,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/[id]",
               "name": "GetSpecificProjectWorkflowStatus",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8035,18 +8035,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/[id]",
               "name": "DeleteProjectWorkflowResolvation",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8057,18 +8057,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/active/[id]",
               "name": "ActiveProjectWorkflowResolvation",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8079,18 +8079,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/inactive/[id]",
               "name": "InactiveProjectWorkflowResolvation",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8101,18 +8101,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/[id]",
               "name": "GetSpecificProjectWorkflowResolvation",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8134,7 +8134,96 @@
           "v": 10,
           "name": "ProjectWorkflowProgress",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/[id]",
+              "name": "DeleteProjectWorkflowProgress",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5jrz6m_1fbe5266-14e0-424f-b8aa-c649d7e1af07"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/active/[id]",
+              "name": "ActiveProjectWorkflowProgress",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5ju2sf_8a417ba5-7c16-4557-b740-6b9613c8dd23"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/inactive/[id]",
+              "name": "InactiveProjectWorkflowProgress",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5jv72v_ceb18a4e-2449-4045-8781-e68c0d57ab88"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/[id]",
+              "name": "GetSpecificProjectWorkflowProgress",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5kewvq_f995078f-4ea3-4df3-bac7-6a9f0e71c4af"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8142,19 +8231,6 @@
           "headers": [],
           "variables": [],
           "_ref_id": "coll_mp1ivjuy_616dc479-f861-4976-8268-ed3f91e1aae0"
-        },
-        {
-          "v": 10,
-          "name": "ProjectWorkflowDocumentType",
-          "folders": [],
-          "requests": [],
-          "auth": {
-            "authType": "inherit",
-            "authActive": true
-          },
-          "headers": [],
-          "variables": [],
-          "_ref_id": "coll_mp1ivujn_7130cda4-0436-495c-bbf0-30151fb8d898"
         },
         {
           "v": 10,
@@ -8220,19 +8296,6 @@
           "headers": [],
           "variables": [],
           "_ref_id": "coll_mp1j280h_4f45a9d3-9959-467a-a3ad-3d622a0880f3"
-        },
-        {
-          "v": 10,
-          "name": "WorkflowAllowdedFileExtension",
-          "folders": [],
-          "requests": [],
-          "auth": {
-            "authType": "inherit",
-            "authActive": true
-          },
-          "headers": [],
-          "variables": [],
-          "_ref_id": "coll_mp1j5htu_5e59003f-0a98-4a3a-8fb5-b21c11cc8552"
         },
         {
           "v": 10,

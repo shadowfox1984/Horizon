@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.5.12
+	Last Version : 26.5.14
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -711,20 +711,7 @@ CREATE TABLE ProjectManagement.ProjectWorkflowProgress(
 	FOREIGN KEY (EndProjectWorkflowStatusId) REFERENCES ProjectManagement.ProjectWorkflowStatus(Id)
 );
 
-CREATE TABLE DocumentManagement.ProjectWorkflowDocumentType(
-    Id serial PRIMARY KEY NOT NULL,
-	DocumentTypeId bigint NOT NULL,
-	ProjectWorkflowId bigint NOT NULL,
-    IsActive boolean NOT NULL DEFAULT true,
-    IsDeleted boolean NOT NULL DEFAULT false,
-    CreateDate timestamp NOT NULL DEFAULT NOW(),
-	CreatorId bigint NOT NULL,
-    ModifyDate timestamp,
-	ModifierId bigint,
-	FOREIGN KEY (DocumentTypeId) REFERENCES DocumentManagement.DocumentType(Id),
-	FOREIGN KEY (ProjectWorkflowId) REFERENCES ProjectManagement.ProjectWorkflow(Id),
-	UNIQUE(DocumentTypeId, ProjectWorkflowId)
-);
+
 
 CREATE TABLE ProjectManagement.Issue(
     Id serial PRIMARY KEY NOT NULL,
@@ -835,7 +822,7 @@ CREATE TABLE ProjectManagement.WorkLog(
 	FOREIGN KEY (IssueId) REFERENCES ProjectManagement.Issue(Id)
 );
 
-CREATE TABLE ProjectManagement.WorkflowAllowdedFileExtension(
+CREATE TABLE ProjectManagement.WorkflowAllowedFileExtension(
     Id serial PRIMARY KEY NOT NULL,
 	FileExtensionId bigint NOT NULL,
 	ProjectWorkflowId bigint NOT NULL,
@@ -849,6 +836,21 @@ CREATE TABLE ProjectManagement.WorkflowAllowdedFileExtension(
 	FOREIGN KEY (FileExtensionId) REFERENCES DocumentManagement.FileExtension(Id),
 	FOREIGN KEY (ProjectWorkflowId) REFERENCES ProjectManagement.ProjectWorkflow(Id),
 	UNIQUE(FileExtensionId, ProjectWorkflowId)
+);
+
+CREATE TABLE ProjectManagement.WorkflowAllowedDocumentType(
+    Id serial PRIMARY KEY NOT NULL,
+	DocumentTypeId bigint NOT NULL,
+	ProjectWorkflowId bigint NOT NULL,
+    IsActive boolean NOT NULL DEFAULT true,
+    IsDeleted boolean NOT NULL DEFAULT false,
+    CreateDate timestamp NOT NULL DEFAULT NOW(),
+	CreatorId bigint NOT NULL,
+    ModifyDate timestamp,
+	ModifierId bigint,
+	FOREIGN KEY (DocumentTypeId) REFERENCES DocumentManagement.DocumentType(Id),
+	FOREIGN KEY (ProjectWorkflowId) REFERENCES ProjectManagement.ProjectWorkflow(Id),
+	UNIQUE(DocumentTypeId, ProjectWorkflowId)
 );
 
 CREATE TABLE ProjectManagement.IssueWorkflowHistory(
