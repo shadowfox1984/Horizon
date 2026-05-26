@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Project Management Schema Diagram \n Version 25.11.10
+title Horizon Research Project (HRP) \n Project Management Schema Diagram \n Version 26.5.16
 
 entity "Basic.Priority" as priority #LightPink{
   *Id : bigint(19) <<serial>>
@@ -15,8 +15,7 @@ entity "Basic.Priority" as priority #LightPink{
   *Ordering : integer
   *Color : varchar(7)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -31,8 +30,7 @@ entity "Basic.IssueType" as issueType #LightPink{
   *IconAddress : varchar(1000)
   *Color : varchar(7)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -46,9 +44,8 @@ entity "Basic.Status" as status #LightPink{
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
   *Color : varchar(7)
-  *StatusEffect : enum <<ToDo, InProgress, Done>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *StatusEffect : enum(ToDo, InProgress, Done)
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -63,8 +60,7 @@ entity "Basic.Resolvation" as resolvation #LightPink{
   Description : varchar(4000)
   *Color : varchar(7)
   *IsResolved : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -77,8 +73,7 @@ entity "Basic.MeetingType" as meetingType #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -92,8 +87,7 @@ entity "Basic.TimeUnit" as timeUnit #LightPink{
   *Code : varchar(20) <<unique>>
   BasedOnMillisecond : bigint(19)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -108,8 +102,7 @@ entity "DocumentManagement.Document" as document #Gold{
   *DocumentTypeId : bigint(19) <<FK>>
   *FileExtensionId : bigint(19) <<FK>>
   *FileAddress: varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -122,8 +115,7 @@ entity "UserManagement.Role" as role #Violet{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -136,8 +128,7 @@ entity "UserManagement.Groups" as groups #Violet{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -149,7 +140,7 @@ entity "UserManagement.Profile" as profile #Violet{
   --
   *FirstName : varchar(200)
   *LastName : varchar(200)
-  *Gender : enum <<male, female>>
+  *Gender : enum(male, female)
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
@@ -167,8 +158,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *Username : varchar(200) <<unique>>
   *Pass : varchar(255)
   PassSalt : varchar(50)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -180,8 +170,7 @@ entity "DocumentManagement.ProjectWorkflowDocumentType" as projectWorkflowDocume
   --
   *DocumentTypeId : bigint(19) <<FK>> <<composite unique>>
   *ProjectWorkflowId : bigint(19) <<FK>> <<composite unique>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -195,8 +184,7 @@ entity "HumanResource.Department" as department #Lavender{
   *Code : varchar(20) <<unique>>
   ParentId : integer(20) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -211,8 +199,7 @@ entity "ProjectManagement.Project" as project #Orange{
   Description : varchar(4000)
   StartDate : date
   EndDate : date
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -225,8 +212,7 @@ entity "ProjectManagement.ProjectProfileMember" as projectProfileMember #Orange{
   *ProjectId : bigint(19) <<FK>> <<composite unique>>
   *ProfileId : bigint(19) <<FK>> <<composite unique>>
   *IsProjectManager : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -238,8 +224,7 @@ entity "ProjectManagement.ProjectGroupMember" as projectGroupMember #Orange{
   --
   *ProjectId : bigint(19) <<FK>> <<composite unique>>
   *GroupId : bigint(19) <<FK>> <<composite unique>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -251,8 +236,7 @@ entity "ProjectManagement.ProjectRoleMember" as projectRoleMember #Orange{
   --
   *ProjectId : bigint(19) <<FK>> <<composite unique>>
   *RoleId : bigint(19) <<FK>> <<composite unique>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -264,8 +248,7 @@ entity "ProjectManagement.ProjectDepartmentMember" as projectDepartmentMember #O
   --
   *ProjectId : bigint(19) <<FK>> <<composite unique>>
   *DepartmentId : bigint(19) <<FK>> <<composite unique>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -279,8 +262,7 @@ entity "ProjectManagement.ProjectWorkflow" as projectWorkflow #Orange{
   *Code : varchar(20) <<unique>>
   *Title : varchar(200)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -292,8 +274,7 @@ entity "ProjectManagement.ProjectWorkflowStatus" as projectWorkflowStatus #Orang
   --
   *ProjectWorkflowId : bigint(19) <<FK>>
   *StatusId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -305,8 +286,7 @@ entity "ProjectManagement.ProjectWorkflowResolvation" as projectWorkflowResolvat
   --
   *ProjectWorkflowId : bigint(19) <<FK>>
   *ResolvationId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -322,8 +302,7 @@ entity "ProjectManagement.ProjectWorkflowProgress" as projectWorkflowProgress #O
   *CanBeStartedFromAnyStatus : boolean
   EndProjectWorkflowStatusId : bigint(19) <<FK>>
   *IsWorkflowEndPoint : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -341,15 +320,14 @@ entity "ProjectManagement.Issue" as issue #Orange{
   DueDate : date
   PriorityId : bigint(19) <<FK>>
   *IssueTypeId : bigint(19) <<FK>>
-  IssueSize : enum <<XS, S, M , L , XL>>
+  IssueSize : enum(XS, S, M , L , XL)
   ParentIssueId : bigint(19) <<FK>>
 	EpicLinkedId : bigint(19) <<FK>>
 	LinkedIssueId : bigint(19) <<FK>>
-	LinkedIssueType : enum <<Blocks, RelatesTo, Duplicates, Clones>>
+	LinkedIssueType : enum(Blocks, RelatesTo, Duplicates, Clones)
   *CurrentStatusId : bigint(19) <<FK>>
   *CurrentResolvationId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -361,8 +339,7 @@ entity "ProjectManagement.IssueComment" as issueComment #Orange{
   --
   *IssueId : bigint(19) <<FK>>
   *CommentText : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -374,8 +351,7 @@ entity "ProjectManagement.IssueAttachment" as issueAttachment #Orange{
   --
   *IssueId : bigint(19) <<FK>> <<composite unique>>
   *DocumentId : bigint(19) <<FK>> <<composite unique>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -389,8 +365,7 @@ entity "ProjectManagement.ProjectRelease" as release #Orange{
   *VersionNumber : varchar(20) <<unique>>
   ReleaseDate : date
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -403,8 +378,7 @@ entity "ProjectManagement.ProjectReleaseIssue" as releaseIssue #Orange{
   *ProjectReleaseId : bigint(19) <<FK>> <<composite unique>>
   *IssueId : bigint(19) <<FK>> <<composite unique>>
   IsFinalized : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -420,8 +394,7 @@ entity "ProjectManagement.WorkLog" as workLog #Orange{
   *WorkingDuration : float 
   *TimeUnitId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -434,8 +407,7 @@ entity "DocumentManagement.WorkflowEligibleFileExtension" as workflowEligibleFil
   *WorkflowId : bigint(19) <<FK>> <<composite unique>>
   *FileExtensionId : bigint(19) <<FK>> <<composite unique>>
   *MaxFileSizeForUpload : integer <<default: 5242880>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -450,8 +422,7 @@ entity "ProjectManagement.IssueWorkflowHistory" as issueWorkflowHistory #Orange{
   *EndStatusId : bigint(19) <<FK>>
   *ProjectWorkflowProgressId : bigint(19) <<FK>>
   ProjectWorkflowResolvationId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -473,8 +444,7 @@ entity "ProjectManagement.ProjectMeeting" as projectMeeting #Orange{
   ActualStartTime : time
   ActualEndTime : time
   *IsCanncelled : boolean <<default: false>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -490,8 +460,7 @@ entity "ProjectManagement.MeetingInvitees" as meetingInvitees #Orange{
   InviteeFullName : varchar(255)
 	InviteeCompanyName : varchar(255)
   IsAttanded : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -506,8 +475,7 @@ entity "ProjectManagement.MeetingMinutes" as meetingMinutes #Orange{
   ResponsibleDepartmentId : bigint(19) <<FK>>
   IssueId : bigint(19) <<FK>>
   DueDate : datetime
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp

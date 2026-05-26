@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.2.14
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.5.18
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -13,8 +13,7 @@ entity "Basic.ContractType" as contractType #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -27,8 +26,7 @@ entity "Basic.EducationLevel" as educationLevel #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -41,8 +39,7 @@ entity "Basic.DocumentType" as documentType #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -55,8 +52,7 @@ entity "Basic.FileExtension" as fileExtension #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -71,8 +67,7 @@ entity "Basic.Priority" as priority #LightPink{
   *Ordering : integer
   *Color : varchar(7)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -87,8 +82,7 @@ entity "Basic.IssueType" as issueType #LightPink{
   *IconAddress : varchar(1000)
   *Color : varchar(7)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -102,9 +96,8 @@ entity "Basic.Status" as status #LightPink{
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
   *Color : varchar(7)
-  *StatusEffect : enum <<ToDo, InProgress, Done>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *StatusEffect : enum(ToDo, InProgress, Done)
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -119,8 +112,7 @@ entity "Basic.Resolvation" as resolvation #LightPink{
   Description : varchar(4000)
   *Color : varchar(7)
   *IsResolved : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -133,8 +125,7 @@ entity "Basic.MeetingType" as meetingType #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -148,8 +139,7 @@ entity "Basic.TimeUnit" as timeUnit #LightPink{
   *Code : varchar(20) <<unique>>
   BasedOnMillisecond : bigint(19)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -164,8 +154,7 @@ entity "Basic.TestApproval" as testApproval #LightPink{
   *IsApproved : boolean
   *Color : varchar(10)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -179,8 +168,7 @@ entity "Basic.TestComplexityLevel" as testComplexityLevel #LightPink{
   *Code : varchar(20) <<unique>>
   *ValueNumber : float
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -194,8 +182,7 @@ entity "Basic.Currency" as currency #LightPink{
   *Code : varchar(20) <<unique>>
   *Symbol : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -208,8 +195,7 @@ entity "UserManagement.Role" as role #Violet{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -222,8 +208,7 @@ entity "UserManagement.Groups" as groups #Violet{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -236,8 +221,7 @@ entity "UserManagement.Permission" as permission #Violet{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -250,8 +234,7 @@ entity "UserManagement.Form" as form #Violet{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -263,8 +246,7 @@ entity "UserManagement.FormPermission" as formPermission #Violet{
   --
   *FormId : bigint(19) <<FK>>
   *PermissionId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -278,8 +260,7 @@ entity "UserManagement.RolePermission" as rolePermission #Violet{
   *FormPermissionId : integer(10) <<FK>>
   *ActiveFrom : datetime
   ActiveTo : datetime
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -291,8 +272,7 @@ entity "UserManagement.GroupPermission" as groupPermission #Violet{
   --
   *GroupId : bigint(19) <<FK>>
   *FormPermissionId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -304,8 +284,7 @@ entity "UserManagement.ProfilePermission" as profilePermission #Violet{
   --
   *ProfileId : bigint(19) <<FK>>
   *PermissionId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -317,7 +296,7 @@ entity "UserManagement.Profile" as profile #Violet{
   --
   *FirstName : varchar(200)
   *LastName : varchar(200)
-  *Gender : enum <<male, female>>
+  *Gender : enum(male, female)
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
@@ -335,8 +314,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *Username : varchar(200) <<unique>>
   *Pass : varchar(255)
   PassSalt : varchar(50)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -348,8 +326,7 @@ entity "UserManagement.ProfileRole" as profileRole #Violet{
   --
   *ProfileId : bigint(19) <<FK>>
   *RoleId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -361,8 +338,7 @@ entity "UserManagement.ProfileGroup" as profileGroup #Violet{
   --
   *ProfileId : bigint(19) <<FK>>
   *GroupId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -377,8 +353,7 @@ entity "DocumentManagement.Document" as document #Gold{
   *DocumentTypeId : bigint(19) <<FK>>
   *FileExtensionId : bigint(19) <<FK>>
   *FileAddress: varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -390,8 +365,7 @@ entity "DocumentManagement.ProjectWorkflowDocumentType" as projectWorkflowDocume
   --
   *DocumentTypeId : bigint(19) <<FK>> <<composite unique>>
   *ProjectWorkflowId : bigint(19) <<FK>> <<composite unique>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -404,8 +378,7 @@ entity "DocumentManagement.WorkflowEligibleFileExtension" as workflowEligibleFil
   *WorkflowId : bigint(19) <<FK>> <<composite unique>>
   *FileExtensionId : bigint(19) <<FK>> <<composite unique>>
   *MaxFileSizeForUpload : integer <<default: 5242880>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -419,8 +392,7 @@ entity "HumanResource.Department" as department #Lavender{
   *Code : varchar(20) <<unique>>
   ParentId : integer(20) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -435,8 +407,7 @@ entity "HumanResource.Position" as position #Lavender{
   *DepartmentId : bigint(19) <<FK>>
   ParentId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -454,8 +425,7 @@ entity "HumanResource.ProfileEducation" as profileEducation #Lavender{
   StartDate : date
   EndDate : date
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -471,8 +441,7 @@ entity "HumanResource.ProfileJobExperience" as profileJobExperience #Lavender{
   StartDate : date
   EndDate : date
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -491,8 +460,7 @@ entity "HumanResource.ProfileCertificate" as profileCertificate #Lavender{
   DocumentId : bigint(19) <<FK>>
   CertificateFileAddress : varchar(4000)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -502,15 +470,14 @@ entity "HumanResource.ProfileCertificate" as profileCertificate #Lavender{
 entity "HumanResource.WorkingTimeTable" as workingTimeTable #Lavender{ 
   *Id : bigint(19) <<serial>>
   --
-  *WorkingDay : enum <<Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday>>
+  *WorkingDay : enum(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)
   *ContractTypeId : bigint(19) <<FK>>
   *Title : varchar(200)
   *StartTime : time
   *EndTime : time
   FloatingStartTime : time
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -522,10 +489,9 @@ entity "HumanResource.Holidaies" as holidaies #Lavender{
   --
   *Title : varchar(255)
   *HolidayDate : date <<unique>> 
-  *HolidayType : enum <<National, GovernmentOrFederal, ProvincialOrState, Organizational>>
+  *HolidayType : enum(National, GovernmentOrFederal, ProvincialOrState, Organizational)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -537,10 +503,9 @@ entity "HumanResource.Attendance" as attendance #Lavender{
   --
   *ProfileId : bigint(19) <<FK>>
   *WorkingDate : date
-  *EnteranceType : enum <<enter, exit>>
+  *EnteranceType : enum(enter, exit)
   *EnternaceTime : time
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -551,14 +516,13 @@ entity "HumanResource.Leave" as leave #Lavender{
   *Id : bigint(19) <<serial>>
   --
   *ProfileId : bigint(19) <<FK>>
-  LeaveType : enum <<fulltime, parttime>>
+  LeaveType : enum(fulltime, parttime)
   *LeavingStartDate : date
   LeavingEndDate : date
   *LeavingStartTime : time
   *LeavingEndTime : time
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -575,8 +539,7 @@ entity "HumanResource.WorkMission" as workMission #Lavender{
   *MissionEndTime : time
   MissionLocation : varchar(255)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -591,8 +554,7 @@ entity "ProjectManagement.Project" as project #Orange{
   Description : varchar(4000)
   StartDate : date
   EndDate : date
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -605,8 +567,7 @@ entity "ProjectManagement.ProjectProfileMember" as projectProfileMember #Orange{
   *ProjectId : bigint(19) <<FK>> <<composite unique>>
   *ProfileId : bigint(19) <<FK>> <<composite unique>>
   *IsProjectManager : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -618,8 +579,7 @@ entity "ProjectManagement.ProjectGroupMember" as projectGroupMember #Orange{
   --
   *ProjectId : bigint(19) <<FK>> <<composite unique>>
   *GroupId : bigint(19) <<FK>> <<composite unique>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -631,8 +591,7 @@ entity "ProjectManagement.ProjectRoleMember" as projectRoleMember #Orange{
   --
   *ProjectId : bigint(19) <<FK>> <<composite unique>>
   *RoleId : bigint(19) <<FK>> <<composite unique>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -644,8 +603,7 @@ entity "ProjectManagement.ProjectDepartmentMember" as projectDepartmentMember #O
   --
   *ProjectId : bigint(19) <<FK>> <<composite unique>>
   *DepartmentId : bigint(19) <<FK>> <<composite unique>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -659,8 +617,7 @@ entity "ProjectManagement.ProjectWorkflow" as projectWorkflow #Orange{
   *Code : varchar(20) <<unique>>
   *Title : varchar(200)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -672,8 +629,7 @@ entity "ProjectManagement.ProjectWorkflowStatus" as projectWorkflowStatus #Orang
   --
   *ProjectWorkflowId : bigint(19) <<FK>>
   *StatusId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -685,8 +641,7 @@ entity "ProjectManagement.ProjectWorkflowResolvation" as projectWorkflowResolvat
   --
   *ProjectWorkflowId : bigint(19) <<FK>>
   *ResolvationId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -702,8 +657,7 @@ entity "ProjectManagement.ProjectWorkflowProgress" as projectWorkflowProgress #O
   *CanBeStartedFromAnyStatus : boolean
   EndProjectWorkflowStatusId : bigint(19) <<FK>>
   *IsWorkflowEndPoint : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -721,15 +675,14 @@ entity "ProjectManagement.Issue" as issue #Orange{
   DueDate : date
   PriorityId : bigint(19) <<FK>>
   *IssueTypeId : bigint(19) <<FK>>
-  IssueSize : enum <<XS, S, M , L , XL>>
+  IssueSize : enum(XS, S, M , L , XL)
   ParentIssueId : bigint(19) <<FK>>
 	EpicLinkedId : bigint(19) <<FK>>
 	LinkedIssueId : bigint(19) <<FK>>
-	LinkedIssueType : enum <<Blocks, RelatesTo, Duplicates, Clones>>
+	LinkedIssueType : enum(Blocks, RelatesTo, Duplicates, Clones)
   *CurrentStatusId : bigint(19) <<FK>>
   *CurrentResolvationId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -741,8 +694,7 @@ entity "ProjectManagement.IssueComment" as issueComment #Orange{
   --
   *IssueId : bigint(19) <<FK>>
   *CommentText : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -754,8 +706,7 @@ entity "ProjectManagement.IssueAttachment" as issueAttachment #Orange{
   --
   *IssueId : bigint(19) <<FK>> <<composite unique>>
   *DocumentId : bigint(19) <<FK>> <<composite unique>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -769,8 +720,7 @@ entity "ProjectManagement.ProjectRelease" as release #Orange{
   *VersionNumber : varchar(20) <<unique>>
   ReleaseDate : date
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -783,8 +733,7 @@ entity "ProjectManagement.ProjectReleaseIssue" as releaseIssue #Orange{
   *ProjectReleaseId : bigint(19) <<FK>> <<composite unique>>
   *IssueId : bigint(19) <<FK>> <<composite unique>>
   IsFinalized : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -800,8 +749,7 @@ entity "ProjectManagement.WorkLog" as workLog #Orange{
   *WorkingDuration : float 
   *TimeUnitId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -814,8 +762,7 @@ entity "DocumentManagement.WorkflowEligibleFileExtension" as workflowEligibleFil
   *WorkflowId : bigint(19) <<FK>> <<composite unique>>
   *FileExtensionId : bigint(19) <<FK>> <<composite unique>>
   *MaxFileSizeForUpload : integer <<default: 5242880>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -830,8 +777,7 @@ entity "ProjectManagement.IssueWorkflowHistory" as issueWorkflowHistory #Orange{
   *EndStatusId : bigint(19) <<FK>>
   *ProjectWorkflowProgressId : bigint(19) <<FK>>
   ProjectWorkflowResolvationId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -853,8 +799,7 @@ entity "ProjectManagement.ProjectMeeting" as projectMeeting #Orange{
   ActualStartTime : time
   ActualEndTime : time
   *IsCanncelled : boolean <<default: false>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -870,8 +815,7 @@ entity "ProjectManagement.MeetingInvitees" as meetingInvitees #Orange{
   InviteeFullName : varchar(255)
 	InviteeCompanyName : varchar(255)
   IsAttanded : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -886,8 +830,7 @@ entity "ProjectManagement.MeetingMinutes" as meetingMinutes #Orange{
   ResponsibleDepartmentId : bigint(19) <<FK>>
   IssueId : bigint(19) <<FK>>
   DueDate : datetime
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -904,8 +847,7 @@ entity "Finance.StaffContract" as staffContract #Salmon{
   *Title : varchar(200)
   Description : varchar(4000)
   AutoRenewal : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -921,8 +863,7 @@ entity "Finance.ContractSalaryItem" as contractSalaryItem #Salmon{
   *CurrencyId : bigint(19) <<FK>>
   Description : varchar(4000)
   *CalculationTimeUnitId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -934,14 +875,13 @@ entity "Finance.ContractDeductionItem" as contractDeductionItem #Salmon{
   --
   *StaffContractId : bigint(19) <<FK>>
   *Title : varchar(200)
-  *CalculationType : enum <<percentage, fixedAmount>>
+  *CalculationType : enum(percentage, fixedAmount)
   DeductionPercentage : numeric(3,2) <<from 0 until 100>>
   FixedAmount : numeric(22,2)
   FixedAmountCurrencyId : bigint(19) <<FK>>
   Description : varchar(4000)
   *CalculationTimeUnitId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -960,8 +900,7 @@ entity "Finance.Supplier" as supplier #Salmon{
   City : varchar(255)
   Address : varchar(4000)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -977,8 +916,7 @@ entity "Finance.CostInvoice" as costInvoice #Salmon{
   *TotalAmount : numeric(22,2)
   *CurrencyId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -994,8 +932,7 @@ entity "Finance.CostInvoiceItem" as costInvoiceItem #Salmon{
   *CurrencyId : bigint(19) <<FK>>
   *Quantity : float
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1009,8 +946,7 @@ entity "Finance.ProjectDirectCostItem" as projectDirectCostItem #Salmon{
   *CostInvoiceItemId : bigint(19) <<FK>>
   *AllocatedQuantity : float
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1027,8 +963,7 @@ entity "Finance.CostPaymentReceipt" as costPaymentReceipt #Salmon{
   *CurrencyId : bigint(19) <<FK>>
   *PaymentDate : date
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1045,8 +980,7 @@ entity "Finance.SalaryPaymentReceipt" as salaryPaymentReceipt #Salmon{
   *CurrencyId : bigint(19) <<FK>>
   *PaymentDate : date
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1063,8 +997,7 @@ entity "Finance.StaffAdditionalPaymentReceipt" as staffAdditionalPaymentReceipt 
   *CurrencyId : bigint(19) <<FK>>
   *PaymentDate : date
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1081,8 +1014,7 @@ entity "Finance.Customer" as customer #Salmon{
   PostalCode : varchar(20)
   Address : varchar(4000)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1104,8 +1036,7 @@ entity "Finance.Contract" as contract #Salmon{
   *CurrencyId : bigint(19) <<FK>>
   DocumentId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1122,8 +1053,7 @@ entity "Finance.ContractPaymentSchedule" as contractPaymentSchedule #Salmon{
   *Amount : numeric(22,2)
   *CurrencyId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1140,8 +1070,7 @@ entity "Finance.ContractPaymentReceipt" as contractPaymentReceipt #Salmon{
   *Amount : numeric(22,2)
   *CurrencyId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1158,8 +1087,7 @@ entity "QualityControl.TestScenario" as testScenario #Silver{
   UsersAndRoles : varchar(4000)
   Steps : varchar(4000)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1171,8 +1099,7 @@ entity "QualityControl.PrerequisiteTestScenario" as prerequisiteTestScenario #Si
   --
   *TestScenarioId : bigint(19) <<FK>>
   *PrerequisiteTestScenarioId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1187,8 +1114,7 @@ entity "QualityControl.TestPlan" as testPlan #Silver{
   PlanningDate : date
   ProjectReleaseId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1201,8 +1127,7 @@ entity "QualityControl.TestPlanScenario" as testPlanScenario #Silver{
   *TestScenarioId : bigint(19) <<FK>> <<composite unique>>
   *TestPlanId : bigint(19) <<FK>> <<composite unique>>
   *Ordering : float <<composite unique>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1214,8 +1139,7 @@ entity "QualityControl.TestPlanScenarioIssueCoverage" as testPlanScenarioIssueCo
   --
   *TestPlanScenarioId : bigint(19) <<FK>> <<composite unique>>
   *IssueId : bigint(19) <<FK>> <<composite unique>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1228,8 +1152,7 @@ entity "QualityControl.TestResult" as testResult #Silver{
   *TestDate : date
   *TestPlanId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1242,8 +1165,7 @@ entity "QualityControl.TestResultDetail" as testResultDetail #Silver{
   TestPlanScenarioId : bigint(19) <<FK>>
   *TestApprovalId : bigint(19) <<FK>>
   *Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1255,7 +1177,7 @@ entity "UserManagement.Profile" as profile #Violet{
   --
   *FirstName : varchar(200)
   *LastName : varchar(200)
-  *Gender : enum <<male, female>>
+  *Gender : enum(male, female)
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
@@ -1273,8 +1195,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *Username : varchar(200) <<unique>>
   *Pass : varchar(255)
   PassSalt : varchar(50)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1288,8 +1209,7 @@ entity "HumanResource.Department" as department #Lavender{
   *Code : varchar(20) <<unique>>
   ParentId : integer(20) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1304,8 +1224,7 @@ entity "ProjectManagement.Project" as project #Orange{
   Description : varchar(4000)
   StartDate : date
   EndDate : date
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1322,8 +1241,7 @@ entity "Finance.Customer" as customer #Salmon{
   MobileNumber : varchar(20)
   Email : varchar(100)
   PostalCode : varchar(20)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1336,10 +1254,9 @@ entity "Evaluation.Question" as question #SkyBlue{
   *QuestionnaireId : bigint(19) <<FK>>
   *Question : varchar(4000)
   *Code : varchar(20) <<unique>>
-  *AnswerType : enum <<SingleChoice, MultiChoice, Description>>
+  *AnswerType : enum(SingleChoice, MultiChoice, Description)
   *Score : integer
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1353,8 +1270,7 @@ entity "Evaluation.QuestionOption" as questionOption #SkyBlue{
   *Title : varchar(4000)
   *Score : integer
   *IsDescriptionRequired : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1367,14 +1283,13 @@ entity "Evaluation.Questionnaire" as questionnaire #SkyBlue{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   ProjectId : bigint(19) <<FK>>
-  *QuestionnaireAduience : enum <<Staffs, Customers, SeniorManagers, Stackholders>>
+  *QuestionnaireAduience : enum(Staffs, Customers, SeniorManagers, Stackholders)
   *TotalScore : integer
   *AcceptableScore : integer
   *WarningScore : integer
   *DisasterScore : integer
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1386,21 +1301,19 @@ entity "Evaluation.QuestionnaireTargetDepartment" as questionnaireTargetDepartme
   --
   *QuestionnaireId : bigint(19) <<FK>>
   *DepoartmentId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
   ModifierId : bigint(19)
 }
 
-entity "Evaluation.QuestionList" as questionList #SkyBlue{
+entity "Evaluation.QuestionnaireItem" as questionnaireItem #SkyBlue{
   *Id : bigint(19) <<serial>>
   --
   *QuestionnaireId : bigint(19) <<FK>>
   *QuestionId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1414,8 +1327,7 @@ entity "Evaluation.QuestionnaireResult" as questionnaireResult #SkyBlue{
   ProfileId : bigint(19) <<FK>>
   CustomerId : bigint(19) <<FK>>
   *TotalScore : integer
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1426,11 +1338,10 @@ entity "Evaluation.QuestionnaireResultDetail" as questionnaireResultDetail #SkyB
   *Id : bigint(19) <<serial>>
   --
   *QuestionnaireResultId : bigint(19) <<FK>>
-  *QuestionListId : bigint(19) <<FK>>
+  *QuestionnaireItemId : bigint(19) <<FK>>
   ChoosedQuestionOptionId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1445,8 +1356,7 @@ entity "Evaluation.CustomerFeedback" as customerFeedback #SkyBlue{
   *FeedbackDate : date
   *FeedbackValue : numeric(2,2) <<between 1 and 10>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1460,8 +1370,7 @@ entity "Evaluation.StaffSatisfactionEvaluation" as staffSatisfactionEvaluation #
   *EvalationDate : date
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1475,8 +1384,7 @@ entity "Evaluation.ProjectProductivityEvaluation" as projectProductivityEvaluati
   *EvalationDate : datetime
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1491,8 +1399,7 @@ entity "Evaluation.CustomerSatisfactionEvaluation" as customerSatisfactionEvalua
   *EvalationDate : datetime
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -1628,15 +1535,15 @@ testApproval ||..o{ testResultDetail
 
 questionnaire ||..o{ questionnaireTargetDepartment
 department ||..o{ questionnaireTargetDepartment
-question ||..o{ questionList
+question ||..o{ questionnaireItem
 project ||..o{ questionnaire
-questionnaire ||..o{ questionList
+questionnaire ||..o{ questionnaireItem
 question ||..o{ questionOption
 questionnaire ||..o{ questionnaireResult
 profile |o..o{ questionnaireResult
 customer |o..o{ questionnaireResult
 questionnaireResult ||..o{ questionnaireResultDetail
-questionList ||..o{ questionnaireResultDetail
+questionnaireItem ||..o{ questionnaireResultDetail
 questionOption |o..o{ questionnaireResultDetail
 profile ||..o{ staffSatisfactionEvaluation
 project ||..o{ projectProductivityEvaluation

@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n User Management Schema Diagram \n Version 25.6.19
+title Horizon Research Project (HRP) \n User Management Schema Diagram \n Version 26.5.16
 
 entity "HumanResource.Position" as position #Lavender{
   *Id : integer(10) <<serial>>
@@ -15,8 +15,7 @@ entity "HumanResource.Position" as position #Lavender{
   *DepartmentId : bigint(19) <<FK>>
   ParentId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -29,8 +28,7 @@ entity "UserManagement.Role" as role #Violet{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -43,8 +41,7 @@ entity "UserManagement.Groups" as groups #Violet{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -57,8 +54,7 @@ entity "UserManagement.Permission" as permission #Violet{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -71,8 +67,7 @@ entity "UserManagement.Form" as form #Violet{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -84,8 +79,7 @@ entity "UserManagement.FormPermission" as formPermission #Violet{
   --
   *FormId : bigint(19) <<FK>>
   *PermissionId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -99,8 +93,7 @@ entity "UserManagement.RolePermission" as rolePermission #Violet{
   *FormPermissionId : integer(10) <<FK>>
   *ActiveFrom : datetime
   ActiveTo : datetime
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -112,8 +105,7 @@ entity "UserManagement.GroupPermission" as groupPermission #Violet{
   --
   *GroupId : bigint(19) <<FK>>
   *FormPermissionId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -125,8 +117,7 @@ entity "UserManagement.ProfilePermission" as profilePermission #Violet{
   --
   *ProfileId : bigint(19) <<FK>>
   *PermissionId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -138,7 +129,7 @@ entity "UserManagement.Profile" as profile #Violet{
   --
   *FirstName : varchar(200)
   *LastName : varchar(200)
-  *Gender : enum <<male, female>>
+  *Gender : enum(male, female)
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
@@ -156,8 +147,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *Username : varchar(200) <<unique>>
   *Pass : varchar(255)
   PassSalt : varchar(50)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -169,8 +159,7 @@ entity "UserManagement.ProfileRole" as profileRole #Violet{
   --
   *ProfileId : bigint(19) <<FK>>
   *RoleId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -182,8 +171,7 @@ entity "UserManagement.ProfileGroup" as profileGroup #Violet{
   --
   *ProfileId : bigint(19) <<FK>>
   *GroupId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp

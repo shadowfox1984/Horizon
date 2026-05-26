@@ -8137,18 +8137,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/[id]",
               "name": "DeleteProjectWorkflowProgress",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8159,18 +8159,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/active/[id]",
               "name": "ActiveProjectWorkflowProgress",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8181,18 +8181,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/inactive/[id]",
               "name": "InactiveProjectWorkflowProgress",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8203,18 +8203,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/[id]",
               "name": "GetSpecificProjectWorkflowProgress",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8236,7 +8236,96 @@
           "v": 10,
           "name": "Issue",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteIssue",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issue/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mgmce_bb59e541-75c4-4fab-b753-be642e6686a9"
+            },
+            {
+              "v": "16",
+              "name": "ActiveIssue",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issue/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mhpef_101e02f9-2c65-4bc9-9992-1a2db8da22d1"
+            },
+            {
+              "v": "16",
+              "name": "InactiveIssue",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issue/incative/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5midny_7306de62-1d22-458d-aaba-9dfd52758a6a"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificIssue",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issue/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mjw6u_da93e765-6954-4036-ba74-6602eed0b58c"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8249,7 +8338,96 @@
           "v": 10,
           "name": "IssueComment",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteIssueComment",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueComment/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mljge_0e7bb002-493b-4fc9-b93a-47dec8fd9037"
+            },
+            {
+              "v": "16",
+              "name": "ActiveIssueComment",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueComment/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mmeam_abd91e2a-ce47-4724-b81a-564028743036"
+            },
+            {
+              "v": "16",
+              "name": "InactiveIssueComment",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueComment/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mom7y_84408dae-585f-44d0-ad36-cf75897103ca"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificIssueComment",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueComment/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mpopq_87dd8a41-694e-4dbd-b46f-d0d56f798a1b"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8262,7 +8440,96 @@
           "v": 10,
           "name": "IssueAttachment",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteIssueAttachment",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mt1oe_24af9d7d-c5e5-4120-9f15-09091c28ba82"
+            },
+            {
+              "v": "16",
+              "name": "ActiveIssueAttachment",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mug8e_9520d484-5e07-4e2e-9fce-4ce97b558dde"
+            },
+            {
+              "v": "16",
+              "name": "InactiveIssueAttachment",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mvd7b_aed7585b-df67-4a8f-94ee-8412d9e0c81b"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificIssueAttachment",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mwgra_697a1ad4-ca75-43f3-b9f2-49f91b37fd48"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8275,7 +8542,96 @@
           "v": 10,
           "name": "ProjectRelease",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteProjectRelease",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mxyhi_759fa382-d551-46d0-9e2b-cf6174e01b98"
+            },
+            {
+              "v": "16",
+              "name": "ActiveProjectRelease",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5mzgqe_6b4dd844-0a05-4c01-8eac-4faaf3f99d3e"
+            },
+            {
+              "v": "16",
+              "name": "InactiveProjectRelease",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5n04i7_c3667af6-173a-492a-9267-c3597fc5857d"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificProjectRelease",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5n1552_63c83e76-9166-49b9-b7a7-65486fd93185"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8288,7 +8644,96 @@
           "v": 10,
           "name": "WorkLog",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteWorkLog",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/workLog/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5n203i_4d75d6cc-28d8-4e3f-8975-7ebe81bd0278"
+            },
+            {
+              "v": "16",
+              "name": "ActiveWorkLog",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/workLog/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5n3cnp_f7a6b38c-a558-4ca3-b41c-7b98a3695a99"
+            },
+            {
+              "v": "16",
+              "name": "InactiveWorkLog",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/workLog/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5n46xj_ed2422ea-8b32-4a59-a58c-bc118bb54557"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificWorkLog",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/workLog/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5n4zml_9df0924a-9bfa-4e60-baf3-15fb6a677895"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8301,7 +8746,52 @@
           "v": 10,
           "name": "IssueWorkflowHistory",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteIssueWorkflowHistory",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueWorkflowHistory/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5n6sxy_6e539e70-33c1-41af-be22-8a23f33eb634"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificIssueWorkflowHistory",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueWorkflowHistory/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5n8l4m_a9e951ae-0f83-40ff-b585-34ee9aa999f0"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8314,7 +8804,96 @@
           "v": 10,
           "name": "ProjectMeeting",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteProjectMeeting",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5ncva6_e4dcc9e8-2ca3-44e6-9429-f1dd9b2edfff"
+            },
+            {
+              "v": "16",
+              "name": "ActiveProjectMeeting",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5nf0k6_9c70950a-a180-4d9d-ad01-857a1ceeaced"
+            },
+            {
+              "v": "16",
+              "name": "InactiveProjectMeeting",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5nfv2m_4e63ad10-31b1-48c9-896b-40bb7fce4265"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificProjectMeeting",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5nj8fi_e06efb6c-6c13-493b-abcb-8263d9627b50"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8325,9 +8904,200 @@
         },
         {
           "v": 10,
+          "name": "MeetingInvitees",
+          "folders": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteMeetingInvitees",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingInvitees/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5xzr72_3933f4eb-fbbe-4069-b290-2f6bf39ecbcf"
+            },
+            {
+              "v": "16",
+              "name": "ActiveMeetingInvitees",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingInvitees/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5y22j2_fea6894d-9ece-456c-9092-4717d9d6fbdd"
+            },
+            {
+              "v": "16",
+              "name": "InactiveMeetingInvitees",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingInvitees/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5y2wpa_16116533-fed1-4968-ac32-92892259b5dc"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificMeetingInvitees",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingInvitees/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5y3x1a_2dfd9f30-c78b-4ea0-9c85-0a3479876c8a"
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "_ref_id": "coll_mp5naj13_d4e9724a-4efd-4ab4-84eb-da45471a3958"
+        },
+        {
+          "v": 10,
           "name": "MeetingMinutes",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteMeetingMinutes",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingMinutes/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5y5e4m_03e82695-5c59-4a5f-8ef2-5ebbeec972b2"
+            },
+            {
+              "v": "16",
+              "name": "ActiveMeetingMinutes",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingMinutes/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5y6oou_8bf7d01f-80d9-4faf-865a-0ddb561848e0"
+            },
+            {
+              "v": "16",
+              "name": "InactiveMeetingMinutes",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingMinutes/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5y7eem_afdf7c0e-b88b-458f-b5e3-9aa940c11f2a"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificMeetingMinutes",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingMinutes/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5y8jr2_a7e7f7a0-b32c-43a4-b7f1-bdf47973d444"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8354,7 +9124,96 @@
           "v": 10,
           "name": "StaffContract",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteStaffContract",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/staffContract/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5ye0lp_9f687fd9-9b81-4538-9d87-be8294ea5d24"
+            },
+            {
+              "v": "16",
+              "name": "ActiveStaffContract",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/staffContract/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5yg12u_b88f28e0-1134-4703-8d81-c25ef70d0352"
+            },
+            {
+              "v": "16",
+              "name": "InactiveStaffContract",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/staffContract/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5ygw5q_948d8e28-131f-4b5c-b1e8-fa64c4be0523"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificStaffContract",
+              "method": "GET",
+              "endpoint": "hthttps://[MainDomian]/api/finance/staffContract/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp5yi9om_d0142a1f-51c9-4d28-ae21-649684f78128"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8367,7 +9226,96 @@
           "v": 10,
           "name": "ContractSalaryItem",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteContractSalaryItem",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/contractSalaryItem/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63j8nx_8f88670e-b266-4d91-92ac-2ffecd7caed3"
+            },
+            {
+              "v": "16",
+              "name": "ActiveContractSalaryItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/contractSalaryItem/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63kpcl_1f8fa1d9-4160-4518-af5b-4be7df9fb22c"
+            },
+            {
+              "v": "16",
+              "name": "InactiveContractSalaryItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/contractSalaryItem/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63lqp1_c1aa4af2-f08c-4838-bbfb-3b2fb0c9c4b9"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificContractSalaryItem",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/contractSalaryItem/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63my39_4e4432e2-0848-49b2-9d6a-781c17b0325a"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8380,7 +9328,96 @@
           "v": 10,
           "name": "ContractDeductionItem",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteContractDeductionItem",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/contractDeductionItem/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63ob2d_5f56b1bf-efe3-405a-826c-fae3e5930017"
+            },
+            {
+              "v": "16",
+              "name": "ActiveContractDeductionItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/contractDeductionItem/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63ra5h_c3b0b4a5-4df9-4433-a005-70f145ecd7ba"
+            },
+            {
+              "v": "16",
+              "name": "InactiveContractDeductionItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/contractDeductionItem/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63s86m_ae73157d-a09f-4870-996c-367b6e757b81"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificContractDeductionItem",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/contractDeductionItem/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63tivi_2f51afd8-acb4-4d0d-9809-a995f13d2fb4"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8393,7 +9430,95 @@
           "v": 10,
           "name": "Supplier",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteSupplier",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/supplier/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63uy0d_f066e67d-537b-4e7b-8d62-e305a6340e65"
+            },
+            {
+              "v": "16",
+              "name": "ActiveSupplier",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/supplier/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63vve6_0bdc8531-118c-482f-ac14-20c52418e36c"
+            },
+            {
+              "v": "16",
+              "name": "InactiveSupplier",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/supplier/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63x5at_55bea293-278b-42ee-8449-e351671a4803"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificSupplier",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/supplier/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63y951_b9a4e4d9-c8bf-4bfd-9a30-b8e9e557ce2e"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8406,7 +9531,96 @@
           "v": 10,
           "name": "CostInvoice",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteCostInvoice",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoice/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp63zp4d_fdfc7909-9fe5-4db6-8101-227b640e7892"
+            },
+            {
+              "v": "16",
+              "name": "ActiveCostInvoice",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoice/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp641bi5_59bd631a-3c0b-43ac-8ac4-d3759d519b9a"
+            },
+            {
+              "v": "16",
+              "name": "InactiveCostInvoice",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoice/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp64297p_a95694aa-f522-4a20-aadd-b4590b268314"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificCostInvoice",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoice/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp6438zh_01286daa-94a9-4508-a761-45c412af0df8"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8419,7 +9633,96 @@
           "v": 10,
           "name": "CostInvoiceItem",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteCostInvoiceItem",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp644jp9_8829d404-46d4-42b8-b61c-fc1e1cc469ed"
+            },
+            {
+              "v": "16",
+              "name": "ActiveCostInvoiceItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp645xpp_959eb494-5f20-417b-80b8-9558873a1f79"
+            },
+            {
+              "v": "16",
+              "name": "InactiveCostInvoiceItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp646tbq_521dbc9b-2608-4bdb-ae4d-0b22f84626e8"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificCostInvoiceItem",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp648bg5_a565af4e-e4cf-4e42-8b14-2ecea8fcb2cb"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8432,7 +9735,96 @@
           "v": 10,
           "name": "ProjectDirectCostItem",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteProjectDirectCostItem",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp6qttvq_bec103c3-e2ff-40d0-a3bd-3485e4d45db2"
+            },
+            {
+              "v": "16",
+              "name": "ActiveProjectDirectCostItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp6qw3h3_5f62f051-c2e3-46c0-a7db-11d9ec0fd47d"
+            },
+            {
+              "v": "16",
+              "name": "InactiveProjectDirectCostItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp6qxdla_5548da47-f5d7-40b2-a810-44ddbb75b9d7"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificProjectDirectCostItem",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp6qyhrb_115cbe50-0577-4ad7-a6be-8068fce741fd"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8445,7 +9837,96 @@
           "v": 10,
           "name": "CostPaymentReceipt",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteCostPaymentReceipt",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp6r3pqu_4e3e3944-e971-4830-ab79-67fc5ab7edaf"
+            },
+            {
+              "v": "16",
+              "name": "ActiveCostPaymentReceipt",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp6r7zjq_f29c70d8-cedf-481b-9dc3-447a634733a1"
+            },
+            {
+              "v": "16",
+              "name": "InactiveCostPaymentReceipt",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp6raxau_7de15fd7-5d4f-4c50-97a9-89c740dddac2"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificCostPaymentReceipt",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp6rc4im_c2ea9c29-1c8d-43b1-bcd0-e885d437e021"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8458,7 +9939,96 @@
           "v": 10,
           "name": "SalaryPaymentReceipt",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteSalarylPaymentReceipt",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp79wlp3_f1c7ea5d-44f5-4dcb-a5c5-355503f3a7aa"
+            },
+            {
+              "v": "16",
+              "name": "ActiveSalarylPaymentReceipt",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp79x632_653ad469-7ac0-4156-8f02-7fd47edb1c48"
+            },
+            {
+              "v": "16",
+              "name": "InactiveSalarylPaymentReceipt",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp79xbh3_14d12f12-e68f-40ad-b573-1fb810f38d68"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificSalarylPaymentReceipt",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp79xn2v_68ffe213-0d79-4ea1-ac7a-6450664f0a48"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8471,7 +10041,96 @@
           "v": 10,
           "name": "StaffAdditionalPaymentReceipt",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteStaffAdditionalPaymentReceipt",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp79ub3i_5fe5aaa5-c92c-4446-8833-b78405e0f842"
+            },
+            {
+              "v": "16",
+              "name": "ActiveStaffAdditionalPaymentReceipt",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp79y78v_0ebe0405-1a94-4d3a-b077-ef4006d993ca"
+            },
+            {
+              "v": "16",
+              "name": "InactiveStaffAdditionalPaymentReceipt",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp79yc7b_f6302bc5-2a58-4019-a60f-ba554322cb9a"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificStaffAdditionalPaymentReceipt",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp79yn0n_c6b56957-a6fb-4841-bb99-fe3fccde864c"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8484,7 +10143,96 @@
           "v": 10,
           "name": "Customer",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteCustomer",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/customer/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7as9rq_ae080ed6-4ebd-402d-b5ae-845c351669b2"
+            },
+            {
+              "v": "16",
+              "name": "ActiveCustomer",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/customer/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7atnzq_d85d49e1-1f7b-4f39-811b-fd6b138b8e44"
+            },
+            {
+              "v": "16",
+              "name": "InactiveCustomer",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/customer/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7auqhr_89a7b311-37d9-43d5-9470-85a2d300becf"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificCustomer",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/customer/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7avsxi_3a130507-a48c-45a4-95a5-e1d226116689"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8495,9 +10243,97 @@
         },
         {
           "v": 10,
-          "name": "Contract",
+          "name": "CustomerContract",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteCustomerContract",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/customerContract/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7awnue_cda33955-be70-4904-b63f-d26435ef3050"
+            },
+            {
+              "v": "16",
+              "name": "ActiveCustomerContract",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/customerContract/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7axz3b_c9be6514-a343-4828-a4bb-26897c3698d9"
+            },
+            {
+              "v": "16",
+              "name": "InactiveCustomerContract",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/customerContract/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7azimw_b1c4509b-fdc5-4e75-acd5-863bcdd09377"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificCustomerContract",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/customerContract/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7b0x9j_a905ee46-e349-4599-a178-20f78f9cd605"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8508,9 +10344,98 @@
         },
         {
           "v": 10,
-          "name": "ContractPaymentSchedule",
+          "name": "CustomerContractPaymentSchedule",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteCustomerContractPaymentSchedule",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7bc3ke_05e41c7b-43ef-4832-9c34-e4080db379b2"
+            },
+            {
+              "v": "16",
+              "name": "ActiveCustomerContractPaymentSchedule",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7bce53_5702898b-e650-4764-8bc5-a6b45a49ca29"
+            },
+            {
+              "v": "16",
+              "name": "InactiveCustomerContractPaymentSchedule",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7bcnt3_186b60db-e4a0-40a1-b131-be50a029989e"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificCustomerContractPaymentSchedule",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7bd43q_a1314c4e-d96e-450e-bd13-ddad515423fe"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8521,9 +10446,98 @@
         },
         {
           "v": 10,
-          "name": "ContractPaymentReceipt",
+          "name": "CustomerContractPaymentReceipt",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteCustomerContractPaymentReceipt",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7bf40m_88eab5b9-96df-419b-a8c9-c0b1f28ba01c"
+            },
+            {
+              "v": "16",
+              "name": "ActiveCustomerContractPaymentReceipt",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7bfgdz_b65757fd-26d8-49dd-92b3-a69fa9b8a99c"
+            },
+            {
+              "v": "16",
+              "name": "InactiveCustomerContractPaymentReceipt",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7bfm7j_6869839d-352c-449c-a7c5-eb7b67fa8e3c"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificCustomerContractPaymentReceipt",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp7bfwhr_96e4d2ca-efb7-415d-8a40-454cc6afaad8"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8550,7 +10564,96 @@
           "v": 10,
           "name": "TestScenario",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/[id]",
+              "name": "DeleteTestScenario",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8v15xe_93040eb8-e555-44c7-afd1-7ab8ac1c9ee7"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/active/[id]",
+              "name": "ActiveTestScenario",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8v2wl6_f94fc051-592d-49f1-a284-ca373997130a"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/inactive/[id]",
+              "name": "InactiveTestScenario",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8v3y5m_37f6545c-5142-41f4-9b28-317972e0a7df"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/[id]",
+              "name": "GetSpecificTestScenario",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8v4xrv_a565a10e-c4fc-4d34-85c7-71747b84eb3f"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8563,7 +10666,96 @@
           "v": 10,
           "name": "PrerequisiteTestScenario",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/[id]",
+              "name": "DeletePrerequisiteTestScenario",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vkk9e_53d6e918-4dcd-4dbf-9f2e-8bc1c0358ced"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/active/[id]",
+              "name": "ActivePrerequisiteTestScenario",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vmieq_2dfd3e36-4077-40ba-99bb-ecf45ec11da7"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/inactive/[id]",
+              "name": "InactivePrerequisiteTestScenario",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vnasq_c3cb057b-dfaa-4800-ad61-5b9b92a7a405"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/[id]",
+              "name": "GetSpecificrerequisiteTestScenario",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8voczm_74b8cfd0-5a8d-4031-bd07-9bbc7123a807"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8576,7 +10768,96 @@
           "v": 10,
           "name": "TestPlan",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/[id]",
+              "name": "DeleteTestPlan",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8v6b0i_aa7e65ad-ca8f-46ea-8728-9ac7c9ad5532"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/active/[id]",
+              "name": "ActiveTestPlan",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vgca3_1252180f-387e-4f6b-9060-0d1edaa21e89"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/inactive/[id]",
+              "name": "InactiveTestPlan",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vht8i_9e186ba0-6d3e-4319-a024-9debc3bc6339"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/[id]",
+              "name": "GetSpecifiicTestPlan",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vj8e9_674075dd-66c6-4849-abd0-84f38883d00f"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8589,7 +10870,96 @@
           "v": 10,
           "name": "TestPlanScenario",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/[id]",
+              "name": "DeleteTestPlanScenario",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vq6je_85bcbcbd-5170-4df6-bb19-c851ced88073"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/active/[id]",
+              "name": "ActiveTestPlanScenario",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vrv2q_fa785150-78d1-46fe-888a-73353ebdd339"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/inactive/[id]",
+              "name": "ImactiveTestPlanScenario",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vsq4y_c940fc34-5d1b-461d-93fe-f2063b4ee4bd"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/[id]",
+              "name": "GetSpecificTestPlanScenario",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vtxix_838815a4-6567-4428-8be5-870bf38cdc1e"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8602,7 +10972,110 @@
           "v": 10,
           "name": "TestPlanScenarioIssueCoverage",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/[id]",
+              "name": "DeleteTestPlanScenarioIssueCoverage",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8wu61u_4ea85c20-6f04-4c40-acf7-e4463dd45358"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/active/[id]",
+              "name": "ActiveTestPlanScenarioIssueCoverage",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "addTo": "HEADERS",
+                "grantTypeInfo": {
+                  "authEndpoint": "",
+                  "tokenEndpoint": "",
+                  "clientID": "",
+                  "clientSecret": "",
+                  "isPKCE": false,
+                  "codeVerifierMethod": "S256",
+                  "authRequestParams": [],
+                  "refreshRequestParams": [],
+                  "tokenRequestParams": [],
+                  "grantType": "AUTHORIZATION_CODE",
+                  "token": ""
+                },
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8wvxgq_e8dec4d5-8b9e-4345-ba1c-44681a6c676d"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/inactive/[id]",
+              "name": "InactiveTestPlanScenarioIssueCoverage",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8wxrxe_6a23b29e-ada0-4e9d-89cf-7d5ac37d88f4"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/[id]",
+              "name": "GetSpecificTestPlanScenarioIssueCoverage",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8wypsq_07f48864-e3fd-412f-ae4c-a0cfa482de1e"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8615,7 +11088,96 @@
           "v": 10,
           "name": "TestResult",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/[id]",
+              "name": "DeleteTestResult",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vvs5t_45bc0429-c8e1-4456-9cd6-a5fe1c9b488a"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/active/[id]",
+              "name": "ActiveTestResult",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vyfwp_f3bd4208-53c0-476a-a9fc-e584c588fa6b"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/inactive/[id]",
+              "name": "InactiveTestResult",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8vz8v6_3265b056-3fd2-48ac-b2c9-a4e9622a0273"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/[id]",
+              "name": "GetSpecificTestResult",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8w0cq9_947b2d2e-06f9-4a5c-bfd3-cdfe687448bd"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -8628,7 +11190,96 @@
           "v": 10,
           "name": "TestResultDetail",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/[id]",
+              "name": "DeleteTestResultDetail",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8w29sp_c97eda62-bc0b-45af-b6ec-0ac2e9a21503"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/active/[id]",
+              "name": "ActiveTestResultDetail",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8w3c5d_cf77d16f-98f4-47b2-9ac0-d8ff9ab82c3a"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/inactive/[id]",
+              "name": "InactiveTestResultDetail",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8w49cy_1dcb50ac-db52-4e20-bf85-385e0c38f341"
+            },
+            {
+              "v": "16",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/[id]",
+              "name": "GetSpecificTestResultDetail",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mp8w5esp_1bcc475c-8845-47df-8e26-7db170a9af35"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true

@@ -5,14 +5,14 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Evaluation Schema Diagram \n Version 26.2.14
+title Horizon Research Project (HRP) \n Evaluation Schema Diagram \n Version 26.5.18
 
 entity "UserManagement.Profile" as profile #Violet{
   *Id : bigint(19) <<serial>>
   --
   *FirstName : varchar(200)
   *LastName : varchar(200)
-  *Gender : enum <<male, female>>
+  *Gender : enum(male, female)
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
@@ -30,8 +30,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *Username : varchar(200) <<unique>>
   *Pass : varchar(255)
   PassSalt : varchar(50)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -45,8 +44,7 @@ entity "HumanResource.Department" as department #Lavender{
   *Code : varchar(20) <<unique>>
   ParentId : integer(20) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -61,8 +59,7 @@ entity "ProjectManagement.Project" as project #Orange{
   Description : varchar(4000)
   StartDate : date
   EndDate : date
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -79,8 +76,7 @@ entity "Finance.Customer" as customer #Salmon{
   MobileNumber : varchar(20)
   Email : varchar(100)
   PostalCode : varchar(20)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -93,10 +89,9 @@ entity "Evaluation.Question" as question #SkyBlue{
   *QuestionnaireId : bigint(19) <<FK>>
   *Question : varchar(4000)
   *Code : varchar(20) <<unique>>
-  *AnswerType : enum <<SingleChoice, MultiChoice, Description>>
+  *AnswerType : enum(SingleChoice, MultiChoice, Description)
   *Score : integer
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -110,8 +105,7 @@ entity "Evaluation.QuestionOption" as questionOption #SkyBlue{
   *Title : varchar(4000)
   *Score : integer
   *IsDescriptionRequired : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -124,14 +118,13 @@ entity "Evaluation.Questionnaire" as questionnaire #SkyBlue{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   ProjectId : bigint(19) <<FK>>
-  *QuestionnaireAduience : enum <<Staffs, Customers, SeniorManagers, Stackholders>>
+  *QuestionnaireAduience : enum(Staffs, Customers, SeniorManagers, Stackholders)
   *TotalScore : integer
   *AcceptableScore : integer
   *WarningScore : integer
   *DisasterScore : integer
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -143,21 +136,19 @@ entity "Evaluation.QuestionnaireTargetDepartment" as questionnaireTargetDepartme
   --
   *QuestionnaireId : bigint(19) <<FK>>
   *DepoartmentId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
   ModifierId : bigint(19)
 }
 
-entity "Evaluation.QuestionList" as questionList #SkyBlue{
+entity "Evaluation.QuestionnaireItem" as questionnaireItem #SkyBlue{
   *Id : bigint(19) <<serial>>
   --
   *QuestionnaireId : bigint(19) <<FK>>
   *QuestionId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -171,8 +162,7 @@ entity "Evaluation.QuestionnaireResult" as questionnaireResult #SkyBlue{
   ProfileId : bigint(19) <<FK>>
   CustomerId : bigint(19) <<FK>>
   *TotalScore : integer
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -183,11 +173,10 @@ entity "Evaluation.QuestionnaireResultDetail" as questionnaireResultDetail #SkyB
   *Id : bigint(19) <<serial>>
   --
   *QuestionnaireResultId : bigint(19) <<FK>>
-  *QuestionListId : bigint(19) <<FK>>
+  *QuestionnaireItemId : bigint(19) <<FK>>
   ChoosedQuestionOptionId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -202,8 +191,7 @@ entity "Evaluation.CustomerFeedback" as customerFeedback #SkyBlue{
   *FeedbackDate : date
   *FeedbackValue : numeric(2,2) <<between 1 and 10>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -217,8 +205,7 @@ entity "Evaluation.StaffSatisfactionEvaluation" as staffSatisfactionEvaluation #
   *EvalationDate : date
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -232,8 +219,7 @@ entity "Evaluation.ProjectProductivityEvaluation" as projectProductivityEvaluati
   *EvalationDate : datetime
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -248,8 +234,7 @@ entity "Evaluation.CustomerSatisfactionEvaluation" as customerSatisfactionEvalua
   *EvalationDate : datetime
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -258,15 +243,15 @@ entity "Evaluation.CustomerSatisfactionEvaluation" as customerSatisfactionEvalua
 
 questionnaire ||..o{ questionnaireTargetDepartment
 department ||..o{ questionnaireTargetDepartment
-question ||..o{ questionList
+question ||..o{ questionnaireItem
 project ||..o{ questionnaire
-questionnaire ||..o{ questionList
+questionnaire ||..o{ questionnaireItem
 question ||..o{ questionOption
 questionnaire ||..o{ questionnaireResult
 profile |o..o{ questionnaireResult
 customer |o..o{ questionnaireResult
 questionnaireResult ||..o{ questionnaireResultDetail
-questionList ||..o{ questionnaireResultDetail
+questionnaireItem ||..o{ questionnaireResultDetail
 questionOption |o..o{ questionnaireResultDetail
 profile ||..o{ staffSatisfactionEvaluation
 project ||..o{ projectProductivityEvaluation

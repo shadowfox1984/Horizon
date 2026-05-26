@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Finance Schema Diagram \n Version 25.12.16
+title Horizon Research Project (HRP) \n Finance Schema Diagram \n Version 26.5.16
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -13,8 +13,7 @@ entity "Basic.ContractType" as contractType #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -28,8 +27,7 @@ entity "Basic.Currency" as currency #LightPink{
   *Code : varchar(20) <<unique>>
   *Symbol : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -43,8 +41,7 @@ entity "Basic.TimeUnit" as timeUnit #LightPink{
   *Code : varchar(20) <<unique>>
   BasedOnMillisecond : bigint(19)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -59,8 +56,7 @@ entity "ProjectManagement.Project" as project #Orange{
   Description : varchar(4000)
   StartDate : date
   EndDate : date
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -74,8 +70,7 @@ entity "ProjectManagement.ProjectRelease" as release #Orange{
   *VersionNumber : varchar(20) <<unique>>
   ReleaseDate : date
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -90,8 +85,7 @@ entity "DocumentManagement.Document" as document #Gold{
   *DocumentTypeId : bigint(19) <<FK>>
   *FileExtensionId : bigint(19) <<FK>>
   *FileAddress: varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -103,7 +97,7 @@ entity "UserManagement.Profile" as profile #Violet{
   --
   *FirstName : varchar(200)
   *LastName : varchar(200)
-  *Gender : enum <<male, female>>
+  *Gender : enum(male, female)
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
@@ -121,8 +115,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *Username : varchar(200) <<unique>>
   *Pass : varchar(255)
   PassSalt : varchar(50)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -139,8 +132,7 @@ entity "Finance.StaffContract" as staffContract #Salmon{
   *Title : varchar(200)
   Description : varchar(4000)
   AutoRenewal : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -156,8 +148,7 @@ entity "Finance.ContractSalaryItem" as contractSalaryItem #Salmon{
   *CurrencyId : bigint(19) <<FK>>
   Description : varchar(4000)
   *CalculationTimeUnitId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -169,14 +160,13 @@ entity "Finance.ContractDeductionItem" as contractDeductionItem #Salmon{
   --
   *StaffContractId : bigint(19) <<FK>>
   *Title : varchar(200)
-  *CalculationType : enum <<percentage, fixedAmount>>
+  *CalculationType : enum(percentage, fixedAmount)
   DeductionPercentage : numeric(3,2) <<from 0 until 100>>
   FixedAmount : numeric(22,2)
   FixedAmountCurrencyId : bigint(19) <<FK>>
   Description : varchar(4000)
   *CalculationTimeUnitId : bigint(19) <<FK>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -195,8 +185,7 @@ entity "Finance.Supplier" as supplier #Salmon{
   City : varchar(255)
   Address : varchar(4000)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -212,8 +201,7 @@ entity "Finance.CostInvoice" as costInvoice #Salmon{
   *TotalAmount : numeric(22,2)
   *CurrencyId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -229,8 +217,7 @@ entity "Finance.CostInvoiceItem" as costInvoiceItem #Salmon{
   *CurrencyId : bigint(19) <<FK>>
   *Quantity : float
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -244,8 +231,7 @@ entity "Finance.ProjectDirectCostItem" as projectDirectCostItem #Salmon{
   *CostInvoiceItemId : bigint(19) <<FK>>
   *AllocatedQuantity : float
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -262,8 +248,7 @@ entity "Finance.CostPaymentReceipt" as costPaymentReceipt #Salmon{
   *CurrencyId : bigint(19) <<FK>>
   *PaymentDate : date
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -280,8 +265,7 @@ entity "Finance.SalaryPaymentReceipt" as salaryPaymentReceipt #Salmon{
   *CurrencyId : bigint(19) <<FK>>
   *PaymentDate : date
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -298,8 +282,7 @@ entity "Finance.StaffAdditionalPaymentReceipt" as staffAdditionalPaymentReceipt 
   *CurrencyId : bigint(19) <<FK>>
   *PaymentDate : date
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -316,8 +299,7 @@ entity "Finance.Customer" as customer #Salmon{
   PostalCode : varchar(20)
   Address : varchar(4000)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -339,8 +321,7 @@ entity "Finance.Contract" as contract #Salmon{
   *CurrencyId : bigint(19) <<FK>>
   DocumentId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -357,8 +338,7 @@ entity "Finance.ContractPaymentSchedule" as contractPaymentSchedule #Salmon{
   *Amount : numeric(22,2)
   *CurrencyId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -375,8 +355,7 @@ entity "Finance.ContractPaymentReceipt" as contractPaymentReceipt #Salmon{
   *Amount : numeric(22,2)
   *CurrencyId : bigint(19) <<FK>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp

@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Basic Schema Diagram \n Version 25.12.15
+title Horizon Research Project (HRP) \n Basic Schema Diagram \n Version 26.5.16
 
 entity "Basic.ContractType" as contractType #LightPink{
   *Id : bigint(19) <<serial>>
@@ -13,8 +13,7 @@ entity "Basic.ContractType" as contractType #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -27,8 +26,7 @@ entity "Basic.EducationLevel" as educationLevel #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -41,8 +39,7 @@ entity "Basic.DocumentType" as documentType #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -55,8 +52,7 @@ entity "Basic.FileExtension" as fileExtension #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -71,8 +67,7 @@ entity "Basic.Priority" as priority #LightPink{
   *Ordering : integer
   *Color : varchar(7)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -87,8 +82,7 @@ entity "Basic.IssueType" as issueType #LightPink{
   *IconAddress : varchar(1000)
   *Color : varchar(7)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -102,9 +96,8 @@ entity "Basic.Status" as status #LightPink{
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
   *Color : varchar(7)
-  *StatusEffect : enum <<ToDo, InProgress, Done>>
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *StatusEffect : enum(ToDo, InProgress, Done)
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -119,8 +112,7 @@ entity "Basic.Resolvation" as resolvation #LightPink{
   Description : varchar(4000)
   *Color : varchar(7)
   *IsResolved : boolean
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -133,8 +125,7 @@ entity "Basic.MeetingType" as meetingType #LightPink{
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -148,8 +139,7 @@ entity "Basic.TimeUnit" as timeUnit #LightPink{
   *Code : varchar(20) <<unique>>
   BasedOnMillisecond : bigint(19)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -164,8 +154,7 @@ entity "Basic.TestApproval" as testApproval #LightPink{
   *IsApproved : boolean
   *Color : varchar(10)
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -179,8 +168,7 @@ entity "Basic.TestComplexityLevel" as testComplexityLevel #LightPink{
   *Code : varchar(20) <<unique>>
   *ValueNumber : float
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
@@ -194,8 +182,7 @@ entity "Basic.Currency" as currency #LightPink{
   *Code : varchar(20) <<unique>>
   *Symbol : varchar(20) <<unique>>
   Description : varchar(4000)
-  *IsActive : boolean <<default: true>>
-  *IsDeleted : boolean <<default: false>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
   ModifyDate : timestamp
