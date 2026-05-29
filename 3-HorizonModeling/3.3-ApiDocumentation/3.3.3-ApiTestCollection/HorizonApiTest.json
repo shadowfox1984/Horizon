@@ -7181,7 +7181,7 @@
               "v": "16",
               "name": "InactiveProjectRoleMember",
               "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/[id]",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -8030,14 +8030,14 @@
         },
         {
           "v": 10,
-          "name": "ProjectWorkflowResolvation",
+          "name": "ProjectWorkflowResolution",
           "folders": [],
           "requests": [
             {
               "v": "16",
-              "name": "DeleteProjectWorkflowResolvation",
+              "name": "DeleteProjectWorkflowResolution",
               "method": "DELETE",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/[id]",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -8057,9 +8057,9 @@
             },
             {
               "v": "16",
-              "name": "ActiveProjectWorkflowResolvation",
+              "name": "ActiveProjectWorkflowResolution",
               "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/active/[id]",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -8079,9 +8079,9 @@
             },
             {
               "v": "16",
-              "name": "InactiveProjectWorkflowResolvation",
+              "name": "InactiveProjectWorkflowResolution",
               "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/inactive/[id]",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -8101,9 +8101,9 @@
             },
             {
               "v": "16",
-              "name": "GetSpecificProjectWorkflowResolvation",
+              "name": "GetSpecificProjectWorkflowResolution",
               "method": "GET",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolvation/[id]",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -10567,18 +10567,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/[id]",
               "name": "DeleteTestScenario",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10589,18 +10589,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/active/[id]",
               "name": "ActiveTestScenario",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10611,18 +10611,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/inactive/[id]",
               "name": "InactiveTestScenario",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10633,18 +10633,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/[id]",
               "name": "GetSpecificTestScenario",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10669,18 +10669,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/[id]",
               "name": "DeletePrerequisiteTestScenario",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10691,18 +10691,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/active/[id]",
               "name": "ActivePrerequisiteTestScenario",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10713,18 +10713,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/inactive/[id]",
               "name": "InactivePrerequisiteTestScenario",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10735,18 +10735,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/[id]",
               "name": "GetSpecificrerequisiteTestScenario",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10771,18 +10771,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/[id]",
               "name": "DeleteTestPlan",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10793,18 +10793,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/active/[id]",
               "name": "ActiveTestPlan",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10815,18 +10815,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/inactive/[id]",
               "name": "InactiveTestPlan",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10837,18 +10837,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/[id]",
               "name": "GetSpecifiicTestPlan",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10873,18 +10873,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/[id]",
               "name": "DeleteTestPlanScenario",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10895,18 +10895,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/active/[id]",
               "name": "ActiveTestPlanScenario",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10917,18 +10917,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/inactive/[id]",
               "name": "ImactiveTestPlanScenario",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10939,18 +10939,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/[id]",
               "name": "GetSpecificTestPlanScenario",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10975,18 +10975,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/[id]",
               "name": "DeleteTestPlanScenarioIssueCoverage",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -10997,32 +10997,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/active/[id]",
               "name": "ActiveTestPlanScenarioIssueCoverage",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "addTo": "HEADERS",
-                "grantTypeInfo": {
-                  "authEndpoint": "",
-                  "tokenEndpoint": "",
-                  "clientID": "",
-                  "clientSecret": "",
-                  "isPKCE": false,
-                  "codeVerifierMethod": "S256",
-                  "authRequestParams": [],
-                  "refreshRequestParams": [],
-                  "tokenRequestParams": [],
-                  "grantType": "AUTHORIZATION_CODE",
-                  "token": ""
-                },
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -11033,18 +11019,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/inactive/[id]",
               "name": "InactiveTestPlanScenarioIssueCoverage",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -11055,18 +11041,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/[id]",
               "name": "GetSpecificTestPlanScenarioIssueCoverage",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -11091,18 +11077,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/[id]",
               "name": "DeleteTestResult",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -11113,18 +11099,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/active/[id]",
               "name": "ActiveTestResult",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -11135,18 +11121,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/inactive/[id]",
               "name": "InactiveTestResult",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -11157,18 +11143,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/[id]",
               "name": "GetSpecificTestResult",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -11193,18 +11179,18 @@
           "requests": [
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/[id]",
               "name": "DeleteTestResultDetail",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/[id]",
               "params": [],
               "headers": [],
-              "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -11215,18 +11201,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/active/[id]",
               "name": "ActiveTestResultDetail",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/active/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -11237,18 +11223,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/inactive/[id]",
               "name": "InactiveTestResultDetail",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/inactive/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -11259,18 +11245,18 @@
             },
             {
               "v": "16",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/[id]",
               "name": "GetSpecificTestResultDetail",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/[id]",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -11306,7 +11292,96 @@
           "v": 10,
           "name": "Question",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteQuestion",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/evaluation/question/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbimdr1_0f22e08c-f4f8-4016-9249-c204e98993ab"
+            },
+            {
+              "v": "16",
+              "name": "ActiveQuestion",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/question/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbioucu_6f86a685-8da2-418d-a255-ed64eb134e8a"
+            },
+            {
+              "v": "16",
+              "name": "InactiveQuestion",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/question/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbipo2f_5c9952eb-fad5-4804-89f8-32faa88bfa42"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificQuestion",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/question/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbiqihb_5f6175f8-13af-4691-93fc-7d3e47505ef9"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -11319,7 +11394,96 @@
           "v": 10,
           "name": "QuestionOption",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteQuestionOption",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbiri2t_c2e4220e-6cc1-4210-8889-92dc5b830237"
+            },
+            {
+              "v": "16",
+              "name": "ActiveQuestionOption",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbit2yn_af68f520-a416-4c39-93b8-49de57ba03e3"
+            },
+            {
+              "v": "16",
+              "name": "InactiveQuestionOption",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbitmrp_245979c6-6620-47b6-b305-63fb91d9dbb6"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificQuestionOption",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbivdvh_8b701706-438e-4b13-a8af-14ba3dcf1bf3"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -11332,7 +11496,96 @@
           "v": 10,
           "name": "Questionnaire",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteQuestionnaire",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbixdal_2b897382-f498-4b7f-8e0b-069f4a0653ef"
+            },
+            {
+              "v": "16",
+              "name": "ActiveQuestionnaire",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbizdk5_060813a4-2372-4d6e-9bd4-d9fe9bd20992"
+            },
+            {
+              "v": "16",
+              "name": "InactiveQuestionnaire",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbj0b4l_666559a8-d67b-400d-9c21-a222ea70f786"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificQuestionnaire",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbj1ara_80b31a59-c23c-4973-94d0-f41d7e04c043"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -11356,9 +11609,98 @@
         },
         {
           "v": 10,
-          "name": "QuestionList",
+          "name": "QuestionnaireItem",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteQuestionnaireItem",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbj3sud_11c98657-96d7-49c0-b2d5-6df331258c2e"
+            },
+            {
+              "v": "16",
+              "name": "ActiveQuestionnaireItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjd5i6_af281363-3b7a-4a96-bc5f-a7b0080d25a2"
+            },
+            {
+              "v": "16",
+              "name": "InactiveQuestionnaireItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjdw7y_83a2848a-c3e0-46e4-9362-8b8bab2f7b7c"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificQuestionnaireItem",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjep8t_5703c864-8171-4d9f-87c1-9d76b90d3253"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -11371,7 +11713,96 @@
           "v": 10,
           "name": "QuestionnaireResult",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteQuestionnaireResult",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjfxl9_a238fc79-a43a-4820-9e62-f033bd159d94"
+            },
+            {
+              "v": "16",
+              "name": "ActiveQuestionnaireResult",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjhkz1_281ce3af-40b6-4324-9fa0-5035afc4180c"
+            },
+            {
+              "v": "16",
+              "name": "InactiveQuestionnaireResult",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjil9p_af57cd6d-2b9a-42fd-ad6c-d4bfb24c9aa6"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificQuestionnaireResult",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjjr26_fa7178d9-4c4d-4307-8fbd-9828ab8eb6c1"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -11384,7 +11815,96 @@
           "v": 10,
           "name": "QuestionnaireResultDetail",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteQuestionnaireResultDetail",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResultDetail/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjlb31_2ea8ea09-1c11-476e-a07e-0e51713d59b6"
+            },
+            {
+              "v": "16",
+              "name": "ActiveQuestionnaireResultDetail",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResultDetail/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjmc1h_968500bb-55d6-4a1f-87f3-eb42eca734d7"
+            },
+            {
+              "v": "16",
+              "name": "InactiveQuestionnaireResultDetail",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResultDetail/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjn4bj_aad81e76-adfd-4527-bfd5-0f5371f16b67"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificQuestionnaireResultDetail",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResultDetail/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjo3n9_6dc11582-d2a5-4d07-9a29-5738f788642b"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -11397,7 +11917,96 @@
           "v": 10,
           "name": "StaffSatisfactionEvaluation",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteStaffSatisfactionEvaluation",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbk0319_8a30956b-770f-4ed6-8891-7297e21c8673"
+            },
+            {
+              "v": "16",
+              "name": "ActiveStaffSatisfactionEvaluation",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbk4b9q_50d7b4cd-ec45-41f9-ada9-4972a362c83c"
+            },
+            {
+              "v": "16",
+              "name": "InactiveStaffSatisfactionEvaluation",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbk520m_a7758fcd-4d37-4adc-a3b1-98444d600bd9"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificStaffSatisfactionEvaluation",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbk657i_58ad9670-fead-43f2-952e-baf97b7bb90d"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -11410,7 +12019,96 @@
           "v": 10,
           "name": "ProjectProductivityEvaluation",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteProjectProductivityEvaluation",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/evaluation/projectProductivityEvaluation/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbk8ahy_5c74499d-e3cd-4bef-ac48-1cbeebf09466"
+            },
+            {
+              "v": "16",
+              "name": "ActiveProjectProductivityEvaluation",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/projectProductivityEvaluation/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbka71p_23035619-cae7-402c-ab8d-33c2b2c01635"
+            },
+            {
+              "v": "16",
+              "name": "InactiveProjectProductivityEvaluation",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/projectProductivityEvaluation/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbkb1zi_ccc8fddb-b8b9-46be-bdef-676b50586b93"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificProjectProductivityEvaluation",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/projectProductivityEvaluation/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbkc1da_82e049fb-1b2f-43b8-aa5b-37d28f583cdf"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -11423,7 +12121,96 @@
           "v": 10,
           "name": "CustomerSatisfactionEvaluation",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteCustomerSatisfactionEvaluation",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbkdf26_e4e8cba0-3b66-48b4-a8f0-4198c97c10fb"
+            },
+            {
+              "v": "16",
+              "name": "ActiveCustomerSatisfactionEvaluation",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbkeufp_7d66dd9f-a85f-44af-965e-4d698d15c0fa"
+            },
+            {
+              "v": "16",
+              "name": "InactiveCustomerSatisfactionEvaluation",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbkfrqu_d2e9b800-0ab0-4989-8871-fd7d9838094a"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificCustomerSatisfactionEvaluation",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbkgtrh_f2aa0116-7182-40eb-80bd-4251565fbb4b"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -11436,7 +12223,96 @@
           "v": 10,
           "name": "CustomerFeedback",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "DeleteCustomerFeedback",
+              "method": "DELETE",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerFeedback/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjpuk5_70c75d6d-edff-4d15-a03b-3cf58026a6c4"
+            },
+            {
+              "v": "16",
+              "name": "ActiveCustomerFeedback",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerFeedback/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjr9jy_ab6bb9eb-d601-4a1a-b981-ee7336b55989"
+            },
+            {
+              "v": "16",
+              "name": "InactiveCustomerFeedback",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerFeedback/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjs83x_a3016e1e-3b62-4b02-aa5f-9fef0ba1c8e6"
+            },
+            {
+              "v": "16",
+              "name": "GetSpecificCustomerFeedback",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerFeedback/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mpbjvdkl_8b461ed7-10a7-4c1f-8a72-bb8b0dab3b3d"
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true

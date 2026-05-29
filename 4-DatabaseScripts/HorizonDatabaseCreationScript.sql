@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.5.18
+	Last Version : 26.5.29
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -86,7 +86,7 @@ CREATE TABLE Basic.Status(
 	ModifierId bigint
 );
 
-CREATE TABLE Basic.Resolvation(
+CREATE TABLE Basic.Resolution(
     Id serial PRIMARY KEY NOT NULL, 
     Code varchar(20) NOT NULL UNIQUE,
     Title varchar(200) NOT NULL,
@@ -638,17 +638,17 @@ CREATE TABLE ProjectManagement.ProjectWorkflowStatus(
 	FOREIGN KEY (StatusId) REFERENCES Basic.Status(Id)
 );
 
-CREATE TABLE ProjectManagement.ProjectWorkflowResolvation(
+CREATE TABLE ProjectManagement.ProjectWorkflowResolution(
     Id serial PRIMARY KEY NOT NULL, 
 	ProjectWorkflowId bigint NOT NULL,
-	ResolvationId bigint NOT NULL,
+	ResolutionId bigint NOT NULL,
     ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
     CreateDate timestamp NOT NULL DEFAULT NOW(),
 	CreatorId bigint NOT NULL,
     ModifyDate timestamp,
 	ModifierId bigint,
 	FOREIGN KEY (ProjectWorkflowId) REFERENCES ProjectManagement.ProjectWorkflow(Id),
-	FOREIGN KEY (ResolvationId) REFERENCES Basic.Resolvation(Id)
+	FOREIGN KEY (ResolutionId) REFERENCES Basic.Resolution(Id)
 );
 
 CREATE TABLE ProjectManagement.ProjectWorkflowProgress(
@@ -686,7 +686,7 @@ CREATE TABLE ProjectManagement.Issue(
 	LinkedIssueId bigint,
 	LinkedIssueType linkedIssueType,
 	CurrentStatusId bigint NOT NULL,
-	CurrentResolvationId bigint NOT NULL,
+	CurrentResolutionId bigint NOT NULL,
     ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
     CreateDate timestamp NOT NULL DEFAULT NOW(),
 	CreatorId bigint NOT NULL,
@@ -696,7 +696,7 @@ CREATE TABLE ProjectManagement.Issue(
 	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id),
 	FOREIGN KEY (IssueTypeId) REFERENCES Basic.IssueType(Id),
 	FOREIGN KEY (CuurentStatusId) REFERENCES ProjectManagement.ProjectWorkflowStatus(Id),
-	FOREIGN KEY (CurrentResolvationId) REFERENCES ProjectManagement.ProjectWorkflowResolvation(Id)
+	FOREIGN KEY (CurrentResolutionId) REFERENCES ProjectManagement.ProjectWorkflowResolution(Id)
 	FOREIGN KEY (LinkedIssueId) REFERENCES ProjectManagement.Issue(Id)
 	FOREIGN KEY (EpicLinkedId) REFERENCES ProjectManagement.Issue(Id)
 	FOREIGN KEY (ParentIssueId) REFERENCES ProjectManagement.Issue(Id)
@@ -808,7 +808,7 @@ CREATE TABLE ProjectManagement.IssueWorkflowHistory(
 	StartStatusId bigint NOT NULL,
 	EndStatusId bigint NOT NULL,
 	ProjectWorkflowProgressId bigint NOT NULL,
-	ProjectWorkflowResolvationId bigint,
+	ProjectWorkflowResolutionId bigint,
     ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
     CreateDate timestamp NOT NULL DEFAULT NOW(),
 	CreatorId bigint NOT NULL,
@@ -818,7 +818,7 @@ CREATE TABLE ProjectManagement.IssueWorkflowHistory(
 	FOREIGN KEY (StartStatusId) REFERENCES ProjectManagement.StartStatus(Id),
 	FOREIGN KEY (EndStatusId) REFERENCES ProjectManagement.EndStatus(Id),
 	FOREIGN KEY (ProjectWorkflowProgressId) REFERENCES ProjectManagement.ProjectWorkflowProgress(Id),
-	FOREIGN KEY (ProjectWorkflowResolvationId) REFERENCES ProjectManagement.ProjectWorkflowResolvation(Id)
+	FOREIGN KEY (ProjectWorkflowResolutionId) REFERENCES ProjectManagement.ProjectWorkflowResolution(Id)
 );
 
 CREATE TABLE ProjectManagement.ProjectMeeting(
