@@ -9195,7 +9195,7 @@
               "v": "16",
               "name": "GetSpecificStaffContract",
               "method": "GET",
-              "endpoint": "hthttps://[MainDomian]/api/finance/staffContract/[id]",
+              "endpoint": "https://[MainDomian]/api/finance/staffContract/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -9463,7 +9463,8 @@
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
+                "authType": "bearer",
+                "token": "[token]",
                 "authActive": true
               },
               "body": {
