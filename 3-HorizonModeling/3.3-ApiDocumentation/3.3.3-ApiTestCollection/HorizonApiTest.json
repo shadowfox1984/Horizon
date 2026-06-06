@@ -6897,6 +6897,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/project",
+              "name": "AddProject",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"startDate\": \"2026-06-06\", /*optional*/\n  \t\"endDate\": \"2026-06-06\", /*optional*/\n  \t\"decription\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/project/[id]",
+              "name": "UpdateProject",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"startDate\": \"2026-06-06\", /*optional*/\n  \t\"endDate\": \"2026-06-06\", /*optional*/\n  \t\"decription\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteProject",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/projectManagement/project/[id]",
@@ -6999,6 +7043,53 @@
           "name": "ProjectProfileMember",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember",
+              "name": "AddProjectProfileMember",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "username": "",
+                "password": "",
+                "algorithm": "MD5",
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"profileId\" : 123,\n  \t\"projectId\" : 123,\n  \t\"IsProjectManager\": true\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/[id]",
+              "name": "UpdateProjectProfileMember",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"profileId\" : 123,\n  \t\"projectId\" : 123,\n  \t\"IsProjectManager\": true\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteProjectProfileMember",
@@ -7105,6 +7196,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember",
+              "name": "AddProjectGroupMember",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"groupId\" : 123,\n  \t\"projectId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/[id]",
+              "name": "UpdateProjectGroupMember",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"groupId\" : 123,\n  \t\"projectId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteProjectGroupMember",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/[id]",
@@ -7207,6 +7342,50 @@
           "name": "ProjectRoleMember",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember",
+              "name": "AddProjectRoleMember",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"roleId\" : 123,\n  \t\"projectId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/[id]",
+              "name": "UpdateProjectRoleMember",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"roleId\" : 123,\n  \t\"projectId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteProjectRoleMember",
@@ -11764,84 +11943,84 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/[id]",
               "name": "DeleteQuestionnaireTargetDepartment",
-              "params": [],
-              "headers": [],
               "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/active/[id]",
-              "name": "ActiveQuestionnaireTargetDepartment",
-              "params": [],
-              "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/inactive/[id]",
-              "name": "InactiveQuestionnaireTargetDepartment",
-              "params": [],
-              "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
               "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/[id]",
-              "name": "GetSpecificQuestionnaireTargetDepartment",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "ActiveQuestionnaireTargetDepartment",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "InactiveQuestionnaireTargetDepartment",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetSpecificQuestionnaireTargetDepartment",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
