@@ -8829,6 +8829,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueComment",
+              "name": "AddIssueComment",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"commentText\" : \"test\",\n\t\"issueId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueComment/[id]",
+              "name": "UpdateIssueComment",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"commentText\" : \"test\",\n\t\"issueId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteIssueComment",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/projectManagement/issueComment/[id]",
@@ -8933,6 +8977,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment",
+              "name": "AddIssueAttachment",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"documentId\" : 123,\n\t\"issueId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment/[id]",
+              "name": "UpdateIssueAttachment",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"documentId\" : 123,\n\t\"issueId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteIssueAttachment",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment/[id]",
@@ -9035,6 +9123,50 @@
           "name": "ProjectRelease",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/[id]",
+              "name": "AddProjectRelease",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"projectId\" : 123,\n  \t\"versionNumber\" : \"1.0.0\",\n  \t\"releaseDate\": \"2026-06-06\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/[id]",
+              "name": "UpdateProjectRelease",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"projectId\" : 123,\n  \t\"versionNumber\" : \"1.0.0\",\n  \t\"releaseDate\": \"2026-06-06\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteProjectRelease",
