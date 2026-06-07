@@ -7489,18 +7489,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember",
               "name": "AddProjectDepartmentMember",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"departmentId\" : 123,\n  \t\"projectId\" : 123\n}"
@@ -7511,18 +7511,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/[id]",
               "name": "UpdateProjectDepartmentMember",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"departmentId\" : 123,\n  \t\"projectId\" : 123\n}"
@@ -7637,18 +7637,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow",
               "name": "AddProjectWorkflow",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"projectId\": 123,\n  \t\"decription\" : \"test\" /*optional*/\n}"
@@ -7659,18 +7659,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/[id]",
               "name": "UpdateProjectWorkflow",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"projectId\": 123,\n  \t\"decription\" : \"test\" /*optional*/\n}"
@@ -8281,18 +8281,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus",
               "name": "AddProjectWorkflowStatus",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"statusId\" : 123,\n  \t\"projectWorkflowId\" : 123\n}"
@@ -8303,18 +8303,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/[id]",
               "name": "UpdateProjectWorkflowStatus",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"statusId\" : 123,\n  \t\"projectWorkflowId\" : 123\n}"
@@ -8429,18 +8429,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution",
               "name": "AddProjectWorkflowResolution",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"resolutionId\" : 123,\n  \t\"projectWorkflowId\" : 123\n}"
@@ -8451,18 +8451,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/[id]",
               "name": "UpdateProjectWorkflowResolution",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"resolutionId\" : 123,\n  \t\"projectWorkflowId\" : 123\n}"
@@ -8577,18 +8577,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress",
               "name": "AddProjetWorkflowProgress",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"title\" : \"test\",\n\t\"startProjectWorkflowStatusId\" : 123,\n\t\"isFromStartPoint\" : true,\n  \t\"canBeStartedFromAnyStatus\" : true,\n  \t\"endProjectWorkflowStatusId\" : 123,\n  \t\"isWorkflowEndPoint\" : true,\n  \t\"projectWorkflowId\" : 123\n}"
@@ -8599,18 +8599,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/[id]",
               "name": "UpdateProjetWorkflowProgress",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"title\" : \"test\",\n\t\"startProjectWorkflowStatusId\" : 123,\n\t\"isFromStartPoint\" : true,\n  \t\"canBeStartedFromAnyStatus\" : true,\n  \t\"endProjectWorkflowStatusId\" : 123,\n  \t\"isWorkflowEndPoint\" : true,\n  \t\"projectWorkflowId\" : 123\n}"
@@ -8725,6 +8725,71 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issue",
+              "name": "AddIssue",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"projectId\" : 123,\n  \t\"assigneeId\" : 123, /*optional*/\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /*optional*/\n  \t\"issueSize\" : \"XL\", /*optional*/\n  \t\"priorityId\" : 123,  /*optional*/\n  \t\"dueDate\": \"2026-06-08\", /*optional*/\n  \t\"issueTypeId\" : 123, /*optional*/\n  \t\"parentIssueId\" : 123, /*optional*/\n  \t\"epicLinkedId\" : 123, /*optional*/\n  \t\"linkedIssueId\" : 123, /*optional*/\n  \t\"linkedIssueType\" : 123, /*optional*/\n  \t\"currentStatusId\" : 123,  /*optional*/\n  \t\"currentResolutionId\" : 123 /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issue/[id]",
+              "name": "UpdateIssue",
+              "params": [],
+              "headers": [
+                {
+                  "key": "Content-Type",
+                  "value": "",
+                  "active": true,
+                  "description": ""
+                }
+              ],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "addTo": "HEADERS",
+                "grantTypeInfo": {
+                  "authEndpoint": "",
+                  "tokenEndpoint": "",
+                  "clientID": "",
+                  "clientSecret": "",
+                  "isPKCE": false,
+                  "codeVerifierMethod": "S256",
+                  "authRequestParams": [],
+                  "refreshRequestParams": [],
+                  "tokenRequestParams": [],
+                  "grantType": "AUTHORIZATION_CODE",
+                  "token": ""
+                },
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"projectId\" : 123,\n  \t\"assigneeId\" : 123, /*optional*/\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /*optional*/\n  \t\"issueSize\" : \"XL\", /*optional*/\n  \t\"priorityId\" : 123,  /*optional*/\n  \t\"dueDate\": \"2026-06-08\", /*optional*/\n  \t\"issueTypeId\" : 123, /*optional*/\n  \t\"parentIssueId\" : 123, /*optional*/\n  \t\"epicLinkedId\" : 123, /*optional*/\n  \t\"linkedIssueId\" : 123, /*optional*/\n  \t\"linkedIssueType\" : 123, /*optional*/\n  \t\"currentStatusId\" : 123,  /*optional*/\n  \t\"currentResolutionId\" : 123 /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteIssue",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/projectManagement/issue/[id]",
@@ -8829,18 +8894,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/issueComment",
               "name": "AddIssueComment",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueComment",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"commentText\" : \"test\",\n\t\"issueId\" : 123\n}"
@@ -8851,18 +8916,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/issueComment/[id]",
               "name": "UpdateIssueComment",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueComment/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"commentText\" : \"test\",\n\t\"issueId\" : 123\n}"
@@ -8977,18 +9042,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment",
               "name": "AddIssueAttachment",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"documentId\" : 123,\n\t\"issueId\" : 123\n}"
@@ -8999,18 +9064,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment/[id]",
               "name": "UpdateIssueAttachment",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"documentId\" : 123,\n\t\"issueId\" : 123\n}"
@@ -9125,18 +9190,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/[id]",
               "name": "AddProjectRelease",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/[id]",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"projectId\" : 123,\n  \t\"versionNumber\" : \"1.0.0\",\n  \t\"releaseDate\": \"2026-06-06\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
@@ -9147,18 +9212,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/[id]",
               "name": "UpdateProjectRelease",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"projectId\" : 123,\n  \t\"versionNumber\" : \"1.0.0\",\n  \t\"releaseDate\": \"2026-06-06\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
