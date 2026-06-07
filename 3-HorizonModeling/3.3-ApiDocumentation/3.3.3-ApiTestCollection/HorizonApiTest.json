@@ -6897,18 +6897,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/project",
               "name": "AddProject",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/project",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"startDate\": \"2026-06-06\", /*optional*/\n  \t\"endDate\": \"2026-06-06\", /*optional*/\n  \t\"decription\" : \"test\" /*optional*/\n}"
@@ -6919,18 +6919,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/project/[id]",
               "name": "UpdateProject",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/project/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"startDate\": \"2026-06-06\", /*optional*/\n  \t\"endDate\": \"2026-06-06\", /*optional*/\n  \t\"decription\" : \"test\" /*optional*/\n}"
@@ -7045,21 +7045,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember",
               "name": "AddProjectProfileMember",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "username": "",
-                "password": "",
-                "algorithm": "MD5",
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"profileId\" : 123,\n  \t\"projectId\" : 123,\n  \t\"IsProjectManager\": true\n}"
@@ -7070,18 +7067,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/[id]",
               "name": "UpdateProjectProfileMember",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"profileId\" : 123,\n  \t\"projectId\" : 123,\n  \t\"IsProjectManager\": true\n}"
@@ -7196,18 +7193,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember",
               "name": "AddProjectGroupMember",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"groupId\" : 123,\n  \t\"projectId\" : 123\n}"
@@ -7218,18 +7215,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/[id]",
               "name": "UpdateProjectGroupMember",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"groupId\" : 123,\n  \t\"projectId\" : 123\n}"
@@ -7344,18 +7341,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember",
               "name": "AddProjectRoleMember",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"roleId\" : 123,\n  \t\"projectId\" : 123\n}"
@@ -7366,18 +7363,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/[id]",
               "name": "UpdateProjectRoleMember",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"roleId\" : 123,\n  \t\"projectId\" : 123\n}"
@@ -7492,6 +7489,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember",
+              "name": "AddProjectDepartmentMember",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"departmentId\" : 123,\n  \t\"projectId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/[id]",
+              "name": "UpdateProjectDepartmentMember",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"departmentId\" : 123,\n  \t\"projectId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteProjectDepartmentMember",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/[id]",
@@ -7594,6 +7635,50 @@
           "name": "ProjectWorkflow",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow",
+              "name": "AddProjectWorkflow",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"projectId\": 123,\n  \t\"decription\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/[id]",
+              "name": "UpdateProjectWorkflow",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"projectId\": 123,\n  \t\"decription\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteProjectWorkflow",
@@ -7714,7 +7799,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"FileExtensionId\": 123,\n  \"ProjectWorkflowId\": 123,\n  \"MaxFileSizeForUpload\": 4\n}\n"
+                "body": "{\n  \"fileExtensionId\": 123,\n  \"projectWorkflowId\": 123,\n  \"maxFileSizeForUpload\": 4\n}\n"
               },
               "requestVariables": [],
               "responses": {},
@@ -7736,7 +7821,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"FileExtensionId\": 123,\n  \"ProjectWorkflowId\": 123,\n  \"MaxFileSizeForUpload\": 4\n}"
+                "body": "{\n  \"fileExtensionId\": 123,\n  \"projectWorkflowId\": 123,\n  \"maxFileSizeForUpload\": 4\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -7965,7 +8050,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"DocumentTypeId\": 123,\n  \"ProjectWorkflowId\": 123 \n}\n"
+                "body": "{\n  \"documentTypeId\": 123,\n  \"projectWorkflowId\": 123 \n}\n"
               },
               "requestVariables": [],
               "responses": {},
@@ -7987,7 +8072,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"DocumentTypeId\": 123,\n  \"ProjectWorkflowId\": 123 \n}"
+                "body": "{\n  \"documentTypeId\": 123,\n  \"projectWorkflowId\": 123 \n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -8196,6 +8281,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus",
+              "name": "AddProjectWorkflowStatus",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"statusId\" : 123,\n  \t\"projectWorkflowId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/[id]",
+              "name": "UpdateProjectWorkflowStatus",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"statusId\" : 123,\n  \t\"projectWorkflowId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteProjectWorkflowStatus",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/[id]",
@@ -8300,6 +8429,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution",
+              "name": "AddProjectWorkflowResolution",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"resolutionId\" : 123,\n  \t\"projectWorkflowId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/[id]",
+              "name": "UpdateProjectWorkflowResolution",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"resolutionId\" : 123,\n  \t\"projectWorkflowId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteProjectWorkflowResolution",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/[id]",
@@ -8402,6 +8575,50 @@
           "name": "ProjectWorkflowProgress",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress",
+              "name": "AddProjetWorkflowProgress",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"title\" : \"test\",\n\t\"startProjectWorkflowStatusId\" : 123,\n\t\"isFromStartPoint\" : true,\n  \t\"canBeStartedFromAnyStatus\" : true,\n  \t\"endProjectWorkflowStatusId\" : 123,\n  \t\"isWorkflowEndPoint\" : true,\n  \t\"projectWorkflowId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/[id]",
+              "name": "UpdateProjetWorkflowProgress",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"title\" : \"test\",\n\t\"startProjectWorkflowStatusId\" : 123,\n\t\"isFromStartPoint\" : true,\n  \t\"canBeStartedFromAnyStatus\" : true,\n  \t\"endProjectWorkflowStatusId\" : 123,\n  \t\"isWorkflowEndPoint\" : true,\n  \t\"projectWorkflowId\" : 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteProjectWorkflowProgress",
