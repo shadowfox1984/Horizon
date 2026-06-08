@@ -8725,18 +8725,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/issue",
               "name": "AddIssue",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issue",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"projectId\" : 123,\n  \t\"assigneeId\" : 123, /*optional*/\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /*optional*/\n  \t\"issueSize\" : \"XL\", /*optional*/\n  \t\"priorityId\" : 123,  /*optional*/\n  \t\"dueDate\": \"2026-06-08\", /*optional*/\n  \t\"issueTypeId\" : 123, /*optional*/\n  \t\"parentIssueId\" : 123, /*optional*/\n  \t\"epicLinkedId\" : 123, /*optional*/\n  \t\"linkedIssueId\" : 123, /*optional*/\n  \t\"linkedIssueType\" : 123, /*optional*/\n  \t\"currentStatusId\" : 123,  /*optional*/\n  \t\"currentResolutionId\" : 123 /*optional*/\n}"
@@ -8747,8 +8747,9 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/issue/[id]",
               "name": "UpdateIssue",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issue/[id]",
               "params": [],
               "headers": [
                 {
@@ -8758,28 +8759,13 @@
                   "description": ""
                 }
               ],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "addTo": "HEADERS",
-                "grantTypeInfo": {
-                  "authEndpoint": "",
-                  "tokenEndpoint": "",
-                  "clientID": "",
-                  "clientSecret": "",
-                  "isPKCE": false,
-                  "codeVerifierMethod": "S256",
-                  "authRequestParams": [],
-                  "refreshRequestParams": [],
-                  "tokenRequestParams": [],
-                  "grantType": "AUTHORIZATION_CODE",
-                  "token": ""
-                },
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"projectId\" : 123,\n  \t\"assigneeId\" : 123, /*optional*/\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /*optional*/\n  \t\"issueSize\" : \"XL\", /*optional*/\n  \t\"priorityId\" : 123,  /*optional*/\n  \t\"dueDate\": \"2026-06-08\", /*optional*/\n  \t\"issueTypeId\" : 123, /*optional*/\n  \t\"parentIssueId\" : 123, /*optional*/\n  \t\"epicLinkedId\" : 123, /*optional*/\n  \t\"linkedIssueId\" : 123, /*optional*/\n  \t\"linkedIssueType\" : 123, /*optional*/\n  \t\"currentStatusId\" : 123,  /*optional*/\n  \t\"currentResolutionId\" : 123 /*optional*/\n}"
@@ -9338,6 +9324,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/workLog",
+              "name": "AddWorkLog",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"issueId\" : 123,\n  \t\"LogDate\" : \"2026-06-08\",\n  \t\"StartWorkTime\" : 1.0,\n  \t\"WorkingDuration\" : \"test\",\n  \t\"TimeUnitId\" : 123,\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/workLog/[id]",
+              "name": "UpdateWorkLog",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"issueId\" : 123,\n  \t\"LogDate\" : \"2026-06-08\",\n  \t\"StartWorkTime\" : 1.0,\n  \t\"WorkingDuration\" : \"test\",\n  \t\"TimeUnitId\" : 123,\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteWorkLog",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/projectManagement/workLog/[id]",
@@ -9442,6 +9472,28 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueWorkflowHistory",
+              "name": "AddIssueWorkflowHistory",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"issueId\" : 123,\n  \t\"startStatusId\" : 123,\n  \t\"endStatusId\" : 123,\n  \t\"projectWorkflowProgressId\" : 123,\n  \t\"projectWorkflowResolutionId\" : 123 /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteIssueWorkflowHistory",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/projectManagement/issueWorkflowHistory/[id]",
@@ -9500,6 +9552,50 @@
           "name": "ProjectMeeting",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting",
+              "name": "AddProjectMeeting",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"ProjectId\" : 123,\n  \t\"MeetingTypeId\" : 123,\n  \t\"MeetingDate\" : 123,\n  \t\"Title\" : 123,\n  \t\"Location\" : 123,\n  \t\"MinutesDocumentId\" : 123, /*optional*/\n  \t\"Description\" : 123, /*optional*/\n  \t\"ScheduleStartTime\" : \"08:00\", /*optional*/\n  \t\"ScheduleEndTime\" : \"15:00\", /*optional*/\n  \t\"ActualStartTime\" : \"08:00\", /*optional*/\n  \t\"ActualEndTime\" : \"15:00\", /*optional*/\n  \t\"IsCanncelled\" : false\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/[id]",
+              "name": "UpdateProjectMeeting",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"ProjectId\" : 123,\n  \t\"MeetingTypeId\" : 123,\n  \t\"MeetingDate\" : 123,\n  \t\"Title\" : 123,\n  \t\"Location\" : 123,\n  \t\"MinutesDocumentId\" : 123, /*optional*/\n  \t\"Description\" : 123, /*optional*/\n  \t\"ScheduleStartTime\" : \"08:00\", /*optional*/\n  \t\"ScheduleEndTime\" : \"15:00\", /*optional*/\n  \t\"ActualStartTime\" : \"08:00\", /*optional*/\n  \t\"ActualEndTime\" : \"15:00\", /*optional*/\n  \t\"IsCanncelled\" : false\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteProjectMeeting",
