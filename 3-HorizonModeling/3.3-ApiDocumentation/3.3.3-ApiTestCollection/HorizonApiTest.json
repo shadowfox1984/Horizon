@@ -27,7 +27,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"Code\" : \"[code]\",\n  \t\"Title\" : \"[title]\",\n  \t\"Decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"decription\" : \"test\" /* optional */\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -49,7 +49,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"Code\" : \"[code]\",\n  \t\"Title\" : \"[title]\",\n  \t\"Decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"decription\" : \"test\" /* optional */\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -256,7 +256,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"ordering\" : 0, //integer number\n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FF0000\",\n  \t\"ordering\" : 1, /* integer number */\n  \t\"decription\" : \"test\" /* optional */\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -278,7 +278,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"ordering\" : 0, //integer number\n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FF0000\",\n  \t\"ordering\" : 1, /* integer number */\n  \t\"decription\" : \"test\" /* optional */\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -2853,7 +2853,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"symbol\" : \"[currency symbol]\",\n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"symbol\" : \"USD\",\n  \t\"decription\" : \"test\" /* optional */\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -2875,7 +2875,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"valueBasedOnMillisecond\" : 1000,\n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"symbol\" : \"USD\",\n  \t\"decription\" : \"test\" /* optional */\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -7059,7 +7059,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"profileId\" : 123,\n  \t\"projectId\" : 123,\n  \t\"IsProjectManager\": true\n}"
+                "body": "{\n  \t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"IsProjectManager\": true\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -7081,7 +7081,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"profileId\" : 123,\n  \t\"projectId\" : 123,\n  \t\"IsProjectManager\": true\n}"
+                "body": "{\n  \t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"IsProjectManager\": true\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -7207,7 +7207,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"groupId\" : 123,\n  \t\"projectId\" : 123\n}"
+                "body": "{\n  \t\"groupId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -7229,7 +7229,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"groupId\" : 123,\n  \t\"projectId\" : 123\n}"
+                "body": "{\n  \t\"groupId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -7355,7 +7355,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"roleId\" : 123,\n  \t\"projectId\" : 123\n}"
+                "body": "{\n  \t\"roleId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -7503,7 +7503,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"departmentId\" : 123,\n  \t\"projectId\" : 123\n}"
+                "body": "{\n  \t\"departmentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : 123\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -7525,7 +7525,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"departmentId\" : 123,\n  \t\"projectId\" : 123\n}"
+                "body": "{\n  \t\"departmentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -7651,7 +7651,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"projectId\": 123,\n  \t\"decription\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -7673,7 +7673,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"projectId\": 123,\n  \t\"decription\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -7799,7 +7799,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"fileExtensionId\": 123,\n  \"projectWorkflowId\": 123,\n  \"maxFileSizeForUpload\": 4\n}\n"
+                "body": "{\n  \"fileExtensionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"maxFileSizeForUpload\": 4\n}\n"
               },
               "requestVariables": [],
               "responses": {},
@@ -7821,7 +7821,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"fileExtensionId\": 123,\n  \"projectWorkflowId\": 123,\n  \"maxFileSizeForUpload\": 4\n}"
+                "body": "{\n  \"fileExtensionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"maxFileSizeForUpload\": 4\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -8050,7 +8050,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"documentTypeId\": 123,\n  \"projectWorkflowId\": 123 \n}\n"
+                "body": "{\n  \"documentTypeId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\" \n}\n"
               },
               "requestVariables": [],
               "responses": {},
@@ -8295,7 +8295,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"statusId\" : 123,\n  \t\"projectWorkflowId\" : 123\n}"
+                "body": "{\n  \t\"statusId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectWorkflowId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -8317,7 +8317,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"statusId\" : 123,\n  \t\"projectWorkflowId\" : 123\n}"
+                "body": "{\n  \t\"statusId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectWorkflowId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -8443,7 +8443,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"resolutionId\" : 123,\n  \t\"projectWorkflowId\" : 123\n}"
+                "body": "{\n  \t\"resolutionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectWorkflowId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -8591,7 +8591,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"title\" : \"test\",\n\t\"startProjectWorkflowStatusId\" : 123,\n\t\"isFromStartPoint\" : true,\n  \t\"canBeStartedFromAnyStatus\" : true,\n  \t\"endProjectWorkflowStatusId\" : 123,\n  \t\"isWorkflowEndPoint\" : true,\n  \t\"projectWorkflowId\" : 123\n}"
+                "body": "{\n  \t\"title\" : \"test\",\n\t\"startProjectWorkflowStatusId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n\t\"isFromStartPoint\" : true,\n  \t\"canBeStartedFromAnyStatus\" : true,\n  \t\"endProjectWorkflowStatusId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"isWorkflowEndPoint\" : true,\n  \t\"projectWorkflowId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -8613,7 +8613,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"title\" : \"test\",\n\t\"startProjectWorkflowStatusId\" : 123,\n\t\"isFromStartPoint\" : true,\n  \t\"canBeStartedFromAnyStatus\" : true,\n  \t\"endProjectWorkflowStatusId\" : 123,\n  \t\"isWorkflowEndPoint\" : true,\n  \t\"projectWorkflowId\" : 123\n}"
+                "body": "{\n  \t\"title\" : \"test\",\n\t\"startProjectWorkflowStatusId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n\t\"isFromStartPoint\" : true,\n  \t\"canBeStartedFromAnyStatus\" : true,\n  \t\"endProjectWorkflowStatusId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"isWorkflowEndPoint\" : true,\n  \t\"projectWorkflowId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -8739,7 +8739,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"projectId\" : 123,\n  \t\"assigneeId\" : 123, /*optional*/\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /*optional*/\n  \t\"issueSize\" : \"XL\", /*optional*/\n  \t\"priorityId\" : 123,  /*optional*/\n  \t\"dueDate\": \"2026-06-08\", /*optional*/\n  \t\"issueTypeId\" : 123, /*optional*/\n  \t\"parentIssueId\" : 123, /*optional*/\n  \t\"epicLinkedId\" : 123, /*optional*/\n  \t\"linkedIssueId\" : 123, /*optional*/\n  \t\"linkedIssueType\" : 123, /*optional*/\n  \t\"currentStatusId\" : 123,  /*optional*/\n  \t\"currentResolutionId\" : 123 /*optional*/\n}"
+                "body": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"assigneeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /*optional*/\n  \t\"issueSize\" : \"XL\", /*optional*/\n  \t\"priorityId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",  /*optional*/\n  \t\"dueDate\": \"2026-06-08\", /*optional*/\n  \t\"issueTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"parentIssueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"epicLinkedId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"linkedIssueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"linkedIssueType\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"currentStatusId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",  /*optional*/\n  \t\"currentResolutionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -8894,7 +8894,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"commentText\" : \"test\",\n\t\"issueId\" : 123\n}"
+                "body": "{\n  \t\"commentText\" : \"test\",\n\t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -8916,7 +8916,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"commentText\" : \"test\",\n\t\"issueId\" : 123\n}"
+                "body": "{\n  \t\"commentText\" : \"test\",\n\t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -9042,7 +9042,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"documentId\" : 123,\n\t\"issueId\" : 123\n}"
+                "body": "{\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n\t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -9064,7 +9064,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"documentId\" : 123,\n\t\"issueId\" : 123\n}"
+                "body": "{\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n\t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -9190,7 +9190,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"projectId\" : 123,\n  \t\"versionNumber\" : \"1.0.0\",\n  \t\"releaseDate\": \"2026-06-06\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"versionNumber\" : \"1.0.0\",\n  \t\"releaseDate\": \"2026-06-06\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -9212,7 +9212,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"projectId\" : 123,\n  \t\"versionNumber\" : \"1.0.0\",\n  \t\"releaseDate\": \"2026-06-06\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"versionNumber\" : \"1.0.0\",\n  \t\"releaseDate\": \"2026-06-06\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -9324,21 +9324,21 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/workLog",
               "name": "AddWorkLog",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/workLog",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"issueId\" : 123,\n  \t\"LogDate\" : \"2026-06-08\",\n  \t\"StartWorkTime\" : 1.0,\n  \t\"WorkingDuration\" : \"test\",\n  \t\"TimeUnitId\" : 123,\n  \t\"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n\t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"LogDate\" : \"2026-06-08\",\n  \t\"StartWorkTime\" : 1.0,\n  \t\"WorkingDuration\" : \"test\",\n  \t\"TimeUnitId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -9346,21 +9346,21 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/workLog/[id]",
               "name": "UpdateWorkLog",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/workLog/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"issueId\" : 123,\n  \t\"LogDate\" : \"2026-06-08\",\n  \t\"StartWorkTime\" : 1.0,\n  \t\"WorkingDuration\" : \"test\",\n  \t\"TimeUnitId\" : 123,\n  \t\"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n\t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"LogDate\" : \"2026-06-08\",\n  \t\"StartWorkTime\" : 1.0,\n  \t\"WorkingDuration\" : \"test\",\n  \t\"TimeUnitId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -9472,21 +9472,21 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/issueWorkflowHistory",
               "name": "AddIssueWorkflowHistory",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueWorkflowHistory",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"issueId\" : 123,\n  \t\"startStatusId\" : 123,\n  \t\"endStatusId\" : 123,\n  \t\"projectWorkflowProgressId\" : 123,\n  \t\"projectWorkflowResolutionId\" : 123 /*optional*/\n}"
+                "body": "{\n\t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"startStatusId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"endStatusId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectWorkflowProgressId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectWorkflowResolutionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -9554,21 +9554,21 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting",
               "name": "AddProjectMeeting",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"ProjectId\" : 123,\n  \t\"MeetingTypeId\" : 123,\n  \t\"MeetingDate\" : 123,\n  \t\"Title\" : 123,\n  \t\"Location\" : 123,\n  \t\"MinutesDocumentId\" : 123, /*optional*/\n  \t\"Description\" : 123, /*optional*/\n  \t\"ScheduleStartTime\" : \"08:00\", /*optional*/\n  \t\"ScheduleEndTime\" : \"15:00\", /*optional*/\n  \t\"ActualStartTime\" : \"08:00\", /*optional*/\n  \t\"ActualEndTime\" : \"15:00\", /*optional*/\n  \t\"IsCanncelled\" : false\n}"
+                "body": "{\n\t\"ProjectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"MeetingTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"MeetingDate\" : \"2026-06-13\",\n  \t\"Title\" : \"test\",\n  \t\"Location\" : \"test\",\n  \t\"MinutesDocumentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"Description\" : \"test\", /*optional*/\n  \t\"ScheduleStartTime\" : \"08:00\", /*optional*/\n  \t\"ScheduleEndTime\" : \"15:00\", /*optional*/\n  \t\"ActualStartTime\" : \"08:00\", /*optional*/\n  \t\"ActualEndTime\" : \"15:00\", /*optional*/\n  \t\"IsCanncelled\" : false\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -9576,21 +9576,21 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/[id]",
               "name": "UpdateProjectMeeting",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"ProjectId\" : 123,\n  \t\"MeetingTypeId\" : 123,\n  \t\"MeetingDate\" : 123,\n  \t\"Title\" : 123,\n  \t\"Location\" : 123,\n  \t\"MinutesDocumentId\" : 123, /*optional*/\n  \t\"Description\" : 123, /*optional*/\n  \t\"ScheduleStartTime\" : \"08:00\", /*optional*/\n  \t\"ScheduleEndTime\" : \"15:00\", /*optional*/\n  \t\"ActualStartTime\" : \"08:00\", /*optional*/\n  \t\"ActualEndTime\" : \"15:00\", /*optional*/\n  \t\"IsCanncelled\" : false\n}"
+                "body": "{\n\t\"ProjectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"MeetingTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"MeetingDate\" : \"2026-06-13\",\n  \t\"Title\" : \"test\",\n  \t\"Location\" : \"test\",\n  \t\"MinutesDocumentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"Description\" : \"test\", /*optional*/\n  \t\"ScheduleStartTime\" : \"08:00\", /*optional*/\n  \t\"ScheduleEndTime\" : \"15:00\", /*optional*/\n  \t\"ActualStartTime\" : \"08:00\", /*optional*/\n  \t\"ActualEndTime\" : \"15:00\", /*optional*/\n  \t\"IsCanncelled\" : false\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -9924,6 +9924,50 @@
           "name": "StaffContract",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "name": "AddStaffContract",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/staffContract",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"contractTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"startDate\" : \"2026-06-13\",\n  \t\"endDate\" : \"2027-06-13\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /* optional */\n  \t\"autoRenewal\" : false\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/staffContract/[id]",
+              "name": "UpdateStaffContract",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"contractTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"startDate\" : \"2026-06-13\",\n  \t\"endDate\" : \"2027-06-13\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /* optional */\n  \t\"autoRenewal\" : false\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteStaffContract",
