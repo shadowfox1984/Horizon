@@ -5,10 +5,10 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Quality Control Schema Diagram \n Version 25.12.17
+title Horizon Research Project (HRP) \n Quality Control Schema Diagram \n Version 26.6.13
 
 entity "Basic.TestApproval" as testApproval #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -24,7 +24,7 @@ entity "Basic.TestApproval" as testApproval #LightPink{
 }
 
 entity "Basic.TestComplexityLevel" as testComplexityLevel #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -39,7 +39,7 @@ entity "Basic.TestComplexityLevel" as testComplexityLevel #LightPink{
 }
 
 entity "ProjectManagement.Project" as project #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Code : varchar(20) <<unique>>
   *Title : varchar(200)
@@ -55,9 +55,9 @@ entity "ProjectManagement.Project" as project #Orange{
 }
 
 entity "ProjectManagement.ProjectRelease" as release #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>>
+  *ProjectId : uui <<FK>>
   *VersionNumber : varchar(20) <<unique>>
   ReleaseDate : date
   Description : varchar(4000)
@@ -70,18 +70,18 @@ entity "ProjectManagement.ProjectRelease" as release #Orange{
 }
 
 entity "ProjectManagement.Issue" as issue #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>>
-  AssigneeId : bigint(19) <<FK>>
+  *ProjectId : uui <<FK>>
+  AssigneeId : uui <<FK>>
   *Code : varchar(20) <<unique>>
   *Title : varchar(200)
   Description : varchar(4000)
   DueDate : date
-  PriorityId : bigint(19) <<FK>>
-  *IssueTypeId : bigint(19) <<FK>>
-  *CuurentStatusId : bigint(19) <<FK>>
-  *CurrentResolvationId : bigint(19) <<FK>>
+  PriorityId : uui <<FK>>
+  *IssueTypeId : uui <<FK>>
+  *CuurentStatusId : uui <<FK>>
+  *CurrentResolvationId : uui <<FK>>
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
   *CreateDate : timestamp <<default: now()>>
@@ -91,12 +91,12 @@ entity "ProjectManagement.Issue" as issue #Orange{
 }
 
 entity "QualityControl.TestScenario" as testScenario #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>>
+  *ProjectId : uui <<FK>>
   *Code : varchar(20) <<unique>>
   *Title : varchar(255)
-  TestComplexityLevelId : bigint(19) <<FK>>
+  TestComplexityLevelId : uui <<FK>>
   UsersAndRoles : varchar(4000)
   Steps : varchar(4000)
   Description : varchar(4000)
@@ -109,10 +109,10 @@ entity "QualityControl.TestScenario" as testScenario #Silver{
 }
 
 entity "QualityControl.PrerequisiteTestScenario" as prerequisiteTestScenario #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *TestScenarioId : bigint(19) <<FK>>
-  *PrerequisiteTestScenarioId : bigint(19) <<FK>>
+  *TestScenarioId : uui <<FK>>
+  *PrerequisiteTestScenarioId : uui <<FK>>
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
   *CreateDate : timestamp <<default: now()>>
@@ -122,12 +122,12 @@ entity "QualityControl.PrerequisiteTestScenario" as prerequisiteTestScenario #Si
 }
 
 entity "QualityControl.TestPlan" as testPlan #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Code : varchar(20) <<unique>>
   *Title : varchar(255)
   PlanningDate : date
-  ProjectReleaseId : bigint(19) <<FK>>
+  ProjectReleaseId : uui <<FK>>
   Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
@@ -138,10 +138,10 @@ entity "QualityControl.TestPlan" as testPlan #Silver{
 }
 
 entity "QualityControl.TestPlanScenario" as testPlanScenario #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *TestScenarioId : bigint(19) <<FK>> <<composite unique>>
-  *TestPlanId : bigint(19) <<FK>> <<composite unique>>
+  *TestScenarioId : uui <<FK>> <<composite unique>>
+  *TestPlanId : uui <<FK>> <<composite unique>>
   *Ordering : float <<composite unique>>
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
@@ -152,10 +152,10 @@ entity "QualityControl.TestPlanScenario" as testPlanScenario #Silver{
 }
 
 entity "QualityControl.TestPlanScenarioIssueCoverage" as testPlanScenarioIssueCoverage #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *TestPlanScenarioId : bigint(19) <<FK>> <<composite unique>>
-  *IssueId : bigint(19) <<FK>> <<composite unique>>
+  *TestPlanScenarioId : uui <<FK>> <<composite unique>>
+  *IssueId : uui <<FK>> <<composite unique>>
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
   *CreateDate : timestamp <<default: now()>>
@@ -165,10 +165,10 @@ entity "QualityControl.TestPlanScenarioIssueCoverage" as testPlanScenarioIssueCo
 }
 
 entity "QualityControl.TestResult" as testResult #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *TestDate : date
-  *TestPlanId : bigint(19) <<FK>>
+  *TestPlanId : uui <<FK>>
   Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
@@ -179,10 +179,10 @@ entity "QualityControl.TestResult" as testResult #Silver{
 }
 
 entity "QualityControl.TestResultDetail" as testResultDetail #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  TestPlanScenarioId : bigint(19) <<FK>>
-  *TestApprovalId : bigint(19) <<FK>>
+  TestPlanScenarioId : uui <<FK>>
+  *TestApprovalId : uui <<FK>>
   *Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>

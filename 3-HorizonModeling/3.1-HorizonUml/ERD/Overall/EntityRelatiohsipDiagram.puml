@@ -8,7 +8,7 @@ skinparam TitleFontSize 72pt
 title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.5.18
 
 entity "Basic.ContractType" as contractType #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -21,7 +21,7 @@ entity "Basic.ContractType" as contractType #LightPink{
 }
 
 entity "Basic.EducationLevel" as educationLevel #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -34,7 +34,7 @@ entity "Basic.EducationLevel" as educationLevel #LightPink{
 }
 
 entity "Basic.DocumentType" as documentType #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -47,7 +47,7 @@ entity "Basic.DocumentType" as documentType #LightPink{
 }
 
 entity "Basic.FileExtension" as fileExtension #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -60,7 +60,7 @@ entity "Basic.FileExtension" as fileExtension #LightPink{
 }
 
 entity "Basic.Priority" as priority #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -75,7 +75,7 @@ entity "Basic.Priority" as priority #LightPink{
 }
 
 entity "Basic.IssueType" as issueType #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -90,7 +90,7 @@ entity "Basic.IssueType" as issueType #LightPink{
 }
 
 entity "Basic.Status" as status #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -105,7 +105,7 @@ entity "Basic.Status" as status #LightPink{
 }
 
 entity "Basic.Resolvation" as resolvation #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -120,7 +120,7 @@ entity "Basic.Resolvation" as resolvation #LightPink{
 }
 
 entity "Basic.MeetingType" as meetingType #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -133,7 +133,7 @@ entity "Basic.MeetingType" as meetingType #LightPink{
 }
 
 entity "Basic.TimeUnit" as timeUnit #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -147,7 +147,7 @@ entity "Basic.TimeUnit" as timeUnit #LightPink{
 }
 
 entity "Basic.TestApproval" as testApproval #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -162,7 +162,7 @@ entity "Basic.TestApproval" as testApproval #LightPink{
 }
 
 entity "Basic.TestComplexityLevel" as testComplexityLevel #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -176,7 +176,7 @@ entity "Basic.TestComplexityLevel" as testComplexityLevel #LightPink{
 }
 
 entity "Basic.Currency" as currency #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -190,7 +190,7 @@ entity "Basic.Currency" as currency #LightPink{
 }
 
 entity "UserManagement.Role" as role #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -203,7 +203,7 @@ entity "UserManagement.Role" as role #Violet{
 }
 
 entity "UserManagement.Groups" as groups #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -216,7 +216,7 @@ entity "UserManagement.Groups" as groups #Violet{
 }
 
 entity "UserManagement.Permission" as permission #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -229,7 +229,7 @@ entity "UserManagement.Permission" as permission #Violet{
 }
 
 entity "UserManagement.Form" as form #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -242,10 +242,10 @@ entity "UserManagement.Form" as form #Violet{
 }
 
 entity "UserManagement.FormPermission" as formPermission #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *FormId : bigint(19) <<FK>>
-  *PermissionId : bigint(19) <<FK>>
+  *FormId : uuid <<FK>>
+  *PermissionId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -254,10 +254,10 @@ entity "UserManagement.FormPermission" as formPermission #Violet{
 }
 
 entity "UserManagement.RolePermission" as rolePermission #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *RoleId : integer(10) <<FK>>
-  *FormPermissionId : integer(10) <<FK>>
+  *RoleId : uuid <<FK>>
+  *FormPermissionId : uuid <<FK>>
   *ActiveFrom : datetime
   ActiveTo : datetime
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -268,10 +268,10 @@ entity "UserManagement.RolePermission" as rolePermission #Violet{
 }
 
 entity "UserManagement.GroupPermission" as groupPermission #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *GroupId : bigint(19) <<FK>>
-  *FormPermissionId : bigint(19) <<FK>>
+  *GroupId : uuid <<FK>>
+  *FormPermissionId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -280,10 +280,10 @@ entity "UserManagement.GroupPermission" as groupPermission #Violet{
 }
 
 entity "UserManagement.ProfilePermission" as profilePermission #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
-  *PermissionId : bigint(19) <<FK>>
+  *ProfileId : uuid <<FK>>
+  *PermissionId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -292,7 +292,7 @@ entity "UserManagement.ProfilePermission" as profilePermission #Violet{
 }
 
 entity "UserManagement.Profile" as profile #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *FirstName : varchar(200)
   *LastName : varchar(200)
@@ -300,7 +300,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
-  PositionId : bigint(19) <<FK>>
+  PositionId : uuid <<FK>>
   Avatar : text
   Birthday : date
   PhoneNumber : varchar(20)
@@ -322,10 +322,10 @@ entity "UserManagement.Profile" as profile #Violet{
 }
 
 entity "UserManagement.ProfileRole" as profileRole #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
-  *RoleId : bigint(19) <<FK>>
+  *ProfileId : uuid <<FK>>
+  *RoleId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -334,10 +334,10 @@ entity "UserManagement.ProfileRole" as profileRole #Violet{
 }
 
 entity "UserManagement.ProfileGroup" as profileGroup #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
-  *GroupId : bigint(19) <<FK>>
+  *ProfileId : uuid <<FK>>
+  *GroupId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -346,12 +346,12 @@ entity "UserManagement.ProfileGroup" as profileGroup #Violet{
 }
 
 entity "DocumentManagement.Document" as document #Gold{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *TableName : varchar(255)
   *TableId : bigint(19)
-  *DocumentTypeId : bigint(19) <<FK>>
-  *FileExtensionId : bigint(19) <<FK>>
+  *DocumentTypeId : uuid <<FK>>
+  *FileExtensionId : uuid <<FK>>
   *FileAddress: varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -361,10 +361,10 @@ entity "DocumentManagement.Document" as document #Gold{
 }
 
 entity "DocumentManagement.ProjectWorkflowDocumentType" as projectWorkflowDocumentType #Gold{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *DocumentTypeId : bigint(19) <<FK>> <<composite unique>>
-  *ProjectWorkflowId : bigint(19) <<FK>> <<composite unique>>
+  *DocumentTypeId : uuid <<FK>> <<composite unique>>
+  *ProjectWorkflowId : uuid <<FK>> <<composite unique>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -373,10 +373,10 @@ entity "DocumentManagement.ProjectWorkflowDocumentType" as projectWorkflowDocume
 }
 
 entity "DocumentManagement.WorkflowEligibleFileExtension" as workflowEligibleFileExtension #Gold{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *WorkflowId : bigint(19) <<FK>> <<composite unique>>
-  *FileExtensionId : bigint(19) <<FK>> <<composite unique>>
+  *WorkflowId : uuid <<FK>> <<composite unique>>
+  *FileExtensionId : uuid <<FK>> <<composite unique>>
   *MaxFileSizeForUpload : integer <<default: 5242880>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -386,7 +386,7 @@ entity "DocumentManagement.WorkflowEligibleFileExtension" as workflowEligibleFil
 }
 
 entity "HumanResource.Department" as department #Lavender{
-  *Id : integer(10) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(50)
   *Code : varchar(20) <<unique>>
@@ -400,12 +400,12 @@ entity "HumanResource.Department" as department #Lavender{
 }
 
 entity "HumanResource.Position" as position #Lavender{
-  *Id : integer(10) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(50)
   *Code : varchar(20) <<unique>>
-  *DepartmentId : bigint(19) <<FK>>
-  ParentId : bigint(19) <<FK>>
+  *DepartmentId : uuid <<FK>>
+  ParentId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -415,11 +415,11 @@ entity "HumanResource.Position" as position #Lavender{
 }
 
 entity "HumanResource.ProfileEducation" as profileEducation #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
-  *EducatioLevelId : bigint(19) <<FK>>
-  DocumentId : bigint(19) <<FK>>
+  *ProfileId : uuid <<FK>>
+  *EducatioLevelId : uuid <<FK>>
+  DocumentId : uuid <<FK>>
   *Title : varchar(255)
   CollegeName : varchar(255)
   StartDate : date
@@ -433,9 +433,9 @@ entity "HumanResource.ProfileEducation" as profileEducation #Lavender{
 }
 
 entity "HumanResource.ProfileJobExperience" as profileJobExperience #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
+  *ProfileId : uuid <<FK>>
   *JobTitle : varchar(200)
   *CompanyName : varchar(200)
   StartDate : date
@@ -449,15 +449,15 @@ entity "HumanResource.ProfileJobExperience" as profileJobExperience #Lavender{
 }
 
 entity "HumanResource.ProfileCertificate" as profileCertificate #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
+  *ProfileId : uuid <<FK>>
   *Title : varchar(200)
   *InstituteName : varchar(200)
   StartDate : date
   EndDate : date
   HasCertificate : boolean
-  DocumentId : bigint(19) <<FK>>
+  DocumentId : uuid <<FK>>
   CertificateFileAddress : varchar(4000)
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -468,10 +468,10 @@ entity "HumanResource.ProfileCertificate" as profileCertificate #Lavender{
 }
 
 entity "HumanResource.WorkingTimeTable" as workingTimeTable #Lavender{ 
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *WorkingDay : enum(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)
-  *ContractTypeId : bigint(19) <<FK>>
+  *ContractTypeId : uuid <<FK>>
   *Title : varchar(200)
   *StartTime : time
   *EndTime : time
@@ -485,7 +485,7 @@ entity "HumanResource.WorkingTimeTable" as workingTimeTable #Lavender{
 }
 
 entity "HumanResource.Holidaies" as holidaies #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(255)
   *HolidayDate : date <<unique>> 
@@ -499,9 +499,9 @@ entity "HumanResource.Holidaies" as holidaies #Lavender{
 }
 
 entity "HumanResource.Attendance" as attendance #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
+  *ProfileId : uuid <<FK>>
   *WorkingDate : date
   *EnteranceType : enum(enter, exit)
   *EnternaceTime : time
@@ -513,9 +513,9 @@ entity "HumanResource.Attendance" as attendance #Lavender{
 }
 
 entity "HumanResource.Leave" as leave #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
+  *ProfileId : uuid <<FK>>
   LeaveType : enum(fulltime, parttime)
   *LeavingStartDate : date
   LeavingEndDate : date
@@ -530,9 +530,9 @@ entity "HumanResource.Leave" as leave #Lavender{
 }
 
 entity "HumanResource.WorkMission" as workMission #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
+  *ProfileId : uuid <<FK>>
   *MissionStartDate : date
   MissionEndDate : date
   *MissionStartTime : time
@@ -547,7 +547,7 @@ entity "HumanResource.WorkMission" as workMission #Lavender{
 }
 
 entity "ProjectManagement.Project" as project #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Code : varchar(20) <<unique>>
   *Title : varchar(200)
@@ -562,10 +562,10 @@ entity "ProjectManagement.Project" as project #Orange{
 }
 
 entity "ProjectManagement.ProjectProfileMember" as projectProfileMember #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>> <<composite unique>>
-  *ProfileId : bigint(19) <<FK>> <<composite unique>>
+  *ProjectId : uuid <<FK>> <<composite unique>>
+  *ProfileId : uuid <<FK>> <<composite unique>>
   *IsProjectManager : boolean
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -575,10 +575,10 @@ entity "ProjectManagement.ProjectProfileMember" as projectProfileMember #Orange{
 }
 
 entity "ProjectManagement.ProjectGroupMember" as projectGroupMember #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>> <<composite unique>>
-  *GroupId : bigint(19) <<FK>> <<composite unique>>
+  *ProjectId : uuid <<FK>> <<composite unique>>
+  *GroupId : uuid <<FK>> <<composite unique>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -587,10 +587,10 @@ entity "ProjectManagement.ProjectGroupMember" as projectGroupMember #Orange{
 }
 
 entity "ProjectManagement.ProjectRoleMember" as projectRoleMember #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>> <<composite unique>>
-  *RoleId : bigint(19) <<FK>> <<composite unique>>
+  *ProjectId : uuid <<FK>> <<composite unique>>
+  *RoleId : uuid <<FK>> <<composite unique>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -599,10 +599,10 @@ entity "ProjectManagement.ProjectRoleMember" as projectRoleMember #Orange{
 }
 
 entity "ProjectManagement.ProjectDepartmentMember" as projectDepartmentMember #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>> <<composite unique>>
-  *DepartmentId : bigint(19) <<FK>> <<composite unique>>
+  *ProjectId : uuid <<FK>> <<composite unique>>
+  *DepartmentId : uuid <<FK>> <<composite unique>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -611,9 +611,9 @@ entity "ProjectManagement.ProjectDepartmentMember" as projectDepartmentMember #O
 }
 
 entity "ProjectManagement.ProjectWorkflow" as projectWorkflow #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>>
+  *ProjectId : uuid <<FK>>
   *Code : varchar(20) <<unique>>
   *Title : varchar(200)
   Description : varchar(4000)
@@ -625,10 +625,10 @@ entity "ProjectManagement.ProjectWorkflow" as projectWorkflow #Orange{
 }
 
 entity "ProjectManagement.ProjectWorkflowStatus" as projectWorkflowStatus #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectWorkflowId : bigint(19) <<FK>>
-  *StatusId : bigint(19) <<FK>>
+  *ProjectWorkflowId : uuid <<FK>>
+  *StatusId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -637,10 +637,10 @@ entity "ProjectManagement.ProjectWorkflowStatus" as projectWorkflowStatus #Orang
 }
 
 entity "ProjectManagement.ProjectWorkflowResolvation" as projectWorkflowResolvation #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectWorkflowId : bigint(19) <<FK>>
-  *ResolvationId : bigint(19) <<FK>>
+  *ProjectWorkflowId : uuid <<FK>>
+  *ResolvationId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -649,13 +649,13 @@ entity "ProjectManagement.ProjectWorkflowResolvation" as projectWorkflowResolvat
 }
 
 entity "ProjectManagement.ProjectWorkflowProgress" as projectWorkflowProgress #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(255)
-  StartProjectWorkflowStatusId : bigint(19) <<FK>>
+  StartProjectWorkflowStatusId : uuid <<FK>>
   *IsFromStartPoint : boolean
   *CanBeStartedFromAnyStatus : boolean
-  EndProjectWorkflowStatusId : bigint(19) <<FK>>
+  EndProjectWorkflowStatusId : uuid <<FK>>
   *IsWorkflowEndPoint : boolean
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -665,23 +665,23 @@ entity "ProjectManagement.ProjectWorkflowProgress" as projectWorkflowProgress #O
 }
 
 entity "ProjectManagement.Issue" as issue #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>>
-  AssigneeId : bigint(19) <<FK>>
+  *ProjectId : uuid <<FK>>
+  AssigneeId : uuid <<FK>>
   *Code : varchar(20) <<unique>>
   *Title : varchar(200)
   Description : varchar(4000)
   DueDate : date
-  PriorityId : bigint(19) <<FK>>
-  *IssueTypeId : bigint(19) <<FK>>
+  PriorityId : uuid <<FK>>
+  *IssueTypeId : uuid <<FK>>
   IssueSize : enum(XS, S, M , L , XL)
-  ParentIssueId : bigint(19) <<FK>>
-	EpicLinkedId : bigint(19) <<FK>>
-	LinkedIssueId : bigint(19) <<FK>>
+  ParentIssueId : uuid <<FK>>
+	EpicLinkedId : uuid <<FK>>
+	LinkedIssueId : uuid <<FK>>
 	LinkedIssueType : enum(Blocks, RelatesTo, Duplicates, Clones)
-  *CurrentStatusId : bigint(19) <<FK>>
-  *CurrentResolvationId : bigint(19) <<FK>>
+  *CurrentStatusId : uuid <<FK>>
+  *CurrentResolvationId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -690,9 +690,9 @@ entity "ProjectManagement.Issue" as issue #Orange{
 }
 
 entity "ProjectManagement.IssueComment" as issueComment #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *IssueId : bigint(19) <<FK>>
+  *IssueId : uuid <<FK>>
   *CommentText : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -702,10 +702,10 @@ entity "ProjectManagement.IssueComment" as issueComment #Orange{
 }
 
 entity "ProjectManagement.IssueAttachment" as issueAttachment #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *IssueId : bigint(19) <<FK>> <<composite unique>>
-  *DocumentId : bigint(19) <<FK>> <<composite unique>>
+  *IssueId : uuid <<FK>> <<composite unique>>
+  *DocumentId : uuid <<FK>> <<composite unique>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -714,9 +714,9 @@ entity "ProjectManagement.IssueAttachment" as issueAttachment #Orange{
 }
 
 entity "ProjectManagement.ProjectRelease" as release #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>>
+  *ProjectId : uuid <<FK>>
   *VersionNumber : varchar(20) <<unique>>
   ReleaseDate : date
   Description : varchar(4000)
@@ -728,10 +728,10 @@ entity "ProjectManagement.ProjectRelease" as release #Orange{
 }
 
 entity "ProjectManagement.ProjectReleaseIssue" as releaseIssue #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectReleaseId : bigint(19) <<FK>> <<composite unique>>
-  *IssueId : bigint(19) <<FK>> <<composite unique>>
+  *ProjectReleaseId : uuid <<FK>> <<composite unique>>
+  *IssueId : uuid <<FK>> <<composite unique>>
   IsFinalized : boolean
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -741,13 +741,13 @@ entity "ProjectManagement.ProjectReleaseIssue" as releaseIssue #Orange{
 }
 
 entity "ProjectManagement.WorkLog" as workLog #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *IssueId : bigint(19) <<FK>>
+  *IssueId : uuid <<FK>>
   *LogDate : date
   *StartWorkTime : time
   *WorkingDuration : float 
-  *TimeUnitId : bigint(19) <<FK>>
+  *TimeUnitId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -757,10 +757,10 @@ entity "ProjectManagement.WorkLog" as workLog #Orange{
 }
 
 entity "DocumentManagement.WorkflowEligibleFileExtension" as workflowEligibleFileExtension #Gold{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *WorkflowId : bigint(19) <<FK>> <<composite unique>>
-  *FileExtensionId : bigint(19) <<FK>> <<composite unique>>
+  *WorkflowId : uuid <<FK>> <<composite unique>>
+  *FileExtensionId : uuid <<FK>> <<composite unique>>
   *MaxFileSizeForUpload : integer <<default: 5242880>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -770,13 +770,13 @@ entity "DocumentManagement.WorkflowEligibleFileExtension" as workflowEligibleFil
 }
 
 entity "ProjectManagement.IssueWorkflowHistory" as issueWorkflowHistory #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *IssueId : bigint(19) <<FK>>
-  *StartStatusId : bigint(19) <<FK>>
-  *EndStatusId : bigint(19) <<FK>>
-  *ProjectWorkflowProgressId : bigint(19) <<FK>>
-  ProjectWorkflowResolvationId : bigint(19) <<FK>>
+  *IssueId : uuid <<FK>>
+  *StartStatusId : uuid <<FK>>
+  *EndStatusId : uuid <<FK>>
+  *ProjectWorkflowProgressId : uuid <<FK>>
+  ProjectWorkflowResolvationId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -785,14 +785,14 @@ entity "ProjectManagement.IssueWorkflowHistory" as issueWorkflowHistory #Orange{
 }
 
 entity "ProjectManagement.ProjectMeeting" as projectMeeting #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>>
-  *MeetingTypeId : bigint(19) <<FK>>
+  *ProjectId : uuid <<FK>>
+  *MeetingTypeId : uuid <<FK>>
   *MeetingDate : date
   *Title : varchar(255)
   *Location : varchar(255)
-  MinutesDocumentId : bigint(19) <<FK>>
+  MinutesDocumentId : uuid <<FK>>
   Description : varchar(4000)
   ScheduleStartTime : time
   ScheduleEndTime : time
@@ -807,11 +807,11 @@ entity "ProjectManagement.ProjectMeeting" as projectMeeting #Orange{
 }
 
 entity "ProjectManagement.MeetingInvitees" as meetingInvitees #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectMeetingId : bigint(19) <<FK>>
+  *ProjectMeetingId : uuid <<FK>>
   *IsFromInsideCompnay : boolean
-  ProfileId : bigint(19) <<FK>>
+  ProfileId : uuid <<FK>>
   InviteeFullName : varchar(255)
 	InviteeCompanyName : varchar(255)
   IsAttanded : boolean
@@ -823,12 +823,12 @@ entity "ProjectManagement.MeetingInvitees" as meetingInvitees #Orange{
 }
 
 entity "ProjectManagement.MeetingMinutes" as meetingMinutes #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectMeetingId : bigint(19) <<FK>>
+  *ProjectMeetingId : uuid <<FK>>
   *Resolution : varchar(4000)
-  ResponsibleDepartmentId : bigint(19) <<FK>>
-  IssueId : bigint(19) <<FK>>
+  ResponsibleDepartmentId : uuid <<FK>>
+  IssueId : uuid <<FK>>
   DueDate : datetime
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -838,10 +838,10 @@ entity "ProjectManagement.MeetingMinutes" as meetingMinutes #Orange{
 }
 
 entity "Finance.StaffContract" as staffContract #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
-  *ContractTypeId : bigint(19) <<FK>>
+  *ProfileId : uuid <<FK>>
+  *ContractTypeId : uuid <<FK>>
   *StartDate : date
   *EndDate : date
   *Title : varchar(200)
@@ -855,14 +855,14 @@ entity "Finance.StaffContract" as staffContract #Salmon{
 }
 
 entity "Finance.ContractSalaryItem" as contractSalaryItem #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *StaffContractId : bigint(19) <<FK>>
+  *StaffContractId : uuid <<FK>>
   *Title : varchar(200)
   *Amount : numeric(22,2)
-  *CurrencyId : bigint(19) <<FK>>
+  *CurrencyId : uuid <<FK>>
   Description : varchar(4000)
-  *CalculationTimeUnitId : bigint(19) <<FK>>
+  *CalculationTimeUnitId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -871,16 +871,16 @@ entity "Finance.ContractSalaryItem" as contractSalaryItem #Salmon{
 }
 
 entity "Finance.ContractDeductionItem" as contractDeductionItem #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *StaffContractId : bigint(19) <<FK>>
+  *StaffContractId : uuid <<FK>>
   *Title : varchar(200)
   *CalculationType : enum(percentage, fixedAmount)
   DeductionPercentage : numeric(3,2) <<from 0 until 100>>
   FixedAmount : numeric(22,2)
-  FixedAmountCurrencyId : bigint(19) <<FK>>
+  FixedAmountCurrencyId : uuid <<FK>>
   Description : varchar(4000)
-  *CalculationTimeUnitId : bigint(19) <<FK>>
+  *CalculationTimeUnitId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -889,7 +889,7 @@ entity "Finance.ContractDeductionItem" as contractDeductionItem #Salmon{
 }
 
 entity "Finance.Supplier" as supplier #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(255)
   PhoneNumber : varchar(20)
@@ -908,13 +908,13 @@ entity "Finance.Supplier" as supplier #Salmon{
 }
 
 entity "Finance.CostInvoice" as costInvoice #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *SupplierId : bigint(19) <<FK>>
-  *DocumentId : bigint(19) <<FK>>
+  *SupplierId : uuid <<FK>>
+  *DocumentId : uuid <<FK>>
   *InvoiceDate : date
   *TotalAmount : numeric(22,2)
-  *CurrencyId : bigint(19) <<FK>>
+  *CurrencyId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -924,12 +924,12 @@ entity "Finance.CostInvoice" as costInvoice #Salmon{
 }
 
 entity "Finance.CostInvoiceItem" as costInvoiceItem #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *CostInvoiceId : bigint(19) <<FK>>
+  *CostInvoiceId : uuid <<FK>>
   *ItemTitle : varchar(255)
   *UnitAmount : numeric(22,2)
-  *CurrencyId : bigint(19) <<FK>>
+  *CurrencyId : uuid <<FK>>
   *Quantity : float
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -940,10 +940,10 @@ entity "Finance.CostInvoiceItem" as costInvoiceItem #Salmon{
 }
 
 entity "Finance.ProjectDirectCostItem" as projectDirectCostItem #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>>
-  *CostInvoiceItemId : bigint(19) <<FK>>
+  *ProjectId : uuid <<FK>>
+  *CostInvoiceItemId : uuid <<FK>>
   *AllocatedQuantity : float
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -954,13 +954,13 @@ entity "Finance.ProjectDirectCostItem" as projectDirectCostItem #Salmon{
 }
 
 entity "Finance.CostPaymentReceipt" as costPaymentReceipt #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *CostInvoiceId : bigint(19) <<FK>>
+  *CostInvoiceId : uuid <<FK>>
   *ReceiptNumber : varchar(20)
-  *DocumentId : bigint(19) <<FK>>
+  *DocumentId : uuid <<FK>>
   *Amount : numeric(22,2)
-  *CurrencyId : bigint(19) <<FK>>
+  *CurrencyId : uuid <<FK>>
   *PaymentDate : date
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -971,13 +971,13 @@ entity "Finance.CostPaymentReceipt" as costPaymentReceipt #Salmon{
 }
 
 entity "Finance.SalaryPaymentReceipt" as salaryPaymentReceipt #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *StaffContractId : bigint(19) <<FK>>
+  *StaffContractId : uuid <<FK>>
   *ReceiptNumber : varchar(20)
-  *DocumentId : bigint(19) <<FK>>
+  *DocumentId : uuid <<FK>>
   *Amount : numeric(22,2)
-  *CurrencyId : bigint(19) <<FK>>
+  *CurrencyId : uuid <<FK>>
   *PaymentDate : date
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -988,13 +988,13 @@ entity "Finance.SalaryPaymentReceipt" as salaryPaymentReceipt #Salmon{
 }
 
 entity "Finance.StaffAdditionalPaymentReceipt" as staffAdditionalPaymentReceipt #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
+  *ProfileId : uuid <<FK>>
   *Title : varchar(255)
-  *DocumentId : bigint(19) <<FK>>
+  *DocumentId : uuid <<FK>>
   *Amount : numeric(22,2)
-  *CurrencyId : bigint(19) <<FK>>
+  *CurrencyId : uuid <<FK>>
   *PaymentDate : date
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -1005,7 +1005,7 @@ entity "Finance.StaffAdditionalPaymentReceipt" as staffAdditionalPaymentReceipt 
 }
 
 entity "Finance.Customer" as customer #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(255)
   PhoneNumber : varchar(20)
@@ -1022,10 +1022,10 @@ entity "Finance.Customer" as customer #Salmon{
 }
 
 entity "Finance.Contract" as contract #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *CustomerId : bigint(19) <<FK>>
-  *ProjectId : bigint(19) <<FK>>
+  *CustomerId : uuid <<FK>>
+  *ProjectId : uuid <<FK>>
   *ContractNumber : varchar(20)
   StartDate : date
   ScheduledEndDate : date
@@ -1033,8 +1033,8 @@ entity "Finance.Contract" as contract #Salmon{
   IsDevelopmentContract : boolean
   IsSupportContract : boolean
   *TotalAmount : numeric(22,2)
-  *CurrencyId : bigint(19) <<FK>>
-  DocumentId : bigint(19) <<FK>>
+  *CurrencyId : uuid <<FK>>
+  DocumentId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -1044,14 +1044,14 @@ entity "Finance.Contract" as contract #Salmon{
 }
 
 entity "Finance.ContractPaymentSchedule" as contractPaymentSchedule #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ContractId : bigint(19) <<FK>>
+  *ContractId : uuid <<FK>>
   *PaymentTitle : varchar(255)
-  ProjectReleaseId : bigint(19) <<FK>>
+  ProjectReleaseId : uuid <<FK>>
   ScheduledPaymentDate : date
   *Amount : numeric(22,2)
-  *CurrencyId : bigint(19) <<FK>>
+  *CurrencyId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -1061,14 +1061,14 @@ entity "Finance.ContractPaymentSchedule" as contractPaymentSchedule #Salmon{
 }
 
 entity "Finance.ContractPaymentReceipt" as contractPaymentReceipt #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ContractPaymentScheduleId : bigint(19) <<FK>>
+  *ContractPaymentScheduleId : uuid <<FK>>
   *ReceiptNumber : varchar(20)
   *PaymentDate : date
-  DocumentId : bigint(19) <<FK>>
+  DocumentId : uuid <<FK>>
   *Amount : numeric(22,2)
-  *CurrencyId : bigint(19) <<FK>>
+  *CurrencyId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -1078,12 +1078,12 @@ entity "Finance.ContractPaymentReceipt" as contractPaymentReceipt #Salmon{
 }
 
 entity "QualityControl.TestScenario" as testScenario #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>>
+  *ProjectId : uuid <<FK>>
   *Code : varchar(20) <<unique>>
   *Title : varchar(255)
-  TestComplexityLevelId : bigint(19) <<FK>>
+  TestComplexityLevelId : uuid <<FK>>
   UsersAndRoles : varchar(4000)
   Steps : varchar(4000)
   Description : varchar(4000)
@@ -1095,10 +1095,10 @@ entity "QualityControl.TestScenario" as testScenario #Silver{
 }
 
 entity "QualityControl.PrerequisiteTestScenario" as prerequisiteTestScenario #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *TestScenarioId : bigint(19) <<FK>>
-  *PrerequisiteTestScenarioId : bigint(19) <<FK>>
+  *TestScenarioId : uuid <<FK>>
+  *PrerequisiteTestScenarioId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -1107,12 +1107,12 @@ entity "QualityControl.PrerequisiteTestScenario" as prerequisiteTestScenario #Si
 }
 
 entity "QualityControl.TestPlan" as testPlan #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Code : varchar(20) <<unique>>
   *Title : varchar(255)
   PlanningDate : date
-  ProjectReleaseId : bigint(19) <<FK>>
+  ProjectReleaseId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -1122,10 +1122,10 @@ entity "QualityControl.TestPlan" as testPlan #Silver{
 }
 
 entity "QualityControl.TestPlanScenario" as testPlanScenario #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *TestScenarioId : bigint(19) <<FK>> <<composite unique>>
-  *TestPlanId : bigint(19) <<FK>> <<composite unique>>
+  *TestScenarioId : uuid <<FK>> <<composite unique>>
+  *TestPlanId : uuid <<FK>> <<composite unique>>
   *Ordering : float <<composite unique>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -1135,10 +1135,10 @@ entity "QualityControl.TestPlanScenario" as testPlanScenario #Silver{
 }
 
 entity "QualityControl.TestPlanScenarioIssueCoverage" as testPlanScenarioIssueCoverage #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *TestPlanScenarioId : bigint(19) <<FK>> <<composite unique>>
-  *IssueId : bigint(19) <<FK>> <<composite unique>>
+  *TestPlanScenarioId : uuid <<FK>> <<composite unique>>
+  *IssueId : uuid <<FK>> <<composite unique>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -1147,10 +1147,10 @@ entity "QualityControl.TestPlanScenarioIssueCoverage" as testPlanScenarioIssueCo
 }
 
 entity "QualityControl.TestResult" as testResult #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *TestDate : date
-  *TestPlanId : bigint(19) <<FK>>
+  *TestPlanId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -1160,10 +1160,10 @@ entity "QualityControl.TestResult" as testResult #Silver{
 }
 
 entity "QualityControl.TestResultDetail" as testResultDetail #Silver{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  TestPlanScenarioId : bigint(19) <<FK>>
-  *TestApprovalId : bigint(19) <<FK>>
+  TestPlanScenarioId : uuid <<FK>>
+  *TestApprovalId : uuid <<FK>>
   *Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -1173,7 +1173,7 @@ entity "QualityControl.TestResultDetail" as testResultDetail #Silver{
 }
 
 entity "UserManagement.Profile" as profile #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *FirstName : varchar(200)
   *LastName : varchar(200)
@@ -1181,7 +1181,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
-  PositionId : bigint(19) <<FK>>
+  PositionId : uuid <<FK>>
   Avatar : text
   Birthday : date
   PhoneNumber : varchar(20)
@@ -1203,7 +1203,7 @@ entity "UserManagement.Profile" as profile #Violet{
 }
 
 entity "HumanResource.Department" as department #Lavender{
-  *Id : integer(10) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(50)
   *Code : varchar(20) <<unique>>
@@ -1217,7 +1217,7 @@ entity "HumanResource.Department" as department #Lavender{
 }
 
 entity "ProjectManagement.Project" as project #Orange{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Code : varchar(20) <<unique>>
   *Title : varchar(200)
@@ -1232,7 +1232,7 @@ entity "ProjectManagement.Project" as project #Orange{
 }
 
 entity "Finance.Customer" as customer #Salmon{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(255)
   Description : varchar(4000)
@@ -1249,9 +1249,9 @@ entity "Finance.Customer" as customer #Salmon{
 }
 
 entity "Evaluation.Question" as question #SkyBlue{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *QuestionnaireId : bigint(19) <<FK>>
+  *QuestionnaireId : uuid <<FK>>
   *Question : varchar(4000)
   *Code : varchar(20) <<unique>>
   *AnswerType : enum(SingleChoice, MultiChoice, Description)
@@ -1264,9 +1264,9 @@ entity "Evaluation.Question" as question #SkyBlue{
 }
 
 entity "Evaluation.QuestionOption" as questionOption #SkyBlue{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *QuestionId : bigint(19) <<FK>>
+  *QuestionId : uuid <<FK>>
   *Title : varchar(4000)
   *Score : integer
   *IsDescriptionRequired : boolean
@@ -1278,11 +1278,11 @@ entity "Evaluation.QuestionOption" as questionOption #SkyBlue{
 }
 
 entity "Evaluation.Questionnaire" as questionnaire #SkyBlue{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
-  ProjectId : bigint(19) <<FK>>
+  ProjectId : uuid <<FK>>
   *QuestionnaireAduience : enum(Staffs, Customers, SeniorManagers, Stackholders)
   *TotalScore : integer
   *AcceptableScore : integer
@@ -1297,10 +1297,10 @@ entity "Evaluation.Questionnaire" as questionnaire #SkyBlue{
 }
 
 entity "Evaluation.QuestionnaireTargetDepartment" as questionnaireTargetDepartment #SkyBlue{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *QuestionnaireId : bigint(19) <<FK>>
-  *DepoartmentId : bigint(19) <<FK>>
+  *QuestionnaireId : uuid <<FK>>
+  *DepoartmentId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -1309,10 +1309,10 @@ entity "Evaluation.QuestionnaireTargetDepartment" as questionnaireTargetDepartme
 }
 
 entity "Evaluation.QuestionnaireItem" as questionnaireItem #SkyBlue{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *QuestionnaireId : bigint(19) <<FK>>
-  *QuestionId : bigint(19) <<FK>>
+  *QuestionnaireId : uuid <<FK>>
+  *QuestionId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -1321,11 +1321,11 @@ entity "Evaluation.QuestionnaireItem" as questionnaireItem #SkyBlue{
 }
 
 entity "Evaluation.QuestionnaireResult" as questionnaireResult #SkyBlue{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *QuestionnaireId : bigint(19) <<FK>>
-  ProfileId : bigint(19) <<FK>>
-  CustomerId : bigint(19) <<FK>>
+  *QuestionnaireId : uuid <<FK>>
+  ProfileId : uuid <<FK>>
+  CustomerId : uuid <<FK>>
   *TotalScore : integer
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -1335,11 +1335,11 @@ entity "Evaluation.QuestionnaireResult" as questionnaireResult #SkyBlue{
 }
 
 entity "Evaluation.QuestionnaireResultDetail" as questionnaireResultDetail #SkyBlue{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *QuestionnaireResultId : bigint(19) <<FK>>
-  *QuestionnaireItemId : bigint(19) <<FK>>
-  ChoosedQuestionOptionId : bigint(19) <<FK>>
+  *QuestionnaireResultId : uuid <<FK>>
+  *QuestionnaireItemId : uuid <<FK>>
+  ChoosedQuestionOptionId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -1349,10 +1349,10 @@ entity "Evaluation.QuestionnaireResultDetail" as questionnaireResultDetail #SkyB
 }
 
 entity "Evaluation.CustomerFeedback" as customerFeedback #SkyBlue{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *CustomerId : bigint(19) <<FK>>
-  *ProjectId : bigint(19) <<FK>>
+  *CustomerId : uuid <<FK>>
+  *ProjectId : uuid <<FK>>
   *FeedbackDate : date
   *FeedbackValue : numeric(2,2) <<between 1 and 10>>
   Description : varchar(4000)
@@ -1364,9 +1364,9 @@ entity "Evaluation.CustomerFeedback" as customerFeedback #SkyBlue{
 }
 
 entity "Evaluation.StaffSatisfactionEvaluation" as staffSatisfactionEvaluation #SkyBlue{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
+  *ProfileId : uuid <<FK>>
   *EvalationDate : date
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
@@ -1378,9 +1378,9 @@ entity "Evaluation.StaffSatisfactionEvaluation" as staffSatisfactionEvaluation #
 }
 
 entity "Evaluation.ProjectProductivityEvaluation" as projectProductivityEvaluation #SkyBlue{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : bigint(19) <<FK>>
+  *ProjectId : uuid <<FK>>
   *EvalationDate : datetime
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
@@ -1392,10 +1392,10 @@ entity "Evaluation.ProjectProductivityEvaluation" as projectProductivityEvaluati
 }
 
 entity "Evaluation.CustomerSatisfactionEvaluation" as customerSatisfactionEvaluation #SkyBlue{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *CustomerId : bigint(19) <<FK>>
-  *ProjectId : bigint(19) <<FK>>
+  *CustomerId : uuid <<FK>>
+  *ProjectId : uuid <<FK>>
   *EvalationDate : datetime
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)

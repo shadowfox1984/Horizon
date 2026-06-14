@@ -8,7 +8,7 @@ skinparam TitleFontSize 72pt
 title Horizon Research Project (HRP) \n Human Resource Schema Diagram \n Version 26.5.16
 
 entity "Basic.ContractType" as contractType #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -21,7 +21,7 @@ entity "Basic.ContractType" as contractType #LightPink{
 }
 
 entity "Basic.EducationLevel" as educationLevel #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -34,12 +34,12 @@ entity "Basic.EducationLevel" as educationLevel #LightPink{
 }
 
 entity "DocumentManagement.Document" as document #Gold{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *TableName : varchar(255)
   *TableId : bigint(19)
-  *DocumentTypeId : bigint(19) <<FK>>
-  *FileExtensionId : bigint(19) <<FK>>
+  *DocumentTypeId : uui <<FK>>
+  *FileExtensionId : uui <<FK>>
   *FileAddress: varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -49,7 +49,7 @@ entity "DocumentManagement.Document" as document #Gold{
 }
 
 entity "UserManagement.Profile" as profile #Violet{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *FirstName : varchar(200)
   *LastName : varchar(200)
@@ -57,7 +57,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
-  PositionId : bigint(19) <<FK>>
+  PositionId : uui <<FK>>
   Avatar : text
   Birthday : date
   PhoneNumber : varchar(20)
@@ -79,7 +79,7 @@ entity "UserManagement.Profile" as profile #Violet{
 }
 
 entity "HumanResource.Department" as department #Lavender{
-  *Id : integer(10) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(50)
   *Code : varchar(20) <<unique>>
@@ -93,12 +93,12 @@ entity "HumanResource.Department" as department #Lavender{
 }
 
 entity "HumanResource.Position" as position #Lavender{
-  *Id : integer(10) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(50)
   *Code : varchar(20) <<unique>>
-  *DepartmentId : bigint(19) <<FK>>
-  ParentId : bigint(19) <<FK>>
+  *DepartmentId : uui <<FK>>
+  ParentId : uui <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -108,11 +108,11 @@ entity "HumanResource.Position" as position #Lavender{
 }
 
 entity "HumanResource.ProfileEducation" as profileEducation #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
-  *EducatioLevelId : bigint(19) <<FK>>
-  DocumentId : bigint(19) <<FK>>
+  *ProfileId : uui <<FK>>
+  *EducatioLevelId : uui <<FK>>
+  DocumentId : uui <<FK>>
   *Title : varchar(255)
   CollegeName : varchar(255)
   StartDate : date
@@ -126,9 +126,9 @@ entity "HumanResource.ProfileEducation" as profileEducation #Lavender{
 }
 
 entity "HumanResource.ProfileJobExperience" as profileJobExperience #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
+  *ProfileId : uui <<FK>>
   *JobTitle : varchar(200)
   *CompanyName : varchar(200)
   StartDate : date
@@ -142,15 +142,15 @@ entity "HumanResource.ProfileJobExperience" as profileJobExperience #Lavender{
 }
 
 entity "HumanResource.ProfileCertificate" as profileCertificate #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
+  *ProfileId : uui <<FK>>
   *Title : varchar(200)
   *InstituteName : varchar(200)
   StartDate : date
   EndDate : date
   HasCertificate : boolean
-  DocumentId : bigint(19) <<FK>>
+  DocumentId : uui <<FK>>
   CertificateFileAddress : varchar(4000)
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -161,10 +161,10 @@ entity "HumanResource.ProfileCertificate" as profileCertificate #Lavender{
 }
 
 entity "HumanResource.WorkingTimeTable" as workingTimeTable #Lavender{ 
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *WorkingDay : enum(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)
-  *ContractTypeId : bigint(19) <<FK>>
+  *ContractTypeId : uui <<FK>>
   *Title : varchar(200)
   *StartTime : time
   *EndTime : time
@@ -178,7 +178,7 @@ entity "HumanResource.WorkingTimeTable" as workingTimeTable #Lavender{
 }
 
 entity "HumanResource.Holidaies" as holidaies #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(255)
   *HolidayDate : date <<unique>> 
@@ -192,9 +192,9 @@ entity "HumanResource.Holidaies" as holidaies #Lavender{
 }
 
 entity "HumanResource.Attendance" as attendance #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
+  *ProfileId : uui <<FK>>
   *WorkingDate : date
   *EnteranceType : enum(enter, exit)
   *EnternaceTime : time
@@ -206,9 +206,9 @@ entity "HumanResource.Attendance" as attendance #Lavender{
 }
 
 entity "HumanResource.Leave" as leave #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
+  *ProfileId : uui <<FK>>
   LeaveType : enum(fulltime, parttime)
   *LeavingStartDate : date
   LeavingEndDate : date
@@ -223,9 +223,9 @@ entity "HumanResource.Leave" as leave #Lavender{
 }
 
 entity "HumanResource.WorkMission" as workMission #Lavender{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : bigint(19) <<FK>>
+  *ProfileId : uui <<FK>>
   *MissionStartDate : date
   MissionEndDate : date
   *MissionStartTime : time

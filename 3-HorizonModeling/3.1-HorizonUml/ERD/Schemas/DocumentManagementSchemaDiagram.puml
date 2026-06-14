@@ -8,7 +8,7 @@ skinparam TitleFontSize 72pt
 title Horizon Research Project (HRP) \n Evaluation Schema Diagram \n Version 26.5.16
 
 entity "Basic.DocumentType" as documentType #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -21,7 +21,7 @@ entity "Basic.DocumentType" as documentType #LightPink{
 }
 
 entity "Basic.FileExtension" as fileExtension #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -34,12 +34,12 @@ entity "Basic.FileExtension" as fileExtension #LightPink{
 }
 
 entity "DocumentManagement.Document" as document #Gold{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *TableName : varchar(255)
   *TableId : bigint(19)
-  *DocumentTypeId : bigint(19) <<FK>>
-  *FileExtensionId : bigint(19) <<FK>>
+  *DocumentTypeId : uui <<FK>>
+  *FileExtensionId : uui <<FK>>
   *FileAddress: varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -49,10 +49,10 @@ entity "DocumentManagement.Document" as document #Gold{
 }
 
 entity "DocumentManagement.ProjectWorkflowDocumentType" as projectWorkflowDocumentType #Gold{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *DocumentTypeId : bigint(19) <<FK>> <<composite unique>>
-  *ProjectWorkflowId : bigint(19) <<FK>> <<composite unique>>
+  *DocumentTypeId : uui <<FK>> <<composite unique>>
+  *ProjectWorkflowId : uui <<FK>> <<composite unique>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -61,10 +61,10 @@ entity "DocumentManagement.ProjectWorkflowDocumentType" as projectWorkflowDocume
 }
 
 entity "DocumentManagement.WorkflowEligibleFileExtension" as workflowEligibleFileExtension #Gold{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *WorkflowId : bigint(19) <<FK>> <<composite unique>>
-  *FileExtensionId : bigint(19) <<FK>> <<composite unique>>
+  *WorkflowId : uui <<FK>> <<composite unique>>
+  *FileExtensionId : uui <<FK>> <<composite unique>>
   *MaxFileSizeForUpload : integer <<default: 5242880>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>

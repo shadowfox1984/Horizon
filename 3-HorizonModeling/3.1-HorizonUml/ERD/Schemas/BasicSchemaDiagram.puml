@@ -8,7 +8,7 @@ skinparam TitleFontSize 72pt
 title Horizon Research Project (HRP) \n Basic Schema Diagram \n Version 26.5.16
 
 entity "Basic.ContractType" as contractType #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -21,7 +21,7 @@ entity "Basic.ContractType" as contractType #LightPink{
 }
 
 entity "Basic.EducationLevel" as educationLevel #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -34,7 +34,7 @@ entity "Basic.EducationLevel" as educationLevel #LightPink{
 }
 
 entity "Basic.DocumentType" as documentType #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -47,7 +47,7 @@ entity "Basic.DocumentType" as documentType #LightPink{
 }
 
 entity "Basic.FileExtension" as fileExtension #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -60,7 +60,7 @@ entity "Basic.FileExtension" as fileExtension #LightPink{
 }
 
 entity "Basic.Priority" as priority #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -75,7 +75,7 @@ entity "Basic.Priority" as priority #LightPink{
 }
 
 entity "Basic.IssueType" as issueType #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -90,7 +90,7 @@ entity "Basic.IssueType" as issueType #LightPink{
 }
 
 entity "Basic.Status" as status #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -105,7 +105,7 @@ entity "Basic.Status" as status #LightPink{
 }
 
 entity "Basic.Resolvation" as resolvation #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -120,7 +120,7 @@ entity "Basic.Resolvation" as resolvation #LightPink{
 }
 
 entity "Basic.MeetingType" as meetingType #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -133,7 +133,7 @@ entity "Basic.MeetingType" as meetingType #LightPink{
 }
 
 entity "Basic.TimeUnit" as timeUnit #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -147,7 +147,7 @@ entity "Basic.TimeUnit" as timeUnit #LightPink{
 }
 
 entity "Basic.TestApproval" as testApproval #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -162,7 +162,7 @@ entity "Basic.TestApproval" as testApproval #LightPink{
 }
 
 entity "Basic.TestComplexityLevel" as testComplexityLevel #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
@@ -176,7 +176,7 @@ entity "Basic.TestComplexityLevel" as testComplexityLevel #LightPink{
 }
 
 entity "Basic.Currency" as currency #LightPink{
-  *Id : bigint(19) <<serial>>
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
