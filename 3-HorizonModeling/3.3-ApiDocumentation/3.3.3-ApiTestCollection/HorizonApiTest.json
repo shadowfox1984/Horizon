@@ -9702,18 +9702,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/meetingInvitees",
               "name": "AddMeetingInvitees",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingInvitees",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"projectMeetingId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*It should be null if isFromInsideCompnay be false*/\n  \t\"isFromInsideCompnay\" : true,\n  \t\"inviteeFullName\" : \"test\", /*It should be null if isFromInsideCompnay be true*/\n  \t\"inviteeCompanyName\" : \"test\", /*It should be null if isFromInsideCompnay be true*/\n  \t\"isAttanded\" : true /*optional*/\n}"
@@ -9724,18 +9724,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/meetingInvitees/[id]",
               "name": "UpdateMeetingInvitees",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingInvitees/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"projectMeetingId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*It should be null if isFromInsideCompnay be false*/\n  \t\"isFromInsideCompnay\" : true,\n  \t\"inviteeFullName\" : \"test\", /*It should be null if isFromInsideCompnay be true*/\n  \t\"inviteeCompanyName\" : \"test\", /*It should be null if isFromInsideCompnay be true*/\n  \t\"isAttanded\" : true /*optional*/\n}"
@@ -9850,18 +9850,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/meetingMinutes",
               "name": "AddMeetingMinutes",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingMinutes",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"projectMeetingId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"responsibleDepartmentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"resolution\" : \"test\",\n  \t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"dueDate\" : \"2026-06-15\" /*optional*/\n}"
@@ -9872,18 +9872,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/meetingMinutes/[id]",
               "name": "UpdateMeetingMinutes",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingMinutes/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"projectMeetingId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"responsibleDepartmentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"resolution\" : \"test\",\n  \t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"dueDate\" : \"2026-06-15\" /*optional*/\n}"
@@ -10160,6 +10160,50 @@
           "name": "ContractSalaryItem",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "name": "AddContractSalaryItem",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/contractSalaryItem",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"staffContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"calculationTimeUnitId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\",\n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "UpdateContractSalaryItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/contractSalaryItem/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"staffContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"calculationTimeUnitId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\",\n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteContractSalaryItem",
