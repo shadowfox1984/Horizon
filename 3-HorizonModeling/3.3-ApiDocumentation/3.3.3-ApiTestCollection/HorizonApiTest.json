@@ -10310,18 +10310,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/contractDeductionItem",
               "name": "AddContractDeductionItem",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/contractDeductionItem",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"calculationType\" : \"FixedAmount | Percentage\",\n\t\"staffContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"calculationTimeUnitId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\",\n  \t\"deductionPercentage\" : 100.0, /*It will be null if value of calculationType be FixedAmount*/\n  \t\"fixedAmount\" : 1000.0, /*It will be null if value of calculationType be Percentage*/\n  \t\"fixedAmountCurrencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*It will be null if value of calculationType be Percentage*/\n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -10332,18 +10332,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/contractDeductionItem/[id]",
               "name": "UpdateContractDeductionItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/contractDeductionItem/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"calculationType\" : \"FixedAmount | Percentage\",\n\t\"staffContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"calculationTimeUnitId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\",\n  \t\"deductionPercentage\" : 100.0, /*It will be null if value of calculationType be FixedAmount*/\n  \t\"fixedAmount\" : 1000.0, /*It will be null if value of calculationType be Percentage*/\n  \t\"fixedAmountCurrencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*It will be null if value of calculationType be Percentage*/\n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -10456,6 +10456,50 @@
           "name": "Supplier",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/supplier",
+              "name": "AddSupplier",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"cellNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/supplier/[id]",
+              "name": "UpdateSupplier",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"cellNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteSupplier",
