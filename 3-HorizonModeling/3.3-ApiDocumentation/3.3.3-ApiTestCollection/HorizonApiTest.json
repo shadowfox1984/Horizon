@@ -10458,21 +10458,21 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/supplier",
               "name": "AddSupplier",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/supplier",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"cellNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -10480,21 +10480,21 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/supplier/[id]",
               "name": "UpdateSupplier",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/supplier/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"cellNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -10606,6 +10606,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoice",
+              "name": "AddCostInvoice",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"companyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n\t\"supplierId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"invoiceDate\" : \"2026-06-19\",\n  \t\"invoiceNumber\" : \"123456\", \n  \t\"totalAmount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoice/[id]",
+              "name": "UpdateCostInvoice",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"companyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n\t\"supplierId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"invoiceDate\" : \"2026-06-19\",\n  \t\"invoiceNumber\" : \"123456\", \n  \t\"totalAmount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteCostInvoice",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/finance/costInvoice/[id]",
@@ -10708,6 +10752,50 @@
           "name": "CostInvoiceItem",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem",
+              "name": "AddCostInvoiceItem",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"costInvoiceId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"itemTitle\" : \"test\",\n  \t\"quantity\" : 10.0, \n  \t\"unitAmount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem/[id]",
+              "name": "UpdateCostInvoiceItem",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"costInvoiceId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"itemTitle\" : \"test\",\n  \t\"quantity\" : 10.0, \n  \t\"unitAmount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteCostInvoiceItem",
@@ -10814,6 +10902,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem",
+              "name": "AddProjectDirectCostItem",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"costInvoiceItemId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"allocatedQuantity\" : 10.0, \n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem/[id]",
+              "name": "UpdateProjectDirectCostItem",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"costInvoiceItemId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"allocatedQuantity\" : 10.0, \n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteProjectDirectCostItem",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem/[id]",
@@ -10916,6 +11048,50 @@
           "name": "CostPaymentReceipt",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt",
+              "name": "AddCostPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"costInvoiceId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt/[id]",
+              "name": "UpdateCostPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"costInvoiceId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteCostPaymentReceipt",
@@ -11022,6 +11198,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt",
+              "name": "AddSalaryPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"staffContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt/[id]",
+              "name": "UpdateSalaryPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"staffContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteSalarylPaymentReceipt",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt/[id]",
@@ -11124,6 +11344,50 @@
           "name": "StaffAdditionalPaymentReceipt",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt",
+              "name": "AddStaffAdditionalPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/[id]",
+              "name": "UpdateStaffAdditionalPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteStaffAdditionalPaymentReceipt",
@@ -11230,6 +11494,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/customer",
+              "name": "AddCustomer",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/customer/[id]",
+              "name": "UpdateCustomer",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteCustomer",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/finance/customer/[id]",
@@ -11332,6 +11640,50 @@
           "name": "CustomerContract",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/customerContract",
+              "name": "AddCustomerContract",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"customerId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"contractNumber\" : \"123456\",\n  \t\"startDate\" : \"2026-06-13\",\n  \t\"scheduledEndDate\" : \"2027-06-13\",\n  \t\"realEndDate\"  : \"2027-06-13\",\n  \t\"isDevelopmentContract\" : true,\n  \t\"isSupportContract\" : false,\n  \t\"totalAmount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/customerContract/[id]",
+              "name": "UpdateCustomerContract",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"customerId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"contractNumber\" : \"123456\",\n  \t\"startDate\" : \"2026-06-13\",\n  \t\"scheduledEndDate\" : \"2027-06-13\",\n  \t\"realEndDate\"  : \"2027-06-13\",\n  \t\"isDevelopmentContract\" : true,\n  \t\"isSupportContract\" : false,\n  \t\"totalAmount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteCustomerContract",
@@ -11437,6 +11789,66 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule",
+              "name": "AddCustomerContractPaymentSchedule",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]",
+                "secret": "",
+                "algorithm": "HS256",
+                "payload": "{}",
+                "addTo": "HEADERS",
+                "isSecretBase64Encoded": false,
+                "headerPrefix": "Bearer ",
+                "paramName": "token",
+                "jwtHeaders": "{}"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"customerContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"ProjectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \t\"PaymentTitle\" : \"test\",\n  \t\"ScheduledPaymentDate\" : \"2026-06-13\", /* optional */\n  \t\"amount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/[id]",
+              "name": "UpdateCustomerContractPaymentSchedule",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]",
+                "secret": "",
+                "algorithm": "HS256",
+                "payload": "{}",
+                "addTo": "HEADERS",
+                "isSecretBase64Encoded": false,
+                "headerPrefix": "Bearer ",
+                "paramName": "token",
+                "jwtHeaders": "{}"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"customerContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"ProjectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \t\"PaymentTitle\" : \"test\",\n  \t\"ScheduledPaymentDate\" : \"2026-06-13\", /* optional */\n  \t\"amount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteCustomerContractPaymentSchedule",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/[id]",
@@ -11539,6 +11951,50 @@
           "name": "CustomerContractPaymentReceipt",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt",
+              "name": "AddCustomerContractPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"customerContractPaymentScheduleId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt/[id]",
+              "name": "UpdateCustomerContractPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"customerContractPaymentScheduleId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteCustomerContractPaymentReceipt",

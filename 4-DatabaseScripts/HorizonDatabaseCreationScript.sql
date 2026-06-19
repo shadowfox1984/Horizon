@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.6.11
+	Last Version : 26.6.20
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1137,8 +1137,10 @@ CREATE TABLE Finance.Customer(
 	Title varchar(255) NOT NULL,
 	PhoneNumber varchar(20),
 	MobileNumber varchar(20),
+	FaxNumber varchar(20),
 	Email varchar(100),
 	PostalCode varchar(20),
+	City varchar(200),
 	Address varchar(4000),
 	Description varchar(4000),
     ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
