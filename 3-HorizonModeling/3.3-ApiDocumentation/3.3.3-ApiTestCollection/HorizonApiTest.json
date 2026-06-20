@@ -10606,18 +10606,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/costInvoice",
               "name": "AddCostInvoice",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoice",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"companyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n\t\"supplierId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"invoiceDate\" : \"2026-06-19\",\n  \t\"invoiceNumber\" : \"123456\", \n  \t\"totalAmount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -10628,18 +10628,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/costInvoice/[id]",
               "name": "UpdateCostInvoice",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoice/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"companyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n\t\"supplierId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"invoiceDate\" : \"2026-06-19\",\n  \t\"invoiceNumber\" : \"123456\", \n  \t\"totalAmount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -10754,18 +10754,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem",
               "name": "AddCostInvoiceItem",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"costInvoiceId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"itemTitle\" : \"test\",\n  \t\"quantity\" : 10.0, \n  \t\"unitAmount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -10776,18 +10776,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem/[id]",
               "name": "UpdateCostInvoiceItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"costInvoiceId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"itemTitle\" : \"test\",\n  \t\"quantity\" : 10.0, \n  \t\"unitAmount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -10902,18 +10902,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem",
               "name": "AddProjectDirectCostItem",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"costInvoiceItemId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"allocatedQuantity\" : 10.0, \n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -10924,18 +10924,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem/[id]",
               "name": "UpdateProjectDirectCostItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"costInvoiceItemId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"allocatedQuantity\" : 10.0, \n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -11050,18 +11050,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt",
               "name": "AddCostPaymentReceipt",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"costInvoiceId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -11072,18 +11072,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt/[id]",
               "name": "UpdateCostPaymentReceipt",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"costInvoiceId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -11198,18 +11198,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt",
               "name": "AddSalaryPaymentReceipt",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"staffContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -11220,18 +11220,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt/[id]",
               "name": "UpdateSalaryPaymentReceipt",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"staffContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -11346,18 +11346,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt",
               "name": "AddStaffAdditionalPaymentReceipt",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -11368,18 +11368,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/[id]",
               "name": "UpdateStaffAdditionalPaymentReceipt",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -11494,18 +11494,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/customer",
               "name": "AddCustomer",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/customer",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -11516,18 +11516,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/customer/[id]",
               "name": "UpdateCustomer",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/customer/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -11642,18 +11642,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/customerContract",
               "name": "AddCustomerContract",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/customerContract",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"customerId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"contractNumber\" : \"123456\",\n  \t\"startDate\" : \"2026-06-13\",\n  \t\"scheduledEndDate\" : \"2027-06-13\",\n  \t\"realEndDate\"  : \"2027-06-13\",\n  \t\"isDevelopmentContract\" : true,\n  \t\"isSupportContract\" : false,\n  \t\"totalAmount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
@@ -11664,18 +11664,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/customerContract/[id]",
               "name": "UpdateCustomerContract",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/customerContract/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"customerId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"contractNumber\" : \"123456\",\n  \t\"startDate\" : \"2026-06-13\",\n  \t\"scheduledEndDate\" : \"2027-06-13\",\n  \t\"realEndDate\"  : \"2027-06-13\",\n  \t\"isDevelopmentContract\" : true,\n  \t\"isSupportContract\" : false,\n  \t\"totalAmount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
@@ -11789,26 +11789,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule",
               "name": "AddCustomerContractPaymentSchedule",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]",
-                "secret": "",
-                "algorithm": "HS256",
-                "payload": "{}",
-                "addTo": "HEADERS",
-                "isSecretBase64Encoded": false,
-                "headerPrefix": "Bearer ",
-                "paramName": "token",
-                "jwtHeaders": "{}"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"customerContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"ProjectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \t\"PaymentTitle\" : \"test\",\n  \t\"ScheduledPaymentDate\" : \"2026-06-13\", /* optional */\n  \t\"amount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
@@ -11819,26 +11811,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/[id]",
               "name": "UpdateCustomerContractPaymentSchedule",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]",
-                "secret": "",
-                "algorithm": "HS256",
-                "payload": "{}",
-                "addTo": "HEADERS",
-                "isSecretBase64Encoded": false,
-                "headerPrefix": "Bearer ",
-                "paramName": "token",
-                "jwtHeaders": "{}"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"customerContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"ProjectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \t\"PaymentTitle\" : \"test\",\n  \t\"ScheduledPaymentDate\" : \"2026-06-13\", /* optional */\n  \t\"amount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
@@ -11953,18 +11937,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt",
               "name": "AddCustomerContractPaymentReceipt",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"customerContractPaymentScheduleId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
@@ -11975,18 +11959,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt/[id]",
               "name": "UpdateCustomerContractPaymentReceipt",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"customerContractPaymentScheduleId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"paymentDate\" : \"2026-06-19\",\n  \t\"receiptNumber\" : \"123456\", \n  \t\"amount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
@@ -12115,6 +12099,50 @@
           "name": "TestScenario",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario",
+              "name": "AddTestScenario",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testComplexityLevelId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\", \n  \t\"UsersAndRoles\" : \"test\", /*optional*/\n  \t\"steps\" : \"test\", /*optional*/\n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/[id]",
+              "name": "UpdateTestScenario",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testComplexityLevelId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\", \n  \t\"UsersAndRoles\" : \"test\", /*optional*/\n  \t\"steps\" : \"test\", /*optional*/\n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteTestScenario",
