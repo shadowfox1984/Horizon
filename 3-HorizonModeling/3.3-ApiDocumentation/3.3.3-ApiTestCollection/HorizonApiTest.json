@@ -12101,18 +12101,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario",
               "name": "AddTestScenario",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testComplexityLevelId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\", \n  \t\"UsersAndRoles\" : \"test\", /*optional*/\n  \t\"steps\" : \"test\", /*optional*/\n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -12123,18 +12123,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/[id]",
               "name": "UpdateTestScenario",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testComplexityLevelId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\", \n  \t\"UsersAndRoles\" : \"test\", /*optional*/\n  \t\"steps\" : \"test\", /*optional*/\n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -12249,6 +12249,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario",
+              "name": "AddPrerequisiteTestScenario",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"testScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"prerequisiteTestScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/[id]",
+              "name": "UpdatePrerequisiteTestScenario",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"testScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"prerequisiteTestScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeletePrerequisiteTestScenario",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/[id]",
@@ -12351,6 +12395,50 @@
           "name": "TestPlan",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan",
+              "name": "AddTestPlan",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"projectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"title\" : \"test\", \n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"planningDate\" : \"2026-06-23\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/[id]",
+              "name": "UpdateTestPlan",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"projectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"title\" : \"test\", \n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"planningDate\" : \"2026-06-23\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteTestPlan",
@@ -12457,6 +12545,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario",
+              "name": "AddTestPlanScenario",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"testScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testPlanId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"ordering\" : 1.0\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/[id]",
+              "name": "UpdateTestPlanScenario",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"testScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testPlanId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"ordering\" : 1.0\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteTestPlanScenario",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/[id]",
@@ -12559,6 +12691,50 @@
           "name": "TestPlanScenarioIssueCoverage",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage",
+              "name": "AddTestPlanScenarioIssueCoverage",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n\t\"testPlanScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"IssueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/[id]",
+              "name": "UpdateTestPlanScenarioIssueCoverage",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteTestPlanScenarioIssueCoverage",
@@ -12665,6 +12841,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult",
+              "name": "AddTestResult",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"testPlanId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testDate\" : \"2026-06-23\",\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/[id]",
+              "name": "UpdateTestResult",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"testPlanId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testDate\" : \"2026-06-23\",\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteTestResult",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/qualityControl/testResult/[id]",
@@ -12767,6 +12987,50 @@
           "name": "TestResultDetail",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail",
+              "name": "AddTestResultDetail",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"testResultId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testPlanScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testApprovalId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/[id]",
+              "name": "UpdateTestResultDetail",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"testResultId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testPlanScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testApprovalId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\" /*optional*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteTestResultDetail",

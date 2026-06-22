@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.6.20
+	Last Version : 26.6.23
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1311,8 +1311,9 @@ CREATE TABLE QualityControl.TestResult(
 );
 
 CREATE TABLE QualityControl.TestResultDetail(
-    Id uuid NOT NULL DEFAULT gen_random_uuid(),  
-	TestPlanScenarioId uuid,
+    Id uuid NOT NULL DEFAULT gen_random_uuid(),
+	TestResultId uuid NOT NULL,
+	TestPlanScenarioId uuid NOT NULL,
 	TestApprovalId uuid NOT NULL,
 	Description varchar(4000),
     ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
@@ -1321,6 +1322,7 @@ CREATE TABLE QualityControl.TestResultDetail(
     ModifyDate timestamp,
 	ModifierId uuid,
 	PRIMARY KEY(Id),
+	FOREIGN KEY (TestResultId) REFERENCES QualityControl.TestResult(Id),
 	FOREIGN KEY (TestPlanScenarioId) REFERENCES QualityControl.TestPlanScenario(Id),
 	FOREIGN KEY (TestApprovalId) REFERENCES Basic.TestApproval(Id)
 );
