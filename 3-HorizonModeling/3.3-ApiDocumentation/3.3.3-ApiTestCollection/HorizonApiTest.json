@@ -12249,18 +12249,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario",
               "name": "AddPrerequisiteTestScenario",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"testScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"prerequisiteTestScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
@@ -12271,18 +12271,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/[id]",
               "name": "UpdatePrerequisiteTestScenario",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"testScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"prerequisiteTestScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
@@ -12397,18 +12397,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan",
               "name": "AddTestPlan",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"projectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"title\" : \"test\", \n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"planningDate\" : \"2026-06-23\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -12419,18 +12419,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/[id]",
               "name": "UpdateTestPlan",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"projectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"title\" : \"test\", \n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"planningDate\" : \"2026-06-23\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -12545,18 +12545,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario",
               "name": "AddTestPlanScenario",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"testScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testPlanId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"ordering\" : 1.0\n}"
@@ -12567,18 +12567,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/[id]",
               "name": "UpdateTestPlanScenario",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"testScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testPlanId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"ordering\" : 1.0\n}"
@@ -12693,18 +12693,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage",
               "name": "AddTestPlanScenarioIssueCoverage",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n\t\"testPlanScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"IssueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
@@ -12715,21 +12715,21 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/[id]",
               "name": "UpdateTestPlanScenarioIssueCoverage",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
-                "body": null
+                "body": ""
               },
               "requestVariables": [],
               "responses": {},
@@ -12841,18 +12841,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResult",
               "name": "AddTestResult",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"testPlanId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testDate\" : \"2026-06-23\",\n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -12863,18 +12863,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/[id]",
               "name": "UpdateTestResult",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"testPlanId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testDate\" : \"2026-06-23\",\n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -12989,18 +12989,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail",
               "name": "AddTestResultDetail",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail",
               "params": [],
               "headers": [],
-              "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"testResultId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testPlanScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testApprovalId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -13011,18 +13011,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/[id]",
               "name": "UpdateTestResultDetail",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \t\"testResultId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testPlanScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testApprovalId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\" /*optional*/\n}"
@@ -13153,6 +13153,50 @@
           "requests": [
             {
               "v": "17",
+              "name": "AddQuestion",
+              "method": "POST",
+              "endpoint": "https://[MainDomian]/api/evaluation/question",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"score\": 10,\n  \t\"code\" : \"123\", /*It should be unique*/\n  \t\"question\" : \"test\",\n  \t\"answerType\" : \"SignleChoice\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "UpdateQuestion",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/question/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"score\": 10,\n  \t\"code\" : \"123\", /*It should be unique*/\n  \t\"question\" : \"test\",\n  \t\"answerType\" : \"SignleChoice\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteQuestion",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/evaluation/question/[id]",
@@ -13255,6 +13299,50 @@
           "name": "QuestionOption",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionOption",
+              "name": "AddQuestionOption",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"questionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"score\" : 10,\n  \"title\" : \"test\",\n  \"isDescriptionRequired\" : false\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/[id]",
+              "name": "UpdateQuestionOption",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"questionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"score\" : 10,\n  \"title\" : \"test\",\n  \"isDescriptionRequired\" : false\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteQuestionOption",
@@ -13361,6 +13449,50 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire",
+              "name": "AddQuestionnaire",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \"code\" : \"123456\",\n  \"title\" : \"test\",\n  \"questionnaireAduience\" : \"Customers\",\n  \"totalScore\" : 100.0,\n  \"acceptableScore\" : 95.0,\n  \"WarningScore\" : 40.0,\n  \"DisasterScore\" : 10.0,\n  \"Description\" : \"test\" /* optional */\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/[id]",
+              "name": "UpdateQuestionnaire",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \"code\" : \"123456\",\n  \"title\" : \"test\",\n  \"questionnaireAduience\" : \"Customers\",\n  \"totalScore\" : 100.0,\n  \"acceptableScore\" : 95.0,\n  \"WarningScore\" : 40.0,\n  \"DisasterScore\" : 10.0,\n  \"Description\" : \"test\" /* optional */\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteQuestionnaire",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/[id]",
@@ -13463,6 +13595,50 @@
           "name": "QuestionnaireTargetDepartment",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment",
+              "name": "AddQuestionnaireTargetDepartment",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"questionnaireId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"departmentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/[id]",
+              "name": "UpdateQuestionnaireTargetDepartment",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"questionnaireId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"departmentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteQuestionnaireTargetDepartment",
@@ -13569,6 +13745,28 @@
           "requests": [
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem",
+              "name": "AddQuestionnaireItem",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"questionnaireId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"questionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteQuestionnaireItem",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/[id]",
@@ -13654,6 +13852,28 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/[id]",
+              "name": "UpdateQuestionnaireItem",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"questionnaireId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"questionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -13671,6 +13891,50 @@
           "name": "QuestionnaireResult",
           "folders": [],
           "requests": [
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult",
+              "name": "AddQuestionnaireResult",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"questionnaireId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"customerId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"totalScore\" : 100.0 \n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/[id]",
+              "name": "UpdateQuestionnaireResult",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"questionnaireId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"customerId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"totalScore\" : 100.0 \n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
             {
               "v": "17",
               "name": "DeleteQuestionnaireResult",
