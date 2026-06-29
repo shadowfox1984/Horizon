@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.6.29
+	Last Version : 26.6.30
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1424,7 +1424,7 @@ CREATE TABLE Evaluation.QuestionnaireResult(
 
 CREATE TABLE Evaluation.QuestionnaireResultDetail(
     Id uuid NOT NULL DEFAULT gen_random_uuid(),  
-	QuestionnaireResultDetailId uuid NOT NULL,
+	QuestionnaireResultId uuid NOT NULL,
 	QuestionnaireItemId uuid NOT NULL,
 	ChoosedQuestionOptionId uuid,
 	Description varchar(4000),
@@ -1434,7 +1434,7 @@ CREATE TABLE Evaluation.QuestionnaireResultDetail(
     ModifyDate timestamp,
 	ModifierId uuid,
 	PRIMARY KEY(Id),
-	FOREIGN KEY (QuestionnaireResultDetailId) REFERENCES Evaluation.QuestionnaireResultDetail(Id),
+	FOREIGN KEY (QuestionnaireResultId) REFERENCES Evaluation.QuestionnaireResult(Id),
 	FOREIGN KEY (QuestionnaireItemId) REFERENCES Evaluation.QuestionnaireItem(Id),
 	FOREIGN KEY (ChoosedQuestionOptionId) REFERENCES Evaluation.QuestionOption(Id)
 );
