@@ -497,7 +497,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"iconAddress\" : \"[Icon URL]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"iconAddress\" : \"http://127.0.0.0.1/icons/icon1.png\", \n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -519,7 +519,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"iconAddress\" : \"[Icon URL]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"iconAddress\" : \"http://127.0.0.0.1/icons/icon1.png\", \n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -732,7 +732,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"statusEffect\" : \"[ENUM (To Do, In Progress, Done)]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"statusEffect\" : \"To Do | In Progress | Done\", \n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -754,7 +754,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"statusEffect\" : \"[ENUM (To Do, In Progress, Done)]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"statusEffect\" : \"To Do | In Progress | Done\", \n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -954,14 +954,14 @@
         },
         {
           "v": 12,
-          "name": "Resolvation",
+          "name": "Resolution",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "AddResolvation",
+              "name": "AddResolution",
               "method": "POST",
-              "endpoint": "https://[MainDomian]/api/basic/resolvation",
+              "endpoint": "https://[MainDomian]/api/basic/resolution",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -973,7 +973,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"isResolved\" : true/false, \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"isResolved\" : true, \n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -981,9 +981,9 @@
             },
             {
               "v": "17",
-              "name": "UpdateResolvation",
+              "name": "UpdateResolution",
               "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/basic/resolvation/[id]",
+              "endpoint": "https://[MainDomian]/api/basic/resolution/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -995,7 +995,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"isResolved\" : true/false, \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"isResolved\" : true, \n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -1003,9 +1003,9 @@
             },
             {
               "v": "17",
-              "name": "DeleteResolvation",
+              "name": "DeleteResolution",
               "method": "DELETE",
-              "endpoint": "https://[MainDomian]/api/basic/resolvation/[id]",
+              "endpoint": "https://[MainDomian]/api/basic/resolution/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -1025,9 +1025,9 @@
             },
             {
               "v": "17",
-              "name": "ActiveResolvation",
+              "name": "ActiveResolution",
               "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/basic/resolvation/active/[id]",
+              "endpoint": "https://[MainDomian]/api/basic/resolution/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -1047,9 +1047,9 @@
             },
             {
               "v": "17",
-              "name": "InactiveResolvation",
+              "name": "InactiveResolution",
               "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/basic/resolvation/inactive/[id]",
+              "endpoint": "https://[MainDomian]/api/basic/resolution/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -1069,9 +1069,9 @@
             },
             {
               "v": "17",
-              "name": "GetSpecificResolvation",
+              "name": "GetSpecificResolution",
               "method": "GET",
-              "endpoint": "https://[MainDomian]/api/basic/resolvation/[id]",
+              "endpoint": "https://[MainDomian]/api/basic/resolution/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -1091,7 +1091,7 @@
             },
             {
               "v": "17",
-              "name": "GetAllResolvation",
+              "name": "GetAllResolution",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/basic/resolvation/getAll",
               "params": [
@@ -1162,9 +1162,9 @@
             },
             {
               "v": "17",
-              "name": "GetComboListOfResolvation",
+              "name": "GetComboListOfResolution",
               "method": "GET",
-              "endpoint": "https://[MainDomian]/api/basic/resolvation/getComboList",
+              "endpoint": "https://[MainDomian]/api/basic/resolution/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -1443,7 +1443,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\", \n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -1465,7 +1465,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\", \n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -1563,7 +1563,7 @@
               "v": "17",
               "name": "GetAllDocumentType",
               "method": "GET",
-              "endpoint": "https://[MainDomian]/api/basic/fileExtension/getAll",
+              "endpoint": "https://[MainDomian]/api/basic/documentType/getAll",
               "params": [
                 {
                   "key": "title",
@@ -1672,7 +1672,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\", \n  \t\"decription\" : \"test\" /*optioanl*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -1694,7 +1694,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\", \n  \t\"decription\" : \"test\" /*optioanl*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -1901,7 +1901,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\", \n  \t\"decription\" : \"test\" /*optioanl*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -1923,7 +1923,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\", \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\", \n  \t\"decription\" : \"test\" /*optioanl*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -2130,7 +2130,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"isApproved\" : true/false, \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"isApproved\" : true, \n  \t\"decription\" : \"test\" /*optioanl*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -2152,7 +2152,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"color\" : \"[Color Hex Code]\",\n  \t\"isApproved\" : true/false, \n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"isApproved\" : true, \n  \t\"decription\" : \"test\" /*optioanl*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -2371,7 +2371,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"valueNumber\" : 1.0,\n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"valueNumber\" : 1.0,\n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -2393,7 +2393,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"valueNumber\" : 1.0,\n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"valueNumber\" : 1.0,\n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -2612,7 +2612,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"[code]\",\n  \t\"title\" : \"[title]\",\n  \t\"valueBasedOnMillisecond\" : 1000,\n  \t\"decription\" : \"[description (optional)]\"\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"valueBasedOnMillisecond\" : 1000,\n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
