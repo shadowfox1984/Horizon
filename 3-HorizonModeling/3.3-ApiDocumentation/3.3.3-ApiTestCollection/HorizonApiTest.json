@@ -4452,8 +4452,9 @@
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
               },
               "body": {
                 "contentType": null,
@@ -6752,7 +6753,7 @@
               "params": [
                 {
                   "key": "profileId",
-                  "value": "123",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                   "active": true,
                   "description": "mandatory"
                 },
