@@ -4453,8 +4453,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
+                "token": "[JWT token]",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
@@ -7378,7 +7378,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"roleId\" : 123,\n  \t\"projectId\" : 123\n}"
+                "body": "{\n  \t\"roleId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -7504,7 +7504,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"departmentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : 123\n}"
+                "body": "{\n  \t\"departmentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -8466,7 +8466,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"resolutionId\" : 123,\n  \t\"projectWorkflowId\" : 123\n}"
+                "body": "{\n  \t\"resolutionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectWorkflowId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -8769,7 +8769,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"projectId\" : 123,\n  \t\"assigneeId\" : 123, /*optional*/\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /*optional*/\n  \t\"issueSize\" : \"XL\", /*optional*/\n  \t\"priorityId\" : 123,  /*optional*/\n  \t\"dueDate\": \"2026-06-08\", /*optional*/\n  \t\"issueTypeId\" : 123, /*optional*/\n  \t\"parentIssueId\" : 123, /*optional*/\n  \t\"epicLinkedId\" : 123, /*optional*/\n  \t\"linkedIssueId\" : 123, /*optional*/\n  \t\"linkedIssueType\" : 123, /*optional*/\n  \t\"currentStatusId\" : 123,  /*optional*/\n  \t\"currentResolutionId\" : 123 /*optional*/\n}"
+                "body": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"assigneeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /*optional*/\n  \t\"issueSize\" : \"XL\", /*optional*/\n  \t\"priorityId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",  /*optional*/\n  \t\"dueDate\": \"2026-06-08\", /*optional*/\n  \t\"issueTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"parentIssueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"epicLinkedId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"linkedIssueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"linkedIssueType\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"currentStatusId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",  /*optional*/\n  \t\"currentResolutionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
