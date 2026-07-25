@@ -12730,7 +12730,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": ""
+                "body": "{\n\t\"testPlanScenarioId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"IssueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
