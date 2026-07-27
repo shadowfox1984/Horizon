@@ -13768,6 +13768,28 @@
             },
             {
               "v": "17",
+              "name": "UpdateQuestionnaireItem",
+              "method": "PUT",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"questionnaireId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"questionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "DeleteQuestionnaireItem",
               "method": "DELETE",
               "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/[id]",
@@ -13849,28 +13871,6 @@
               "body": {
                 "contentType": null,
                 "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "UpdateQuestionnaireItem",
-              "method": "PUT",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[JWT token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": "application/json",
-                "body": "{\n  \"questionnaireId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"questionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {},
