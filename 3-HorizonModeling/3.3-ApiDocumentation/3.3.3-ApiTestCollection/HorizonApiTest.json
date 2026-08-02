@@ -7030,19 +7030,20 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/project/getAll",
               "name": "GetAllProject",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/project/getAll",
               "params": [
                 {
-                  "active": true,
                   "key": "code",
                   "value": "123",
+                  "active": true,
                   "description": ""
                 },
                 {
-                  "active": true,
                   "key": "title",
                   "value": "test",
+                  "active": true,
                   "description": ""
                 },
                 {
@@ -7065,14 +7066,13 @@
                 }
               ],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7083,18 +7083,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/project/getComboList",
               "name": "GetComboListProject",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/project/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7253,18 +7253,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/getAll",
               "name": "GetAllProjectProfileMember",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/getAll",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7275,18 +7275,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/getComboList",
               "name": "GetComboListProjectProfileMember",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7445,18 +7445,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/getAll",
               "name": "GetAllProjectGroupMember",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/getAll",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7467,18 +7467,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/getComboList",
               "name": "GetComboListProjectGroupMember",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7637,18 +7637,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/getAll",
               "name": "GetAllProjectRoleMember",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/getAll",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7659,18 +7659,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/getComboList",
               "name": "GetComboListProjectRoleMember",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7829,18 +7829,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/getAll",
               "name": "GetAllProjectDepartmentMember",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/getAll",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -7851,18 +7851,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/getComboList",
               "name": "GetComboListProjectDepartmentMember",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8021,18 +8021,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/getAll",
               "name": "GetAllProjectWorkflow",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/getAll",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8043,18 +8043,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/getComboList",
               "name": "GetComaboListProjectWorkflow",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8709,18 +8709,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/getAll",
               "name": "GetAllProjectWorkflowStatus",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/getAll",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8731,18 +8731,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/getComboList",
               "name": "GetComaboListProjectWorkflowStatus",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8901,18 +8901,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/getAll",
               "name": "GetAllProjectWorkflowResolution",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/getAll",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -8923,18 +8923,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/getComboList",
               "name": "GetComboListProjectWorkflowResolution",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -9093,18 +9093,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/getAll",
               "name": "GetAllProjectWorkflowProgress",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/getAll",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -9115,18 +9115,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/getComboList",
               "name": "GetComboListProjectWorkflowProgress",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -9292,18 +9292,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/projectManagement/issue/getAll",
               "name": "GetAllIssue",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issue/getAll",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -9314,17 +9314,17 @@
             },
             {
               "v": "17",
-              "endpoint": "https://echo.hoppscotch.io",
               "name": "GetComboListIssue",
+              "method": "GET",
+              "endpoint": "https://echo.hoppscotch.io",
               "params": [],
               "headers": [],
-              "method": "GET",
+              "preRequestScript": "",
+              "testScript": "",
               "auth": {
                 "authType": "inherit",
                 "authActive": true
               },
-              "preRequestScript": "",
-              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -9464,6 +9464,50 @@
               "name": "GetSpecificIssueComment",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/issueComment/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllIssueComment",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueComment/getAll",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListIssueComment",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueComment/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -9628,6 +9672,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllIssueAttachment",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment/getAll",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListIssueAttachment",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment/getComboList",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -9649,7 +9737,7 @@
               "v": "17",
               "name": "AddProjectRelease",
               "method": "POST",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/[id]",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -9760,6 +9848,50 @@
               "name": "GetSpecificProjectRelease",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllProjectRelease",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/getAll",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListProjectRelease",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -9924,6 +10056,28 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllWoekLog",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/workLog/getAll",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -9990,6 +10144,28 @@
               "name": "GetSpecificIssueWorkflowHistory",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/issueWorkflowHistory/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllIssueWorkflowHistory",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issueWorkflowHistory/getAll",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -10154,6 +10330,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListProjectMeeting",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/getComboList",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllProjectMeeting",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/getAll",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -10302,6 +10522,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllMeetingInvitee",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingInvitees/getAll",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListMeetingInvitee",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingInvitees/getComboList/[ProjectMeetingId]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -10434,6 +10698,50 @@
               "name": "GetSpecificMeetingMinutes",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/meetingMinutes/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllMeetingMinutes",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingMinutes/getAll",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListMeetingMinutes",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/meetingMinutes/[ProjectMeetingId]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -10614,6 +10922,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/staffContract/getAll",
+              "name": "GetAllStaffContract",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/staffContract/getComboList",
+              "name": "GetComboListStaffContract",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -10755,6 +11107,50 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/contractSalaryItem/getAll",
+              "name": "GetAllContractSalaryItem",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/contractSalaryItem/getComboList",
+              "name": "GetComboListContractSalaryItem",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -10910,6 +11306,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/contractDeductionItem/getAll",
+              "name": "GetAllContractDeductionItem",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/contractDeductionItem/getComboList",
+              "name": "GetComboListContractDeductionItem",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -11051,6 +11491,50 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/supplier/getAll",
+              "name": "GetAllSupplier",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/supplier/getComboList",
+              "name": "GetComboListSupplier",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -11206,6 +11690,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoice/getAll",
+              "name": "GetAllCostInvoice",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoice/getComboList",
+              "name": "GetComboListCostInvoice",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -11347,6 +11875,50 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem/getAll",
+              "name": "GetAllCostInvoiceItem",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem/getComboList",
+              "name": "GetComboListCostInvoiceItem",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -11502,6 +12074,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem/getAll",
+              "name": "GetAllProjectDirectCostItem",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem/getComboList",
+              "name": "GetComboListProjectDirectCostItem",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -11643,6 +12259,50 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt/getAll",
+              "name": "GetAllCostPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt/getComboList",
+              "name": "GetComboListCostPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -11798,6 +12458,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt/getAll",
+              "name": "GetAllSalaryPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/salaryPaymentReceipt/getComboList",
+              "name": "GetComboListSalaryPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -11939,6 +12643,50 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/getAll",
+              "name": "GetAllStaffAdditionalPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/getComboList",
+              "name": "GetComboListStaffAdditionalPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -12094,6 +12842,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/customer/getAll",
+              "name": "GetAllCustomer",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/customer/getComboList",
+              "name": "GetComboListCustomer",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -12234,6 +13026,28 @@
                 "authType": "inherit",
                 "authActive": true
               },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/customerContract/getComboList",
+              "name": "GetComboListCustomerContract",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -12389,6 +13203,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://echo.hoppscotch.io",
+              "name": "GetAllCustomerContractPaymentSchedule",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/getCombolist",
+              "name": "GetComboListCustomerContractPaymentSchedule",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -12530,6 +13388,50 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt/getAll",
+              "name": "GetAllCustomerContractPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt/getComboList",
+              "name": "GetComboListCustomerContractPaymentReceipt",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
