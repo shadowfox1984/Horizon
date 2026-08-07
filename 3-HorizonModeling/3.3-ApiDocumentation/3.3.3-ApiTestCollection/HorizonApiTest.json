@@ -7038,31 +7038,49 @@
                   "key": "code",
                   "value": "123",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
                 },
                 {
                   "key": "title",
                   "value": "test",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
                 },
                 {
                   "key": "startDate",
                   "value": " 2026-7-29",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
                 },
                 {
                   "key": "endDate",
                   "value": "2026-7-29",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
                 },
                 {
                   "key": "description",
                   "value": "test",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
                 }
               ],
               "headers": [],
@@ -7256,7 +7274,56 @@
               "name": "GetAllProjectProfileMember",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectProfileMember/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51 ",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "IsProjectManager",
+                  "value": "true",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -7448,7 +7515,50 @@
               "name": "GetAllProjectGroupMember",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectGroupMember/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "groupId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "groupTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -7640,7 +7750,50 @@
               "name": "GetAllProjectRoleMember",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectRoleMember/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "roleId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "roleTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectId",
+                  "value": " d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -7832,7 +7985,50 @@
               "name": "GetAllProjectDepartmentMember",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectDepartmentMember/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "departmentId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "departmentTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -8024,7 +8220,56 @@
               "name": "GetAllProjectWorkflow",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflow/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "code",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "decription",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -8218,19 +8463,31 @@
               "endpoint": "https://[MainDomian]/api/projectMangement/workflowAllowedFileExtension/getAll",
               "params": [
                 {
-                  "key": "FileExtensionId",
-                  "value": "123",
+                  "key": "fileExtensionId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                   "active": true,
                   "description": "optional"
                 },
                 {
-                  "key": "ProjectWorkflowId",
-                  "value": "123",
+                  "key": "fileExtensionTitle",
+                  "value": "test",
                   "active": true,
                   "description": "optional"
                 },
                 {
-                  "key": "MaxFileSizeForUpload",
+                  "key": "projectWorkflowId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "maxFileSizeForUpload",
                   "value": "4",
                   "active": true,
                   "description": "optional"
@@ -8469,14 +8726,26 @@
               "endpoint": "https://[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/getAll",
               "params": [
                 {
-                  "key": "DocumentTypeId",
-                  "value": "123",
+                  "key": "documentTypeId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                   "active": true,
                   "description": "optional"
                 },
                 {
-                  "key": "ProjectWorkflowId",
-                  "value": "123",
+                  "key": "documentTypeTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "drojectWorkflowId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowTitle",
+                  "value": "test",
                   "active": true,
                   "description": "optional"
                 },
@@ -8712,7 +8981,50 @@
               "name": "GetAllProjectWorkflowStatus",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowStatus/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "statusId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "statusTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -8904,7 +9216,50 @@
               "name": "GetAllProjectWorkflowResolution",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowResolution/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "resolutionId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "resolutionTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -9096,7 +9451,86 @@
               "name": "GetAllProjectWorkflowProgress",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectWorkflowProgress/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "startProjectWorkflowStatusId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "startProjectWorkflowStatusTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "endProjectWorkflowStatusId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "endProjectWorkflowStatusTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "isFromStartPoint",
+                  "value": "true",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "canBeStartedFromAnyStatus",
+                  "value": "true",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "isWorkflowEndPoint",
+                  "value": "true",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -9167,7 +9601,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"assigneeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /*optional*/\n  \t\"issueSize\" : \"XL\", /*optional*/\n  \t\"priorityId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",  /*optional*/\n  \t\"dueDate\": \"2026-06-08\", /*optional*/\n  \t\"issueTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"parentIssueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"epicLinkedId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"linkedIssueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"linkedIssueType\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"currentStatusId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",  /*optional*/\n  \t\"currentResolutionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\" /*optional*/\n}"
+                "body": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"assigneeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /*optional*/\n  \t\"issueSize\" : \"XL\", /*optional*/\n  \t\"priorityId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",  /*optional*/\n  \t\"dueDate\": \"2026-06-08\", /*optional*/\n  \t\"issueTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"parentIssueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"epicLinkedId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"linkedIssueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"linkedIssueTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /*optional*/\n  \t\"currentStatusId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",  /*optional*/\n  \t\"currentResolutionId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -9295,7 +9729,164 @@
               "name": "GetAllIssue",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/issue/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "assigneeId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "assigneeName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "code",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "issueSize",
+                  "value": "XL",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "priorityId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "priorityTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "dueDate",
+                  "value": "2026-08-07",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "issueTypeId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "issueTypeTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "parentIssueId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "parentIssueTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "epicLinkedId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "epicLinkedTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "linkedIssueTypeId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "linkedIssueTypeTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currentStatusId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currentStatusTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currentResolutionId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currentResolutionTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -9486,7 +10077,56 @@
               "name": "GetAllIssueComment",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/issueComment/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "commentText",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "issueId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "issueTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -9678,7 +10318,62 @@
               "name": "GetAllIssueAttachment",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/issueAttachment/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "documentId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "documentName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "documentTypeId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "documentTypeTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "issueId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "issueTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -9870,7 +10565,56 @@
               "name": "GetAllProjectRelease",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectRelease/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "versionNumber",
+                  "value": "1.0.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "releaseDate",
+                  "value": "2026-08-07",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "decription",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -9941,7 +10685,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"LogDate\" : \"2026-06-08\",\n  \t\"StartWorkTime\" : 1.0,\n  \t\"WorkingDuration\" : \"test\",\n  \t\"TimeUnitId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n\t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"logDate\" : \"2026-06-08\",\n  \t\"startWorkTime\" : \"08:00\",\n  \t\"workingDuration\" : 2.0,\n  \t\"timeUnitId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -9963,7 +10707,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"LogDate\" : \"2026-06-08\",\n  \t\"StartWorkTime\" : 1.0,\n  \t\"WorkingDuration\" : \"test\",\n  \t\"TimeUnitId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n\t\"issueId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"logDate\" : \"2026-06-08\",\n  \t\"startWorkTime\" : \"08:00\",\n  \t\"workingDuration\" : 2.0,\n  \t\"timeUnitId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -10062,7 +10806,86 @@
               "name": "GetAllWoekLog",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/workLog/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "issueId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "issueTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "logDate",
+                  "value": "2026-08-07",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "startWorkTime",
+                  "value": "08:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "workingDuration",
+                  "value": "2.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "timeUnitId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "timeUnitTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -10166,7 +10989,80 @@
               "name": "GetAllIssueWorkflowHistory",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/issueWorkflowHistory/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "issueId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "issueTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "startStatusId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "startStatusTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "endStatusId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "endStatusTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowProgressId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowResolutionId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowResolutionTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -10358,7 +11254,104 @@
               "name": "GetAllProjectMeeting",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "meetingTypeId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "meetingTypeTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "meetingDate",
+                  "value": "2026-08-07",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "location",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "scheduleStartTime",
+                  "value": "08:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "scheduleEndTime",
+                  "value": "10:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "actualStartTime",
+                  "value": "08:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "actualEndTime",
+                  "value": "10:00",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "isCanncelled",
+                  "value": "true",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -10528,7 +11521,74 @@
               "name": "GetAllMeetingInvitee",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/meetingInvitees/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "projectMeetingId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectMeetingTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "isFromInsideCompnay",
+                  "value": "true",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "inviteeFullName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "inviteeCompanyName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "isAttanded",
+                  "value": "true",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -10720,7 +11780,74 @@
               "name": "GetAllMeetingMinutes",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/meetingMinutes/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "projectMeetingId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectMeetingTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "responsibleDepartmentId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "responsibleDepartmentTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "resolution",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "issueId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "issueTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "dueDate",
+                  "value": "2026-08-07",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -13603,50 +14730,6 @@
               "requestVariables": [],
               "responses": {},
               "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/getAll",
-              "name": "GetAllTestScenario",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/getComboList",
-              "name": "GetComboListTestScenario",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
             }
           ],
           "auth": {
@@ -13788,50 +14871,6 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/getAll",
-              "name": "GetAllPrerequisiteTestScenario",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/getComboList",
-              "name": "GetComboListPrerequisiteTestScenario",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -13987,50 +15026,6 @@
               "requestVariables": [],
               "responses": {},
               "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/getAll",
-              "name": "GetAllTestPlan",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/getComboList",
-              "name": "GetComboListTestPlan",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
             }
           ],
           "auth": {
@@ -14172,50 +15167,6 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/getAll",
-              "name": "GetAllTestPlanScenario",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/getComboList",
-              "name": "GetComboListTestPlanScenario",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -14371,50 +15322,6 @@
               "requestVariables": [],
               "responses": {},
               "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/getAll",
-              "name": "GetAllTestPlanScenarioIssueCoverage",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/getComboList",
-              "name": "GetComboListTestPlanScenarioIssueCoverage",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
             }
           ],
           "auth": {
@@ -14563,50 +15470,6 @@
               "requestVariables": [],
               "responses": {},
               "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/getComboList",
-              "name": "GetAllTestResult",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/getAll",
-              "name": "GetComboListTestResult",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
             }
           ],
           "auth": {
@@ -14748,50 +15611,6 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/getAll",
-              "name": "GetAllTestResultDetail",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/getComboList",
-              "name": "GetComboListTestResultDetail",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -14963,50 +15782,6 @@
               "requestVariables": [],
               "responses": {},
               "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/question/getAll",
-              "name": "GetAllQuestion",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/question/getComboList",
-              "name": "GetComboListQuestion",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
             }
           ],
           "auth": {
@@ -15148,50 +15923,6 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/getAll",
-              "name": "GetAllQuestionOption",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/getComboList",
-              "name": "GetComboListQuestionOption",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -15347,50 +16078,6 @@
               "requestVariables": [],
               "responses": {},
               "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/getAll",
-              "name": "GetAllQuestionnaire",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/getComboList",
-              "name": "GetComboListQuestionnaire",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
             }
           ],
           "auth": {
@@ -15532,50 +16219,6 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/getComboList",
-              "name": "GetAllQuestionnaireTargetDepartment",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/getAll",
-              "name": "GetComboListQuestionnaireTargetDepartment",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -15731,50 +16374,6 @@
               "requestVariables": [],
               "responses": {},
               "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/getAll",
-              "name": "GetAllQuestionnaireItem",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/getComboList",
-              "name": "GetComboListQuestionnaireItem",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
             }
           ],
           "auth": {
@@ -15916,50 +16515,6 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/getAll",
-              "name": "GetAllQuestionnaireResult",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/getComboList",
-              "name": "GetComboListQuestionnaireResult",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -16115,53 +16670,6 @@
               "requestVariables": [],
               "responses": {},
               "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResultDetail/getAll",
-              "name": "GetAllQuestionnaireResultDetail",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "username": "",
-                "password": "",
-                "algorithm": "MD5",
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResultDetail/getComboList",
-              "name": "GetComboListQuestionnaireResultDetail",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
             }
           ],
           "auth": {
@@ -16303,50 +16811,6 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/getAll",
-              "name": "GetAllStaffSatisfactionEvaluation",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/getComboList",
-              "name": "GetComboListStaffSatisfactionEvaluation",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -16502,50 +16966,6 @@
               "requestVariables": [],
               "responses": {},
               "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/projectProductivityEvaluation/getAll",
-              "name": "GetAllProjectProductivityEvaluation",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/projectProductivityEvaluation/getComboList",
-              "name": "GetComboListProjectProductivityEvaluation",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
             }
           ],
           "auth": {
@@ -16694,50 +17114,6 @@
               "requestVariables": [],
               "responses": {},
               "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getAll",
-              "name": "GetAllCustomerSatisfactionEvaluation",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getComboList",
-              "name": "GetComboListCustomerSatisfactionEvaluation",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
             }
           ],
           "auth": {
@@ -16879,53 +17255,6 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/customerFeedback/getAll",
-              "name": "GetAllCustomerFeedback",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/customerFeedback/getComboList",
-              "name": "GetComboListCustomerFeedback",
-              "params": [],
-              "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "username": "",
-                "password": "",
-                "algorithm": "MD5",
-                "token": "[JWT token]"
-              },
-              "preRequestScript": "",
-              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
