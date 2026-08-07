@@ -12055,7 +12055,80 @@
               "name": "GetAllStaffContract",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/finance/staffContract/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "contractTypeId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "contractTypeTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2026-08-08",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2026-08-08",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "autoRenewal",
+                  "value": "false",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -12247,7 +12320,86 @@
               "name": "GetAllContractSalaryItem",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/finance/contractSalaryItem/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "staffContractId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "staffContractTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "calculationTimeUnitId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "calculationTimeUnitTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "amount",
+                  "value": "1000.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencySymbol",
+                  "value": "USD",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -12439,7 +12591,98 @@
               "name": "GetAllContractDeductionItem",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/finance/contractDeductionItem/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "calculationType",
+                  "value": "Percentage",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "staffContractId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "staffContractTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "calculationTimeUnitId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "calculationTimeUnitTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "deductionPercentage",
+                  "value": "100.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "fixedAmount",
+                  "value": "1000.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "fixedAmountCurrencyId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "fixedAmountCurrencyTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "fixedAmountCurrencySymbol",
+                  "value": "USD",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
