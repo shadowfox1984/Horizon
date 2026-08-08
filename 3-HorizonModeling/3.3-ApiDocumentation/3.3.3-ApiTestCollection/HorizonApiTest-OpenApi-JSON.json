@@ -12774,6 +12774,116 @@
         "tags": [
           "Finance/Supplier"
         ],
+        "parameters": [
+          {
+            "name": "title",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "phoneNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "+18182121",
+            "description": "optional"
+          },
+          {
+            "name": "mobileNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "+18182121",
+            "description": "optional"
+          },
+          {
+            "name": "faxNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "+18182121",
+            "description": "optional"
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "name@company.com",
+            "description": "optional"
+          },
+          {
+            "name": "postalCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1234",
+            "description": "optional"
+          },
+          {
+            "name": "city",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Los Angles",
+            "description": "optional"
+          },
+          {
+            "name": "address",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
         "security": [
           {
             "bearerAuth": []
@@ -12935,6 +13045,134 @@
         "operationId": "GetAllCostInvoice",
         "tags": [
           "Finance/CostInvoice"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "companyName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "supplierId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "supplierName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "invoiceDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-08",
+            "description": "optional"
+          },
+          {
+            "name": "invoiceNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-08",
+            "description": "optional"
+          },
+          {
+            "name": "totalAmount",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1000.0",
+            "description": "optional"
+          },
+          {
+            "name": "currencyId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "currencyTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "currencySymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "USD",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
         ],
         "security": [
           {
@@ -13098,6 +13336,116 @@
         "tags": [
           "Finance/CostInvoiceItem"
         ],
+        "parameters": [
+          {
+            "name": "costInvoiceId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "invoiceNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "itemTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "quantity",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2.0",
+            "description": "optional"
+          },
+          {
+            "name": "unitAmount",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1000.0",
+            "description": "optional"
+          },
+          {
+            "name": "currencyId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "currencyTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "currencySymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "USD",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
         "security": [
           {
             "bearerAuth": []
@@ -13260,6 +13608,89 @@
         "tags": [
           "Finance/ProjectDirectCostItem"
         ],
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "projectTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "costInvoiceItemId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "costInvoiceItemTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "allocatedQuantity",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "10.0",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
         "security": [
           {
             "bearerAuth": []
@@ -13421,6 +13852,116 @@
         "operationId": "GetAllCostPaymentReceipt",
         "tags": [
           "Finance/CostPaymentReceipt"
+        ],
+        "parameters": [
+          {
+            "name": "costInvoiceId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "invoiceNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123456",
+            "description": "optional"
+          },
+          {
+            "name": "paymentDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-09",
+            "description": "optional"
+          },
+          {
+            "name": "receiptNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123456",
+            "description": "optional"
+          },
+          {
+            "name": "amount",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1000.0",
+            "description": "optional"
+          },
+          {
+            "name": "currencyId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "currencyTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "currencySymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "USD",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
         ],
         "security": [
           {
@@ -13746,6 +14287,125 @@
         "tags": [
           "Finance/StaffAdditionalPaymentReceipt"
         ],
+        "parameters": [
+          {
+            "name": "profileId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "profileName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "paymentDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-09",
+            "description": "optional"
+          },
+          {
+            "name": "receiptNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123456",
+            "description": "optional"
+          },
+          {
+            "name": "amount",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1000.0",
+            "description": "optional"
+          },
+          {
+            "name": "currencyId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "currencyTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "currencySymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "USD",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
         "security": [
           {
             "bearerAuth": []
@@ -13908,6 +14568,104 @@
         "tags": [
           "Finance/Customer"
         ],
+        "parameters": [
+          {
+            "name": "title",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test"
+          },
+          {
+            "name": "phoneNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "+18182221"
+          },
+          {
+            "name": "mobileNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "+18182221"
+          },
+          {
+            "name": "faxNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "+18182221"
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "name@domain.com"
+          },
+          {
+            "name": "postalCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123456"
+          },
+          {
+            "name": "city",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "New York"
+          },
+          {
+            "name": "address",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)"
+          }
+        ],
         "security": [
           {
             "bearerAuth": []
@@ -14053,6 +14811,189 @@
         ]
       }
     },
+    "/https://[MainDomian]/api/finance/customerContract/getAll": {
+      "get": {
+        "summary": "GetAllCustomerContract",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllCustomerContract",
+        "tags": [
+          "Finance/CustomerContract"
+        ],
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "customerTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "projectTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "contractNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123456",
+            "description": "optional"
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-09",
+            "description": "optional"
+          },
+          {
+            "name": "scheduledEndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2027-08-10",
+            "description": "optional"
+          },
+          {
+            "name": "realEndDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2027-08-10",
+            "description": "optional"
+          },
+          {
+            "name": "isDevelopmentContract",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "true",
+            "description": "optional"
+          },
+          {
+            "name": "isSupportContract",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "true",
+            "description": "optional"
+          },
+          {
+            "name": "totalAmount",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1000.0",
+            "description": "optional"
+          },
+          {
+            "name": "currencyId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "currencyTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "currencySymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "USD",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
     "/https://[MainDomian]/api/finance/customerContract/getComboList": {
       "get": {
         "summary": "GetComboListCustomerContract",
@@ -14087,7 +15028,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n\t\"customerContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"ProjectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \t\"PaymentTitle\" : \"test\",\n  \t\"ScheduledPaymentDate\" : \"2026-06-13\", /* optional */\n  \t\"amount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
+              "example": "{\n\t\"customerContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \t\"paymentTitle\" : \"test\",\n  \t\"scheduledPaymentDate\" : \"2026-06-13\", /* optional */\n  \t\"amount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
             }
           }
         },
@@ -14113,7 +15054,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n\t\"customerContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"ProjectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \t\"PaymentTitle\" : \"test\",\n  \t\"ScheduledPaymentDate\" : \"2026-06-13\", /* optional */\n  \t\"amount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
+              "example": "{\n\t\"customerContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \t\"paymentTitle\" : \"test\",\n  \t\"scheduledPaymentDate\" : \"2026-06-13\", /* optional */\n  \t\"amount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
             }
           }
         },
@@ -14188,6 +15129,153 @@
         "operationId": "InactiveCustomerContractPaymentSchedule",
         "tags": [
           "Finance/CustomerContractPaymentSchedule"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/getAll": {
+      "get": {
+        "summary": "GetAllCustomerContractPaymentSchedule",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllCustomerContractPaymentSchedule",
+        "tags": [
+          "Finance/CustomerContractPaymentSchedule"
+        ],
+        "parameters": [
+          {
+            "name": "customerContractId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "contractNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123456",
+            "description": "optional"
+          },
+          {
+            "name": "projectReleaseId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "versionNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.0.0",
+            "description": "optional"
+          },
+          {
+            "name": "paymentTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "scheduledPaymentDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-09",
+            "description": "optional"
+          },
+          {
+            "name": "amount",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1000.0",
+            "description": "optional"
+          },
+          {
+            "name": "currencyId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "currencyTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "currencySymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "USD",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
         ],
         "security": [
           {
@@ -14364,6 +15452,107 @@
         "operationId": "GetAllCustomerContractPaymentReceipt",
         "tags": [
           "Finance/CustomerContractPaymentReceipt"
+        ],
+        "parameters": [
+          {
+            "name": "customerContractPaymentScheduleId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "paymentTItle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "paymentDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-09",
+            "description": "optional"
+          },
+          {
+            "name": "receiptNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123456",
+            "description": "optional"
+          },
+          {
+            "name": "amount",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1000.0",
+            "description": "optional"
+          },
+          {
+            "name": "currencyId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "currencyTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "currencySymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "USD",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
         ],
         "security": [
           {
@@ -17071,31 +18260,6 @@
             "description": "optional"
           }
         ],
-        "headers": [],
-        "preRequestScript": "",
-        "testScript": "",
-        "auth": {
-          "authType": "bearer",
-          "token": "",
-          "authActive": true
-        },
-        "body": {
-          "contentType": null,
-          "body": null
-        },
-        "requestVariables": [],
-        "responses": {},
-        "description": null
-      }
-    },
-    {
-      "tagPath": "Finance/CustomerContractPaymentSchedule",
-      "request": {
-        "v": "17",
-        "name": "GetAllCustomerContractPaymentSchedule",
-        "method": "GET",
-        "endpoint": "https://echo.hoppscotch.io",
-        "params": [],
         "headers": [],
         "preRequestScript": "",
         "testScript": "",

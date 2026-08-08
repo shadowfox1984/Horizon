@@ -12874,7 +12874,80 @@
               "name": "GetAllSupplier",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/finance/supplier/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "phoneNumber",
+                  "value": "+18182121",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "mobileNumber",
+                  "value": "+18182121",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "faxNumber",
+                  "value": "+18182121",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "email",
+                  "value": "name@company.com",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "postalCode",
+                  "value": "1234",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "city",
+                  "value": "Los Angles",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "address",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -13066,7 +13139,92 @@
               "name": "GetAllCostInvoice",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/finance/costInvoice/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "companyId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "companyName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "supplierId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "supplierName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "invoiceDate",
+                  "value": "2026-08-08",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "invoiceNumber",
+                  "value": "2026-08-08",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "totalAmount",
+                  "value": "1000.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencySymbol",
+                  "value": "USD",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -13258,7 +13416,80 @@
               "name": "GetAllCostInvoiceItem",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/finance/costInvoiceItem/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "costInvoiceId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "invoiceNumber",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "itemTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "quantity",
+                  "value": "2.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "unitAmount",
+                  "value": "1000.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencySymbol",
+                  "value": "USD",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -13450,7 +13681,62 @@
               "name": "GetAllProjectDirectCostItem",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/finance/projectDirectCostItem/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "costInvoiceItemId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "costInvoiceItemTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "allocatedQuantity",
+                  "value": "10.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -13642,7 +13928,80 @@
               "name": "GetAllCostPaymentReceipt",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/finance/costPaymentReceipt/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "costInvoiceId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "invoiceNumber",
+                  "value": "123456",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "paymentDate",
+                  "value": "2026-08-09",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "receiptNumber",
+                  "value": "123456",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "amount",
+                  "value": "1000.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencySymbol",
+                  "value": "USD",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -14026,7 +14385,86 @@
               "name": "GetAllStaffAdditionalPaymentReceipt",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "paymentDate",
+                  "value": "2026-08-09",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "receiptNumber",
+                  "value": "123456",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "amount",
+                  "value": "1000.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencySymbol",
+                  "value": "USD",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -14218,7 +14656,80 @@
               "name": "GetAllCustomer",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/finance/customer/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": ""
+                },
+                {
+                  "key": "phoneNumber",
+                  "value": "+18182221",
+                  "active": true,
+                  "description": ""
+                },
+                {
+                  "key": "mobileNumber",
+                  "value": "+18182221",
+                  "active": true,
+                  "description": ""
+                },
+                {
+                  "key": "faxNumber",
+                  "value": "+18182221",
+                  "active": true,
+                  "description": ""
+                },
+                {
+                  "key": "email",
+                  "value": "name@domain.com",
+                  "active": true,
+                  "description": ""
+                },
+                {
+                  "key": "postalCode",
+                  "value": "123456",
+                  "active": true,
+                  "description": ""
+                },
+                {
+                  "key": "city",
+                  "value": "New York",
+                  "active": true,
+                  "description": ""
+                },
+                {
+                  "key": "address",
+                  "value": "test",
+                  "active": true,
+                  "description": ""
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": ""
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": ""
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": ""
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": ""
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -14406,6 +14917,137 @@
             },
             {
               "v": "17",
+              "endpoint": "https://[MainDomian]/api/finance/customerContract/getAll",
+              "name": "GetAllCustomerContract",
+              "params": [
+                {
+                  "key": "customerId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "customerTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "contractNumber",
+                  "value": "123456",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2026-08-09",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "scheduledEndDate",
+                  "value": "2027-08-10",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "realEndDate",
+                  "value": "2027-08-10",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "isDevelopmentContract",
+                  "value": "true",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "isSupportContract",
+                  "value": "true",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "totalAmount",
+                  "value": "1000.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencySymbol",
+                  "value": "USD",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "GetComboListCustomerContract",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/finance/customerContract/getComboList",
@@ -14458,7 +15100,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"customerContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"ProjectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \t\"PaymentTitle\" : \"test\",\n  \t\"ScheduledPaymentDate\" : \"2026-06-13\", /* optional */\n  \t\"amount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
+                "body": "{\n\t\"customerContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \t\"paymentTitle\" : \"test\",\n  \t\"scheduledPaymentDate\" : \"2026-06-13\", /* optional */\n  \t\"amount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -14480,7 +15122,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"customerContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"ProjectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \t\"PaymentTitle\" : \"test\",\n  \t\"ScheduledPaymentDate\" : \"2026-06-13\", /* optional */\n  \t\"amount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
+                "body": "{\n\t\"customerContractId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"projectReleaseId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \t\"paymentTitle\" : \"test\",\n  \t\"scheduledPaymentDate\" : \"2026-06-13\", /* optional */\n  \t\"amount\" : 10000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"description\" : \"test\", /* optional */\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -14578,8 +15220,93 @@
               "v": "17",
               "name": "GetAllCustomerContractPaymentSchedule",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
-              "params": [],
+              "endpoint": "https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/getAll",
+              "params": [
+                {
+                  "key": "customerContractId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "contractNumber",
+                  "value": "123456",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectReleaseId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "versionNumber",
+                  "value": "1.0.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "paymentTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "scheduledPaymentDate",
+                  "value": "2026-08-09",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "amount",
+                  "value": "1000.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencySymbol",
+                  "value": "USD",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
@@ -14771,7 +15498,74 @@
               "name": "GetAllCustomerContractPaymentReceipt",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/finance/customerContractPaymentReceipt/getAll",
-              "params": [],
+              "params": [
+                {
+                  "key": "customerContractPaymentScheduleId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "paymentTItle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "paymentDate",
+                  "value": "2026-08-09",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "receiptNumber",
+                  "value": "123456",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "amount",
+                  "value": "1000.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencySymbol",
+                  "value": "USD",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
