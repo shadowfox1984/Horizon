@@ -15595,7 +15595,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testComplexityLevelId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\", \n  \t\"UsersAndRoles\" : \"test\", /*optional*/\n  \t\"steps\" : \"test\", /*optional*/\n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              "example": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testComplexityLevelId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\", \n  \t\"usersAndRoles\" : \"test\", /*optional*/\n  \t\"steps\" : \"test\", /*optional*/\n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"description\" : \"test\" /*optional*/\n}"
             }
           }
         },
@@ -15621,7 +15621,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testComplexityLevelId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\", \n  \t\"UsersAndRoles\" : \"test\", /*optional*/\n  \t\"steps\" : \"test\", /*optional*/\n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              "example": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testComplexityLevelId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\", \n  \t\"usersAndRoles\" : \"test\", /*optional*/\n  \t\"steps\" : \"test\", /*optional*/\n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"description\" : \"test\" /*optional*/\n}"
             }
           }
         },
@@ -15694,6 +15694,145 @@
           }
         },
         "operationId": "InactiveTestScenario",
+        "tags": [
+          "QualityControl/TestScenario"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/qualityControl/testScenario/getAll": {
+      "get": {
+        "summary": "GetAllTestScenario",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllTestScenario",
+        "tags": [
+          "QualityControl/TestScenario"
+        ],
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "projectTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "testComplexityLevelId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "testComplexityLevelTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "usersAndRoles",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "steps",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/qualityControl/testScenario/getComboList": {
+      "get": {
+        "summary": "GetComboListTestScenario",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListTestScenario",
         "tags": [
           "QualityControl/TestScenario"
         ],
@@ -15834,6 +15973,109 @@
         ]
       }
     },
+    "/https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/getAll": {
+      "get": {
+        "summary": "GetAllPrerequisiteTestScenario",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllPrerequisiteTestScenario",
+        "tags": [
+          "QualityControl/PrerequisiteTestScenario"
+        ],
+        "parameters": [
+          {
+            "name": "testScenarioId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "testScenarioTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "prerequisiteTestScenarioId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "prerequisiteTestScenarioTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/getComboList": {
+      "get": {
+        "summary": "GetComboListPrerequisiteTestScenario",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListPrerequisiteTestScenario",
+        "tags": [
+          "QualityControl/PrerequisiteTestScenario"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
     "/https://[MainDomian]/api/qualityControl/testPlan": {
       "post": {
         "summary": "AddTestPlan",
@@ -15948,6 +16190,127 @@
           }
         },
         "operationId": "InactiveTestPlan",
+        "tags": [
+          "QualityControl/TestPlan"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/qualityControl/testPlan/getAll": {
+      "get": {
+        "summary": "GetAllTestPlan",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllTestPlan",
+        "tags": [
+          "QualityControl/TestPlan"
+        ],
+        "parameters": [
+          {
+            "name": "projectReleaseId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "versionNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.0.0",
+            "description": "optional"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "planningDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-10",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/qualityControl/testPlan/getComboList": {
+      "get": {
+        "summary": "GetComboListTestPlan",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListTestPlan",
         "tags": [
           "QualityControl/TestPlan"
         ],
@@ -16090,6 +16453,118 @@
         ]
       }
     },
+    "/https://[MainDomian]/api/qualityControl/testPlanScenario/getAll": {
+      "get": {
+        "summary": "GetAllTestPlanScenario",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllTestPlanScenario",
+        "tags": [
+          "QualityControl/TestPlanScenario"
+        ],
+        "parameters": [
+          {
+            "name": "testScenarioId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "testScenarioTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "testPlanId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "testPlanTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "ordering",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1.0",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/qualityControl/testPlanScenario/getComboList": {
+      "get": {
+        "summary": "GetComboListTestPlanScenario",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListTestPlanScenario",
+        "tags": [
+          "QualityControl/TestPlanScenario"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
     "/https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage": {
       "post": {
         "summary": "AddTestPlanScenarioIssueCoverage",
@@ -16210,6 +16685,127 @@
           }
         },
         "operationId": "InactiveTestPlanScenarioIssueCoverage",
+        "tags": [
+          "QualityControl/TestPlanScenarioIssueCoverage"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/getAll": {
+      "get": {
+        "summary": "GetAllTestPlanScenarioIssueCoverage",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllTestPlanScenarioIssueCoverage",
+        "tags": [
+          "QualityControl/TestPlanScenarioIssueCoverage"
+        ],
+        "parameters": [
+          {
+            "name": "testPlanScenarioId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "testPlanScenarioTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "testPlanTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "IssueId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "IssueTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "IssueCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "PRO-123",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/getComboList": {
+      "get": {
+        "summary": "GetComboListTestPlanScenarioIssueCoverage",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListTestPlanScenarioIssueCoverage",
         "tags": [
           "QualityControl/TestPlanScenarioIssueCoverage"
         ],
@@ -16344,6 +16940,109 @@
         ]
       }
     },
+    "/https://[MainDomian]/api/qualityControl/testResult/getAll": {
+      "get": {
+        "summary": "GetAllTestResult",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllTestResult",
+        "tags": [
+          "QualityControl/TestResult"
+        ],
+        "parameters": [
+          {
+            "name": "testPlanId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "testPlanTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "testDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-10",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/qualityControl/testResult/getComboList": {
+      "get": {
+        "summary": "GetComboListTestResult",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListTestResult",
+        "tags": [
+          "QualityControl/TestResult"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
     "/https://[MainDomian]/api/qualityControl/testResultDetail": {
       "post": {
         "summary": "AddTestResultDetail",
@@ -16468,6 +17167,163 @@
         ]
       }
     },
+    "/https://[MainDomian]/api/qualityControl/testResultDetail/getAll": {
+      "get": {
+        "summary": "GetAllTestResultDetail",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllTestResultDetail",
+        "tags": [
+          "QualityControl/TestResultDetail"
+        ],
+        "parameters": [
+          {
+            "name": "testResultId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "testPlanId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "testPlanTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "testDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-10",
+            "description": "optional"
+          },
+          {
+            "name": "testPlanScenarioId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "testScenarioId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "testScenarioTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "testApprovalId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "testApprovalTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/qualityControl/testResultDetail/getComboList": {
+      "get": {
+        "summary": "GetComboListTestResultDetail",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListTestResultDetail",
+        "tags": [
+          "QualityControl/TestResultDetail"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
     "/https://[MainDomian]/api/evaluation/question": {
       "post": {
         "summary": "AddQuestion",
@@ -16582,6 +17438,44 @@
           }
         },
         "operationId": "InactiveQuestion",
+        "tags": [
+          "Evaluation/Question"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/question/getAll": {
+      "get": {
+        "summary": "GetAllQuestion",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllQuestion",
+        "tags": [
+          "Evaluation/Question"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/question/getComboList": {
+      "get": {
+        "summary": "GetComboListQuestion",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListQuestion",
         "tags": [
           "Evaluation/Question"
         ],
@@ -16726,6 +17620,44 @@
         ]
       }
     },
+    "/https://[MainDomian]/api/evaluation/questionOption/getAll": {
+      "get": {
+        "summary": "GetAllQuestionOption",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllQuestionOption",
+        "tags": [
+          "Evaluation/QuestionOption"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/questionOption/getComboList": {
+      "get": {
+        "summary": "GetComboListQuestionOption",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListQuestionOption",
+        "tags": [
+          "Evaluation/QuestionOption"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
     "/https://[MainDomian]/api/evaluation/questionnaire": {
       "post": {
         "summary": "AddQuestionnaire",
@@ -16840,6 +17772,44 @@
           }
         },
         "operationId": "InactiveQuestionnaire",
+        "tags": [
+          "Evaluation/Questionnaire"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/questionnaire/getAll": {
+      "get": {
+        "summary": "GetAllQuestionnaire",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllQuestionnaire",
+        "tags": [
+          "Evaluation/Questionnaire"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/questionnaire/getComboList": {
+      "get": {
+        "summary": "GetComboListQuestionnaire",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListQuestionnaire",
         "tags": [
           "Evaluation/Questionnaire"
         ],
@@ -16980,6 +17950,44 @@
         ]
       }
     },
+    "/https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/getAll": {
+      "get": {
+        "summary": "GetAllQuestionnaireTargetDepartment",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllQuestionnaireTargetDepartment",
+        "tags": [
+          "Evaluation/QuestionnaireTargetDepartment"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/getComboList": {
+      "get": {
+        "summary": "GetComboListQuestionnaireTargetDepartment",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListQuestionnaireTargetDepartment",
+        "tags": [
+          "Evaluation/QuestionnaireTargetDepartment"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
     "/https://[MainDomian]/api/evaluation/questionnaireItem": {
       "post": {
         "summary": "AddQuestionnaireItem",
@@ -17100,6 +18108,44 @@
           }
         },
         "operationId": "InactiveQuestionnaireItem",
+        "tags": [
+          "Evaluation/QuestionnaireItem"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/questionnaireItem/getAll": {
+      "get": {
+        "summary": "GetAllQuestionnaireItem",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllQuestionnaireItem",
+        "tags": [
+          "Evaluation/QuestionnaireItem"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/questionnaireItem/getComboList": {
+      "get": {
+        "summary": "GetComboListQuestionnaireItem",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListQuestionnaireItem",
         "tags": [
           "Evaluation/QuestionnaireItem"
         ],
@@ -17244,6 +18290,44 @@
         ]
       }
     },
+    "/https://[MainDomian]/api/evaluation/questionnaireResult/getAll": {
+      "get": {
+        "summary": "GetAllQuestionnaireResult",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllQuestionnaireResult",
+        "tags": [
+          "Evaluation/QuestionnaireResult"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/questionnaireResult/getComboList": {
+      "get": {
+        "summary": "GetComboListQuestionnaireResult",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListQuestionnaireResult",
+        "tags": [
+          "Evaluation/QuestionnaireResult"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
     "/https://[MainDomian]/api/evaluation/questionnaireResultDetail": {
       "post": {
         "summary": "AddQuestionnaireResultDetail",
@@ -17358,6 +18442,44 @@
           }
         },
         "operationId": "InactiveQuestionnaireResultDetail",
+        "tags": [
+          "Evaluation/QuestionnaireResultDetail"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/questionnaireResultDetail/getAll": {
+      "get": {
+        "summary": "GetAllQuestionnaireResultDetail",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllQuestionnaireResultDetail",
+        "tags": [
+          "Evaluation/QuestionnaireResultDetail"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/questionnaireResultDetail/getComboList": {
+      "get": {
+        "summary": "GetComboListQuestionnaireResultDetail",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListQuestionnaireResultDetail",
         "tags": [
           "Evaluation/QuestionnaireResultDetail"
         ],
@@ -17492,6 +18614,44 @@
         ]
       }
     },
+    "/https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/getAll": {
+      "get": {
+        "summary": "GetAllStaffSatisfactionEvaluation",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllStaffSatisfactionEvaluation",
+        "tags": [
+          "Evaluation/StaffSatisfactionEvaluation"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/getComboList": {
+      "get": {
+        "summary": "GetComboListStaffSatisfactionEvaluation",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListStaffSatisfactionEvaluation",
+        "tags": [
+          "Evaluation/StaffSatisfactionEvaluation"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
     "/https://[MainDomian]/api/evaluation/projectProductivityEvaluation": {
       "post": {
         "summary": "AddProjectProductivityEvaluation",
@@ -17606,6 +18766,44 @@
           }
         },
         "operationId": "InactiveProjectProductivityEvaluation",
+        "tags": [
+          "Evaluation/ProjectProductivityEvaluation"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/projectProductivityEvaluation/getAll": {
+      "get": {
+        "summary": "GetAllProjectProductivityEvaluation",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllProjectProductivityEvaluation",
+        "tags": [
+          "Evaluation/ProjectProductivityEvaluation"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/projectProductivityEvaluation/getComboList": {
+      "get": {
+        "summary": "GetComboListProjectProductivityEvaluation",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListProjectProductivityEvaluation",
         "tags": [
           "Evaluation/ProjectProductivityEvaluation"
         ],
@@ -17740,6 +18938,25 @@
         ]
       }
     },
+    "/https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getComboList": {
+      "get": {
+        "summary": "GetAllCustomerSatisfactionEvaluation",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllCustomerSatisfactionEvaluation",
+        "tags": [
+          "Evaluation/CustomerSatisfactionEvaluation"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
     "/https://[MainDomian]/api/evaluation/customerFeedback": {
       "post": {
         "summary": "AddCustomerFeedback",
@@ -17854,6 +19071,44 @@
           }
         },
         "operationId": "InactiveCustomerFeedback",
+        "tags": [
+          "Evaluation/CustomerFeedback"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/customerFeedback/getAll": {
+      "get": {
+        "summary": "GetAllCustomerFeedback",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetAllCustomerFeedback",
+        "tags": [
+          "Evaluation/CustomerFeedback"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/evaluation/customerFeedback/getComboList": {
+      "get": {
+        "summary": "GetComboListCustomerFeedback",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListCustomerFeedback",
         "tags": [
           "Evaluation/CustomerFeedback"
         ],
@@ -18274,6 +19529,32 @@
         },
         "requestVariables": [],
         "responses": {},
+        "description": null
+      }
+    },
+    {
+      "tagPath": "Evaluation/CustomerSatisfactionEvaluation",
+      "request": {
+        "v": "17",
+        "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getComboList",
+        "name": "GetComboListCustomerSatisfactionEvaluation",
+        "params": [],
+        "headers": [],
+        "method": "GET",
+        "auth": {
+          "authType": "bearer",
+          "authActive": true,
+          "token": ""
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {},
+        "_ref_id": "req_msndrwx4_d220950a-e06a-46cd-912c-7fc1769af5cf",
         "description": null
       }
     }

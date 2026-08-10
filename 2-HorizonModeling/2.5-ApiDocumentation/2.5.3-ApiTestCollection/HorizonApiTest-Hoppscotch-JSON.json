@@ -14917,8 +14917,9 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/finance/customerContract/getAll",
               "name": "GetAllCustomerContract",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/finance/customerContract/getAll",
               "params": [
                 {
                   "key": "customerId",
@@ -15030,14 +15031,13 @@
                 }
               ],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -15652,7 +15652,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testComplexityLevelId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\", \n  \t\"UsersAndRoles\" : \"test\", /*optional*/\n  \t\"steps\" : \"test\", /*optional*/\n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testComplexityLevelId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\", \n  \t\"usersAndRoles\" : \"test\", /*optional*/\n  \t\"steps\" : \"test\", /*optional*/\n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -15674,7 +15674,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testComplexityLevelId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\", \n  \t\"UsersAndRoles\" : \"test\", /*optional*/\n  \t\"steps\" : \"test\", /*optional*/\n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n\t\"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"testComplexityLevelId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"title\" : \"test\", \n  \t\"usersAndRoles\" : \"test\", /*optional*/\n  \t\"steps\" : \"test\", /*optional*/\n  \t\"code\" : \"123456\", /*It should be unique.*/\n  \t\"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -15751,6 +15751,117 @@
               "name": "GetSpecificTestScenario",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllTestScenario",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/getAll",
+              "params": [
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testComplexityLevelId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testComplexityLevelTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "usersAndRoles",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "steps",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "code",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListTestScenario",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testScenario/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -15915,6 +16026,93 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllPrerequisiteTestScenario",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/getAll",
+              "params": [
+                {
+                  "key": "testScenarioId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testScenarioTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "prerequisiteTestScenarioId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "prerequisiteTestScenarioTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListPrerequisiteTestScenario",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/prerequisiteTestScenario/getComboList",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -16047,6 +16245,105 @@
               "name": "GetSpecifiicTestPlan",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllTestPlan",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/getAll",
+              "params": [
+                {
+                  "key": "projectReleaseId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "versionNumber",
+                  "value": "1.0.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "code",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "planningDate",
+                  "value": "2026-08-10",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListTestPlan",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlan/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -16211,6 +16508,99 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllTestPlanScenario",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/getAll",
+              "params": [
+                {
+                  "key": "testScenarioId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testScenarioTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testPlanId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testPlanTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "ordering",
+                  "value": "1.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListTestPlanScenario",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenario/getComboList",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -16343,6 +16733,105 @@
               "name": "GetSpecificTestPlanScenarioIssueCoverage",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllTestPlanScenarioIssueCoverage",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/getAll",
+              "params": [
+                {
+                  "key": "testPlanScenarioId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testPlanScenarioTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testPlanTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "IssueId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "IssueTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "IssueCode",
+                  "value": "PRO-123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListTestPlanScenarioIssueCoverage",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testPlanScenarioIssueCoverage/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -16507,6 +16996,93 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllTestResult",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/getAll",
+              "params": [
+                {
+                  "key": "testPlanId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testPlanTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testDate",
+                  "value": "2026-08-10",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListTestResult",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResult/getComboList",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -16639,6 +17215,129 @@
               "name": "GetSpecificTestResultDetail",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetAllTestResultDetail",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/getAll",
+              "params": [
+                {
+                  "key": "testResultId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testPlanId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testPlanTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testDate",
+                  "value": "2026-08-10",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testPlanScenarioId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testScenarioId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testScenarioTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testApprovalId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "testApprovalTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListTestResultDetail",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/qualityControl/testResultDetail/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -16819,6 +17518,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/question/getAll",
+              "name": "GetAllQuestion",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/question/getComboList",
+              "name": "GetComboListQuestion",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -16960,6 +17703,50 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/getAll",
+              "name": "GetAllQuestionOption",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/getComboList",
+              "name": "GetComboListQuestionOption",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -17115,6 +17902,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/getAll",
+              "name": "GetAllQuestionnaire",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/getComboList",
+              "name": "GetComboListQuestionnaire",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -17256,6 +18087,50 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/getAll",
+              "name": "GetAllQuestionnaireTargetDepartment",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/getComboList",
+              "name": "GetComboListQuestionnaireTargetDepartment",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -17411,6 +18286,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/getAll",
+              "name": "GetAllQuestionnaireItem",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/getComboList",
+              "name": "GetComboListQuestionnaireItem",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -17552,6 +18471,50 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/getAll",
+              "name": "GetAllQuestionnaireResult",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/getComboList",
+              "name": "GetComboListQuestionnaireResult",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -17707,6 +18670,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResultDetail/getAll",
+              "name": "GetAllQuestionnaireResultDetail",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResultDetail/getComboList",
+              "name": "GetComboListQuestionnaireResultDetail",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -17848,6 +18855,50 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/getAll",
+              "name": "GetAllStaffSatisfactionEvaluation",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/getComboList",
+              "name": "GetComboListStaffSatisfactionEvaluation",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
@@ -18003,6 +19054,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/projectProductivityEvaluation/getAll",
+              "name": "GetAllProjectProductivityEvaluation",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/projectProductivityEvaluation/getComboList",
+              "name": "GetComboListProjectProductivityEvaluation",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -18151,6 +19246,50 @@
               "requestVariables": [],
               "responses": {},
               "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getComboList",
+              "name": "GetAllCustomerSatisfactionEvaluation",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getComboList",
+              "name": "GetComboListCustomerSatisfactionEvaluation",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
             }
           ],
           "auth": {
@@ -18292,6 +19431,50 @@
                 "token": "[JWT token]",
                 "authActive": true
               },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerFeedback/getAll",
+              "name": "GetAllCustomerFeedback",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerFeedback/getComboList",
+              "name": "GetComboListCustomerFeedback",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
+              },
+              "preRequestScript": "",
+              "testScript": "",
               "body": {
                 "contentType": null,
                 "body": null
