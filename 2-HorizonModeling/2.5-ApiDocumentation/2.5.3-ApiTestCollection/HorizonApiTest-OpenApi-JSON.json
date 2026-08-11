@@ -17460,6 +17460,71 @@
         "tags": [
           "Evaluation/Question"
         ],
+        "parameters": [
+          {
+            "name": "score",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "10",
+            "description": "optional"
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "question",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "answerType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "SignleChoice",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
         "security": [
           {
             "bearerAuth": []
@@ -17632,6 +17697,80 @@
         "tags": [
           "Evaluation/QuestionOption"
         ],
+        "parameters": [
+          {
+            "name": "questionId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "questionCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "score",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "10",
+            "description": "optional"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "isDescriptionRequired",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "false",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
         "security": [
           {
             "bearerAuth": []
@@ -17673,7 +17812,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \"code\" : \"123456\",\n  \"title\" : \"test\",\n  \"questionnaireAduience\" : \"Customers\",\n  \"totalScore\" : 100.0,\n  \"acceptableScore\" : 95.0,\n  \"WarningScore\" : 40.0,\n  \"DisasterScore\" : 10.0,\n  \"Description\" : \"test\" /* optional */\n}"
+              "example": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \"code\" : \"123456\",\n  \"title\" : \"test\",\n  \"questionnaireAduience\" : \"Customers\",\n  \"totalScore\" : 100.0,\n  \"acceptableScore\" : 95.0,\n  \"warningScore\" : 40.0,\n  \"disasterScore\" : 10.0,\n  \"description\" : \"test\" /* optional */\n}"
             }
           }
         },
@@ -17699,7 +17838,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \"code\" : \"123456\",\n  \"title\" : \"test\",\n  \"questionnaireAduience\" : \"Customers\",\n  \"totalScore\" : 100.0,\n  \"acceptableScore\" : 95.0,\n  \"WarningScore\" : 40.0,\n  \"DisasterScore\" : 10.0,\n  \"Description\" : \"test\" /* optional */\n}"
+              "example": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \"code\" : \"123456\",\n  \"title\" : \"test\",\n  \"questionnaireAduience\" : \"Customers\",\n  \"totalScore\" : 100.0,\n  \"acceptableScore\" : 95.0,\n  \"warningScore\" : 40.0,\n  \"disasterScore\" : 10.0,\n  \"description\" : \"test\" /* optional */\n}"
             }
           }
         },
@@ -17793,6 +17932,125 @@
         "operationId": "GetAllQuestionnaire",
         "tags": [
           "Evaluation/Questionnaire"
+        ],
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "projectTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "questionnaireAduience",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "Customers",
+            "description": "optional"
+          },
+          {
+            "name": "totalScore",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "100.0",
+            "description": "optional"
+          },
+          {
+            "name": "acceptableScore",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "95.0",
+            "description": "optional"
+          },
+          {
+            "name": "warningScore",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "40.0",
+            "description": "optional"
+          },
+          {
+            "name": "disasterScore",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "10.0",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
         ],
         "security": [
           {
@@ -17962,6 +18220,80 @@
         "tags": [
           "Evaluation/QuestionnaireTargetDepartment"
         ],
+        "parameters": [
+          {
+            "name": "questionnaireId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "questionnaireTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "questionnaireCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "departmentId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "departmentTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "10",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
         "security": [
           {
             "bearerAuth": []
@@ -18129,6 +18461,89 @@
         "operationId": "GetAllQuestionnaireItem",
         "tags": [
           "Evaluation/QuestionnaireItem"
+        ],
+        "parameters": [
+          {
+            "name": "questionnaireId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "questionnaireTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "questionnaireCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "questionId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "questionTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "questionCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName) ",
+            "description": "optional"
+          }
         ],
         "security": [
           {
@@ -18302,6 +18717,107 @@
         "tags": [
           "Evaluation/QuestionnaireResult"
         ],
+        "parameters": [
+          {
+            "name": "questionnaireId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "questionnaireTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "questionnaireCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "profileId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "profileName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "customerId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "customerTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "totalScore",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "100.0",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
         "security": [
           {
             "bearerAuth": []
@@ -18463,6 +18979,71 @@
         "operationId": "GetAllQuestionnaireResultDetail",
         "tags": [
           "Evaluation/QuestionnaireResultDetail"
+        ],
+        "parameters": [
+          {
+            "name": "questionnaireResultId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "questionnaireItemId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "choosedQuestionOptionId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
         ],
         "security": [
           {
@@ -18626,6 +19207,80 @@
         "tags": [
           "Evaluation/StaffSatisfactionEvaluation"
         ],
+        "parameters": [
+          {
+            "name": "profileId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "profileName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "evalationDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-11",
+            "description": "optional"
+          },
+          {
+            "name": "evaluatedValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "100.0",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
         "security": [
           {
             "bearerAuth": []
@@ -18787,6 +19442,89 @@
         "operationId": "GetAllProjectProductivityEvaluation",
         "tags": [
           "Evaluation/ProjectProductivityEvaluation"
+        ],
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "projectTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "projectCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "evalationDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-11",
+            "description": "optional"
+          },
+          {
+            "name": "evaluatedValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "100.0",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
         ],
         "security": [
           {
@@ -18950,6 +19688,80 @@
         "tags": [
           "Evaluation/CustomerSatisfactionEvaluation"
         ],
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "customerTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "evalationDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-10",
+            "description": "optional"
+          },
+          {
+            "name": "evaluatedValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "100.0",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
         "security": [
           {
             "bearerAuth": []
@@ -19092,6 +19904,107 @@
         "operationId": "GetAllCustomerFeedback",
         "tags": [
           "Evaluation/CustomerFeedback"
+        ],
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "customerTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "projectId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "projectTitle",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "projectCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "feedbackDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-08-11",
+            "description": "optional"
+          },
+          {
+            "name": "feedbackValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "10.0",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "12",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
         ],
         "security": [
           {
@@ -19536,25 +20449,24 @@
       "tagPath": "Evaluation/CustomerSatisfactionEvaluation",
       "request": {
         "v": "17",
-        "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getComboList",
         "name": "GetComboListCustomerSatisfactionEvaluation",
+        "method": "GET",
+        "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getComboList",
         "params": [],
         "headers": [],
-        "method": "GET",
-        "auth": {
-          "authType": "bearer",
-          "authActive": true,
-          "token": ""
-        },
         "preRequestScript": "",
         "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "",
+          "authActive": true
+        },
         "body": {
           "contentType": null,
           "body": null
         },
         "requestVariables": [],
         "responses": {},
-        "_ref_id": "req_msndrwx4_d220950a-e06a-46cd-912c-7fc1769af5cf",
         "description": null
       }
     }

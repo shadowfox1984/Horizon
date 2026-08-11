@@ -17521,18 +17521,61 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/question/getAll",
               "name": "GetAllQuestion",
-              "params": [],
-              "headers": [],
               "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
+              "endpoint": "https://[MainDomian]/api/evaluation/question/getAll",
+              "params": [
+                {
+                  "key": "score",
+                  "value": "10",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "code",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "question",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "answerType",
+                  "value": "SignleChoice",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -17543,18 +17586,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/question/getComboList",
               "name": "GetComboListQuestion",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/question/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -17713,18 +17756,67 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/getAll",
               "name": "GetAllQuestionOption",
-              "params": [],
-              "headers": [],
               "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
+              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/getAll",
+              "params": [
+                {
+                  "key": "questionId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionCode",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "score",
+                  "value": "10",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "isDescriptionRequired",
+                  "value": "false",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -17735,18 +17827,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/getComboList",
               "name": "GetComboListQuestionOption",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionOption/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -17787,7 +17879,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \"code\" : \"123456\",\n  \"title\" : \"test\",\n  \"questionnaireAduience\" : \"Customers\",\n  \"totalScore\" : 100.0,\n  \"acceptableScore\" : 95.0,\n  \"WarningScore\" : 40.0,\n  \"DisasterScore\" : 10.0,\n  \"Description\" : \"test\" /* optional */\n}"
+                "body": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \"code\" : \"123456\",\n  \"title\" : \"test\",\n  \"questionnaireAduience\" : \"Customers\",\n  \"totalScore\" : 100.0,\n  \"acceptableScore\" : 95.0,\n  \"warningScore\" : 40.0,\n  \"disasterScore\" : 10.0,\n  \"description\" : \"test\" /* optional */\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -17809,7 +17901,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \"code\" : \"123456\",\n  \"title\" : \"test\",\n  \"questionnaireAduience\" : \"Customers\",\n  \"totalScore\" : 100.0,\n  \"acceptableScore\" : 95.0,\n  \"WarningScore\" : 40.0,\n  \"DisasterScore\" : 10.0,\n  \"Description\" : \"test\" /* optional */\n}"
+                "body": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", /* optional */\n  \"code\" : \"123456\",\n  \"title\" : \"test\",\n  \"questionnaireAduience\" : \"Customers\",\n  \"totalScore\" : 100.0,\n  \"acceptableScore\" : 95.0,\n  \"warningScore\" : 40.0,\n  \"disasterScore\" : 10.0,\n  \"description\" : \"test\" /* optional */\n}"
               },
               "requestVariables": [],
               "responses": {},
@@ -17905,18 +17997,97 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/getAll",
               "name": "GetAllQuestionnaire",
-              "params": [],
-              "headers": [],
               "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/getAll",
+              "params": [
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "code",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionnaireAduience",
+                  "value": "Customers",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "totalScore",
+                  "value": "100.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "acceptableScore",
+                  "value": "95.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "warningScore",
+                  "value": "40.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "disasterScore",
+                  "value": "10.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -17927,18 +18098,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/getComboList",
               "name": "GetComboListQuestionnaire",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaire/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -18097,18 +18268,67 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/getAll",
               "name": "GetAllQuestionnaireTargetDepartment",
-              "params": [],
-              "headers": [],
               "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/getAll",
+              "params": [
+                {
+                  "key": "questionnaireId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionnaireTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionnaireCode",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "departmentId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "departmentTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "10",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -18119,18 +18339,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/getComboList",
               "name": "GetComboListQuestionnaireTargetDepartment",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireTargetDepartment/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -18289,18 +18509,73 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/getAll",
               "name": "GetAllQuestionnaireItem",
-              "params": [],
-              "headers": [],
               "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/getAll",
+              "params": [
+                {
+                  "key": "questionnaireId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionnaireTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionnaireCode",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionCode",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName) ",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -18311,18 +18586,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/getComboList",
               "name": "GetComboListQuestionnaireItem",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireItem/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -18481,18 +18756,85 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/getAll",
               "name": "GetAllQuestionnaireResult",
-              "params": [],
-              "headers": [],
               "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/getAll",
+              "params": [
+                {
+                  "key": "questionnaireId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionnaireTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionnaireCode",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "customerId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "customerTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "totalScore",
+                  "value": "100.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -18503,18 +18845,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/getComboList",
               "name": "GetComboListQuestionnaireResult",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResult/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -18673,18 +19015,61 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResultDetail/getAll",
               "name": "GetAllQuestionnaireResultDetail",
-              "params": [],
-              "headers": [],
               "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResultDetail/getAll",
+              "params": [
+                {
+                  "key": "questionnaireResultId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionnaireItemId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "choosedQuestionOptionId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -18695,18 +19080,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResultDetail/getComboList",
               "name": "GetComboListQuestionnaireResultDetail",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/questionnaireResultDetail/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -18865,18 +19250,67 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/getAll",
               "name": "GetAllStaffSatisfactionEvaluation",
-              "params": [],
-              "headers": [],
               "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
+              "endpoint": "https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/getAll",
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "evalationDate",
+                  "value": "2026-08-11",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "evaluatedValue",
+                  "value": "100.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -18887,18 +19321,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/getComboList",
               "name": "GetComboListStaffSatisfactionEvaluation",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/staffSatisfactionEvaluation/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -19057,18 +19491,73 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/projectProductivityEvaluation/getAll",
               "name": "GetAllProjectProductivityEvaluation",
-              "params": [],
-              "headers": [],
               "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
+              "endpoint": "https://[MainDomian]/api/evaluation/projectProductivityEvaluation/getAll",
+              "params": [
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectCode",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "evalationDate",
+                  "value": "2026-08-11",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "evaluatedValue",
+                  "value": "100.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -19079,18 +19568,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/projectProductivityEvaluation/getComboList",
               "name": "GetComboListProjectProductivityEvaluation",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/projectProductivityEvaluation/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -19249,18 +19738,67 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getComboList",
               "name": "GetAllCustomerSatisfactionEvaluation",
-              "params": [],
-              "headers": [],
               "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
+              "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getComboList",
+              "params": [
+                {
+                  "key": "customerId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "customerTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "evalationDate",
+                  "value": "2026-08-10",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "evaluatedValue",
+                  "value": "100.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -19271,18 +19809,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getComboList",
               "name": "GetComboListCustomerSatisfactionEvaluation",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -19441,18 +19979,85 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/customerFeedback/getAll",
               "name": "GetAllCustomerFeedback",
-              "params": [],
-              "headers": [],
               "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
+              "endpoint": "https://[MainDomian]/api/evaluation/customerFeedback/getAll",
+              "params": [
+                {
+                  "key": "customerId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "customerTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectCode",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "feedbackDate",
+                  "value": "2026-08-11",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "feedbackValue",
+                  "value": "10.0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -19463,18 +20068,18 @@
             },
             {
               "v": "17",
-              "endpoint": "https://[MainDomian]/api/evaluation/customerFeedback/getComboList",
               "name": "GetComboListCustomerFeedback",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/evaluation/customerFeedback/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "[JWT token]"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
