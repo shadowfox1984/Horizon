@@ -40,7 +40,7 @@ These analyses are translated into clear, actionable recommendations, such as wo
 Horizon includes an Extension Engine for integrating external tools or custom modules. Developers can connect services like Jira, Slack, or payroll systems, or create plugins to extend Horizon for organization-specific needs.
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/shadowfox1984/Horizon/refs/heads/master/2-HorizonModeling/2.5-HorizonUml/out/Architecture/ProjectSchemaDiagram.png" style="margin-left:auto; margin-right:auto">
+<img src="https://raw.githubusercontent.com/shadowfox1984/Horizon/refs/heads/master/2-HorizonModeling/2.3-HorizonUml/out/Architecture/ProjectSchemaDiagram.png" style="margin-left:auto; margin-right:auto">
 </div>
 
 ## Vision
