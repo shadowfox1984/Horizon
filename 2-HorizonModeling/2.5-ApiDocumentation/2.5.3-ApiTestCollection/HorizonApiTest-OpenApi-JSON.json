@@ -9749,7 +9749,7 @@
         ]
       }
     },
-    "/": {
+    "/https://[MainDomian]/api/projectManagement/issue/getComboList": {
       "get": {
         "summary": "GetComboListIssue",
         "responses": {
@@ -9760,6 +9760,11 @@
         "operationId": "GetComboListIssue",
         "tags": [
           "ProjectManagement/Issue"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
         ]
       }
     },
@@ -11069,25 +11074,6 @@
         ]
       }
     },
-    "/https://[MainDomian]/api/projectManagement/projectMeeting/getComboList": {
-      "get": {
-        "summary": "GetComboListProjectMeeting",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "GetComboListProjectMeeting",
-        "tags": [
-          "ProjectManagement/ProjectMeeting"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
     "/https://[MainDomian]/api/projectManagement/projectMeeting/getAll": {
       "get": {
         "summary": "GetAllProjectMeeting",
@@ -11245,6 +11231,25 @@
             "example": "desc(fieldName)",
             "description": "optional"
           }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/https://[MainDomian]/api/projectManagement/projectMeeting/getComboList": {
+      "get": {
+        "summary": "GetComboListProjectMeeting",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "GetComboListProjectMeeting",
+        "tags": [
+          "ProjectManagement/ProjectMeeting"
         ],
         "security": [
           {
@@ -20036,9 +20041,6 @@
   "servers": [
     {
       "url": "https://echo.hoppscotch.iohttps"
-    },
-    {
-      "url": "https://echo.hoppscotch.io"
     }
   ],
   "tags": [

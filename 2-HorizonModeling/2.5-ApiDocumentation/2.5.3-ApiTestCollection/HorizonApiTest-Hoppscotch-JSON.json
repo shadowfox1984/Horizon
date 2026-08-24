@@ -9907,14 +9907,15 @@
               "v": "17",
               "name": "GetComboListIssue",
               "method": "GET",
-              "endpoint": "https://echo.hoppscotch.io",
+              "endpoint": "https://[MainDomian]/api/projectManagement/issue/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
               "auth": {
-                "authType": "inherit",
-                "authActive": true
+                "authType": "bearer",
+                "authActive": true,
+                "token": "[JWT token]"
               },
               "body": {
                 "contentType": null,
@@ -11229,28 +11230,6 @@
             },
             {
               "v": "17",
-              "name": "GetComboListProjectMeeting",
-              "method": "GET",
-              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/getComboList",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "[JWT token]",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
               "name": "GetAllProjectMeeting",
               "method": "GET",
               "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/getAll",
@@ -11352,6 +11331,28 @@
                   "description": "optional"
                 }
               ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "[JWT token]",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "GetComboListProjectMeeting",
+              "method": "GET",
+              "endpoint": "https://[MainDomian]/api/projectManagement/projectMeeting/getComboList",
+              "params": [],
               "headers": [],
               "preRequestScript": "",
               "testScript": "",
