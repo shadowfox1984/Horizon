@@ -13207,13 +13207,13 @@
     },
     "/https://[MainDomian]/api/finance/costInvoiceItem": {
       "post": {
-        "summary": "AddCostInvoiceItem",
+        "summary": "S060601 - AddCostInvoiceItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "AddCostInvoiceItem",
+        "operationId": "S060601___AddCostInvoiceItem",
         "tags": [
           "S06 - Finance/S0606 - CostInvoiceItem"
         ],
@@ -13233,13 +13233,13 @@
     },
     "/https://[MainDomian]/api/finance/costInvoiceItem/[id]": {
       "put": {
-        "summary": "UpdateCostInvoiceItem",
+        "summary": "S060602 - UpdateCostInvoiceItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "UpdateCostInvoiceItem",
+        "operationId": "S060602___UpdateCostInvoiceItem",
         "tags": [
           "S06 - Finance/S0606 - CostInvoiceItem"
         ],
@@ -13257,13 +13257,13 @@
         ]
       },
       "delete": {
-        "summary": "DeleteCostInvoiceItem",
+        "summary": "S060603 - DeleteCostInvoiceItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "DeleteCostInvoiceItem",
+        "operationId": "S060603___DeleteCostInvoiceItem",
         "tags": [
           "S06 - Finance/S0606 - CostInvoiceItem"
         ],
@@ -13274,13 +13274,13 @@
         ]
       },
       "get": {
-        "summary": "GetSpecificCostInvoiceItem",
+        "summary": "S060606 - GetSpecificCostInvoiceItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetSpecificCostInvoiceItem",
+        "operationId": "S060606___GetSpecificCostInvoiceItem",
         "tags": [
           "S06 - Finance/S0606 - CostInvoiceItem"
         ],
@@ -13293,13 +13293,13 @@
     },
     "/https://[MainDomian]/api/finance/costInvoiceItem/active/[id]": {
       "put": {
-        "summary": "ActiveCostInvoiceItem",
+        "summary": "S060604 - ActiveCostInvoiceItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "ActiveCostInvoiceItem",
+        "operationId": "S060604___ActiveCostInvoiceItem",
         "tags": [
           "S06 - Finance/S0606 - CostInvoiceItem"
         ],
@@ -13312,13 +13312,13 @@
     },
     "/https://[MainDomian]/api/finance/costInvoiceItem/inactive/[id]": {
       "put": {
-        "summary": "InactiveCostInvoiceItem",
+        "summary": "S060605 - InactiveCostInvoiceItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "InactiveCostInvoiceItem",
+        "operationId": "S060605___InactiveCostInvoiceItem",
         "tags": [
           "S06 - Finance/S0606 - CostInvoiceItem"
         ],
@@ -13331,13 +13331,13 @@
     },
     "/https://[MainDomian]/api/finance/costInvoiceItem/getAll": {
       "get": {
-        "summary": "GetAllCostInvoiceItem",
+        "summary": "S060607 - GetAllCostInvoiceItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetAllCostInvoiceItem",
+        "operationId": "S060607___GetAllCostInvoiceItem",
         "tags": [
           "S06 - Finance/S0606 - CostInvoiceItem"
         ],
@@ -13460,13 +13460,13 @@
     },
     "/https://[MainDomian]/api/finance/costInvoiceItem/getComboList": {
       "get": {
-        "summary": "GetComboListCostInvoiceItem",
+        "summary": "S060608 - GetComboListCostInvoiceItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetComboListCostInvoiceItem",
+        "operationId": "S060608___GetComboListCostInvoiceItem",
         "tags": [
           "S06 - Finance/S0606 - CostInvoiceItem"
         ],
@@ -13479,13 +13479,13 @@
     },
     "/https://[MainDomian]/api/finance/projectDirectCostItem": {
       "post": {
-        "summary": "AddProjectDirectCostItem",
+        "summary": "S060701 - AddProjectDirectCostItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "AddProjectDirectCostItem",
+        "operationId": "S060701___AddProjectDirectCostItem",
         "tags": [
           "S06 - Finance/S0607 - ProjectDirectCostItem"
         ],
@@ -13505,13 +13505,13 @@
     },
     "/https://[MainDomian]/api/finance/projectDirectCostItem/[id]": {
       "put": {
-        "summary": "UpdateProjectDirectCostItem",
+        "summary": "S060702 - UpdateProjectDirectCostItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "UpdateProjectDirectCostItem",
+        "operationId": "S060702___UpdateProjectDirectCostItem",
         "tags": [
           "S06 - Finance/S0607 - ProjectDirectCostItem"
         ],
@@ -13529,13 +13529,13 @@
         ]
       },
       "delete": {
-        "summary": "DeleteProjectDirectCostItem",
+        "summary": "S060703 - DeleteProjectDirectCostItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "DeleteProjectDirectCostItem",
+        "operationId": "S060703___DeleteProjectDirectCostItem",
         "tags": [
           "S06 - Finance/S0607 - ProjectDirectCostItem"
         ],
@@ -13546,13 +13546,13 @@
         ]
       },
       "get": {
-        "summary": "GetSpecificProjectDirectCostItem",
+        "summary": "S060706 - GetSpecificProjectDirectCostItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetSpecificProjectDirectCostItem",
+        "operationId": "S060706___GetSpecificProjectDirectCostItem",
         "tags": [
           "S06 - Finance/S0607 - ProjectDirectCostItem"
         ],
@@ -13565,13 +13565,13 @@
     },
     "/https://[MainDomian]/api/finance/projectDirectCostItem/active/[id]": {
       "put": {
-        "summary": "ActiveProjectDirectCostItem",
+        "summary": "S060704 - ActiveProjectDirectCostItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "ActiveProjectDirectCostItem",
+        "operationId": "S060704___ActiveProjectDirectCostItem",
         "tags": [
           "S06 - Finance/S0607 - ProjectDirectCostItem"
         ],
@@ -13584,13 +13584,13 @@
     },
     "/https://[MainDomian]/api/finance/projectDirectCostItem/inactive/[id]": {
       "put": {
-        "summary": "InactiveProjectDirectCostItem",
+        "summary": "S060705 - InactiveProjectDirectCostItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "InactiveProjectDirectCostItem",
+        "operationId": "S060705___InactiveProjectDirectCostItem",
         "tags": [
           "S06 - Finance/S0607 - ProjectDirectCostItem"
         ],
@@ -13603,13 +13603,13 @@
     },
     "/https://[MainDomian]/api/finance/projectDirectCostItem/getAll": {
       "get": {
-        "summary": "GetAllProjectDirectCostItem",
+        "summary": "S060707 - GetAllProjectDirectCostItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetAllProjectDirectCostItem",
+        "operationId": "S060707___GetAllProjectDirectCostItem",
         "tags": [
           "S06 - Finance/S0607 - ProjectDirectCostItem"
         ],
@@ -13705,13 +13705,13 @@
     },
     "/https://[MainDomian]/api/finance/projectDirectCostItem/getComboList": {
       "get": {
-        "summary": "GetComboListProjectDirectCostItem",
+        "summary": "S060708 - GetComboListProjectDirectCostItem",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetComboListProjectDirectCostItem",
+        "operationId": "S060708___GetComboListProjectDirectCostItem",
         "tags": [
           "S06 - Finance/S0607 - ProjectDirectCostItem"
         ],
@@ -13724,13 +13724,13 @@
     },
     "/https://[MainDomian]/api/finance/costPaymentReceipt": {
       "post": {
-        "summary": "AddCostPaymentReceipt",
+        "summary": "S060801 - AddCostPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "AddCostPaymentReceipt",
+        "operationId": "S060801___AddCostPaymentReceipt",
         "tags": [
           "S06 - Finance/S0608 - CostPaymentReceipt"
         ],
@@ -13750,13 +13750,13 @@
     },
     "/https://[MainDomian]/api/finance/costPaymentReceipt/[id]": {
       "put": {
-        "summary": "UpdateCostPaymentReceipt",
+        "summary": "S060802 - UpdateCostPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "UpdateCostPaymentReceipt",
+        "operationId": "S060802___UpdateCostPaymentReceipt",
         "tags": [
           "S06 - Finance/S0608 - CostPaymentReceipt"
         ],
@@ -13774,13 +13774,13 @@
         ]
       },
       "delete": {
-        "summary": "DeleteCostPaymentReceipt",
+        "summary": "S060803 - DeleteCostPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "DeleteCostPaymentReceipt",
+        "operationId": "S060803___DeleteCostPaymentReceipt",
         "tags": [
           "S06 - Finance/S0608 - CostPaymentReceipt"
         ],
@@ -13791,13 +13791,13 @@
         ]
       },
       "get": {
-        "summary": "GetSpecificCostPaymentReceipt",
+        "summary": "S060806 - GetSpecificCostPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetSpecificCostPaymentReceipt",
+        "operationId": "S060806___GetSpecificCostPaymentReceipt",
         "tags": [
           "S06 - Finance/S0608 - CostPaymentReceipt"
         ],
@@ -13810,13 +13810,13 @@
     },
     "/https://[MainDomian]/api/finance/costPaymentReceipt/active/[id]": {
       "put": {
-        "summary": "ActiveCostPaymentReceipt",
+        "summary": "S060804 - ActiveCostPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "ActiveCostPaymentReceipt",
+        "operationId": "S060804___ActiveCostPaymentReceipt",
         "tags": [
           "S06 - Finance/S0608 - CostPaymentReceipt"
         ],
@@ -13829,13 +13829,13 @@
     },
     "/https://[MainDomian]/api/finance/costPaymentReceipt/inactive/[id]": {
       "put": {
-        "summary": "InactiveCostPaymentReceipt",
+        "summary": "S060805 - InactiveCostPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "InactiveCostPaymentReceipt",
+        "operationId": "S060805___InactiveCostPaymentReceipt",
         "tags": [
           "S06 - Finance/S0608 - CostPaymentReceipt"
         ],
@@ -13848,13 +13848,13 @@
     },
     "/https://[MainDomian]/api/finance/costPaymentReceipt/getAll": {
       "get": {
-        "summary": "GetAllCostPaymentReceipt",
+        "summary": "S060807 - GetAllCostPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetAllCostPaymentReceipt",
+        "operationId": "S060807___GetAllCostPaymentReceipt",
         "tags": [
           "S06 - Finance/S0608 - CostPaymentReceipt"
         ],
@@ -13977,13 +13977,13 @@
     },
     "/https://[MainDomian]/api/finance/costPaymentReceipt/getComboList": {
       "get": {
-        "summary": "GetComboListCostPaymentReceipt",
+        "summary": "S060808 - GetComboListCostPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetComboListCostPaymentReceipt",
+        "operationId": "S060808___GetComboListCostPaymentReceipt",
         "tags": [
           "S06 - Finance/S0608 - CostPaymentReceipt"
         ],
@@ -13996,13 +13996,13 @@
     },
     "/https://[MainDomian]/api/finance/salaryPaymentReceipt": {
       "post": {
-        "summary": "AddSalaryPaymentReceipt",
+        "summary": "S060901 - AddSalaryPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "AddSalaryPaymentReceipt",
+        "operationId": "S060901___AddSalaryPaymentReceipt",
         "tags": [
           "S06 - Finance/S0609 - SalaryPaymentReceipt"
         ],
@@ -14022,13 +14022,13 @@
     },
     "/https://[MainDomian]/api/finance/salaryPaymentReceipt/[id]": {
       "put": {
-        "summary": "UpdateSalaryPaymentReceipt",
+        "summary": "S060902 - UpdateSalaryPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "UpdateSalaryPaymentReceipt",
+        "operationId": "S060902___UpdateSalaryPaymentReceipt",
         "tags": [
           "S06 - Finance/S0609 - SalaryPaymentReceipt"
         ],
@@ -14046,13 +14046,13 @@
         ]
       },
       "delete": {
-        "summary": "DeleteSalarylPaymentReceipt",
+        "summary": "S060903 - DeleteSalarylPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "DeleteSalarylPaymentReceipt",
+        "operationId": "S060903___DeleteSalarylPaymentReceipt",
         "tags": [
           "S06 - Finance/S0609 - SalaryPaymentReceipt"
         ],
@@ -14063,13 +14063,13 @@
         ]
       },
       "get": {
-        "summary": "GetSpecificSalarylPaymentReceipt",
+        "summary": "S060906 - GetSpecificSalarylPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetSpecificSalarylPaymentReceipt",
+        "operationId": "S060906___GetSpecificSalarylPaymentReceipt",
         "tags": [
           "S06 - Finance/S0609 - SalaryPaymentReceipt"
         ],
@@ -14082,13 +14082,13 @@
     },
     "/https://[MainDomian]/api/finance/salaryPaymentReceipt/active/[id]": {
       "put": {
-        "summary": "ActiveSalarylPaymentReceipt",
+        "summary": "S060904 - ActiveSalarylPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "ActiveSalarylPaymentReceipt",
+        "operationId": "S060904___ActiveSalarylPaymentReceipt",
         "tags": [
           "S06 - Finance/S0609 - SalaryPaymentReceipt"
         ],
@@ -14101,13 +14101,13 @@
     },
     "/https://[MainDomian]/api/finance/salaryPaymentReceipt/inactive/[id]": {
       "put": {
-        "summary": "InactiveSalarylPaymentReceipt",
+        "summary": "S060905 - InactiveSalarylPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "InactiveSalarylPaymentReceipt",
+        "operationId": "S060905___InactiveSalarylPaymentReceipt",
         "tags": [
           "S06 - Finance/S0609 - SalaryPaymentReceipt"
         ],
@@ -14120,13 +14120,13 @@
     },
     "/https://[MainDomian]/api/finance/salaryPaymentReceipt/getAll": {
       "get": {
-        "summary": "GetAllSalaryPaymentReceipt",
+        "summary": "S060907 - GetAllSalaryPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetAllSalaryPaymentReceipt",
+        "operationId": "S060907___GetAllSalaryPaymentReceipt",
         "tags": [
           "S06 - Finance/S0609 - SalaryPaymentReceipt"
         ],
@@ -14139,13 +14139,13 @@
     },
     "/https://[MainDomian]/api/finance/salaryPaymentReceipt/getComboList": {
       "get": {
-        "summary": "GetComboListSalaryPaymentReceipt",
+        "summary": "S060908 - GetComboListSalaryPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetComboListSalaryPaymentReceipt",
+        "operationId": "S060908___GetComboListSalaryPaymentReceipt",
         "tags": [
           "S06 - Finance/S0609 - SalaryPaymentReceipt"
         ],
@@ -14158,13 +14158,13 @@
     },
     "/https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt": {
       "post": {
-        "summary": "AddStaffAdditionalPaymentReceipt",
+        "summary": "S061001 - AddStaffAdditionalPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "AddStaffAdditionalPaymentReceipt",
+        "operationId": "S061001___AddStaffAdditionalPaymentReceipt",
         "tags": [
           "S06 - Finance/S0610 - StaffAdditionalPaymentReceipt"
         ],
@@ -14184,13 +14184,13 @@
     },
     "/https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/[id]": {
       "put": {
-        "summary": "UpdateStaffAdditionalPaymentReceipt",
+        "summary": "S061002 - UpdateStaffAdditionalPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "UpdateStaffAdditionalPaymentReceipt",
+        "operationId": "S061002___UpdateStaffAdditionalPaymentReceipt",
         "tags": [
           "S06 - Finance/S0610 - StaffAdditionalPaymentReceipt"
         ],
@@ -14208,13 +14208,13 @@
         ]
       },
       "delete": {
-        "summary": "DeleteStaffAdditionalPaymentReceipt",
+        "summary": "S061003 - DeleteStaffAdditionalPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "DeleteStaffAdditionalPaymentReceipt",
+        "operationId": "S061003___DeleteStaffAdditionalPaymentReceipt",
         "tags": [
           "S06 - Finance/S0610 - StaffAdditionalPaymentReceipt"
         ],
@@ -14225,13 +14225,13 @@
         ]
       },
       "get": {
-        "summary": "GetSpecificStaffAdditionalPaymentReceipt",
+        "summary": "S061006 - GetSpecificStaffAdditionalPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetSpecificStaffAdditionalPaymentReceipt",
+        "operationId": "S061006___GetSpecificStaffAdditionalPaymentReceipt",
         "tags": [
           "S06 - Finance/S0610 - StaffAdditionalPaymentReceipt"
         ],
@@ -14244,13 +14244,13 @@
     },
     "/https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/active/[id]": {
       "put": {
-        "summary": "ActiveStaffAdditionalPaymentReceipt",
+        "summary": "S061004 - ActiveStaffAdditionalPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "ActiveStaffAdditionalPaymentReceipt",
+        "operationId": "S061004___ActiveStaffAdditionalPaymentReceipt",
         "tags": [
           "S06 - Finance/S0610 - StaffAdditionalPaymentReceipt"
         ],
@@ -14263,13 +14263,13 @@
     },
     "/https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/inactive/[id]": {
       "put": {
-        "summary": "InactiveStaffAdditionalPaymentReceipt",
+        "summary": "S061005 - InactiveStaffAdditionalPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "InactiveStaffAdditionalPaymentReceipt",
+        "operationId": "S061005___InactiveStaffAdditionalPaymentReceipt",
         "tags": [
           "S06 - Finance/S0610 - StaffAdditionalPaymentReceipt"
         ],
@@ -14282,13 +14282,13 @@
     },
     "/https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/getAll": {
       "get": {
-        "summary": "GetAllStaffAdditionalPaymentReceipt",
+        "summary": "S061007 - GetAllStaffAdditionalPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetAllStaffAdditionalPaymentReceipt",
+        "operationId": "S061007___GetAllStaffAdditionalPaymentReceipt",
         "tags": [
           "S06 - Finance/S0610 - StaffAdditionalPaymentReceipt"
         ],
@@ -14420,13 +14420,13 @@
     },
     "/https://[MainDomian]/api/finance/staffAdditionalPaymentReceipt/getComboList": {
       "get": {
-        "summary": "GetComboListStaffAdditionalPaymentReceipt",
+        "summary": "S061008 - GetComboListStaffAdditionalPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetComboListStaffAdditionalPaymentReceipt",
+        "operationId": "S061008___GetComboListStaffAdditionalPaymentReceipt",
         "tags": [
           "S06 - Finance/S0610 - StaffAdditionalPaymentReceipt"
         ],
@@ -14439,13 +14439,13 @@
     },
     "/https://[MainDomian]/api/finance/customer": {
       "post": {
-        "summary": "AddCustomer",
+        "summary": "S061101 - AddCustomer",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "AddCustomer",
+        "operationId": "S061101___AddCustomer",
         "tags": [
           "S06 - Finance/S0611 - Customer"
         ],
@@ -14465,13 +14465,13 @@
     },
     "/https://[MainDomian]/api/finance/customer/[id]": {
       "put": {
-        "summary": "UpdateCustomer",
+        "summary": "S061102 - UpdateCustomer",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "UpdateCustomer",
+        "operationId": "S061102___UpdateCustomer",
         "tags": [
           "S06 - Finance/S0611 - Customer"
         ],
@@ -14489,13 +14489,13 @@
         ]
       },
       "delete": {
-        "summary": "DeleteCustomer",
+        "summary": "S061103 - DeleteCustomer",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "DeleteCustomer",
+        "operationId": "S061103___DeleteCustomer",
         "tags": [
           "S06 - Finance/S0611 - Customer"
         ],
@@ -14506,13 +14506,13 @@
         ]
       },
       "get": {
-        "summary": "GetSpecificCustomer",
+        "summary": "S061106 - GetSpecificCustomer",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetSpecificCustomer",
+        "operationId": "S061106___GetSpecificCustomer",
         "tags": [
           "S06 - Finance/S0611 - Customer"
         ],
@@ -14525,13 +14525,13 @@
     },
     "/https://[MainDomian]/api/finance/customer/active/[id]": {
       "put": {
-        "summary": "ActiveCustomer",
+        "summary": "S061104 - ActiveCustomer",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "ActiveCustomer",
+        "operationId": "S061104___ActiveCustomer",
         "tags": [
           "S06 - Finance/S0611 - Customer"
         ],
@@ -14544,13 +14544,13 @@
     },
     "/https://[MainDomian]/api/finance/customer/inactive/[id]": {
       "put": {
-        "summary": "InactiveCustomer",
+        "summary": "S061105 - InactiveCustomer",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "InactiveCustomer",
+        "operationId": "S061105___InactiveCustomer",
         "tags": [
           "S06 - Finance/S0611 - Customer"
         ],
@@ -14563,13 +14563,13 @@
     },
     "/https://[MainDomian]/api/finance/customer/getAll": {
       "get": {
-        "summary": "GetAllCustomer",
+        "summary": "S061107 - GetAllCustomer",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetAllCustomer",
+        "operationId": "S061107___GetAllCustomer",
         "tags": [
           "S06 - Finance/S0611 - Customer"
         ],
@@ -14680,13 +14680,13 @@
     },
     "/https://[MainDomian]/api/finance/customer/getComboList": {
       "get": {
-        "summary": "GetComboListCustomer",
+        "summary": "S061107 - GetComboListCustomer",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetComboListCustomer",
+        "operationId": "S061107___GetComboListCustomer",
         "tags": [
           "S06 - Finance/S0611 - Customer"
         ],
@@ -14699,13 +14699,13 @@
     },
     "/https://[MainDomian]/api/finance/customerContract": {
       "post": {
-        "summary": "AddCustomerContract",
+        "summary": "S061201 - AddCustomerContract",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "AddCustomerContract",
+        "operationId": "S061201___AddCustomerContract",
         "tags": [
           "S06 - Finance/S0612 - CustomerContract"
         ],
@@ -14725,13 +14725,13 @@
     },
     "/https://[MainDomian]/api/finance/customerContract/[id]": {
       "put": {
-        "summary": "UpdateCustomerContract",
+        "summary": "S061202 - UpdateCustomerContract",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "UpdateCustomerContract",
+        "operationId": "S061202___UpdateCustomerContract",
         "tags": [
           "S06 - Finance/S0612 - CustomerContract"
         ],
@@ -14749,13 +14749,13 @@
         ]
       },
       "delete": {
-        "summary": "DeleteCustomerContract",
+        "summary": "S061203 - DeleteCustomerContract",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "DeleteCustomerContract",
+        "operationId": "S061203___DeleteCustomerContract",
         "tags": [
           "S06 - Finance/S0612 - CustomerContract"
         ],
@@ -14766,13 +14766,13 @@
         ]
       },
       "get": {
-        "summary": "GetSpecificCustomerContract",
+        "summary": "S061206 - GetSpecificCustomerContract",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetSpecificCustomerContract",
+        "operationId": "S061206___GetSpecificCustomerContract",
         "tags": [
           "S06 - Finance/S0612 - CustomerContract"
         ]
@@ -14780,13 +14780,13 @@
     },
     "/https://[MainDomian]/api/finance/customerContract/active/[id]": {
       "put": {
-        "summary": "ActiveCustomerContract",
+        "summary": "S061204 - ActiveCustomerContract",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "ActiveCustomerContract",
+        "operationId": "S061204___ActiveCustomerContract",
         "tags": [
           "S06 - Finance/S0612 - CustomerContract"
         ],
@@ -14799,13 +14799,13 @@
     },
     "/https://[MainDomian]/api/finance/customerContract/inactive/[id]": {
       "put": {
-        "summary": "InactiveCustomerContract",
+        "summary": "S061205 - InactiveCustomerContract",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "InactiveCustomerContract",
+        "operationId": "S061205___InactiveCustomerContract",
         "tags": [
           "S06 - Finance/S0612 - CustomerContract"
         ],
@@ -14818,13 +14818,13 @@
     },
     "/https://[MainDomian]/api/finance/customerContract/getAll": {
       "get": {
-        "summary": "GetAllCustomerContract",
+        "summary": "S061207 - GetAllCustomerContract",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetAllCustomerContract",
+        "operationId": "S061207___GetAllCustomerContract",
         "tags": [
           "S06 - Finance/S0612 - CustomerContract"
         ],
@@ -15001,13 +15001,13 @@
     },
     "/https://[MainDomian]/api/finance/customerContract/getComboList": {
       "get": {
-        "summary": "GetComboListCustomerContract",
+        "summary": "S061208 - GetComboListCustomerContract",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetComboListCustomerContract",
+        "operationId": "S061208___GetComboListCustomerContract",
         "tags": [
           "S06 - Finance/S0612 - CustomerContract"
         ],
@@ -15020,13 +15020,13 @@
     },
     "/https://[MainDomian]/api/finance/CustomerContractPaymentSchedule": {
       "post": {
-        "summary": "AddCustomerContractPaymentSchedule",
+        "summary": "S061301 - AddCustomerContractPaymentSchedule",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "AddCustomerContractPaymentSchedule",
+        "operationId": "S061301___AddCustomerContractPaymentSchedule",
         "tags": [
           "S06 - Finance/S0613 - CustomerContractPaymentSchedule"
         ],
@@ -15046,13 +15046,13 @@
     },
     "/https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/[id]": {
       "put": {
-        "summary": "UpdateCustomerContractPaymentSchedule",
+        "summary": "S061302 - UpdateCustomerContractPaymentSchedule",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "UpdateCustomerContractPaymentSchedule",
+        "operationId": "S061302___UpdateCustomerContractPaymentSchedule",
         "tags": [
           "S06 - Finance/S0613 - CustomerContractPaymentSchedule"
         ],
@@ -15070,13 +15070,13 @@
         ]
       },
       "delete": {
-        "summary": "DeleteCustomerContractPaymentSchedule",
+        "summary": "S061303 - DeleteCustomerContractPaymentSchedule",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "DeleteCustomerContractPaymentSchedule",
+        "operationId": "S061303___DeleteCustomerContractPaymentSchedule",
         "tags": [
           "S06 - Finance/S0613 - CustomerContractPaymentSchedule"
         ],
@@ -15087,13 +15087,13 @@
         ]
       },
       "get": {
-        "summary": "GetSpecificCustomerContractPaymentSchedule",
+        "summary": "S061306 - GetSpecificCustomerContractPaymentSchedule",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetSpecificCustomerContractPaymentSchedule",
+        "operationId": "S061306___GetSpecificCustomerContractPaymentSchedule",
         "tags": [
           "S06 - Finance/S0613 - CustomerContractPaymentSchedule"
         ],
@@ -15106,13 +15106,13 @@
     },
     "/https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/active/[id]": {
       "put": {
-        "summary": "ActiveCustomerContractPaymentSchedule",
+        "summary": "S061304 - ActiveCustomerContractPaymentSchedule",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "ActiveCustomerContractPaymentSchedule",
+        "operationId": "S061304___ActiveCustomerContractPaymentSchedule",
         "tags": [
           "S06 - Finance/S0613 - CustomerContractPaymentSchedule"
         ],
@@ -15125,13 +15125,13 @@
     },
     "/https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/inactive/[id]": {
       "put": {
-        "summary": "InactiveCustomerContractPaymentSchedule",
+        "summary": "S061305 - InactiveCustomerContractPaymentSchedule",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "InactiveCustomerContractPaymentSchedule",
+        "operationId": "S061305___InactiveCustomerContractPaymentSchedule",
         "tags": [
           "S06 - Finance/S0613 - CustomerContractPaymentSchedule"
         ],
@@ -15144,13 +15144,13 @@
     },
     "/https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/getAll": {
       "get": {
-        "summary": "GetAllCustomerContractPaymentSchedule",
+        "summary": "S061307 - GetAllCustomerContractPaymentSchedule",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetAllCustomerContractPaymentSchedule",
+        "operationId": "S061307___GetAllCustomerContractPaymentSchedule",
         "tags": [
           "S06 - Finance/S0613 - CustomerContractPaymentSchedule"
         ],
@@ -15291,13 +15291,13 @@
     },
     "/https://[MainDomian]/api/finance/CustomerContractPaymentSchedule/getCombolist": {
       "get": {
-        "summary": "GetComboListCustomerContractPaymentSchedule",
+        "summary": "S061308 - GetComboListCustomerContractPaymentSchedule",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetComboListCustomerContractPaymentSchedule",
+        "operationId": "S061308___GetComboListCustomerContractPaymentSchedule",
         "tags": [
           "S06 - Finance/S0613 - CustomerContractPaymentSchedule"
         ],
@@ -15310,13 +15310,13 @@
     },
     "/https://[MainDomian]/api/finance/customerContractPaymentReceipt": {
       "post": {
-        "summary": "AddCustomerContractPaymentReceipt",
+        "summary": "S061401 - AddCustomerContractPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "AddCustomerContractPaymentReceipt",
+        "operationId": "S061401___AddCustomerContractPaymentReceipt",
         "tags": [
           "S06 - Finance/S0614 - CustomerContractPaymentReceipt"
         ],
@@ -15343,13 +15343,13 @@
     },
     "/https://[MainDomian]/api/finance/customerContractPaymentReceipt/[id]": {
       "put": {
-        "summary": "UpdateCustomerContractPaymentReceipt",
+        "summary": "S061402 - UpdateCustomerContractPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "UpdateCustomerContractPaymentReceipt",
+        "operationId": "S061402___UpdateCustomerContractPaymentReceipt",
         "tags": [
           "S06 - Finance/S0614 - CustomerContractPaymentReceipt"
         ],
@@ -15374,13 +15374,13 @@
         ]
       },
       "delete": {
-        "summary": "DeleteCustomerContractPaymentReceipt",
+        "summary": "S061403 - DeleteCustomerContractPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "DeleteCustomerContractPaymentReceipt",
+        "operationId": "S061403___DeleteCustomerContractPaymentReceipt",
         "tags": [
           "S06 - Finance/S0614 - CustomerContractPaymentReceipt"
         ],
@@ -15391,13 +15391,13 @@
         ]
       },
       "get": {
-        "summary": "GetSpecificCustomerContractPaymentReceipt",
+        "summary": "S061406 - GetSpecificCustomerContractPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetSpecificCustomerContractPaymentReceipt",
+        "operationId": "S061406___GetSpecificCustomerContractPaymentReceipt",
         "tags": [
           "S06 - Finance/S0614 - CustomerContractPaymentReceipt"
         ],
@@ -15410,13 +15410,13 @@
     },
     "/https://[MainDomian]/api/finance/customerContractPaymentReceipt/active/[id]": {
       "put": {
-        "summary": "ActiveCustomerContractPaymentReceipt",
+        "summary": "S061404 - ActiveCustomerContractPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "ActiveCustomerContractPaymentReceipt",
+        "operationId": "S061404___ActiveCustomerContractPaymentReceipt",
         "tags": [
           "S06 - Finance/S0614 - CustomerContractPaymentReceipt"
         ],
@@ -15429,13 +15429,13 @@
     },
     "/https://[MainDomian]/api/finance/customerContractPaymentReceipt/inactive/[id]": {
       "put": {
-        "summary": "InactiveCustomerContractPaymentReceipt",
+        "summary": "S061405 - InactiveCustomerContractPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "InactiveCustomerContractPaymentReceipt",
+        "operationId": "S061405___InactiveCustomerContractPaymentReceipt",
         "tags": [
           "S06 - Finance/S0614 - CustomerContractPaymentReceipt"
         ],
@@ -15448,13 +15448,13 @@
     },
     "/https://[MainDomian]/api/finance/customerContractPaymentReceipt/getAll": {
       "get": {
-        "summary": "GetAllCustomerContractPaymentReceipt",
+        "summary": "S061407 - GetAllCustomerContractPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetAllCustomerContractPaymentReceipt",
+        "operationId": "S061407___GetAllCustomerContractPaymentReceipt",
         "tags": [
           "S06 - Finance/S0614 - CustomerContractPaymentReceipt"
         ],
@@ -15568,13 +15568,13 @@
     },
     "/https://[MainDomian]/api/finance/customerContractPaymentReceipt/getComboList": {
       "get": {
-        "summary": "GetComboListCustomerContractPaymentReceipt",
+        "summary": "S061408 - GetComboListCustomerContractPaymentReceipt",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetComboListCustomerContractPaymentReceipt",
+        "operationId": "S061408___GetComboListCustomerContractPaymentReceipt",
         "tags": [
           "S06 - Finance/S0614 - CustomerContractPaymentReceipt"
         ],
