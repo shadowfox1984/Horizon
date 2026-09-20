@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://raw.githubusercontent.com/shadowfox1984/Horizon/master/logo.png" width="120" height="120" style="margin-left:auto; margin-right:auto">
 <h1>Horizon</h1>
-<p><b>Open Source and Open Medel<br/>Human-Centered Enterprise Project Management (EPM) Platform</b></p>
+<p><b>Human-Centered Enterprise Project Management (EPM) Platform</b></p>
 </div>
 
 ## What is Horizon System?
@@ -35,6 +35,25 @@ These analyses are translated into clear, actionable recommendations, such as wo
 2. **Human-Centered Insight:** Measures well-being alongside operational efficiency.
 3. **Actionable Results:** Delivers recommendations based on real data.
 3. **Ethical by Design:** Promotes fairness, transparency, and dignity at work.
+
+## Open Source and Open Model
+
+Horizon is not just an **Open Source** software project — it is also an **Open Model**.
+
+Being Open Source means that the source code is available, inspectable, modifiable, and reusable. But Horizon goes one step further: **the ideas, assumptions, concepts, data models, assessment factors, relationships, APIs, architectural decisions, and analytical methods behind the software are open as well**.
+
+The goal is not to hide the reasoning behind the product and expose only the implementation. Horizon is designed so that its underlying model can be understood, questioned, challenged, improved, and reused independently of the code.
+
+In other words:
+
+1. Open Source makes the software transparent.
+2. Open Model makes the thinking behind the software transparent.
+
+This means Horizon can evolve through contributions not only from developers, but also from system analysts, researchers, project managers, HR professionals, organizational experts, and anyone who can improve the model itself.
+
+The code is therefore only one implementation of the model — not the model itself.
+
+Horizon is an open attempt to model organizational productivity, employee satisfaction, and sustainable development in a way that others can inspect, challenge, and build upon.
 
 ## Extension Engine
 Horizon includes an Extension Engine for integrating external tools or custom modules. Developers can connect services like Jira, Slack, or payroll systems, or create plugins to extend Horizon for organization-specific needs.
