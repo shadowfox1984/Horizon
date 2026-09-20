@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://raw.githubusercontent.com/shadowfox1984/Horizon/master/logo.png" width="120" height="120" style="margin-left:auto; margin-right:auto">
 <h1>Horizon</h1>
-<p>**Open Source and Open Medel<br/>Human-Centered Enterprise Project Management (EPM) Platform**</p>
+<p><b>Open Source and Open Medel<br/>Human-Centered Enterprise Project Management (EPM) Platform</b></p>
 </div>
 
 ## What is Horizon System?
