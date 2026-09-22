@@ -14130,6 +14130,71 @@
         "tags": [
           "S06 - Finance/S0609 - SalaryPaymentReceipt"
         ],
+        "parameters": [
+          {
+            "name": "staffContractId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "staffContractNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123456",
+            "description": "optional"
+          },
+          {
+            "name": "paymentDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-06-19",
+            "description": "optional"
+          },
+          {
+            "name": "receiptNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123456",
+            "description": "optional"
+          },
+          {
+            "name": "amount",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1000.0",
+            "description": "optional"
+          },
+          {
+            "name": "currencyId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          }
+        ],
         "security": [
           {
             "bearerAuth": []
@@ -20376,8 +20441,8 @@
         },
         "requestVariables": [],
         "responses": {},
-        "_ref_id": "req_mu64jkdj_6abd99d3-a8b2-4451-9dc8-44b9575777e2",
-        "description": null
+        "description": null,
+        "_ref_id": "req_mubzc3j9_db5554fd-523c-452a-a2a1-c5d52c942fde"
       }
     },
     {
@@ -20445,8 +20510,8 @@
         },
         "requestVariables": [],
         "responses": {},
-        "_ref_id": "req_mu64jkdk_b44ffae1-754d-4716-82aa-9359f5ad5e78",
-        "description": null
+        "description": null,
+        "_ref_id": "req_mubzc3ja_4154b11f-70a4-46f7-aca8-81f9dccf9a5b"
       }
     },
     {
@@ -20471,8 +20536,8 @@
         },
         "requestVariables": [],
         "responses": {},
-        "_ref_id": "req_mu64jke6_b233bf8f-7ad6-4f5b-a65e-ff965477e7d1",
-        "description": null
+        "description": null,
+        "_ref_id": "req_mubzc3jt_af248378-6c7a-4018-86ad-ae9558d44e76"
       }
     }
   ],
