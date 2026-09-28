@@ -12930,7 +12930,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n  \t\"companyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n\t\"supplierId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"invoiceDate\" : \"2026-06-19\",\n  \t\"invoiceNumber\" : \"123456\", \n  \t\"totalAmount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
+              "example": "{\n\t\"supplierId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"invoiceDate\" : \"2026-06-19\",\n  \t\"invoiceNumber\" : \"123456\", \n  \t\"totalAmount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
             }
           }
         },
@@ -12956,7 +12956,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n  \t\"companyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n\t\"supplierId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"invoiceDate\" : \"2026-06-19\",\n  \t\"invoiceNumber\" : \"123456\", \n  \t\"totalAmount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
+              "example": "{\n\t\"supplierId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"documentId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"invoiceDate\" : \"2026-06-19\",\n  \t\"invoiceNumber\" : \"123456\", \n  \t\"totalAmount\" : 1000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\", \n  \t\"description\" : \"test\" /*optional*/\n}"
             }
           }
         },
@@ -13052,24 +13052,6 @@
           "S06 - Finance/S0605 - CostInvoice"
         ],
         "parameters": [
-          {
-            "name": "companyId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-            "description": "optional"
-          },
-          {
-            "name": "companyName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "example": "test",
-            "description": "optional"
-          },
           {
             "name": "supplierId",
             "in": "query",
@@ -20441,8 +20423,8 @@
         },
         "requestVariables": [],
         "responses": {},
-        "description": null,
-        "_ref_id": "req_mubzc3j9_db5554fd-523c-452a-a2a1-c5d52c942fde"
+        "_ref_id": "req_mubzc3j9_db5554fd-523c-452a-a2a1-c5d52c942fde",
+        "description": null
       }
     },
     {
@@ -20510,8 +20492,8 @@
         },
         "requestVariables": [],
         "responses": {},
-        "description": null,
-        "_ref_id": "req_mubzc3ja_4154b11f-70a4-46f7-aca8-81f9dccf9a5b"
+        "_ref_id": "req_mubzc3ja_4154b11f-70a4-46f7-aca8-81f9dccf9a5b",
+        "description": null
       }
     },
     {
@@ -20536,8 +20518,8 @@
         },
         "requestVariables": [],
         "responses": {},
-        "description": null,
-        "_ref_id": "req_mubzc3jt_af248378-6c7a-4018-86ad-ae9558d44e76"
+        "_ref_id": "req_mubzc3jt_af248378-6c7a-4018-86ad-ae9558d44e76",
+        "description": null
       }
     }
   ],

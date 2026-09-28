@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.6.30
+	Last Version : 26.9.29
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1020,7 +1020,6 @@ CREATE TABLE Finance.CostInvoice(
 	InvoiceNumber varchar(20) NOT NULL,
 	SupplierId uuid NOT NULL,
 	DocumentId uuid NOT NULL,
-	CompnayId uuid NOT NULL,
 	InvoiceDate date NOT NULL,
 	TotalAmount numeric(22, 2) NOT NULL,
 	CurrencyId uuid NOT NULL,
@@ -1033,8 +1032,7 @@ CREATE TABLE Finance.CostInvoice(
 	PRIMARY KEY(Id),
 	FOREIGN KEY (SupplierId) REFERENCES Finance.Supplier(Id),
 	FOREIGN KEY (DocumentId) REFERENCES DocumentManagement.Document(Id),
-	FOREIGN KEY (CurrencyId) REFERENCES Basic.Currency(Id),
-	FOREIGN KEY (CompnayId) REFERENCES HumanResource.Compnay(Id)
+	FOREIGN KEY (CurrencyId) REFERENCES Basic.Currency(Id)
 );
 
 CREATE TABLE Finance.CostInvoiceItem(
