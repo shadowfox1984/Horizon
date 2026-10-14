@@ -14652,7 +14652,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              "example": "{\n  \t\"title\" : \"test\",\n  \t\"code\" : \"123\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
             }
           }
         },
@@ -14678,7 +14678,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              "example": "{\n  \t\"title\" : \"test\",\n  \t\"code\" : \"123\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
             }
           }
         },
@@ -14780,7 +14780,17 @@
             "schema": {
               "type": "string"
             },
-            "example": "test"
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
           },
           {
             "name": "phoneNumber",
@@ -14788,7 +14798,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "+18182221"
+            "example": "+18182221",
+            "description": "optional"
           },
           {
             "name": "mobileNumber",
@@ -14796,7 +14807,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "+18182221"
+            "example": "+18182221",
+            "description": "optional"
           },
           {
             "name": "faxNumber",
@@ -14804,7 +14816,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "+18182221"
+            "example": "+18182221",
+            "description": "optional"
           },
           {
             "name": "email",
@@ -14812,7 +14825,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "name@domain.com"
+            "example": "name@domain.com",
+            "description": "optional"
           },
           {
             "name": "postalCode",
@@ -14820,7 +14834,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "123456"
+            "example": "123456",
+            "description": "optional"
           },
           {
             "name": "city",
@@ -14828,7 +14843,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "New York"
+            "example": "New York",
+            "description": "optional"
           },
           {
             "name": "address",
@@ -14836,7 +14852,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "test"
+            "example": "test",
+            "description": "optional"
           },
           {
             "name": "description",
@@ -14844,7 +14861,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "test"
+            "example": "test",
+            "description": "optional"
           },
           {
             "name": "offset",
@@ -14852,7 +14870,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "0"
+            "example": "0",
+            "description": "optional"
           },
           {
             "name": "limit",
@@ -14860,7 +14879,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "12"
+            "example": "12",
+            "description": "optional"
           },
           {
             "name": "sort_by",
@@ -14868,7 +14888,8 @@
             "schema": {
               "type": "string"
             },
-            "example": "desc(fieldName)"
+            "example": "desc(fieldName)",
+            "description": "optional"
           }
         ],
         "security": [

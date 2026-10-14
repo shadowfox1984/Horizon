@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.9.29
+	Last Version : 26.10.15
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1133,6 +1133,7 @@ CREATE TABLE Finance.StaffAdditionalPaymentReceipt(
 CREATE TABLE Finance.Customer(
     Id uuid NOT NULL DEFAULT gen_random_uuid(), 
 	Title varchar(255) NOT NULL,
+	Code varchar(20) NOT NULL UNIQUE,
 	PhoneNumber varchar(20),
 	MobileNumber varchar(20),
 	FaxNumber varchar(20),
