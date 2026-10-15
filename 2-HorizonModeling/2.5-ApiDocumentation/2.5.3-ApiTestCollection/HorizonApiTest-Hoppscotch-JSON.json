@@ -5852,59 +5852,6 @@
             },
             {
               "v": "17",
-              "name": "S020806 - GetSpecificFileExtension",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/basic/fileExtension/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S020806 - GetSpecificFileExtension",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/basic/fileExtension/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
               "name": "S020802 - UpdateFileExtension",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/basic/fileExtension/[id]",
@@ -6117,6 +6064,59 @@
             },
             {
               "v": "17",
+              "name": "S020806 - GetSpecificFileExtension",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/basic/fileExtension/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S020806 - GetSpecificFileExtension",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/basic/fileExtension/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "S020808 - GetComboListOfFileExtension",
               "method": "GET",
               "endpoint": "<<baseUrl>>/basic/fileExtension/getComboList",
@@ -6240,14 +6240,14 @@
         },
         {
           "v": 12,
-          "name": "S0209 - ContractType",
+          "name": "S0209 - StaffContractType",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S020901 - AddContractType",
+              "name": "S020901 - AddStaffContractType",
               "method": "POST",
-              "endpoint": "<<baseUrl>>/basic/contractType",
+              "endpoint": "<<baseUrl>>/basic/staffContractType",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -6298,62 +6298,9 @@
             },
             {
               "v": "17",
-              "name": "S020906 - GetSpecificContractType",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/basic/contractType/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S020906 - GetSpecificContractType",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/basic/contractType/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S020902 - UpdateContractType",
+              "name": "S020902 - UpdateStaffContractType",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/basic/contractType/[id]",
+              "endpoint": "<<baseUrl>>/basic/staffContractType/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -6404,9 +6351,9 @@
             },
             {
               "v": "17",
-              "name": "S020903 - DeleteContractType",
+              "name": "S020903 - DeleteStaffContractType",
               "method": "DELETE",
-              "endpoint": "<<baseUrl>>/basic/contractType/[id]",
+              "endpoint": "<<baseUrl>>/basic/staffContractType/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -6457,9 +6404,9 @@
             },
             {
               "v": "17",
-              "name": "S020904 - ActiveContractType",
+              "name": "S020904 - ActiveStaffContractType",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/basic/contractType/active/[id]",
+              "endpoint": "<<baseUrl>>/basic/staffContractType/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -6510,9 +6457,9 @@
             },
             {
               "v": "17",
-              "name": "S020905 - InactiveContractType",
+              "name": "S020905 - InactiveStaffContractType",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/basic/contractType/inactive/[id]",
+              "endpoint": "<<baseUrl>>/basic/staffContractType/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -6563,9 +6510,62 @@
             },
             {
               "v": "17",
-              "name": "S020907 - GetAllContractType",
+              "name": "S020906 - GetSpecificStaffContractType",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/basic/contractType/getAll",
+              "endpoint": "<<baseUrl>>/basic/staffContractType/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S020906 - GetSpecificContractType",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/basic/contractType/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S020907 - GetAllStaffContractType",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/basic/staffContractType/getAll",
               "params": [
                 {
                   "key": "title",
@@ -6690,9 +6690,9 @@
             },
             {
               "v": "17",
-              "name": "S020908 - GetComboListOfContractType",
+              "name": "S020908 - GetComboListOfStaffContractType",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/basic/contractType/getComboList",
+              "endpoint": "<<baseUrl>>/basic/staffContractType/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -6789,59 +6789,6 @@
                     "body": {
                       "contentType": "application/json",
                       "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"isApproved\" : true, \n  \t\"decription\" : \"test\" /*optioanl*/\n}"
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S021006 - GetSpecificContractType",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/basic/testApproval/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S021006 - GetSpecificContractType",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/basic/testApproval/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
                     },
                     "auth": {
                       "authType": "bearer",
@@ -7049,6 +6996,59 @@
                     "name": "S021005 - inactiveContractType",
                     "method": "PUT",
                     "endpoint": "<<baseUrl>>/basic/testApproval/incative/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S021006 - GetSpecificContractType",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/basic/testApproval/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S021006 - GetSpecificContractType",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/basic/testApproval/[id]",
                     "headers": [],
                     "params": [],
                     "body": {
@@ -8426,59 +8426,6 @@
             },
             {
               "v": "17",
-              "name": "S021306 - GetSpecificCurrency",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/basic/currency/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S021306 - GetSpecificCurrency",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/basic/currency/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
               "name": "S021302 - UpdateCurrency",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/basic/currency/[id]",
@@ -8691,9 +8638,9 @@
             },
             {
               "v": "17",
-              "name": "S021308 - GetComboListOfCurrency",
+              "name": "S021306 - GetSpecificCurrency",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/basic/currency/getComboList",
+              "endpoint": "<<baseUrl>>/basic/currency/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -8713,9 +8660,9 @@
                   "name": "Successful response",
                   "originalRequest": {
                     "v": "6",
-                    "name": "S021308 - GetComboListOfCurrency",
+                    "name": "S021306 - GetSpecificCurrency",
                     "method": "GET",
-                    "endpoint": "<<baseUrl>>/basic/currency/getComboList",
+                    "endpoint": "<<baseUrl>>/basic/currency/[id]",
                     "headers": [],
                     "params": [],
                     "body": {
@@ -8805,6 +8752,597 @@
               },
               "requestVariables": [],
               "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S021308 - GetComboListOfCurrency",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/basic/currency/getComboList",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S021308 - GetComboListOfCurrency",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/basic/currency/getComboList",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "description": null,
+          "preRequestScript": "",
+          "testScript": ""
+        },
+        {
+          "v": 12,
+          "name": "S0214 - CustomerContractType",
+          "folders": [],
+          "requests": [
+            {
+              "v": "17",
+              "name": "S021401 - AddCustomerContractType",
+              "method": "POST",
+              "endpoint": "<<baseUrl>>/basic/customerContractType",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"minimumeContractAmount\" : 1000000.0,\n  \t\"maximumeContractAmount\" : 50000000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"decription\" : \"test\" /*optioanl*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S020901 - AddContractType",
+                    "method": "POST",
+                    "endpoint": "<<baseUrl>>/basic/contractType",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": "application/json",
+                      "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\", \n  \t\"decription\" : \"test\" /*optioanl*/\n}"
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S021402 - UpdateCustomerContractType",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/basic/customerContractType/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"minimumeContractAmount\" : 1000000.0,\n  \t\"maximumeContractAmount\" : 50000000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"decription\" : \"test\" /*optioanl*/\n}"
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S020902 - UpdateContractType",
+                    "method": "PUT",
+                    "endpoint": "<<baseUrl>>/basic/contractType/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": "application/json",
+                      "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\", \n  \t\"decription\" : \"test\" /*optioanl*/\n}"
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S021403 - DeleteCustomerContractType",
+              "method": "DELETE",
+              "endpoint": "<<baseUrl>>/basic/customerContractType/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S020903 - DeleteContractType",
+                    "method": "DELETE",
+                    "endpoint": "<<baseUrl>>/basic/contractType/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S021404 - ActiveCustomerContractType",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/basic/customerContractType/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S020904 - ActiveContractType",
+                    "method": "PUT",
+                    "endpoint": "<<baseUrl>>/basic/contractType/active/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S021405 - InactiveCustomerContractType",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/basic/customerContractType/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S020905 - InactiveContractType",
+                    "method": "PUT",
+                    "endpoint": "<<baseUrl>>/basic/contractType/inactive/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S021406 - GetSpecificCustomerContractType",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/basic/customerContractType/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S020906 - GetSpecificContractType",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/basic/contractType/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S021407 - GetAllCustomerContractType",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/basic/customerContractType/getAll",
+              "params": [
+                {
+                  "key": "title",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "code",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "minimumeContractAmount",
+                  "value": "1000000",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencyId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "currencySymbol",
+                  "value": "USD",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "maximumeContractAmount",
+                  "value": "50000000",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S020907 - GetAllContractType",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/basic/contractType/getAll",
+                    "headers": [],
+                    "params": [
+                      {
+                        "key": "title",
+                        "value": "test",
+                        "active": true,
+                        "description": ""
+                      },
+                      {
+                        "key": "code",
+                        "value": "123",
+                        "active": true,
+                        "description": ""
+                      },
+                      {
+                        "key": "description",
+                        "value": "test",
+                        "active": true,
+                        "description": ""
+                      },
+                      {
+                        "key": "offset",
+                        "value": "0",
+                        "active": true,
+                        "description": ""
+                      },
+                      {
+                        "key": "limit",
+                        "value": "15",
+                        "active": true,
+                        "description": ""
+                      },
+                      {
+                        "key": "sort_by",
+                        "value": "desc(fieldName)",
+                        "active": true,
+                        "description": ""
+                      }
+                    ],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S021408 - GetComboListOfCustomerContractType",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/basic/customerContractType/getComboList",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S020908 - GetComboListOfContractType",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/basic/contractType/getComboList",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
               "description": null
             }
           ],

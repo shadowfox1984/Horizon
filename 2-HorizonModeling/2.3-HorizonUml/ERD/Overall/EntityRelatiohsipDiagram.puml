@@ -5,13 +5,29 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.5.18
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.10.16
 
-entity "Basic.ContractType" as contractType #LightPink{
+entity "Basic.StaffContractType" as staffContractType #LightPink{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
+  Description : varchar(4000)
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.CustomerContractType" as customerContractType #LightPink{
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  MinimumeContractAmount : numeric(28, 2)
+  MaxmumeContractAmount : numeric(28, 2)
+  CurrencyId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -471,7 +487,7 @@ entity "HumanResource.WorkingTimeTable" as workingTimeTable #Lavender{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *WorkingDay : enum(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)
-  *ContractTypeId : uuid <<FK>>
+  *StaffContractTypeId : uui <<FK>>
   *Title : varchar(200)
   *StartTime : time
   *EndTime : time
@@ -841,6 +857,7 @@ entity "Finance.StaffContract" as staffContract #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *ProfileId : uuid <<FK>>
+  *ContractNumber : varchar(20) <<unique>>
   *ContractTypeId : uuid <<FK>>
   *StartDate : date
   *EndDate : date
@@ -892,6 +909,7 @@ entity "Finance.Supplier" as supplier #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(255)
+  *Code : varchar(20) <<unique>>
   PhoneNumber : varchar(20)
   MobileNumber : varchar(20)
   FaxNumber : varchar(20)
@@ -1008,6 +1026,7 @@ entity "Finance.Customer" as customer #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(255)
+  *Code : varchar(20) <<unique>>
   PhoneNumber : varchar(20)
   MobileNumber : varchar(20)
   Email : varchar(100)
@@ -1021,11 +1040,12 @@ entity "Finance.Customer" as customer #Salmon{
   ModifierId : bigint(19)
 }
 
-entity "Finance.Contract" as contract #Salmon{
+entity "Finance.CustomerContract" as customerContract #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *CustomerId : uuid <<FK>>
   *ProjectId : uuid <<FK>>
+  *CustomerTypeId : uuid <<FK>>
   *ContractNumber : varchar(20)
   StartDate : date
   ScheduledEndDate : date
@@ -1406,6 +1426,8 @@ entity "Evaluation.CustomerSatisfactionEvaluation" as customerSatisfactionEvalua
   ModifierId : bigint(19)
 }
 
+currency ||..o{ customerContractType
+
 form ||..o{ formPermission
 permission ||..o{ formPermission
 role ||..o{ rolePermission
@@ -1436,7 +1458,7 @@ profile ||..o{ leave
 profile ||..o{ workMission
 document ||..o{ profileEducation
 document ||..o{ profileCertificate
-contractType ||..o{ workingTimeTable
+staffContractType ||..o{ workingTimeTable
 
 project ||..o{ issue
 issueType ||..o{ issue
@@ -1484,7 +1506,7 @@ projectWorkflow ||..o{ projectWorkflowDocumentType
 projectWorkflow ||..o{ projectWorkflowResolvation
 resolvation ||..o{ projectWorkflowResolvation
 
-contractType ||..o{ staffContract
+staffContractType ||..o{ staffContract
 profile ||..o{ staffContract
 staffContract ||..o{ contractSalaryItem
 timeUnit ||..o{ contractSalaryItem
@@ -1508,16 +1530,18 @@ staffContract ||..o{ salaryPaymentReceipt
 currency ||..o{ salaryPaymentReceipt
 profile ||..o{ staffAdditionalPaymentReceipt
 document ||..o{ staffAdditionalPaymentReceipt
-contract ||..o{ contractPaymentSchedule
+customerContract ||..o{ contractPaymentSchedule
 currency ||..o{ contractPaymentSchedule
 release ||..o{ contractPaymentSchedule
 contractPaymentSchedule ||..o{ contractPaymentReceipt
 currency ||..o{ contractPaymentReceipt
 document ||..o{ contractPaymentReceipt
-customer ||..o{ contract
-project ||..o{ contract
-currency ||..o{ contract
-document |o..o{ contract
+customer ||..o{ customerContract
+project ||..o{ customerContract
+currency ||..o{ customerContract
+document |o..o{ customerContract
+customerContractType ||..o{ customerContract
+
 
 project ||..o{ testScenario
 testComplexityLevel |o..o{ testScenario

@@ -5,13 +5,29 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Finance Schema Diagram \n Version 26.5.16
+title Horizon Research Project (HRP) \n Finance Schema Diagram \n Version 26.10.16
 
-entity "Basic.ContractType" as contractType #LightPink{
+entity "Basic.StaffContractType" as staffContractType #LightPink{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
+  Description : varchar(4000)
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.CustomerContractType" as customerContractType #LightPink{
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  MinimumeContractAmount : numeric(28, 2)
+  MaxmumeContractAmount : numeric(28, 2)
+  CurrencyId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -66,7 +82,7 @@ entity "ProjectManagement.Project" as project #Orange{
 entity "ProjectManagement.ProjectRelease" as release #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>>
+  *ProjectId : uuid <<FK>>
   *VersionNumber : varchar(20) <<unique>>
   ReleaseDate : date
   Description : varchar(4000)
@@ -82,8 +98,8 @@ entity "DocumentManagement.Document" as document #Gold{
   --
   *TableName : varchar(255)
   *TableId : bigint(19)
-  *DocumentTypeId : uui <<FK>>
-  *FileExtensionId : uui <<FK>>
+  *DocumentTypeId : uuid <<FK>>
+  *FileExtensionId : uuid <<FK>>
   *FileAddress: varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -101,7 +117,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
-  PositionId : uui <<FK>>
+  PositionId : uuid <<FK>>
   Avatar : text
   Birthday : date
   PhoneNumber : varchar(20)
@@ -125,8 +141,9 @@ entity "UserManagement.Profile" as profile #Violet{
 entity "Finance.StaffContract" as staffContract #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
-  *ContractTypeId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
+  *ContractNumber : varchar(20) <<unique>>
+  *ContractTypeId : uuid <<FK>>
   *StartDate : date
   *EndDate : date
   *Title : varchar(200)
@@ -142,12 +159,12 @@ entity "Finance.StaffContract" as staffContract #Salmon{
 entity "Finance.ContractSalaryItem" as contractSalaryItem #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *StaffContractId : uui <<FK>>
+  *StaffContractId : uuid <<FK>>
   *Title : varchar(200)
   *Amount : numeric(22,2)
-  *CurrencyId : uui <<FK>>
+  *CurrencyId : uuid <<FK>>
   Description : varchar(4000)
-  *CalculationTimeUnitId : uui <<FK>>
+  *CalculationTimeUnitId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -158,14 +175,14 @@ entity "Finance.ContractSalaryItem" as contractSalaryItem #Salmon{
 entity "Finance.ContractDeductionItem" as contractDeductionItem #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *StaffContractId : uui <<FK>>
+  *StaffContractId : uuid <<FK>>
   *Title : varchar(200)
   *CalculationType : enum(percentage, fixedAmount)
   DeductionPercentage : numeric(3,2) <<from 0 until 100>>
   FixedAmount : numeric(22,2)
-  FixedAmountCurrencyId : uui <<FK>>
+  FixedAmountCurrencyId : uuid <<FK>>
   Description : varchar(4000)
-  *CalculationTimeUnitId : uui <<FK>>
+  *CalculationTimeUnitId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -177,6 +194,7 @@ entity "Finance.Supplier" as supplier #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(255)
+  *Code : varchar(20) <<unique>>
   PhoneNumber : varchar(20)
   MobileNumber : varchar(20)
   FaxNumber : varchar(20)
@@ -195,11 +213,11 @@ entity "Finance.Supplier" as supplier #Salmon{
 entity "Finance.CostInvoice" as costInvoice #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *SupplierId : uui <<FK>>
-  *DocumentId : uui <<FK>>
+  *SupplierId : uuid <<FK>>
+  *DocumentId : uuid <<FK>>
   *InvoiceDate : date
   *TotalAmount : numeric(22,2)
-  *CurrencyId : uui <<FK>>
+  *CurrencyId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -211,10 +229,10 @@ entity "Finance.CostInvoice" as costInvoice #Salmon{
 entity "Finance.CostInvoiceItem" as costInvoiceItem #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *CostInvoiceId : uui <<FK>>
+  *CostInvoiceId : uuid <<FK>>
   *ItemTitle : varchar(255)
   *UnitAmount : numeric(22,2)
-  *CurrencyId : uui <<FK>>
+  *CurrencyId : uuid <<FK>>
   *Quantity : float
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -227,8 +245,8 @@ entity "Finance.CostInvoiceItem" as costInvoiceItem #Salmon{
 entity "Finance.ProjectDirectCostItem" as projectDirectCostItem #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>>
-  *CostInvoiceItemId : uui <<FK>>
+  *ProjectId : uuid <<FK>>
+  *CostInvoiceItemId : uuid <<FK>>
   *AllocatedQuantity : float
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -241,11 +259,11 @@ entity "Finance.ProjectDirectCostItem" as projectDirectCostItem #Salmon{
 entity "Finance.CostPaymentReceipt" as costPaymentReceipt #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *CostInvoiceId : uui <<FK>>
+  *CostInvoiceId : uuid <<FK>>
   *ReceiptNumber : varchar(20)
-  *DocumentId : uui <<FK>>
+  *DocumentId : uuid <<FK>>
   *Amount : numeric(22,2)
-  *CurrencyId : uui <<FK>>
+  *CurrencyId : uuid <<FK>>
   *PaymentDate : date
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -258,11 +276,11 @@ entity "Finance.CostPaymentReceipt" as costPaymentReceipt #Salmon{
 entity "Finance.SalaryPaymentReceipt" as salaryPaymentReceipt #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *StaffContractId : uui <<FK>>
+  *StaffContractId : uuid <<FK>>
   *ReceiptNumber : varchar(20)
-  *DocumentId : uui <<FK>>
+  *DocumentId : uuid <<FK>>
   *Amount : numeric(22,2)
-  *CurrencyId : uui <<FK>>
+  *CurrencyId : uuid <<FK>>
   *PaymentDate : date
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -275,11 +293,11 @@ entity "Finance.SalaryPaymentReceipt" as salaryPaymentReceipt #Salmon{
 entity "Finance.StaffAdditionalPaymentReceipt" as staffAdditionalPaymentReceipt #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
   *Title : varchar(255)
-  *DocumentId : uui <<FK>>
+  *DocumentId : uuid <<FK>>
   *Amount : numeric(22,2)
-  *CurrencyId : uui <<FK>>
+  *CurrencyId : uuid <<FK>>
   *PaymentDate : date
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -293,6 +311,7 @@ entity "Finance.Customer" as customer #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(255)
+  *Code : varchar(20) <<unique>>
   PhoneNumber : varchar(20)
   MobileNumber : varchar(20)
   Email : varchar(100)
@@ -306,11 +325,12 @@ entity "Finance.Customer" as customer #Salmon{
   ModifierId : bigint(19)
 }
 
-entity "Finance.Contract" as contract #Salmon{
+entity "Finance.CustomerContract" as customerContract #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *CustomerId : uui <<FK>>
-  *ProjectId : uui <<FK>>
+  *CustomerId : uuid <<FK>>
+  *ProjectId : uuid <<FK>>
+  *CustomerTypeId : uuid <<FK>>
   *ContractNumber : varchar(20)
   StartDate : date
   ScheduledEndDate : date
@@ -318,8 +338,8 @@ entity "Finance.Contract" as contract #Salmon{
   IsDevelopmentContract : boolean
   IsSupportContract : boolean
   *TotalAmount : numeric(22,2)
-  *CurrencyId : uui <<FK>>
-  DocumentId : uui <<FK>>
+  *CurrencyId : uuid <<FK>>
+  DocumentId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -331,12 +351,12 @@ entity "Finance.Contract" as contract #Salmon{
 entity "Finance.ContractPaymentSchedule" as contractPaymentSchedule #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ContractId : uui <<FK>>
+  *ContractId : uuid <<FK>>
   *PaymentTitle : varchar(255)
-  ProjectReleaseId : uui <<FK>>
+  ProjectReleaseId : uuid <<FK>>
   ScheduledPaymentDate : date
   *Amount : numeric(22,2)
-  *CurrencyId : uui <<FK>>
+  *CurrencyId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -348,12 +368,12 @@ entity "Finance.ContractPaymentSchedule" as contractPaymentSchedule #Salmon{
 entity "Finance.ContractPaymentReceipt" as contractPaymentReceipt #Salmon{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ContractPaymentScheduleId : uui <<FK>>
+  *ContractPaymentScheduleId : uuid <<FK>>
   *ReceiptNumber : varchar(20)
   *PaymentDate : date
-  DocumentId : uui <<FK>>
+  DocumentId : uuid <<FK>>
   *Amount : numeric(22,2)
-  *CurrencyId : uui <<FK>>
+  *CurrencyId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -363,8 +383,8 @@ entity "Finance.ContractPaymentReceipt" as contractPaymentReceipt #Salmon{
 }
 
 
-
-contractType ||..o{ staffContract
+currency ||..o{ customerContractType
+staffContractType ||..o{ staffContract
 profile ||..o{ staffContract
 staffContract ||..o{ contractSalaryItem
 timeUnit ||..o{ contractSalaryItem
@@ -388,15 +408,16 @@ staffContract ||..o{ salaryPaymentReceipt
 currency ||..o{ salaryPaymentReceipt
 profile ||..o{ staffAdditionalPaymentReceipt
 document ||..o{ staffAdditionalPaymentReceipt
-contract ||..o{ contractPaymentSchedule
+customerContract ||..o{ contractPaymentSchedule
 currency ||..o{ contractPaymentSchedule
 release ||..o{ contractPaymentSchedule
 contractPaymentSchedule ||..o{ contractPaymentReceipt
 currency ||..o{ contractPaymentReceipt
 document ||..o{ contractPaymentReceipt
-customer ||..o{ contract
-project ||..o{ contract
-currency ||..o{ contract
-document |o..o{ contract
+customer ||..o{ customerContract
+project ||..o{ customerContract
+currency ||..o{ customerContract
+document |o..o{ customerContract
+customerContractType ||..o{ customerContract
 
 @enduml

@@ -2654,23 +2654,6 @@
       }
     },
     "/basic/fileExtension/[id]": {
-      "get": {
-        "summary": "S020806 - GetSpecificFileExtension",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S020806___GetSpecificFileExtension",
-        "tags": [
-          "S02- Basic/S0208 - FileExtension"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      },
       "put": {
         "summary": "S020802 - UpdateFileExtension",
         "responses": {
@@ -2703,6 +2686,23 @@
           }
         },
         "operationId": "S020803___DeleteFileExtension",
+        "tags": [
+          "S02- Basic/S0208 - FileExtension"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "get": {
+        "summary": "S020806 - GetSpecificFileExtension",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S020806___GetSpecificFileExtension",
         "tags": [
           "S02- Basic/S0208 - FileExtension"
         ],
@@ -2839,17 +2839,17 @@
         ]
       }
     },
-    "/basic/contractType": {
+    "/basic/staffContractType": {
       "post": {
-        "summary": "S020901 - AddContractType",
+        "summary": "S020901 - AddStaffContractType",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S020901___AddContractType",
+        "operationId": "S020901___AddStaffContractType",
         "tags": [
-          "S02- Basic/S0209 - ContractType"
+          "S02- Basic/S0209 - StaffContractType"
         ],
         "requestBody": {
           "content": {
@@ -2865,34 +2865,17 @@
         ]
       }
     },
-    "/basic/contractType/[id]": {
-      "get": {
-        "summary": "S020906 - GetSpecificContractType",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S020906___GetSpecificContractType",
-        "tags": [
-          "S02- Basic/S0209 - ContractType"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      },
+    "/basic/staffContractType/[id]": {
       "put": {
-        "summary": "S020902 - UpdateContractType",
+        "summary": "S020902 - UpdateStaffContractType",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S020902___UpdateContractType",
+        "operationId": "S020902___UpdateStaffContractType",
         "tags": [
-          "S02- Basic/S0209 - ContractType"
+          "S02- Basic/S0209 - StaffContractType"
         ],
         "requestBody": {
           "content": {
@@ -2908,72 +2891,89 @@
         ]
       },
       "delete": {
-        "summary": "S020903 - DeleteContractType",
+        "summary": "S020903 - DeleteStaffContractType",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S020903___DeleteContractType",
+        "operationId": "S020903___DeleteStaffContractType",
         "tags": [
-          "S02- Basic/S0209 - ContractType"
+          "S02- Basic/S0209 - StaffContractType"
         ],
         "security": [
           {
             "bearerAuth": []
           }
         ]
-      }
-    },
-    "/basic/contractType/active/[id]": {
-      "put": {
-        "summary": "S020904 - ActiveContractType",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S020904___ActiveContractType",
-        "tags": [
-          "S02- Basic/S0209 - ContractType"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/basic/contractType/inactive/[id]": {
-      "put": {
-        "summary": "S020905 - InactiveContractType",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S020905___InactiveContractType",
-        "tags": [
-          "S02- Basic/S0209 - ContractType"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/basic/contractType/getAll": {
+      },
       "get": {
-        "summary": "S020907 - GetAllContractType",
+        "summary": "S020906 - GetSpecificStaffContractType",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S020907___GetAllContractType",
+        "operationId": "S020906___GetSpecificStaffContractType",
         "tags": [
-          "S02- Basic/S0209 - ContractType"
+          "S02- Basic/S0209 - StaffContractType"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/basic/staffContractType/active/[id]": {
+      "put": {
+        "summary": "S020904 - ActiveStaffContractType",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S020904___ActiveStaffContractType",
+        "tags": [
+          "S02- Basic/S0209 - StaffContractType"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/basic/staffContractType/inactive/[id]": {
+      "put": {
+        "summary": "S020905 - InactiveStaffContractType",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S020905___InactiveStaffContractType",
+        "tags": [
+          "S02- Basic/S0209 - StaffContractType"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/basic/staffContractType/getAll": {
+      "get": {
+        "summary": "S020907 - GetAllStaffContractType",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S020907___GetAllStaffContractType",
+        "tags": [
+          "S02- Basic/S0209 - StaffContractType"
         ],
         "parameters": [
           {
@@ -3032,17 +3032,17 @@
         ]
       }
     },
-    "/basic/contractType/getComboList": {
+    "/basic/staffContractType/getComboList": {
       "get": {
-        "summary": "S020908 - GetComboListOfContractType",
+        "summary": "S020908 - GetComboListOfStaffContractType",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S020908___GetComboListOfContractType",
+        "operationId": "S020908___GetComboListOfStaffContractType",
         "tags": [
-          "S02- Basic/S0209 - ContractType"
+          "S02- Basic/S0209 - StaffContractType"
         ],
         "security": [
           {
@@ -3078,23 +3078,6 @@
       }
     },
     "/basic/testApproval/[id]": {
-      "get": {
-        "summary": "S021006 - GetSpecificContractType",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S021006___GetSpecificContractType",
-        "tags": [
-          "S02- Basic/S0210 - TestApproval"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      },
       "put": {
         "summary": "S021002 - UpdateTestApproval",
         "responses": {
@@ -3127,6 +3110,23 @@
           }
         },
         "operationId": "S021003___DeleteTestApproval",
+        "tags": [
+          "S02- Basic/S0210 - TestApproval"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "get": {
+        "summary": "S021006 - GetSpecificContractType",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S021006___GetSpecificContractType",
         "tags": [
           "S02- Basic/S0210 - TestApproval"
         ],
@@ -3783,23 +3783,6 @@
       }
     },
     "/basic/currency/[id]": {
-      "get": {
-        "summary": "S021306 - GetSpecificCurrency",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S021306___GetSpecificCurrency",
-        "tags": [
-          "S02- Basic/S0213 - Currency"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      },
       "put": {
         "summary": "S021302 - UpdateCurrency",
         "responses": {
@@ -3840,6 +3823,23 @@
             "bearerAuth": []
           }
         ]
+      },
+      "get": {
+        "summary": "S021306 - GetSpecificCurrency",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S021306___GetSpecificCurrency",
+        "tags": [
+          "S02- Basic/S0213 - Currency"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
       }
     },
     "/basic/currency/active/[id]": {
@@ -3870,25 +3870,6 @@
           }
         },
         "operationId": "S021305___InactiveCurrency",
-        "tags": [
-          "S02- Basic/S0213 - Currency"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/basic/currency/getComboList": {
-      "get": {
-        "summary": "S021308 - GetComboListOfCurrency",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S021308___GetComboListOfCurrency",
         "tags": [
           "S02- Basic/S0213 - Currency"
         ],
@@ -3975,6 +3956,279 @@
             "example": "desc(fieldName)",
             "description": "optional"
           }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/basic/currency/getComboList": {
+      "get": {
+        "summary": "S021308 - GetComboListOfCurrency",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S021308___GetComboListOfCurrency",
+        "tags": [
+          "S02- Basic/S0213 - Currency"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/basic/customerContractType": {
+      "post": {
+        "summary": "S021401 - AddCustomerContractType",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S021401___AddCustomerContractType",
+        "tags": [
+          "S02- Basic/S0214 - CustomerContractType"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"minimumeContractAmount\" : 1000000.0,\n  \t\"maximumeContractAmount\" : 50000000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"decription\" : \"test\" /*optioanl*/\n}"
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/basic/customerContractType/[id]": {
+      "put": {
+        "summary": "S021402 - UpdateCustomerContractType",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S021402___UpdateCustomerContractType",
+        "tags": [
+          "S02- Basic/S0214 - CustomerContractType"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"minimumeContractAmount\" : 1000000.0,\n  \t\"maximumeContractAmount\" : 50000000.0,\n  \t\"currencyId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"decription\" : \"test\" /*optioanl*/\n}"
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "S021403 - DeleteCustomerContractType",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S021403___DeleteCustomerContractType",
+        "tags": [
+          "S02- Basic/S0214 - CustomerContractType"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "get": {
+        "summary": "S021406 - GetSpecificCustomerContractType",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S021406___GetSpecificCustomerContractType",
+        "tags": [
+          "S02- Basic/S0214 - CustomerContractType"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/basic/customerContractType/active/[id]": {
+      "put": {
+        "summary": "S021404 - ActiveCustomerContractType",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S021404___ActiveCustomerContractType",
+        "tags": [
+          "S02- Basic/S0214 - CustomerContractType"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/basic/customerContractType/inactive/[id]": {
+      "put": {
+        "summary": "S021405 - InactiveCustomerContractType",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S021405___InactiveCustomerContractType",
+        "tags": [
+          "S02- Basic/S0214 - CustomerContractType"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/basic/customerContractType/getAll": {
+      "get": {
+        "summary": "S021407 - GetAllCustomerContractType",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S021407___GetAllCustomerContractType",
+        "tags": [
+          "S02- Basic/S0214 - CustomerContractType"
+        ],
+        "parameters": [
+          {
+            "name": "title",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "minimumeContractAmount",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "1000000",
+            "description": "optional"
+          },
+          {
+            "name": "currencyId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+            "description": "optional"
+          },
+          {
+            "name": "currencySymbol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "USD",
+            "description": "optional"
+          },
+          {
+            "name": "maximumeContractAmount",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "50000000",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "0",
+            "description": "optional"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "15",
+            "description": "optional"
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "desc(fieldName)",
+            "description": "optional"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/basic/customerContractType/getComboList": {
+      "get": {
+        "summary": "S021408 - GetComboListOfCustomerContractType",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "S021408___GetComboListOfCustomerContractType",
+        "tags": [
+          "S02- Basic/S0214 - CustomerContractType"
         ],
         "security": [
           {
@@ -12966,7 +13220,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "+18182121",
+            "example": "0018182121",
             "description": "optional"
           },
           {
@@ -12975,7 +13229,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "+18182121",
+            "example": "0018182121",
             "description": "optional"
           },
           {
@@ -12984,7 +13238,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "+18182121",
+            "example": "0018182121",
             "description": "optional"
           },
           {
@@ -20345,7 +20599,7 @@
       "name": "S02- Basic/S0208 - FileExtension"
     },
     {
-      "name": "S02- Basic/S0209 - ContractType"
+      "name": "S02- Basic/S0209 - StaffContractType"
     },
     {
       "name": "S02- Basic/S0210 - TestApproval"
@@ -20358,6 +20612,9 @@
     },
     {
       "name": "S02- Basic/S0213 - Currency"
+    },
+    {
+      "name": "S02- Basic/S0214 - CustomerContractType"
     },
     {
       "name": "S03 - DocumentManagement"

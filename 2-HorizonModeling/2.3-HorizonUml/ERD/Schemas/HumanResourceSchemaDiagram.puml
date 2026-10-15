@@ -5,9 +5,9 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Human Resource Schema Diagram \n Version 26.5.16
+title Horizon Research Project (HRP) \n Human Resource Schema Diagram \n Version 26.6.16
 
-entity "Basic.ContractType" as contractType #LightPink{
+entity "Basic.StaffContractType" as staffContractType #LightPink{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
@@ -164,7 +164,7 @@ entity "HumanResource.WorkingTimeTable" as workingTimeTable #Lavender{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *WorkingDay : enum(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)
-  *ContractTypeId : uui <<FK>>
+  *StaffContractTypeId : uui <<FK>>
   *Title : varchar(200)
   *StartTime : time
   *EndTime : time
@@ -252,6 +252,6 @@ profile ||..o{ leave
 profile ||..o{ workMission
 document ||..o{ profileEducation
 document ||..o{ profileCertificate
-contractType ||..o{ workingTimeTable
+staffContractType ||..o{ workingTimeTable
 
 @enduml

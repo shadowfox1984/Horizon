@@ -5,13 +5,29 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Basic Schema Diagram \n Version 26.5.16
+title Horizon Research Project (HRP) \n Basic Schema Diagram \n Version 26.6.16
 
-entity "Basic.ContractType" as contractType #LightPink{
+entity "Basic.StaffContractType" as staffContractType #LightPink{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
+  Description : varchar(4000)
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "Basic.CustomerContractType" as customerContractType #LightPink{
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  MinimumeContractAmount : numeric(28, 2)
+  MaxmumeContractAmount : numeric(28, 2)
+  CurrencyId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -188,3 +204,5 @@ entity "Basic.Currency" as currency #LightPink{
   ModifyDate : timestamp
   ModifierId : bigint(19)
 }
+
+currency ||..o{ customerContractType

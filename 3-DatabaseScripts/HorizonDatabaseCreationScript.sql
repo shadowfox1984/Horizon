@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.10.15
+	Last Version : 26.10.16
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -144,7 +144,7 @@ CREATE TABLE Basic.FileExtension(
 	PRIMARY KEY(Id)
 );
 
-CREATE TABLE Basic.ContractType(
+CREATE TABLE Basic.StaffContractType(
     Id uuid NOT NULL DEFAULT gen_random_uuid(),  
     Code varchar(20) NOT NULL UNIQUE,
     Title varchar(200) NOT NULL,
@@ -212,6 +212,23 @@ CREATE TABLE Basic.Currency(
     ModifyDate timestamp,
 	ModifierId uuid,
 	PRIMARY KEY(Id)
+);
+
+CREATE TABLE Basic.CustomerContractType(
+    Id uuid NOT NULL DEFAULT gen_random_uuid(),  
+    Code varchar(20) NOT NULL UNIQUE,
+    Title varchar(200) NOT NULL,
+	MinimumeContractAmount numeric(28, 2) NOT NULL,
+	MaximumeContractAmount numeric(28, 2) NOT NULL,
+	CurrencyId uuid NOT NULL,
+	Description varchar(4000),
+    ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
+    CreateDate timestamp NOT NULL DEFAULT NOW(),
+	CreatorId uuid NOT NULL,
+    ModifyDate timestamp,
+	ModifierId uuid,
+	PRIMARY KEY(Id),
+	FOREIGN KEY (CurrencyId) REFERENCES Basic.Currency(Id)
 );
 
 CREATE TABLE UserManagement.Role(
@@ -493,7 +510,7 @@ CREATE TABLE HumanResource.ProfileCertificate(
 
 CREATE TABLE HumanResource.WorkingTimeTable(
     Id uuid NOT NULL DEFAULT gen_random_uuid(), 
-	ContractTypeId uuid NOt Null,
+	StaffContractTypeId uuid NOt Null,
 	WorkingDay weekday NOT NULL,
 	StartTime time NOT NULL,
 	EndTime time NOT NULL,
@@ -505,7 +522,7 @@ CREATE TABLE HumanResource.WorkingTimeTable(
     ModifyDate timestamp,
 	ModifierId uuid,
 	PRIMARY KEY(Id),
-	FOREIGN KEY (ContractTypeId) REFERENCES Basic.ContractType(Id)
+	FOREIGN KEY (StaffContractTypeId) REFERENCES Basic.StaffContractType(Id)
 );
 
 CREATE TABLE HumanResource.Holiday(
@@ -940,7 +957,7 @@ CREATE TABLE ProjectManagement.MeetingMinutes(
 CREATE TABLE Finance.StaffContract(
     Id uuid NOT NULL DEFAULT gen_random_uuid(), 
 	ProfileId uuid NOT NULL,
-	ContractTypeId uuid NOT NULL,
+	StaffContractTypeId uuid NOT NULL,
 	StartDate date NOT NULL,
 	EndDate date NOT NULL,
 	Title varchar(255) NOT NULL,
@@ -953,7 +970,7 @@ CREATE TABLE Finance.StaffContract(
 	ModifierId uuid,
 	PRIMARY KEY(Id),
 	FOREIGN KEY (PofileId) REFERENCES UserManagement.Profile(Id),
-	FOREIGN KEY (ContractTypeId) REFERENCES Basic.ContractType(Id)
+	FOREIGN KEY (StaffContractTypeId) REFERENCES Basic.StaffContractType(Id)
 );
 
 CREATE TABLE Finance.ContractSalaryItem(
@@ -1155,6 +1172,7 @@ CREATE TABLE Finance.CustomerContract(
     Id uuid NOT NULL DEFAULT gen_random_uuid(), 
 	CustomerId uuid NOT NULL,
 	ProjectId uuid NOT NULL,
+	CustomerContractTypeId uuid NOT NULL,
 	ContractNumber varchar(20) NOT NULL,
 	StartDate date,
 	ScheduledEndDate date,
@@ -1174,7 +1192,8 @@ CREATE TABLE Finance.CustomerContract(
 	FOREIGN KEY (CustomerId) REFERENCES Finance.Customer(Id),
 	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id),
 	FOREIGN KEY (CurrencyId) REFERENCES Basic.Currency(Id),
-	FOREIGN KEY (DocumentId) REFERENCES DocumentManagement.Document(Id)
+	FOREIGN KEY (DocumentId) REFERENCES DocumentManagement.Document(Id),
+	FOREIGN KEY (CustomerContractTypeId) REFERENCES Basic.CustomerContractType(Id)
 );
 
 CREATE TABLE Finance.CustomerContractPaymentSchedule(
