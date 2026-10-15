@@ -999,6 +999,7 @@ CREATE TABLE Finance.ContractDeductionItem(
 CREATE TABLE Finance.Supplier(
     Id uuid NOT NULL DEFAULT gen_random_uuid(), 
 	Title varchar(255) NOT NULL,
+	Code varchar(20) NOT NULL UNIQUE,
 	PhoneNumber varchar(20),
 	MobileNumber varchar(20),
 	FaxNumber varchar(20),

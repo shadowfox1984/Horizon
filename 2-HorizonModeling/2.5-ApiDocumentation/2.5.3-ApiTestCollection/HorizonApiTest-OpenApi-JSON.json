@@ -11959,7 +11959,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n\t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"contractTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"startDate\" : \"2026-06-13\",\n  \t\"endDate\" : \"2027-06-13\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /* optional */\n  \t\"autoRenewal\" : false\n}"
+              "example": "{\n\t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"contractNumber\" : \"123456\",\n  \t\"contractTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"startDate\" : \"2026-06-13\",\n  \t\"endDate\" : \"2027-06-13\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /* optional */\n  \t\"autoRenewal\" : false\n}"
             }
           }
         },
@@ -11985,7 +11985,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n\t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"contractTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"startDate\" : \"2026-06-13\",\n  \t\"endDate\" : \"2027-06-13\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /* optional */\n  \t\"autoRenewal\" : false\n}"
+              "example": "{\n\t\"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"contractNumber\" : \"123456\",\n  \t\"contractTypeId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"startDate\" : \"2026-06-13\",\n  \t\"endDate\" : \"2027-06-13\",\n  \t\"title\" : \"test\",\n  \t\"description\" : \"test\", /* optional */\n  \t\"autoRenewal\" : false\n}"
             }
           }
         },
@@ -12115,6 +12115,15 @@
               "type": "string"
             },
             "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "contractNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123456",
             "description": "optional"
           },
           {
@@ -12811,7 +12820,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              "example": "{\n  \t\"title\" : \"test\",\n    \"code\" : \"123\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
             }
           }
         },
@@ -12837,7 +12846,7 @@
         "requestBody": {
           "content": {
             "application/json": {
-              "example": "{\n  \t\"title\" : \"test\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
+              "example": "{\n  \t\"title\" : \"test\",\n  \t\"code\" : \"123\",\n  \t\"phoneNumber\" : \"+18182121\", /*optional*/\n  \t\"mobileNumber\" : \"+18182121\", /*optional*/\n  \t\"faxNumber\" : \"+18182121\", /*optional*/\n  \t\"email\" : \"name@company.com\", /*optional*/\n  \t\"postalCode\" : \"1234\", /*optional*/\n  \t\"city\" : \"Los Angles\", /*optional*/\n  \t\"address\" : \"test\", /*optional*/\n  \t\"description\" : \"test\" /*optional*/\n}"
             }
           }
         },
@@ -12940,6 +12949,15 @@
               "type": "string"
             },
             "example": "test",
+            "description": "optional"
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "123",
             "description": "optional"
           },
           {
