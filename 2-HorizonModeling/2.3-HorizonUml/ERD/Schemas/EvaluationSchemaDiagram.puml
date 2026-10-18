@@ -199,7 +199,7 @@ entity "Evaluation.CustomerFeedback" as customerFeedback #SkyBlue{
   ModifierId : bigint(19)
 }
 
-entity "Evaluation.StaffSatisfactionEvaluation" as staffSatisfactionEvaluation #SkyBlue{
+entity "Evaluation.StaffSatisfactionEvaluationResult" as staffSatisfactionEvaluationResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *ProfileId : uui <<FK>>
@@ -213,7 +213,7 @@ entity "Evaluation.StaffSatisfactionEvaluation" as staffSatisfactionEvaluation #
   ModifierId : bigint(19)
 }
 
-entity "Evaluation.ProjectProductivityEvaluation" as projectProductivityEvaluation #SkyBlue{
+entity "Evaluation.ProjectProductivityEvaluationResult" as projectProductivityEvaluationResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *ProjectId : uui <<FK>>
@@ -227,7 +227,7 @@ entity "Evaluation.ProjectProductivityEvaluation" as projectProductivityEvaluati
   ModifierId : bigint(19)
 }
 
-entity "Evaluation.CustomerSatisfactionEvaluation" as customerSatisfactionEvaluation #SkyBlue{
+entity "Evaluation.CustomerSatisfactionEvaluationResult" as customerSatisfactionEvaluationResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *CustomerId : uui <<FK>>
@@ -254,10 +254,10 @@ customer |o..o{ questionnaireResult
 questionnaireResult ||..o{ questionnaireResultDetail
 questionnaireItem ||..o{ questionnaireResultDetail
 questionOption |o..o{ questionnaireResultDetail
-profile ||..o{ staffSatisfactionEvaluation
-project ||..o{ projectProductivityEvaluation
-customer ||..o{ customerSatisfactionEvaluation
-project ||..o{ customerSatisfactionEvaluation
+profile ||..o{ staffSatisfactionEvaluationResult
+project ||..o{ projectProductivityEvaluationResult
+customer ||..o{ customerSatisfactionEvaluationResult
+project ||..o{ customerSatisfactionEvaluationResult
 customer ||..o{ customerFeedback
 project ||..o{ customerFeedback
 

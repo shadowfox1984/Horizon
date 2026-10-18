@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.10.16
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.10.18
 
 entity "Basic.StaffContractType" as staffContractType #LightPink{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
@@ -1384,10 +1384,10 @@ entity "Evaluation.CustomerFeedback" as customerFeedback #SkyBlue{
   ModifierId : bigint(19)
 }
 
-entity "Evaluation.StaffSatisfactionEvaluation" as staffSatisfactionEvaluation #SkyBlue{
+entity "Evaluation.StaffSatisfactionEvaluationResult" as staffSatisfactionEvaluationResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uuid <<FK>>
+  *ProfileId : uui <<FK>>
   *EvalationDate : date
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
@@ -1398,10 +1398,10 @@ entity "Evaluation.StaffSatisfactionEvaluation" as staffSatisfactionEvaluation #
   ModifierId : bigint(19)
 }
 
-entity "Evaluation.ProjectProductivityEvaluation" as projectProductivityEvaluation #SkyBlue{
+entity "Evaluation.ProjectProductivityEvaluationResult" as projectProductivityEvaluationResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uuid <<FK>>
+  *ProjectId : uui <<FK>>
   *EvalationDate : datetime
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
@@ -1412,11 +1412,11 @@ entity "Evaluation.ProjectProductivityEvaluation" as projectProductivityEvaluati
   ModifierId : bigint(19)
 }
 
-entity "Evaluation.CustomerSatisfactionEvaluation" as customerSatisfactionEvaluation #SkyBlue{
+entity "Evaluation.CustomerSatisfactionEvaluationResult" as customerSatisfactionEvaluationResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *CustomerId : uuid <<FK>>
-  *ProjectId : uuid <<FK>>
+  *CustomerId : uui <<FK>>
+  *ProjectId : uui <<FK>>
   *EvalationDate : datetime
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
@@ -1570,9 +1570,9 @@ customer |o..o{ questionnaireResult
 questionnaireResult ||..o{ questionnaireResultDetail
 questionnaireItem ||..o{ questionnaireResultDetail
 questionOption |o..o{ questionnaireResultDetail
-profile ||..o{ staffSatisfactionEvaluation
-project ||..o{ projectProductivityEvaluation
-customer ||..o{ customerSatisfactionEvaluation
-project ||..o{ customerSatisfactionEvaluation
+profile ||..o{ staffSatisfactionEvaluationResult
+project ||..o{ projectProductivityEvaluationResult
+customer ||..o{ customerSatisfactionEvaluationResult
+project ||..o{ customerSatisfactionEvaluationResult
 customer ||..o{ customerFeedback
 project ||..o{ customerFeedback

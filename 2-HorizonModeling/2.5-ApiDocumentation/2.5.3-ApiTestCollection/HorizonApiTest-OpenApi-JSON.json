@@ -19580,17 +19580,17 @@
         ]
       }
     },
-    "/evaluation/staffSatisfactionEvaluation": {
+    "/evaluation/staffSatisfactionEvaluationResult": {
       "post": {
-        "summary": "AddStaffSatisfactionEvaluation",
+        "summary": "AddStaffSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "AddStaffSatisfactionEvaluation",
+        "operationId": "AddStaffSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluation"
+          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluationResult"
         ],
         "requestBody": {
           "content": {
@@ -19606,17 +19606,17 @@
         ]
       }
     },
-    "/evaluation/staffSatisfactionEvaluation/[id]": {
+    "/evaluation/staffSatisfactionEvaluationResult/[id]": {
       "put": {
-        "summary": "UpdateStaffSatisfactionEvaluation",
+        "summary": "UpdateStaffSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "UpdateStaffSatisfactionEvaluation",
+        "operationId": "UpdateStaffSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluation"
+          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluationResult"
         ],
         "requestBody": {
           "content": {
@@ -19632,15 +19632,15 @@
         ]
       },
       "delete": {
-        "summary": "DeleteStaffSatisfactionEvaluation",
+        "summary": "DeleteStaffSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "DeleteStaffSatisfactionEvaluation",
+        "operationId": "DeleteStaffSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluation"
+          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluationResult"
         ],
         "security": [
           {
@@ -19649,15 +19649,15 @@
         ]
       },
       "get": {
-        "summary": "GetSpecificStaffSatisfactionEvaluation",
+        "summary": "GetSpecificStaffSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetSpecificStaffSatisfactionEvaluation",
+        "operationId": "GetSpecificStaffSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluation"
+          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluationResult"
         ],
         "security": [
           {
@@ -19666,17 +19666,17 @@
         ]
       }
     },
-    "/evaluation/staffSatisfactionEvaluation/active/[id]": {
+    "/evaluation/staffSatisfactionEvaluationResult/active/[id]": {
       "put": {
-        "summary": "ActiveStaffSatisfactionEvaluation",
+        "summary": "ActiveStaffSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "ActiveStaffSatisfactionEvaluation",
+        "operationId": "ActiveStaffSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluation"
+          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluationResult"
         ],
         "security": [
           {
@@ -19685,17 +19685,17 @@
         ]
       }
     },
-    "/evaluation/staffSatisfactionEvaluation/inactive/[id]": {
+    "/evaluation/staffSatisfactionEvaluationResult/inactive/[id]": {
       "put": {
-        "summary": "InactiveStaffSatisfactionEvaluation",
+        "summary": "InactiveStaffSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "InactiveStaffSatisfactionEvaluation",
+        "operationId": "InactiveStaffSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluation"
+          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluationResult"
         ],
         "security": [
           {
@@ -19704,17 +19704,17 @@
         ]
       }
     },
-    "/evaluation/staffSatisfactionEvaluation/getAll": {
+    "/evaluation/staffSatisfactionEvaluationResult/getAll": {
       "get": {
-        "summary": "GetAllStaffSatisfactionEvaluation",
+        "summary": "GetAllStaffSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetAllStaffSatisfactionEvaluation",
+        "operationId": "GetAllStaffSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluation"
+          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluationResult"
         ],
         "parameters": [
           {
@@ -19797,17 +19797,17 @@
         ]
       }
     },
-    "/evaluation/staffSatisfactionEvaluation/getComboList": {
+    "/evaluation/staffSatisfactionEvaluationResult/getComboList": {
       "get": {
-        "summary": "GetComboListStaffSatisfactionEvaluation",
+        "summary": "GetComboListStaffSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetComboListStaffSatisfactionEvaluation",
+        "operationId": "GetComboListStaffSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluation"
+          "S08 - Evaluation/S0808 - StaffSatisfactionEvaluationResult"
         ],
         "security": [
           {
@@ -19816,17 +19816,17 @@
         ]
       }
     },
-    "/evaluation/projectProductivityEvaluation": {
+    "/evaluation/projectProductivityEvaluationResult": {
       "post": {
-        "summary": "AddProjectProductivityEvaluation",
+        "summary": "AddProjectProductivityEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "AddProjectProductivityEvaluation",
+        "operationId": "AddProjectProductivityEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0809 - ProjectProductivityEvaluation"
+          "S08 - Evaluation/S0809 - ProjectProductivityEvaluationResult"
         ],
         "requestBody": {
           "content": {
@@ -19842,17 +19842,17 @@
         ]
       }
     },
-    "/evaluation/projectProductivityEvaluation/[id]": {
+    "/evaluation/projectProductivityEvaluationResult/[id]": {
       "put": {
-        "summary": "UpdateProjectProductivityEvaluation",
+        "summary": "UpdateProjectProductivityEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "UpdateProjectProductivityEvaluation",
+        "operationId": "UpdateProjectProductivityEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0809 - ProjectProductivityEvaluation"
+          "S08 - Evaluation/S0809 - ProjectProductivityEvaluationResult"
         ],
         "requestBody": {
           "content": {
@@ -19868,15 +19868,15 @@
         ]
       },
       "delete": {
-        "summary": "DeleteProjectProductivityEvaluation",
+        "summary": "DeleteProjectProductivityEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "DeleteProjectProductivityEvaluation",
+        "operationId": "DeleteProjectProductivityEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0809 - ProjectProductivityEvaluation"
+          "S08 - Evaluation/S0809 - ProjectProductivityEvaluationResult"
         ],
         "security": [
           {
@@ -19885,15 +19885,15 @@
         ]
       },
       "get": {
-        "summary": "GetSpecificProjectProductivityEvaluation",
+        "summary": "GetSpecificProjectProductivityEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetSpecificProjectProductivityEvaluation",
+        "operationId": "GetSpecificProjectProductivityEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0809 - ProjectProductivityEvaluation"
+          "S08 - Evaluation/S0809 - ProjectProductivityEvaluationResult"
         ],
         "security": [
           {
@@ -19902,17 +19902,17 @@
         ]
       }
     },
-    "/evaluation/projectProductivityEvaluation/active/[id]": {
+    "/evaluation/projectProductivityEvaluationResult/active/[id]": {
       "put": {
-        "summary": "ActiveProjectProductivityEvaluation",
+        "summary": "ActiveProjectProductivityEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "ActiveProjectProductivityEvaluation",
+        "operationId": "ActiveProjectProductivityEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0809 - ProjectProductivityEvaluation"
+          "S08 - Evaluation/S0809 - ProjectProductivityEvaluationResult"
         ],
         "security": [
           {
@@ -19921,17 +19921,17 @@
         ]
       }
     },
-    "/evaluation/projectProductivityEvaluation/inactive/[id]": {
+    "/evaluation/projectProductivityEvaluationResult/inactive/[id]": {
       "put": {
-        "summary": "InactiveProjectProductivityEvaluation",
+        "summary": "InactiveProjectProductivityEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "InactiveProjectProductivityEvaluation",
+        "operationId": "InactiveProjectProductivityEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0809 - ProjectProductivityEvaluation"
+          "S08 - Evaluation/S0809 - ProjectProductivityEvaluationResult"
         ],
         "security": [
           {
@@ -19940,17 +19940,17 @@
         ]
       }
     },
-    "/evaluation/projectProductivityEvaluation/getAll": {
+    "/evaluation/projectProductivityEvaluationResult/getAll": {
       "get": {
-        "summary": "GetAllProjectProductivityEvaluation",
+        "summary": "GetAllProjectProductivityEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetAllProjectProductivityEvaluation",
+        "operationId": "GetAllProjectProductivityEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0809 - ProjectProductivityEvaluation"
+          "S08 - Evaluation/S0809 - ProjectProductivityEvaluationResult"
         ],
         "parameters": [
           {
@@ -20042,17 +20042,17 @@
         ]
       }
     },
-    "/evaluation/projectProductivityEvaluation/getComboList": {
+    "/evaluation/projectProductivityEvaluationResult/getComboList": {
       "get": {
-        "summary": "GetComboListProjectProductivityEvaluation",
+        "summary": "GetComboListProjectProductivityEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetComboListProjectProductivityEvaluation",
+        "operationId": "GetComboListProjectProductivityEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0809 - ProjectProductivityEvaluation"
+          "S08 - Evaluation/S0809 - ProjectProductivityEvaluationResult"
         ],
         "security": [
           {
@@ -20061,17 +20061,17 @@
         ]
       }
     },
-    "/evaluation/customerSatisfactionEvaluation": {
+    "/evaluation/customerSatisfactionEvaluationResult": {
       "post": {
-        "summary": "AddCustomerSatisfactionEvaluation",
+        "summary": "AddCustomerSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "AddCustomerSatisfactionEvaluation",
+        "operationId": "AddCustomerSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluation"
+          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluationResult"
         ],
         "requestBody": {
           "content": {
@@ -20087,17 +20087,17 @@
         ]
       }
     },
-    "/evaluation/customerSatisfactionEvaluation/[id]": {
+    "/evaluation/customerSatisfactionEvaluationResult/[id]": {
       "put": {
-        "summary": "UpdateCustomerSatisfactionEvaluation",
+        "summary": "UpdateCustomerSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "UpdateCustomerSatisfactionEvaluation",
+        "operationId": "UpdateCustomerSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluation"
+          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluationResult"
         ],
         "requestBody": {
           "content": {
@@ -20113,15 +20113,15 @@
         ]
       },
       "delete": {
-        "summary": "DeleteCustomerSatisfactionEvaluation",
+        "summary": "DeleteCustomerSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "DeleteCustomerSatisfactionEvaluation",
+        "operationId": "DeleteCustomerSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluation"
+          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluationResult"
         ],
         "security": [
           {
@@ -20130,15 +20130,15 @@
         ]
       },
       "get": {
-        "summary": "GetSpecificCustomerSatisfactionEvaluation",
+        "summary": "GetSpecificCustomerSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetSpecificCustomerSatisfactionEvaluation",
+        "operationId": "GetSpecificCustomerSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluation"
+          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluationResult"
         ],
         "security": [
           {
@@ -20147,17 +20147,17 @@
         ]
       }
     },
-    "/evaluation/customerSatisfactionEvaluation/active/[id]": {
+    "/evaluation/customerSatisfactionEvaluationResult/active/[id]": {
       "put": {
-        "summary": "ActiveCustomerSatisfactionEvaluation",
+        "summary": "ActiveCustomerSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "ActiveCustomerSatisfactionEvaluation",
+        "operationId": "ActiveCustomerSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluation"
+          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluationResult"
         ],
         "security": [
           {
@@ -20166,17 +20166,17 @@
         ]
       }
     },
-    "/evaluation/customerSatisfactionEvaluation/inactive/[id]": {
+    "/evaluation/customerSatisfactionEvaluationResult/inactive/[id]": {
       "put": {
-        "summary": "InactiveCustomerSatisfactionEvaluation",
+        "summary": "InactiveCustomerSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "InactiveCustomerSatisfactionEvaluation",
+        "operationId": "InactiveCustomerSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluation"
+          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluationResult"
         ],
         "security": [
           {
@@ -20185,17 +20185,17 @@
         ]
       }
     },
-    "/evaluation/customerSatisfactionEvaluation/getComboList": {
+    "/evaluation/customerSatisfactionEvaluationResult/getComboList": {
       "get": {
-        "summary": "GetAllCustomerSatisfactionEvaluation",
+        "summary": "GetAllCustomerSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetAllCustomerSatisfactionEvaluation",
+        "operationId": "GetAllCustomerSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluation"
+          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluationResult"
         ],
         "parameters": [
           {
@@ -20278,17 +20278,17 @@
         ]
       }
     },
-    "/https://[MainDomian]/api/evaluation/customerSatisfactionEvaluation/getComboList": {
+    "/https://[MainDomian]/api/evaluation/customerSatisfactionEvaluationResult/getComboList": {
       "get": {
-        "summary": "GetComboListCustomerSatisfactionEvaluation",
+        "summary": "GetComboListCustomerSatisfactionEvaluationResult",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "GetComboListCustomerSatisfactionEvaluation",
+        "operationId": "GetComboListCustomerSatisfactionEvaluationResult",
         "tags": [
-          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluation"
+          "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluationResult"
         ],
         "security": [
           {
@@ -20829,13 +20829,13 @@
       "name": "S08 - Evaluation/S0807 - QuestionnaireResultDetail"
     },
     {
-      "name": "S08 - Evaluation/S0808 - StaffSatisfactionEvaluation"
+      "name": "S08 - Evaluation/S0808 - StaffSatisfactionEvaluationResult"
     },
     {
-      "name": "S08 - Evaluation/S0809 - ProjectProductivityEvaluation"
+      "name": "S08 - Evaluation/S0809 - ProjectProductivityEvaluationResult"
     },
     {
-      "name": "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluation"
+      "name": "S08 - Evaluation/S0810 - CustomerSatisfactionEvaluationResult"
     },
     {
       "name": "S08 - Evaluation/S0811 - CustomerFeedback"
