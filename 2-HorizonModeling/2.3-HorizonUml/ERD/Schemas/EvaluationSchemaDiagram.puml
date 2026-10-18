@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Evaluation Schema Diagram \n Version 26.5.18
+title Horizon Research Project (HRP) \n Evaluation Schema Diagram \n Version 26.10.18
 
 entity "UserManagement.Profile" as profile #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
@@ -161,6 +161,7 @@ entity "Evaluation.QuestionnaireResult" as questionnaireResult #SkyBlue{
   *QuestionnaireId : uui <<FK>>
   ProfileId : uui <<FK>>
   CustomerId : uui <<FK>>
+  *QuestionnaireDate : date
   *TotalScore : integer
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>

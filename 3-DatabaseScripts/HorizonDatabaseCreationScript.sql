@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.10.16
+	Last Version : 26.10.18
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -1429,6 +1429,7 @@ CREATE TABLE Evaluation.QuestionnaireResult(
 	QuestionnaireId uuid NOT Null,
 	ProfileId uuid,
 	CustomerId uuid,
+	QuestionnaireDate date,
 	TotalScore numeric(22,2) NOT NULL,
     ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
     CreateDate timestamp NOT NULL DEFAULT NOW(),

@@ -1346,6 +1346,7 @@ entity "Evaluation.QuestionnaireResult" as questionnaireResult #SkyBlue{
   *QuestionnaireId : uuid <<FK>>
   ProfileId : uuid <<FK>>
   CustomerId : uuid <<FK>>
+  *QuestionnaireDate : date
   *TotalScore : integer
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>

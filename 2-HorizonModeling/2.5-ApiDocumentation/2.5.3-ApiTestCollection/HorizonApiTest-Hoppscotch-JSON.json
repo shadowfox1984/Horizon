@@ -41695,7 +41695,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"questionnaireId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"customerId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"totalScore\": 100\n}"
+                "body": "{\n  \"questionnaireId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"customerId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"questionnaireDate\" : \"2026-10-18\",\n  \"totalScore\": 100\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -41748,7 +41748,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"questionnaireId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"customerId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"totalScore\": 100\n}"
+                "body": "{\n  \"questionnaireId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"customerId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"questionnaireDate\" : \"2026-10-18\",\n  \"totalScore\": 100\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -42018,6 +42018,12 @@
                 {
                   "key": "questionnaireCode",
                   "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "questionnaireDate",
+                  "value": "2026-10-18",
                   "active": true,
                   "description": "optional"
                 },

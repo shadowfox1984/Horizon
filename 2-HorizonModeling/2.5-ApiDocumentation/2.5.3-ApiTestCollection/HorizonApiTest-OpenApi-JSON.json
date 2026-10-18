@@ -19088,6 +19088,7 @@
                 "questionnaireId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                 "profileId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                 "customerId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                "questionnaireDate": "2026-10-18",
                 "totalScore": 100
               }
             }
@@ -19119,6 +19120,7 @@
                 "questionnaireId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                 "profileId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                 "customerId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                "questionnaireDate": "2026-10-18",
                 "totalScore": 100
               }
             }
@@ -19241,6 +19243,15 @@
               "type": "string"
             },
             "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "questionnaireDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "2026-10-18",
             "description": "optional"
           },
           {
