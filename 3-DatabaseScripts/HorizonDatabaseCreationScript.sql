@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.10.18
+	Last Version : 26.10.21
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -581,7 +581,8 @@ CREATE TABLE ProjectManagement.ProjectRoleMember(
     Id uuid NOT NULL DEFAULT gen_random_uuid(),  
     ProfileId uuid NOT NULL,
 	ProjectId uuid NOT NULL,
-	RoleId uuid NOT NULL,
+	RoleId uuid,
+	IsProjectAdmin boolean NOT NULL,
     IsActive boolean NOT NULL DEFAULT true,
     IsDeleted boolean NOT NULL DEFAULT false,
     CreateDate timestamp NOT NULL DEFAULT NOW(),
@@ -592,22 +593,6 @@ CREATE TABLE ProjectManagement.ProjectRoleMember(
 	FOREIGN KEY (RoleId) REFERENCES ProjectManagement.Role(Id),
 	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id),
     FOREIGN KEY (ProfileId) REFERENCES UserManagement.Profile(Id)
-);
-
-CREATE TABLE ProjectManagement.ProjectProfileMember(
-    Id uuid NOT NULL DEFAULT gen_random_uuid(),  
-	ProjectId uuid NOT NULL,
-	ProfileId uuid NOT NULL,
-	IsProjectManager boolean NOT NULL,
-    ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
-    CreateDate timestamp NOT NULL DEFAULT NOW(),
-	CreatorId uuid NOT NULL,
-    ModifyDate timestamp,
-	ModifierId uuid,
-	PRIMARY KEY(Id),
-	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id),
-	FOREIGN KEY (ProfileId) REFERENCES UserManagement.Profile(Id),
-	UNIQUE (ProjectId, ProfileId)
 );
 
 CREATE TABLE ProjectManagement.ProjectGroupMember(
