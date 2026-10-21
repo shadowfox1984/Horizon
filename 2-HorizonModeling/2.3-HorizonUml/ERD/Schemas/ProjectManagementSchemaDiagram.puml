@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Project Management Schema Diagram \n Version 26.6.13
+title Horizon Research Project (HRP) \n Project Management Schema Diagram \n Version 26.10.21
 
 entity "Basic.Priority" as priority #LightPink{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
@@ -109,19 +109,6 @@ entity "DocumentManagement.Document" as document #Gold{
   ModifierId : bigint(19)
 }
 
-entity "UserManagement.Role" as role #Violet{
-  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
-  --
-  *Title : varchar(200)
-  *Code : varchar(20) <<unique>>
-  Description : varchar(4000)
-  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
 entity "UserManagement.Groups" as groups #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
@@ -191,6 +178,19 @@ entity "HumanResource.Department" as department #Lavender{
   ModifierId : bigint(19)
 }
 
+entity "ProjectManagement.Role" as role #Orange{
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
+  --
+  *Title : varchar(200)
+  *Code : varchar(20) <<unique>>
+  Description : varchar(4000)
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
 entity "ProjectManagement.Project" as project #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
@@ -206,11 +206,12 @@ entity "ProjectManagement.Project" as project #Orange{
   ModifierId : bigint(19)
 }
 
-entity "ProjectManagement.ProjectProfileMember" as projectProfileMember #Orange{
+entity "ProjectManagement.ProjectRoleMember" as projectRoleMember #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *ProjectId : uui <<FK>> <<composite unique>>
   *ProfileId : uui <<FK>> <<composite unique>>
+  RoleId : uui <<FK>>
   *IsProjectManager : boolean
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -224,18 +225,6 @@ entity "ProjectManagement.ProjectGroupMember" as projectGroupMember #Orange{
   --
   *ProjectId : uui <<FK>> <<composite unique>>
   *GroupId : uui <<FK>> <<composite unique>>
-  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
-entity "ProjectManagement.ProjectRoleMember" as projectRoleMember #Orange{
-  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
-  --
-  *ProjectId : uui <<FK>> <<composite unique>>
-  *RoleId : uui <<FK>> <<composite unique>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -516,12 +505,11 @@ projectWorkflowResolvation ||..o{ issueWorkflowHistory
 project ||..o{ release
 release ||..o{ releaseIssue
 issue ||..o{ releaseIssue
-project ||..o{ projectProfileMember
-profile ||..o{ projectProfileMember
 project ||..o{ projectGroupMember
 groups ||..o{ projectGroupMember
 project ||..o{ projectRoleMember
-role ||..o{ projectRoleMember
+profile ||..o{ projectRoleMember
+role |o..o{ projectRoleMember
 project ||..o{ projectDepartmentMember
 department ||..o{ projectDepartmentMember
 projectWorkflow ||..o{ projectWorkflowDocumentType

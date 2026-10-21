@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n User Management Schema Diagram \n Version 26.6.13
+title Horizon Research Project (HRP) \n User Management Schema Diagram \n Version 26.10.21
 
 entity "HumanResource.Position" as position #Lavender{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
@@ -14,19 +14,6 @@ entity "HumanResource.Position" as position #Lavender{
   *Code : varchar(20) <<unique>>
   *DepartmentId : uui <<FK>>
   ParentId : uui <<FK>>
-  Description : varchar(4000)
-  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
-entity "UserManagement.Role" as role #Violet{
-  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
-  --
-  *Title : varchar(200)
-  *Code : varchar(20) <<unique>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -79,20 +66,6 @@ entity "UserManagement.FormPermission" as formPermission #Violet{
   --
   *FormId : uui <<FK>>
   *PermissionId : uui <<FK>>
-  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
-entity "UserManagement.RolePermission" as rolePermission #Violet{
-  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
-  --
-  *RoleId : uui <<FK>>
-  *FormPermissionId : uui <<FK>>
-  *ActiveFrom : datetime
-  ActiveTo : datetime
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -154,18 +127,6 @@ entity "UserManagement.Profile" as profile #Violet{
   ModifierId : bigint(19)
 }
 
-entity "UserManagement.ProfileRole" as profileRole #Violet{
-  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
-  --
-  *ProfileId : uui <<FK>>
-  *RoleId : uui <<FK>>
-  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
 entity "UserManagement.ProfileGroup" as profileGroup #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
@@ -180,14 +141,10 @@ entity "UserManagement.ProfileGroup" as profileGroup #Violet{
 
 form ||..o{ formPermission
 permission ||..o{ formPermission
-role ||..o{ rolePermission
-permission ||..o{ rolePermission
 groups ||..o{ groupPermission
 permission ||..o{ groupPermission
 profile ||..o{ profilePermission
 permission ||..o{ profilePermission
-profile ||..o{ profileRole
-role ||..o{ profileRole
 profile ||..o{ profileGroup
 groups ||..o{ profileGroup
 position ||..o{ profile

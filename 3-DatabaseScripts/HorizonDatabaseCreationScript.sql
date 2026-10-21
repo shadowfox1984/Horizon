@@ -231,19 +231,6 @@ CREATE TABLE Basic.CustomerContractType(
 	FOREIGN KEY (CurrencyId) REFERENCES Basic.Currency(Id)
 );
 
-CREATE TABLE UserManagement.Role(
-    Id uuid NOT NULL DEFAULT gen_random_uuid(),  
-    Code varchar(20) NOT NULL UNIQUE,
-    Title varchar(200) NOT NULL,
-	Description varchar(4000),
-    ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
-    CreateDate timestamp NOT NULL DEFAULT NOW(),
-	CreatorId uuid NOT NULL,
-    ModifyDate timestamp,
-	ModifierId uuid,
-	PRIMARY KEY(Id)
-);
-
 CREATE TABLE UserManagement.Groups(
     Id uuid NOT NULL DEFAULT gen_random_uuid(),  
     Code varchar(20) NOT NULL UNIQUE,
@@ -295,20 +282,6 @@ CREATE TABLE UserManagement.FormPermission(
 	PRIMARY KEY(Id),
 	FOREIGN KEY (FormId) REFERENCES UserManagement.Form(Id),
     FOREIGN KEY (PermissionId) REFERENCES UserManagement.Permission(Id)
-);
-
-CREATE TABLE UserManagement.RolePermission(
-    Id uuid NOT NULL DEFAULT gen_random_uuid(),  
-    FormPermissionId uuid NOT NULL,
-	RoleId uuid NOT NULL,
-    ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
-    CreateDate timestamp NOT NULL DEFAULT NOW(),
-	CreatorId uuid NOT NULL,
-    ModifyDate timestamp,
-	ModifierId uuid,
-	PRIMARY KEY(Id),
-	FOREIGN KEY (RoleId) REFERENCES UserManagement.Role(Id),
-    FOREIGN KEY (FormPermissionId) REFERENCES UserManagement.FormPermission(Id)
 );
 
 CREATE TABLE UserManagement.GroupPermission(
@@ -400,21 +373,6 @@ CREATE TABLE UserManagement.ProfilePermission(
 	PRIMARY KEY(Id),
 	FOREIGN KEY (ProfileId) REFERENCES UserManagement.Profile(Id),
     FOREIGN KEY (FormPermissionId) REFERENCES UserManagement.FormPermission(Id)
-);
-
-CREATE TABLE UserManagement.ProfileRole(
-    Id uuid NOT NULL DEFAULT gen_random_uuid(),  
-    ProfileId uuid NOT NULL,
-	RoleId uuid NOT NULL,
-    IsActive boolean NOT NULL DEFAULT true,
-    IsDeleted boolean NOT NULL DEFAULT false,
-    CreateDate timestamp NOT NULL DEFAULT NOW(),
-	CreatorId uuid NOT NULL,
-    ModifyDate timestamp,
-	ModifierId uuid,
-	PRIMARY KEY(Id),
-	FOREIGN KEY (RoleId) REFERENCES UserManagement.Role(Id),
-    FOREIGN KEY (ProfileId) REFERENCES UserManagement.Profile(Id)
 );
 
 CREATE TABLE UserManagement.ProfileGroup(
@@ -591,6 +549,18 @@ CREATE TABLE HumanResource.WorkMission(
 	FOREIGN KEY (ProfileId) REFERENCES UserManagement.Profile(Id)
 );
 
+CREATE TABLE ProjectManagement.Role(
+    Id uuid NOT NULL DEFAULT gen_random_uuid(),  
+    Code varchar(20) NOT NULL UNIQUE,
+    Title varchar(200) NOT NULL,
+	Description varchar(4000),
+    ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
+    CreateDate timestamp NOT NULL DEFAULT NOW(),
+	CreatorId uuid NOT NULL,
+    ModifyDate timestamp,
+	ModifierId uuid,
+	PRIMARY KEY(Id)
+);
 
 CREATE TABLE ProjectManagement.Project(
     Id uuid NOT NULL DEFAULT gen_random_uuid(), 
@@ -605,6 +575,23 @@ CREATE TABLE ProjectManagement.Project(
     ModifyDate timestamp,
 	ModifierId uuid,
 	PRIMARY KEY(Id)
+);
+
+CREATE TABLE ProjectManagement.ProjectRoleMember(
+    Id uuid NOT NULL DEFAULT gen_random_uuid(),  
+    ProfileId uuid NOT NULL,
+	ProjectId uuid NOT NULL,
+	RoleId uuid NOT NULL,
+    IsActive boolean NOT NULL DEFAULT true,
+    IsDeleted boolean NOT NULL DEFAULT false,
+    CreateDate timestamp NOT NULL DEFAULT NOW(),
+	CreatorId uuid NOT NULL,
+    ModifyDate timestamp,
+	ModifierId uuid,
+	PRIMARY KEY(Id),
+	FOREIGN KEY (RoleId) REFERENCES ProjectManagement.Role(Id),
+	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id),
+    FOREIGN KEY (ProfileId) REFERENCES UserManagement.Profile(Id)
 );
 
 CREATE TABLE ProjectManagement.ProjectProfileMember(
@@ -636,21 +623,6 @@ CREATE TABLE ProjectManagement.ProjectGroupMember(
 	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id),
 	FOREIGN KEY (GroupId) REFERENCES UserManagement.Groups(Id),
 	UNIQUE (ProjectId, GroupId)
-);
-
-CREATE TABLE ProjectManagement.ProjectRoleMember(
-    Id uuid NOT NULL DEFAULT gen_random_uuid(),  
-	ProjectId uuid NOT NULL,
-	RoleId uuid NOT NULL,
-    ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
-    CreateDate timestamp NOT NULL DEFAULT NOW(),
-	CreatorId uuid NOT NULL,
-    ModifyDate timestamp,
-	ModifierId uuid,
-	PRIMARY KEY(Id),
-	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id),
-	FOREIGN KEY (RoleId) REFERENCES UserManagement.Role(Id),
-	UNIQUE (ProjectId, RoleId)
 );
 
 CREATE TABLE ProjectManagement.ProjectDepartmentMember(
