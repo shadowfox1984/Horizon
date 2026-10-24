@@ -141,277 +141,17 @@
         ]
       }
     },
-    "/user/role": {
-      "post": {
-        "summary": "S010201 - AddRole",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S010201___AddRole",
-        "tags": [
-          "S01 - UserManagement/S0102 - Role"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "example": {
-                "title": "test",
-                "code": "test",
-                "description": "test",
-                "profileId": [
-                  "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "d6eb621f-6dd0-4cdc-93f5-07f51b249b51"
-                ],
-                "formPermissionId": [
-                  "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "d6eb621f-6dd0-4cdc-93f5-07f51b249b51"
-                ]
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/user/role/[id]": {
-      "put": {
-        "summary": "S010202 - UpdateRole",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S010202___UpdateRole",
-        "tags": [
-          "S01 - UserManagement/S0102 - Role"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "example": {
-                "title": "test",
-                "code": "test",
-                "description": "test",
-                "profileId": [
-                  "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "d6eb621f-6dd0-4cdc-93f5-07f51b249b51"
-                ],
-                "formPermissionId": [
-                  "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "d6eb621f-6dd0-4cdc-93f5-07f51b249b51"
-                ]
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      },
-      "delete": {
-        "summary": "S010203 - DeleteRole",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S010203___DeleteRole",
-        "tags": [
-          "S01 - UserManagement/S0102 - Role"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      },
-      "get": {
-        "summary": "S010206 - GetSpecificRole",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S010206___GetSpecificRole",
-        "tags": [
-          "S01 - UserManagement/S0102 - Role"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/user/role/active/[id]": {
-      "put": {
-        "summary": "S010204 - ActiveRole",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S010204___ActiveRole",
-        "tags": [
-          "S01 - UserManagement/S0102 - Role"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/user/role/inactive/[id]": {
-      "put": {
-        "summary": "S010205 - InactiveRole",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S010205___InactiveRole",
-        "tags": [
-          "S01 - UserManagement/S0102 - Role"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/user/role/getAll": {
-      "get": {
-        "summary": "S010207 - GetAllRole",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S010207___GetAllRole",
-        "tags": [
-          "S01 - UserManagement/S0102 - Role"
-        ],
-        "parameters": [
-          {
-            "name": "title",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "example": "test",
-            "description": "optional"
-          },
-          {
-            "name": "code",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "example": "123",
-            "description": "optional"
-          },
-          {
-            "name": "description",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "example": "test",
-            "description": "optional"
-          },
-          {
-            "name": "profileId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-            "description": "optional"
-          },
-          {
-            "name": "formPermissionId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-            "description": "optional"
-          },
-          {
-            "name": "offset",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "example": "0",
-            "description": "optional"
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "example": "15",
-            "description": "optional"
-          },
-          {
-            "name": "sort_by",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "example": "desc(fieldName)",
-            "description": "optional"
-          }
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/user/role/getComboList": {
-      "get": {
-        "summary": "S010208 - GetComboListOfRole",
-        "responses": {
-          "200": {
-            "description": "Successful response"
-          }
-        },
-        "operationId": "S010208___GetComboListOfRole",
-        "tags": [
-          "S01 - UserManagement/S0102 - Role"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
     "/user/group": {
       "post": {
-        "summary": "S010301 - AddGroup",
+        "summary": "S010201 - AddGroup",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S010301___AddGroup",
+        "operationId": "S010201___AddGroup",
         "tags": [
-          "S01 - UserManagement/S0103 - Group"
+          "S01 - UserManagement/S0102 - Group"
         ],
         "requestBody": {
           "content": {
@@ -441,15 +181,15 @@
     },
     "/user/group/[id]": {
       "put": {
-        "summary": "S010302 - UpdateGroup",
+        "summary": "S010202 - UpdateGroup",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S010302___UpdateGroup",
+        "operationId": "S010202___UpdateGroup",
         "tags": [
-          "S01 - UserManagement/S0103 - Group"
+          "S01 - UserManagement/S0102 - Group"
         ],
         "requestBody": {
           "content": {
@@ -477,15 +217,15 @@
         ]
       },
       "delete": {
-        "summary": "S010303 - DeleteGroup",
+        "summary": "S010203 - DeleteGroup",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S010303___DeleteGroup",
+        "operationId": "S010203___DeleteGroup",
         "tags": [
-          "S01 - UserManagement/S0103 - Group"
+          "S01 - UserManagement/S0102 - Group"
         ],
         "security": [
           {
@@ -494,15 +234,15 @@
         ]
       },
       "get": {
-        "summary": "S010306 - GetSpecificGroup",
+        "summary": "S010206 - GetSpecificGroup",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S010306___GetSpecificGroup",
+        "operationId": "S010206___GetSpecificGroup",
         "tags": [
-          "S01 - UserManagement/S0103 - Group"
+          "S01 - UserManagement/S0102 - Group"
         ],
         "security": [
           {
@@ -513,15 +253,15 @@
     },
     "/user/group/active/[id]": {
       "put": {
-        "summary": "S010304 - ActiveGroup",
+        "summary": "S010204 - ActiveGroup",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S010304___ActiveGroup",
+        "operationId": "S010204___ActiveGroup",
         "tags": [
-          "S01 - UserManagement/S0103 - Group"
+          "S01 - UserManagement/S0102 - Group"
         ],
         "security": [
           {
@@ -532,15 +272,15 @@
     },
     "/user/group/inactive/[id]": {
       "put": {
-        "summary": "S010305 - InactiveGroup",
+        "summary": "S010205 - InactiveGroup",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S010305___InactiveGroup",
+        "operationId": "S010205___InactiveGroup",
         "tags": [
-          "S01 - UserManagement/S0103 - Group"
+          "S01 - UserManagement/S0102 - Group"
         ],
         "security": [
           {
@@ -551,15 +291,15 @@
     },
     "/user/group/getAll": {
       "get": {
-        "summary": "S010307 - GetAllGroup",
+        "summary": "S010207 - GetAllGroup",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S010307___GetAllGroup",
+        "operationId": "S010207___GetAllGroup",
         "tags": [
-          "S01 - UserManagement/S0103 - Group"
+          "S01 - UserManagement/S0102 - Group"
         ],
         "parameters": [
           {
@@ -644,15 +384,15 @@
     },
     "/user/group/getComboList": {
       "get": {
-        "summary": "S010308 - GetComboListOfGroup",
+        "summary": "S010208 - GetComboListOfGroup",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S010308___GetComboListOfGroup",
+        "operationId": "S010208___GetComboListOfGroup",
         "tags": [
-          "S01 - UserManagement/S0103 - Group"
+          "S01 - UserManagement/S0102 - Group"
         ],
         "security": [
           {
@@ -7320,25 +7060,25 @@
         ]
       }
     },
-    "/projectManagement/projectProfileMember": {
+    "/projectManagement/role": {
       "post": {
-        "summary": "S050201 - AddProjectProfileMember",
+        "summary": "S050201 - AddRole",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S050201___AddProjectProfileMember",
+        "operationId": "S050201___AddRole",
         "tags": [
-          "S05 - ProjectManagement/S0502 - ProjectProfileMember"
+          "S05 - ProjectManagement/S0502- Role"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "example": {
-                "profileId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                "projectId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                "IsProjectManager": true
+                "title": "test",
+                "code": "test",
+                "description": "test"
               }
             }
           }
@@ -7350,25 +7090,25 @@
         ]
       }
     },
-    "/projectManagement/projectProfileMember/[id]": {
+    "/projectManagement/role/[id]": {
       "put": {
-        "summary": "S050202 - UpdateProjectProfileMember",
+        "summary": "S050202 - UpdateRole",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S050202___UpdateProjectProfileMember",
+        "operationId": "S050202___UpdateRole",
         "tags": [
-          "S05 - ProjectManagement/S0502 - ProjectProfileMember"
+          "S05 - ProjectManagement/S0502- Role"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "example": {
-                "profileId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                "projectId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                "IsProjectManager": true
+                "title": "test",
+                "code": "test",
+                "description": "test"
               }
             }
           }
@@ -7380,15 +7120,15 @@
         ]
       },
       "delete": {
-        "summary": "S050203 - DeleteProjectProfileMember",
+        "summary": "S050203 - DeleteRole",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S050203___DeleteProjectProfileMember",
+        "operationId": "S050203___DeleteRole",
         "tags": [
-          "S05 - ProjectManagement/S0502 - ProjectProfileMember"
+          "S05 - ProjectManagement/S0502- Role"
         ],
         "security": [
           {
@@ -7397,15 +7137,15 @@
         ]
       },
       "get": {
-        "summary": "S050206 - GetSpecificProjectProfileMember",
+        "summary": "S050206 - GetSpecificRole",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S050206___GetSpecificProjectProfileMember",
+        "operationId": "S050206___GetSpecificRole",
         "tags": [
-          "S05 - ProjectManagement/S0502 - ProjectProfileMember"
+          "S05 - ProjectManagement/S0502- Role"
         ],
         "security": [
           {
@@ -7414,17 +7154,17 @@
         ]
       }
     },
-    "/projectManagement/projectProfileMember/active/[id]": {
+    "/projectManagement/role/active/[id]": {
       "put": {
-        "summary": "S050204 - ActiveProjectProfileMember",
+        "summary": "S050204 - ActiveRole",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S050204___ActiveProjectProfileMember",
+        "operationId": "S050204___ActiveRole",
         "tags": [
-          "S05 - ProjectManagement/S0502 - ProjectProfileMember"
+          "S05 - ProjectManagement/S0502- Role"
         ],
         "security": [
           {
@@ -7433,17 +7173,17 @@
         ]
       }
     },
-    "/projectManagement/projectProfileMember/inactive/[id]": {
+    "/projectManagement/role/inactive/[id]": {
       "put": {
-        "summary": "S050205 - InactiveProjectProfileMember",
+        "summary": "S050205 - InactiveRole",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S050205___InactiveProjectProfileMember",
+        "operationId": "S050205___InactiveRole",
         "tags": [
-          "S05 - ProjectManagement/S0502 - ProjectProfileMember"
+          "S05 - ProjectManagement/S0502- Role"
         ],
         "security": [
           {
@@ -7452,39 +7192,21 @@
         ]
       }
     },
-    "/projectManagement/projectProfileMember/getAll": {
+    "/projectManagement/role/getAll": {
       "get": {
-        "summary": "S050207 - GetAllProjectProfileMember",
+        "summary": "S050207 - GetAllRole",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S050207___GetAllProjectProfileMember",
+        "operationId": "S050207___GetAllRole",
         "tags": [
-          "S05 - ProjectManagement/S0502 - ProjectProfileMember"
+          "S05 - ProjectManagement/S0502- Role"
         ],
         "parameters": [
           {
-            "name": "profileId",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "example": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51 ",
-            "description": "optional"
-          },
-          {
-            "name": "profileName",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "example": "test",
-            "description": "optional"
-          },
-          {
-            "name": "projectId",
+            "name": "id",
             "in": "query",
             "schema": {
               "type": "string"
@@ -7493,7 +7215,7 @@
             "description": "optional"
           },
           {
-            "name": "projectTitle",
+            "name": "title",
             "in": "query",
             "schema": {
               "type": "string"
@@ -7502,12 +7224,21 @@
             "description": "optional"
           },
           {
-            "name": "IsProjectManager",
+            "name": "code",
             "in": "query",
             "schema": {
               "type": "string"
             },
-            "example": "true",
+            "example": "123",
+            "description": "optional"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "test",
             "description": "optional"
           },
           {
@@ -7525,7 +7256,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "12",
+            "example": "15",
             "description": "optional"
           },
           {
@@ -7545,17 +7276,17 @@
         ]
       }
     },
-    "/projectManagement/projectProfileMember/getComboList": {
+    "/projectManagement/role/getComboList": {
       "get": {
-        "summary": "S050208 - GetComboListProjectProfileMember",
+        "summary": "S050208 - GetComboListOfRole",
         "responses": {
           "200": {
             "description": "Successful response"
           }
         },
-        "operationId": "S050208___GetComboListProjectProfileMember",
+        "operationId": "S050208___GetComboListOfRole",
         "tags": [
-          "S05 - ProjectManagement/S0502 - ProjectProfileMember"
+          "S05 - ProjectManagement/S0502- Role"
         ],
         "security": [
           {
@@ -7813,8 +7544,10 @@
           "content": {
             "application/json": {
               "example": {
+                "profileId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                 "roleId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                "projectId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51"
+                "projectId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                "isProjectAdmin": true
               }
             }
           }
@@ -7842,8 +7575,10 @@
           "content": {
             "application/json": {
               "example": {
+                "profileId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                 "roleId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                "projectId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51"
+                "projectId": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                "isProjectAdmin": true
               }
             }
           }
@@ -20574,10 +20309,7 @@
       "name": "S01 - UserManagement/S0101 - Auth"
     },
     {
-      "name": "S01 - UserManagement/S0102 - Role"
-    },
-    {
-      "name": "S01 - UserManagement/S0103 - Group"
+      "name": "S01 - UserManagement/S0102 - Group"
     },
     {
       "name": "S01 - UserManagement/S0104 - Profile"
@@ -20679,7 +20411,7 @@
       "name": "S05 - ProjectManagement/S0501 - Project"
     },
     {
-      "name": "S05 - ProjectManagement/S0502 - ProjectProfileMember"
+      "name": "S05 - ProjectManagement/S0502- Role"
     },
     {
       "name": "S05 - ProjectManagement/S0503 - ProjectGroupMember"

@@ -338,550 +338,12 @@
         },
         {
           "v": 12,
-          "name": "S0102 - Role",
+          "name": "S0102 - Group",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S010201 - AddRole",
-              "method": "POST",
-              "endpoint": "<<baseUrl>>/user/role",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "",
-                "authActive": true
-              },
-              "body": {
-                "contentType": "application/json",
-                "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ],\n  \"formPermissionId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ]\n}"
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S010201 - AddRole",
-                    "method": "POST",
-                    "endpoint": "<<baseUrl>>/user/role",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": "application/json",
-                      "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ],\n  \"formPermissionId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ]\n}"
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S010202 - UpdateRole",
-              "method": "PUT",
-              "endpoint": "<<baseUrl>>/user/role/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "",
-                "authActive": true
-              },
-              "body": {
-                "contentType": "application/json",
-                "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ],\n  \"formPermissionId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ]\n}"
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S010202 - UpdateRole",
-                    "method": "PUT",
-                    "endpoint": "<<baseUrl>>/user/role/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": "application/json",
-                      "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ],\n  \"formPermissionId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ]\n}"
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S010203 - DeleteRole",
-              "method": "DELETE",
-              "endpoint": "<<baseUrl>>/user/role/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S010203 - DeleteRole",
-                    "method": "DELETE",
-                    "endpoint": "<<baseUrl>>/user/role/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S010204 - ActiveRole",
-              "method": "PUT",
-              "endpoint": "<<baseUrl>>/user/role/active/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S010204 - ActiveRole",
-                    "method": "PUT",
-                    "endpoint": "<<baseUrl>>/user/role/active/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S010205 - InactiveRole",
-              "method": "PUT",
-              "endpoint": "<<baseUrl>>/user/role/inactive/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S010205 - InactiveRole",
-                    "method": "PUT",
-                    "endpoint": "<<baseUrl>>/user/role/inactive/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S010206 - GetSpecificRole",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/user/role/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S010206 - GetSpecificRole",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/user/role/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S010207 - GetAllRole",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/user/role/getAll",
-              "params": [
-                {
-                  "key": "title",
-                  "value": "test",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "code",
-                  "value": "123",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "description",
-                  "value": "test",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "profileId",
-                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "formPermissionId",
-                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "offset",
-                  "value": "0",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "limit",
-                  "value": "15",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "sort_by",
-                  "value": "desc(fieldName)",
-                  "active": true,
-                  "description": "optional"
-                }
-              ],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S010207 - GetAllRole",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/user/role/getAll",
-                    "headers": [],
-                    "params": [
-                      {
-                        "key": "title",
-                        "value": "test",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "code",
-                        "value": "123",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "description",
-                        "value": "test",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "profileId",
-                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "formPermissionId",
-                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "offset",
-                        "value": "0",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "limit",
-                        "value": "15",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "sort_by",
-                        "value": "desc(fieldName)",
-                        "active": true,
-                        "description": "optional"
-                      }
-                    ],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S010208 - GetComboListOfRole",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/user/role/getComboList",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S010208 - GetComboListOfRole",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/user/role/getComboList",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            }
-          ],
-          "auth": {
-            "authType": "inherit",
-            "authActive": true
-          },
-          "headers": [],
-          "variables": [],
-          "description": null,
-          "preRequestScript": "",
-          "testScript": ""
-        },
-        {
-          "v": 12,
-          "name": "S0103 - Group",
-          "folders": [],
-          "requests": [
-            {
-              "v": "17",
-              "name": "S010301 - AddGroup",
+              "name": "S010201 - AddGroup",
               "method": "POST",
               "endpoint": "<<baseUrl>>/user/group",
               "params": [],
@@ -934,7 +396,7 @@
             },
             {
               "v": "17",
-              "name": "S010302 - UpdateGroup",
+              "name": "S010202 - UpdateGroup",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/user/group/[id]",
               "params": [],
@@ -987,7 +449,7 @@
             },
             {
               "v": "17",
-              "name": "S010303 - DeleteGroup",
+              "name": "S010203 - DeleteGroup",
               "method": "DELETE",
               "endpoint": "<<baseUrl>>/user/group/[id]",
               "params": [],
@@ -1040,7 +502,7 @@
             },
             {
               "v": "17",
-              "name": "S010304 - ActiveGroup",
+              "name": "S010204 - ActiveGroup",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/user/group/active/[id]",
               "params": [],
@@ -1093,7 +555,7 @@
             },
             {
               "v": "17",
-              "name": "S010305 - InactiveGroup",
+              "name": "S010205 - InactiveGroup",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/user/group/inactive/[id]",
               "params": [],
@@ -1146,7 +608,7 @@
             },
             {
               "v": "17",
-              "name": "S010306 - GetSpecificGroup",
+              "name": "S010206 - GetSpecificGroup",
               "method": "GET",
               "endpoint": "<<baseUrl>>/user/group/[id]",
               "params": [],
@@ -1199,7 +661,7 @@
             },
             {
               "v": "17",
-              "name": "S010307 - GetAllGroup",
+              "name": "S010207 - GetAllGroup",
               "method": "GET",
               "endpoint": "<<baseUrl>>/user/group/getAll",
               "params": [
@@ -1350,7 +812,7 @@
             },
             {
               "v": "17",
-              "name": "S010308 - GetComboListOfGroup",
+              "name": "S010208 - GetComboListOfGroup",
               "method": "GET",
               "endpoint": "<<baseUrl>>/user/group/getComboList",
               "params": [],
@@ -16193,14 +15655,14 @@
         },
         {
           "v": 12,
-          "name": "S0502 - ProjectProfileMember",
+          "name": "S0502- Role",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S050201 - AddProjectProfileMember",
+              "name": "S050201 - AddRole",
               "method": "POST",
-              "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember",
+              "endpoint": "<<baseUrl>>/projectManagement/role",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -16212,7 +15674,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"IsProjectManager\": true\n}"
+                "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -16220,14 +15682,14 @@
                   "name": "Successful response",
                   "originalRequest": {
                     "v": "6",
-                    "name": "S050201 - AddProjectProfileMember",
+                    "name": "S010201 - AddRole",
                     "method": "POST",
-                    "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember",
+                    "endpoint": "<<baseUrl>>/user/role",
                     "headers": [],
                     "params": [],
                     "body": {
                       "contentType": "application/json",
-                      "body": "{\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"IsProjectManager\": true\n}"
+                      "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ],\n  \"formPermissionId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ]\n}"
                     },
                     "auth": {
                       "authType": "bearer",
@@ -16251,9 +15713,9 @@
             },
             {
               "v": "17",
-              "name": "S050202 - UpdateProjectProfileMember",
+              "name": "S050202 - UpdateRole",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/role/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -16265,7 +15727,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"IsProjectManager\": true\n}"
+                "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -16273,14 +15735,14 @@
                   "name": "Successful response",
                   "originalRequest": {
                     "v": "6",
-                    "name": "S050202 - UpdateProjectProfileMember",
+                    "name": "S010202 - UpdateRole",
                     "method": "PUT",
-                    "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/[id]",
+                    "endpoint": "<<baseUrl>>/user/role/[id]",
                     "headers": [],
                     "params": [],
                     "body": {
                       "contentType": "application/json",
-                      "body": "{\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"IsProjectManager\": true\n}"
+                      "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ],\n  \"formPermissionId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ]\n}"
                     },
                     "auth": {
                       "authType": "bearer",
@@ -16304,9 +15766,9 @@
             },
             {
               "v": "17",
-              "name": "S050203 - DeleteProjectProfileMember",
+              "name": "S050203 - DeleteRole",
               "method": "DELETE",
-              "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/role/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -16326,9 +15788,9 @@
                   "name": "Successful response",
                   "originalRequest": {
                     "v": "6",
-                    "name": "S050203 - DeleteProjectProfileMember",
+                    "name": "S010203 - DeleteRole",
                     "method": "DELETE",
-                    "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/[id]",
+                    "endpoint": "<<baseUrl>>/user/role/[id]",
                     "headers": [],
                     "params": [],
                     "body": {
@@ -16357,9 +15819,9 @@
             },
             {
               "v": "17",
-              "name": "S050204 - ActiveProjectProfileMember",
+              "name": "S050204 - ActiveRole",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/active/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/role/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -16379,9 +15841,9 @@
                   "name": "Successful response",
                   "originalRequest": {
                     "v": "6",
-                    "name": "S050204 - ActiveProjectProfileMember",
+                    "name": "S010204 - ActiveRole",
                     "method": "PUT",
-                    "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/active/[id]",
+                    "endpoint": "<<baseUrl>>/user/role/active/[id]",
                     "headers": [],
                     "params": [],
                     "body": {
@@ -16410,9 +15872,9 @@
             },
             {
               "v": "17",
-              "name": "S050205 - InactiveProjectProfileMember",
+              "name": "S050205 - InactiveRole",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/inactive/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/role/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -16432,9 +15894,9 @@
                   "name": "Successful response",
                   "originalRequest": {
                     "v": "6",
-                    "name": "S050205 - InactiveProjectProfileMember",
+                    "name": "S010205 - InactiveRole",
                     "method": "PUT",
-                    "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/inactive/[id]",
+                    "endpoint": "<<baseUrl>>/user/role/inactive/[id]",
                     "headers": [],
                     "params": [],
                     "body": {
@@ -16463,9 +15925,9 @@
             },
             {
               "v": "17",
-              "name": "S050206 - GetSpecificProjectProfileMember",
+              "name": "S050206 - GetSpecificRole",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/role/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -16485,9 +15947,9 @@
                   "name": "Successful response",
                   "originalRequest": {
                     "v": "6",
-                    "name": "S050206 - GetSpecificProjectProfileMember",
+                    "name": "S010206 - GetSpecificRole",
                     "method": "GET",
-                    "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/[id]",
+                    "endpoint": "<<baseUrl>>/user/role/[id]",
                     "headers": [],
                     "params": [],
                     "body": {
@@ -16516,37 +15978,31 @@
             },
             {
               "v": "17",
-              "name": "S050207 - GetAllProjectProfileMember",
+              "name": "S050207 - GetAllRole",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/getAll",
+              "endpoint": "<<baseUrl>>/projectManagement/role/getAll",
               "params": [
                 {
-                  "key": "profileId",
-                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51 ",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "profileName",
-                  "value": "test",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "projectId",
+                  "key": "id",
                   "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                   "active": true,
                   "description": "optional"
                 },
                 {
-                  "key": "projectTitle",
+                  "key": "title",
                   "value": "test",
                   "active": true,
                   "description": "optional"
                 },
                 {
-                  "key": "IsProjectManager",
-                  "value": "true",
+                  "key": "code",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "description",
+                  "value": "test",
                   "active": true,
                   "description": "optional"
                 },
@@ -16558,7 +16014,7 @@
                 },
                 {
                   "key": "limit",
-                  "value": "12",
+                  "value": "15",
                   "active": true,
                   "description": "optional"
                 },
@@ -16587,38 +16043,38 @@
                   "name": "Successful response",
                   "originalRequest": {
                     "v": "6",
-                    "name": "S050207 - GetAllProjectProfileMember",
+                    "name": "S010207 - GetAllRole",
                     "method": "GET",
-                    "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/getAll",
+                    "endpoint": "<<baseUrl>>/user/role/getAll",
                     "headers": [],
                     "params": [
                       {
-                        "key": "profileId",
-                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51 ",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "profileName",
+                        "key": "title",
                         "value": "test",
                         "active": true,
                         "description": "optional"
                       },
                       {
-                        "key": "projectId",
+                        "key": "code",
+                        "value": "123",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "description",
+                        "value": "test",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "profileId",
                         "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                         "active": true,
                         "description": "optional"
                       },
                       {
-                        "key": "projectTitle",
-                        "value": "test",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "IsProjectManager",
-                        "value": "true",
+                        "key": "formPermissionId",
+                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                         "active": true,
                         "description": "optional"
                       },
@@ -16630,7 +16086,7 @@
                       },
                       {
                         "key": "limit",
-                        "value": "12",
+                        "value": "15",
                         "active": true,
                         "description": "optional"
                       },
@@ -16667,9 +16123,9 @@
             },
             {
               "v": "17",
-              "name": "S050208 - GetComboListProjectProfileMember",
+              "name": "S050208 - GetComboListOfRole",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/getComboList",
+              "endpoint": "<<baseUrl>>/projectManagement/role/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -16689,9 +16145,9 @@
                   "name": "Successful response",
                   "originalRequest": {
                     "v": "6",
-                    "name": "S050208 - GetComboListProjectProfileMember",
+                    "name": "S010208 - GetComboListOfRole",
                     "method": "GET",
-                    "endpoint": "<<baseUrl>>/projectManagement/projectProfileMember/getComboList",
+                    "endpoint": "<<baseUrl>>/user/role/getComboList",
                     "headers": [],
                     "params": [],
                     "body": {
@@ -17276,7 +16732,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"roleId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+                "body": "{\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"roleId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"isProjectAdmin\": true\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -17329,7 +16785,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"roleId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+                "body": "{\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"roleId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"isProjectAdmin\": true\n}"
               },
               "requestVariables": [],
               "responses": {
