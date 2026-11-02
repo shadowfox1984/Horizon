@@ -357,7 +357,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ],\n  \"formPermissionId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ]\n}"
+                "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -410,7 +410,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\",\n  \"profileId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ],\n  \"formPermissionId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ]\n}"
+                "body": "{\n  \"title\": \"test\",\n  \"code\": \"test\",\n  \"description\": \"test\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -684,18 +684,6 @@
                   "description": "optional"
                 },
                 {
-                  "key": "profileId",
-                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "formPermissionId",
-                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
                   "key": "offset",
                   "value": "0",
                   "active": true,
@@ -881,21 +869,18 @@
           "requests": [
             {
               "v": "17",
-              "endpoint": "<<baseUrl>>/user/groupPermission",
               "name": "S010301 - AddGroupPermission",
-              "params": [],
-              "headers": [],
               "method": "POST",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "username": "",
-                "password": "",
-                "algorithm": "MD5",
-                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
-              },
+              "endpoint": "<<baseUrl>>/user/groupPermission",
+              "params": [],
+              "headers": [],
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \"groupId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"formPermissionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
@@ -906,18 +891,18 @@
             },
             {
               "v": "17",
-              "endpoint": "<<baseUrl>>/user/groupPermission/[id]",
               "name": "S010302 - UpdateGroupPermission",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/user/groupPermission/[id]",
               "params": [],
               "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9",
+                "authActive": true
+              },
               "body": {
                 "contentType": "application/json",
                 "body": "{\n  \"groupId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"formPermissionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
@@ -928,84 +913,18 @@
             },
             {
               "v": "17",
-              "endpoint": "<<baseUrl>>/user/groupPermission/[id]",
               "name": "S010303 - DeleteGroupPermission",
-              "params": [],
-              "headers": [],
               "method": "DELETE",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "<<baseUrl>>/user/groupPermission/active/[id]",
-              "name": "S010304 - ActiveGroupPermission",
-              "params": [],
-              "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
-              "endpoint": "<<baseUrl>>/user/groupPermission/inactive[id]",
-              "name": "S010305 - InactiveGroupPermission",
-              "params": [],
-              "headers": [],
-              "method": "PUT",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
-              },
-              "preRequestScript": "",
-              "testScript": "",
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {},
-              "description": null
-            },
-            {
-              "v": "17",
               "endpoint": "<<baseUrl>>/user/groupPermission/[id]",
-              "name": "S010306 - GetSpecificGroupPermission",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -1016,8 +935,75 @@
             },
             {
               "v": "17",
-              "endpoint": "<<baseUrl>>/user/groupPermission/getAll",
+              "name": "S010304 - ActiveGroupPermission",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/user/groupPermission/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S010305 - InactiveGroupPermission",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/user/groupPermission/inactive[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S010306 - GetSpecificGroupPermission",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/user/groupPermission/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
               "name": "S010307 - GetAllGroupPermission",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/user/groupPermission/getAll",
               "params": [
                 {
                   "key": "groupId",
@@ -1075,14 +1061,13 @@
                 }
               ],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -1093,18 +1078,18 @@
             },
             {
               "v": "17",
-              "endpoint": "<<baseUrl>>/user/groupPermission/getComboList",
               "name": "S010308 - GetComboGroupPermission",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/user/groupPermission/getComboList",
               "params": [],
               "headers": [],
-              "method": "GET",
-              "auth": {
-                "authType": "bearer",
-                "authActive": true,
-                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
-              },
               "preRequestScript": "",
               "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9",
+                "authActive": true
+              },
               "body": {
                 "contentType": null,
                 "body": null
@@ -1145,7 +1130,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"test\",\n  \"gender\": \"Male/Female\",\n  \"staffNumber\": \"4456123\",\n  \"activeTo\": \"2026-09-10 12:00:00\",\n  \"positionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"avatar\": \"/files/avatars/01.jpg\",\n  \"birthday\": \"1984-07-01\",\n  \"phoneNumber\": \"0018881515\",\n  \"mobileNumber\": \"0018881515\",\n  \"emailAddress\": \"test@gmail.com\",\n  \"address\": \"test\",\n  \"postalCode\": \"123456\",\n  \"username\": \"test\",\n  \"pass\": \"Test@123\",\n  \"roleId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ],\n  \"groupId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ],\n  \"permissionId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ]\n}"
+                "body": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"test\",\n  \"gender\": \"Male/Female\",\n  \"staffNumber\": \"4456123\",\n  \"activeTo\": \"2026-09-10 12:00:00\",\n  \"positionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"avatar\": \"/files/avatars/01.jpg\",\n  \"birthday\": \"1984-07-01\",\n  \"phoneNumber\": \"0018881515\",\n  \"mobileNumber\": \"0018881515\",\n  \"emailAddress\": \"test@gmail.com\",\n  \"address\": \"test\",\n  \"postalCode\": \"123456\",\n  \"username\": \"test\",\n  \"pass\": \"Test@123\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -1198,7 +1183,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"test\",\n  \"gender\": \"Male/Female\",\n  \"staffNumber\": \"4456123\",\n  \"activeTo\": \"2026-09-10 12:00:00\",\n  \"positionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"avatar\": \"/files/avatars/01.jpg\",\n  \"birthday\": \"1984-07-01\",\n  \"phoneNumber\": \"0018881515\",\n  \"mobileNumber\": \"0018881515\",\n  \"emailAddress\": \"test@gmail.com\",\n  \"address\": \"test\",\n  \"postalCode\": \"123456\",\n  \"roleId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ],\n  \"groupId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ],\n  \"permissionId\": [\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n    \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n  ]\n}"
+                "body": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"test\",\n  \"gender\": \"Male/Female\",\n  \"staffNumber\": \"4456123\",\n  \"activeTo\": \"2026-09-10 12:00:00\",\n  \"positionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"avatar\": \"/files/avatars/01.jpg\",\n  \"birthday\": \"1984-07-01\",\n  \"phoneNumber\": \"0018881515\",\n  \"mobileNumber\": \"0018881515\",\n  \"emailAddress\": \"test@gmail.com\",\n  \"address\": \"test\",\n  \"postalCode\": \"123456\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -1496,6 +1481,18 @@
                   "description": "optional"
                 },
                 {
+                  "key": "positionTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "positionCode",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
                   "key": "birthday",
                   "value": "1984-07-10",
                   "active": true,
@@ -1534,24 +1531,6 @@
                 {
                   "key": "username",
                   "value": "test",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "roleId",
-                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "groupId",
-                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "permissionId",
-                  "value": "123",
                   "active": true,
                   "description": "optional"
                 },
@@ -1810,7 +1789,236 @@
           "v": 12,
           "name": "S0105 - ProfilePermission",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profilePermission",
+              "name": "S010501 - AddProfilePermission",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"formPermissionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profilePermission/[id]",
+              "name": "S010502 - UpdateProfilePermission",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"formPermissionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profilePermission/[id]",
+              "name": "S010503 - DeleteProfilePermission",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "username": "",
+                "password": "",
+                "algorithm": "MD5",
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profilePermission/active/[id]",
+              "name": "S010504 - ActiveProfilePermission",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profilePermission/inactive/[id]",
+              "name": "S010505 - InactiveProfilePermission",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profilePermission/[id]",
+              "name": "S010506 - GetSpecificProfilePermission",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profilePermission/getAll",
+              "name": "S010507 - GetAllProfilePermission",
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "permissionId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "permissionCode",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "permissionTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profilePermission/getComboList",
+              "name": "S010508 - GetComboListProfilePermission",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -1825,7 +2033,232 @@
           "v": 12,
           "name": "S0106 - ProfileGroup",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profileGroup",
+              "name": "S010601 - AddProfileGroup",
+              "params": [],
+              "headers": [],
+              "method": "POST",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"groupId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profileGroup/[id]",
+              "name": "S010602 - UpdateProfileGroup",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"profileId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"groupId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profileGroup/[id]",
+              "name": "S010603 - DeleteProfileGroup",
+              "params": [],
+              "headers": [],
+              "method": "DELETE",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profileGroup/active/[id]",
+              "name": "S010604 - ActiveProfileGroup",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profileGroup/[id]",
+              "name": "S010605 - InactiveProfileGroup",
+              "params": [],
+              "headers": [],
+              "method": "PUT",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profileGroup/[id]",
+              "name": "S010606 - GetSpecificProfileGroup",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profileGroup/getAll",
+              "name": "S010607 - GetAllProfileGroup",
+              "params": [
+                {
+                  "key": "profileId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "profileName",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "groupId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "groupTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "groupCode",
+                  "value": "123",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/profileGroup/getComboList",
+              "name": "S010608 - GetComboListProfileGroup",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -1840,7 +2273,52 @@
           "v": 12,
           "name": "S0107 - FormPermission",
           "folders": [],
-          "requests": [],
+          "requests": [
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/form/getComboList",
+              "name": "S010701 - GetComboListForm",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            },
+            {
+              "v": "17",
+              "endpoint": "<<baseUrl>>/user/permission/getComboList/[formId]",
+              "name": "S010702 - GetComboListPermission",
+              "params": [],
+              "headers": [],
+              "method": "GET",
+              "auth": {
+                "authType": "bearer",
+                "authActive": true,
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+              },
+              "preRequestScript": "",
+              "testScript": "",
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "description": null
+            }
+          ],
           "auth": {
             "authType": "inherit",
             "authActive": true
@@ -9500,8 +9978,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9"
+                "token": "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzA4MzQ1MTIzLCJleHAiOjE3MDgzNTUxMjN9",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
