@@ -1292,6 +1292,11 @@
         "operationId": "S010603___DeleteProfileGroup",
         "tags": [
           "S01 - UserManagement/S0106 - ProfileGroup"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
         ]
       },
       "get": {
@@ -21278,26 +21283,26 @@
       "tagPath": "S01 - UserManagement/S0106 - ProfileGroup",
       "request": {
         "v": "17",
-        "endpoint": "<<baseUrl>>/user/profileGroup/[id]",
         "name": "S010605 - InactiveProfileGroup",
+        "method": "PUT",
+        "endpoint": "<<baseUrl>>/user/profileGroup/[id]",
         "params": [],
         "headers": [],
-        "method": "PUT",
-        "auth": {
-          "authType": "bearer",
-          "authActive": true,
-          "token": ""
-        },
         "preRequestScript": "",
         "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "",
+          "authActive": true
+        },
         "body": {
           "contentType": null,
           "body": null
         },
         "requestVariables": [],
         "responses": {},
-        "_ref_id": "req_mvzw7kf5_cabfc65b-e0c3-481a-b088-f633b6af463d",
-        "description": null
+        "description": null,
+        "_ref_id": "req_mw16iqew_afe8407a-57fd-4622-b5ac-eb4809c31833"
       }
     }
   ],
