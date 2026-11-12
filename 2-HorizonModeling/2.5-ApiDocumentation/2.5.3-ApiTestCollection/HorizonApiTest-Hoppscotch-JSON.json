@@ -1130,7 +1130,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"test\",\n  \"gender\": \"Male/Female\",\n  \"staffNumber\": \"4456123\",\n  \"activeTo\": \"2026-09-10 12:00:00\",\n  \"positionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"avatar\": \"/files/avatars/01.jpg\",\n  \"birthday\": \"1984-07-01\",\n  \"phoneNumber\": \"0018881515\",\n  \"mobileNumber\": \"0018881515\",\n  \"emailAddress\": \"test@gmail.com\",\n  \"address\": \"test\",\n  \"postalCode\": \"123456\",\n  \"username\": \"test\",\n  \"pass\": \"Test@123\"\n}"
+                "body": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"test\",\n  \"gender\": \"Male/Female\",\n  \"staffNumber\": \"4456123\",\n  \"activeTo\": \"2026-09-10 12:00:00\",\n  \"positionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"avatar\": \"/files/avatars/01.jpg\",\n  \"birthday\": \"1984-07-01\",\n  \"phoneNumber\": \"0018881515\",\n  \"mobileNumber\": \"0018881515\",\n  \"emailAddress\": \"test@gmail.com\",\n  \"address\": \"test\",\n  \"postalCode\": \"123456\",\n  \"username\": \"test\",\n  \"confirmPassword\": \"Test@123\",\n  \"password\": \"Test@123\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -2086,8 +2086,8 @@
               "testScript": "",
               "auth": {
                 "authType": "bearer",
-                "authActive": true,
-                "token": "<<jwtToken>>"
+                "token": "<<jwtToken>>",
+                "authActive": true
               },
               "body": {
                 "contentType": null,
