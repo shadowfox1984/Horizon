@@ -57,7 +57,7 @@ entity "ProjectManagement.Project" as project #Orange{
 entity "ProjectManagement.ProjectRelease" as release #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>>
+  *ProjectId : uuid <<FK>>
   *VersionNumber : varchar(20) <<unique>>
   ReleaseDate : date
   Description : varchar(4000)
@@ -72,16 +72,16 @@ entity "ProjectManagement.ProjectRelease" as release #Orange{
 entity "ProjectManagement.Issue" as issue #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>>
-  AssigneeId : uui <<FK>>
+  *ProjectId : uuid <<FK>>
+  AssigneeId : uuid <<FK>>
   *Code : varchar(20) <<unique>>
   *Title : varchar(200)
   Description : varchar(4000)
   DueDate : date
-  PriorityId : uui <<FK>>
-  *IssueTypeId : uui <<FK>>
-  *CuurentStatusId : uui <<FK>>
-  *CurrentResolvationId : uui <<FK>>
+  PriorityId : uuid <<FK>>
+  *IssueTypeId : uuid <<FK>>
+  *CuurentStatusId : uuid <<FK>>
+  *CurrentResolvationId : uuid <<FK>>
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
   *CreateDate : timestamp <<default: now()>>
@@ -93,10 +93,10 @@ entity "ProjectManagement.Issue" as issue #Orange{
 entity "QualityControl.TestScenario" as testScenario #Silver{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>>
+  *ProjectId : uuid <<FK>>
   *Code : varchar(20) <<unique>>
   *Title : varchar(255)
-  TestComplexityLevelId : uui <<FK>>
+  TestComplexityLevelId : uuid <<FK>>
   UsersAndRoles : varchar(4000)
   Steps : varchar(4000)
   Description : varchar(4000)
@@ -111,8 +111,8 @@ entity "QualityControl.TestScenario" as testScenario #Silver{
 entity "QualityControl.PrerequisiteTestScenario" as prerequisiteTestScenario #Silver{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *TestScenarioId : uui <<FK>>
-  *PrerequisiteTestScenarioId : uui <<FK>>
+  *TestScenarioId : uuid <<FK>>
+  *PrerequisiteTestScenarioId : uuid <<FK>>
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
   *CreateDate : timestamp <<default: now()>>
@@ -127,7 +127,7 @@ entity "QualityControl.TestPlan" as testPlan #Silver{
   *Code : varchar(20) <<unique>>
   *Title : varchar(255)
   PlanningDate : date
-  ProjectReleaseId : uui <<FK>>
+  ProjectReleaseId : uuid <<FK>>
   Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
@@ -140,8 +140,8 @@ entity "QualityControl.TestPlan" as testPlan #Silver{
 entity "QualityControl.TestPlanScenario" as testPlanScenario #Silver{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *TestScenarioId : uui <<FK>> <<composite unique>>
-  *TestPlanId : uui <<FK>> <<composite unique>>
+  *TestScenarioId : uuid <<FK>> <<composite unique>>
+  *TestPlanId : uuid <<FK>> <<composite unique>>
   *Ordering : float <<composite unique>>
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
@@ -154,8 +154,8 @@ entity "QualityControl.TestPlanScenario" as testPlanScenario #Silver{
 entity "QualityControl.TestPlanScenarioIssueCoverage" as testPlanScenarioIssueCoverage #Silver{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *TestPlanScenarioId : uui <<FK>> <<composite unique>>
-  *IssueId : uui <<FK>> <<composite unique>>
+  *TestPlanScenarioId : uuid <<FK>> <<composite unique>>
+  *IssueId : uuid <<FK>> <<composite unique>>
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
   *CreateDate : timestamp <<default: now()>>
@@ -168,7 +168,7 @@ entity "QualityControl.TestResult" as testResult #Silver{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *TestDate : date
-  *TestPlanId : uui <<FK>>
+  *TestPlanId : uuid <<FK>>
   Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>
@@ -181,8 +181,8 @@ entity "QualityControl.TestResult" as testResult #Silver{
 entity "QualityControl.TestResultDetail" as testResultDetail #Silver{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  TestPlanScenarioId : uui <<FK>>
-  *TestApprovalId : uui <<FK>>
+  TestPlanScenarioId : uuid <<FK>>
+  *TestApprovalId : uuid <<FK>>
   *Description : varchar(4000)
   *IsActive : boolean <<default: true>>
   *IsDeleted : boolean <<default: false>>

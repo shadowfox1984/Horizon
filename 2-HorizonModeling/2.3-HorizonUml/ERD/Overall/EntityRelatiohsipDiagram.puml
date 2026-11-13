@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.11.13
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.11.14
 
 entity "Basic.StaffContractType" as staffContractType #LightPink{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
@@ -120,7 +120,7 @@ entity "Basic.Status" as status #LightPink{
   ModifierId : bigint(19)
 }
 
-entity "Basic.Resolvation" as resolvation #LightPink{
+entity "Basic.Resolution" as resolution #LightPink{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)
@@ -247,8 +247,8 @@ entity "UserManagement.Form" as form #Violet{
 entity "UserManagement.FormPermission" as formPermission #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *FormId : uui <<FK>>
-  *PermissionId : uui <<FK>>
+  *FormId : uuid <<FK>>
+  *PermissionId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -259,8 +259,8 @@ entity "UserManagement.FormPermission" as formPermission #Violet{
 entity "UserManagement.GroupPermission" as groupPermission #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *GroupId : uui <<FK>>
-  *FormPermissionId : uui <<FK>>
+  *GroupId : uuid <<FK>>
+  *FormPermissionId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -271,8 +271,8 @@ entity "UserManagement.GroupPermission" as groupPermission #Violet{
 entity "UserManagement.ProfilePermission" as profilePermission #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
-  *PermissionId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
+  *PermissionId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -289,7 +289,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
-  PositionId : uui <<FK>>
+  PositionId : uuid <<FK>>
   Avatar : text
   Birthday : date
   PhoneNumber : varchar(20)
@@ -313,7 +313,7 @@ entity "UserManagement.Profile" as profile #Violet{
 entity "UserManagement.UserToken" as userToken #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
   *ClientSecret : varchar(255)
   *ClientIp : varchar(255)
   *Token : varchar(1000)
@@ -330,8 +330,8 @@ entity "UserManagement.UserToken" as userToken #Violet{
 entity "UserManagement.ProfileGroup" as profileGroup #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
-  *GroupId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
+  *GroupId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -465,7 +465,7 @@ entity "HumanResource.WorkingTimeTable" as workingTimeTable #Lavender{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *WorkingDay : enum(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)
-  *StaffContractTypeId : uui <<FK>>
+  *StaffContractTypeId : uuid <<FK>>
   *Title : varchar(200)
   *StartTime : time
   *EndTime : time
@@ -571,9 +571,9 @@ entity "ProjectManagement.Project" as project #Orange{
 entity "ProjectManagement.ProjectRoleMember" as projectRoleMember #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>> <<composite unique>>
-  *ProfileId : uui <<FK>> <<composite unique>>
-  RoleId : uui <<FK>>
+  *ProjectId : uuid <<FK>> <<composite unique>>
+  *ProfileId : uuid <<FK>> <<composite unique>>
+  RoleId : uuid <<FK>>
   *IsProjectManager : boolean
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -585,8 +585,8 @@ entity "ProjectManagement.ProjectRoleMember" as projectRoleMember #Orange{
 entity "ProjectManagement.ProjectGroupMember" as projectGroupMember #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>> <<composite unique>>
-  *GroupId : uui <<FK>> <<composite unique>>
+  *ProjectId : uuid <<FK>> <<composite unique>>
+  *GroupId : uuid <<FK>> <<composite unique>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -597,8 +597,8 @@ entity "ProjectManagement.ProjectGroupMember" as projectGroupMember #Orange{
 entity "ProjectManagement.ProjectDepartmentMember" as projectDepartmentMember #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>> <<composite unique>>
-  *DepartmentId : uui <<FK>> <<composite unique>>
+  *ProjectId : uuid <<FK>> <<composite unique>>
+  *DepartmentId : uuid <<FK>> <<composite unique>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -609,7 +609,7 @@ entity "ProjectManagement.ProjectDepartmentMember" as projectDepartmentMember #O
 entity "ProjectManagement.ProjectWorkflow" as projectWorkflow #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>>
+  *ProjectId : uuid <<FK>>
   *Code : varchar(20) <<unique>>
   *Title : varchar(200)
   Description : varchar(4000)
@@ -623,8 +623,8 @@ entity "ProjectManagement.ProjectWorkflow" as projectWorkflow #Orange{
 entity "ProjectManagement.ProjectWorkflowStatus" as projectWorkflowStatus #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectWorkflowId : uui <<FK>>
-  *StatusId : uui <<FK>>
+  *ProjectWorkflowId : uuid <<FK>>
+  *StatusId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -632,11 +632,11 @@ entity "ProjectManagement.ProjectWorkflowStatus" as projectWorkflowStatus #Orang
   ModifierId : bigint(19)
 }
 
-entity "ProjectManagement.ProjectWorkflowResolvation" as projectWorkflowResolvation #Orange{
+entity "ProjectManagement.ProjectWorkflowResolution" as projectWorkflowResolution #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectWorkflowId : uui <<FK>>
-  *ResolvationId : uui <<FK>>
+  *ProjectWorkflowId : uuid <<FK>>
+  *ResolutionId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -648,10 +648,10 @@ entity "ProjectManagement.ProjectWorkflowProgress" as projectWorkflowProgress #O
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(255)
-  StartProjectWorkflowStatusId : uui <<FK>>
+  StartProjectWorkflowStatusId : uuid <<FK>>
   *IsFromStartPoint : boolean
   *CanBeStartedFromAnyStatus : boolean
-  EndProjectWorkflowStatusId : uui <<FK>>
+  EndProjectWorkflowStatusId : uuid <<FK>>
   *IsWorkflowEndPoint : boolean
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -663,21 +663,45 @@ entity "ProjectManagement.ProjectWorkflowProgress" as projectWorkflowProgress #O
 entity "ProjectManagement.Issue" as issue #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>>
-  AssigneeId : uui <<FK>>
+  *ProjectId : uuid <<FK>>
+  AssigneeId : uuid <<FK>>
   *Code : varchar(20) <<unique>>
   *Title : varchar(200)
   Description : varchar(4000)
   DueDate : date
-  PriorityId : uui <<FK>>
-  *IssueTypeId : uui <<FK>>
+  PriorityId : uuid <<FK>>
+  *IssueTypeId : uuid <<FK>>
   IssueSize : enum(XS, S, M , L , XL)
-  ParentIssueId : uui <<FK>>
-	EpicLinkedId : uui <<FK>>
-	LinkedIssueId : uui <<FK>>
+  ParentIssueId : uuid <<FK>>
+	EpicLinkedId : uuid <<FK>>
+	LinkedIssueId : uuid <<FK>>
 	LinkedIssueType : enum(Blocks, RelatesTo, Duplicates, Clones)
-  *CurrentStatusId : uui <<FK>>
-  *CurrentResolvationId : uui <<FK>>
+  *CurrentStatusId : uuid <<FK>>
+  *CurrentResolutionId : uuid <<FK>>
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "ProjectManagement.IssueChangeHistory" as issueWorkflowHistory #Orange{
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
+  --
+  *IssueId : uuid <<FK>>
+  *IssueChangeType : enum(UpdateDate, ChangeStatus, ChangeResolution, Deactivation, Activation, ChangeAssignee, MoveToAnotherProject)
+  ProjectWorkflowProgressId : uuid <<FK>>
+  StatusFromId : uuid <<FK>>
+  StatusToId : uuid <<FK>>
+  ResolutionFromId : uuid <<FK>>
+  ResolutionToId : uuid <<FK>>
+  AssigneeFromId : uuid <<FK>>
+  AssigneeToId : uuid <<FK>>
+  ProjectFromId : uuid <<FK>>
+  ProjectToId : uuid <<FK>>
+  IssueActiveStatusFrom : enum(Active, Inactive, Deleted)
+  IssueActiveStatusTo : enum(Active, Inactive, Deleted)
+  ChangeDataJson : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -688,7 +712,7 @@ entity "ProjectManagement.Issue" as issue #Orange{
 entity "ProjectManagement.IssueComment" as issueComment #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *IssueId : uui <<FK>>
+  *IssueId : uuid <<FK>>
   *CommentText : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -700,8 +724,8 @@ entity "ProjectManagement.IssueComment" as issueComment #Orange{
 entity "ProjectManagement.IssueAttachment" as issueAttachment #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *IssueId : uui <<FK>> <<composite unique>>
-  *DocumentId : uui <<FK>> <<composite unique>>
+  *IssueId : uuid <<FK>> <<composite unique>>
+  *DocumentId : uuid <<FK>> <<composite unique>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -712,7 +736,7 @@ entity "ProjectManagement.IssueAttachment" as issueAttachment #Orange{
 entity "ProjectManagement.ProjectRelease" as release #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>>
+  *ProjectId : uuid <<FK>>
   *VersionNumber : varchar(20) <<unique>>
   ReleaseDate : date
   Description : varchar(4000)
@@ -726,8 +750,8 @@ entity "ProjectManagement.ProjectRelease" as release #Orange{
 entity "ProjectManagement.ProjectReleaseIssue" as releaseIssue #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectReleaseId : uui <<FK>> <<composite unique>>
-  *IssueId : uui <<FK>> <<composite unique>>
+  *ProjectReleaseId : uuid <<FK>> <<composite unique>>
+  *IssueId : uuid <<FK>> <<composite unique>>
   IsFinalized : boolean
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -739,93 +763,12 @@ entity "ProjectManagement.ProjectReleaseIssue" as releaseIssue #Orange{
 entity "ProjectManagement.WorkLog" as workLog #Orange{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *IssueId : uui <<FK>>
+  *IssueId : uuid <<FK>>
   *LogDate : date
   *StartWorkTime : time
   *WorkingDuration : float 
-  *TimeUnitId : uui <<FK>>
+  *TimeUnitId : uuid <<FK>>
   Description : varchar(4000)
-  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
-entity "DocumentManagement.WorkflowEligibleFileExtension" as workflowEligibleFileExtension #Gold{
-  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
-  --
-  *WorkflowId : uui <<FK>> <<composite unique>>
-  *FileExtensionId : uui <<FK>> <<composite unique>>
-  *MaxFileSizeForUpload : integer <<default: 5242880>>
-  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
-entity "ProjectManagement.IssueWorkflowHistory" as issueWorkflowHistory #Orange{
-  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
-  --
-  *IssueId : uui <<FK>>
-  *StartStatusId : uui <<FK>>
-  *EndStatusId : uui <<FK>>
-  *ProjectWorkflowProgressId : uui <<FK>>
-  ProjectWorkflowResolvationId : uui <<FK>>
-  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
-entity "ProjectManagement.ProjectMeeting" as projectMeeting #Orange{
-  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
-  --
-  *ProjectId : uui <<FK>>
-  *MeetingTypeId : uui <<FK>>
-  *MeetingDate : date
-  *Title : varchar(255)
-  *Location : varchar(255)
-  MinutesDocumentId : uui <<FK>>
-  Description : varchar(4000)
-  ScheduleStartTime : time
-  ScheduleEndTime : time
-  ActualStartTime : time
-  ActualEndTime : time
-  *IsCanncelled : boolean <<default: false>>
-  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
-entity "ProjectManagement.MeetingInvitees" as meetingInvitees #Orange{
-  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
-  --
-  *ProjectMeetingId : uui <<FK>>
-  *IsFromInsideCompnay : boolean
-  ProfileId : uui <<FK>>
-  InviteeFullName : varchar(255)
-	InviteeCompanyName : varchar(255)
-  IsAttanded : boolean
-  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
-entity "ProjectManagement.MeetingMinutes" as meetingMinutes #Orange{
-  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
-  --
-  *ProjectMeetingId : uui <<FK>>
-  *Resolution : varchar(4000)
-  ResponsibleDepartmentId : uui <<FK>>
-  IssueId : uui <<FK>>
-  DueDate : datetime
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -839,21 +782,6 @@ entity "DocumentManagement.WorkflowEligibleFileExtension" as workflowEligibleFil
   *WorkflowId : uuid <<FK>> <<composite unique>>
   *FileExtensionId : uuid <<FK>> <<composite unique>>
   *MaxFileSizeForUpload : integer <<default: 5242880>>
-  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
-  *CreateDate : timestamp <<default: now()>>
-  *CreatorId : bigint(19)
-  ModifyDate : timestamp
-  ModifierId : bigint(19)
-}
-
-entity "ProjectManagement.IssueWorkflowHistory" as issueWorkflowHistory #Orange{
-  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
-  --
-  *IssueId : uuid <<FK>>
-  *StartStatusId : uuid <<FK>>
-  *EndStatusId : uuid <<FK>>
-  *ProjectWorkflowProgressId : uuid <<FK>>
-  ProjectWorkflowResolvationId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -1448,7 +1376,7 @@ entity "Evaluation.CustomerFeedback" as customerFeedback #SkyBlue{
 entity "Evaluation.StaffSatisfactionEvaluationResult" as staffSatisfactionEvaluationResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
   *EvalationDate : date
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
@@ -1462,7 +1390,7 @@ entity "Evaluation.StaffSatisfactionEvaluationResult" as staffSatisfactionEvalua
 entity "Evaluation.ProjectProductivityEvaluationResult" as projectProductivityEvaluationResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>>
+  *ProjectId : uuid <<FK>>
   *EvalationDate : datetime
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
@@ -1476,8 +1404,8 @@ entity "Evaluation.ProjectProductivityEvaluationResult" as projectProductivityEv
 entity "Evaluation.CustomerSatisfactionEvaluationResult" as customerSatisfactionEvaluationResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *CustomerId : uui <<FK>>
-  *ProjectId : uui <<FK>>
+  *CustomerId : uuid <<FK>>
+  *ProjectId : uuid <<FK>>
   *EvalationDate : datetime
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
@@ -1527,9 +1455,10 @@ issue ||..o{ issue
 issue ||..o{ issue
 issue ||..o{ issue
 projectWorkflowStatus ||..o{ issue
-projectWorkflowResolvation ||..o{ issue
+projectWorkflowResolution ||..o{ issue
 project ||..o{ projectWorkflow
 projectWorkflow ||..o{ projectWorkflowStatus
+status ||..o{ projectWorkflowStatus
 projectWorkflowStatus ||..o{ projectWorkflowProgress
 projectWorkflowStatus ||..o{ projectWorkflowProgress
 issue ||..o{ issueComment
@@ -1545,11 +1474,6 @@ meetingType ||..o{ projectMeeting
 projectWorkflow ||..o{ workflowEligibleFileExtension
 issue ||..o{ workLog
 timeUnit ||..o{ workLog
-issue ||..o{  issueWorkflowHistory
-status ||..o{ issueWorkflowHistory
-status ||..o{ issueWorkflowHistory
-projectWorkflowProgress ||..o{ issueWorkflowHistory
-projectWorkflowResolvation ||..o{ issueWorkflowHistory
 project ||..o{ release
 release ||..o{ releaseIssue
 issue ||..o{ releaseIssue
@@ -1561,8 +1485,17 @@ role |o..o{ projectRoleMember
 project ||..o{ projectDepartmentMember
 department ||..o{ projectDepartmentMember
 projectWorkflow ||..o{ projectWorkflowDocumentType
-projectWorkflow ||..o{ projectWorkflowResolvation
-resolvation ||..o{ projectWorkflowResolvation
+projectWorkflow ||..o{ projectWorkflowResolution
+resolution ||..o{ projectWorkflowResolution
+projectWorkflowProgress |o..o{ issueWorkflowHistory
+projectWorkflowStatus |o..o{ issueWorkflowHistory
+projectWorkflowStatus |o..o{ issueWorkflowHistory
+projectWorkflowResolution |o..o{ issueWorkflowHistory
+projectWorkflowResolution |o..o{ issueWorkflowHistory
+profile |o..o{ issueWorkflowHistory
+profile |o..o{ issueWorkflowHistory
+project |o..o{ issueWorkflowHistory
+project |o..o{ issueWorkflowHistory
 
 staffContractType ||..o{ staffContract
 profile ||..o{ staffContract

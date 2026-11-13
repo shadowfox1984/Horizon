@@ -16,7 +16,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
-  PositionId : uui <<FK>>
+  PositionId : uuid <<FK>>
   Avatar : text
   Birthday : date
   PhoneNumber : varchar(20)
@@ -86,7 +86,7 @@ entity "Finance.Customer" as customer #Salmon{
 entity "Evaluation.Question" as question #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *QuestionnaireId : uui <<FK>>
+  *QuestionnaireId : uuid <<FK>>
   *Question : varchar(4000)
   *Code : varchar(20) <<unique>>
   *AnswerType : enum(SingleChoice, MultiChoice, Description)
@@ -101,7 +101,7 @@ entity "Evaluation.Question" as question #SkyBlue{
 entity "Evaluation.QuestionOption" as questionOption #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *QuestionId : uui <<FK>>
+  *QuestionId : uuid <<FK>>
   *Title : varchar(4000)
   *Score : integer
   *IsDescriptionRequired : boolean
@@ -117,7 +117,7 @@ entity "Evaluation.Questionnaire" as questionnaire #SkyBlue{
   --
   *Title : varchar(200)
   *Code : varchar(20) <<unique>>
-  ProjectId : uui <<FK>>
+  ProjectId : uuid <<FK>>
   *QuestionnaireAduience : enum(Staffs, Customers, SeniorManagers, Stackholders)
   *TotalScore : integer
   *AcceptableScore : integer
@@ -134,8 +134,8 @@ entity "Evaluation.Questionnaire" as questionnaire #SkyBlue{
 entity "Evaluation.QuestionnaireTargetDepartment" as questionnaireTargetDepartment #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *QuestionnaireId : uui <<FK>>
-  *DepoartmentId : uui <<FK>>
+  *QuestionnaireId : uuid <<FK>>
+  *DepoartmentId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -146,8 +146,8 @@ entity "Evaluation.QuestionnaireTargetDepartment" as questionnaireTargetDepartme
 entity "Evaluation.QuestionnaireItem" as questionnaireItem #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *QuestionnaireId : uui <<FK>>
-  *QuestionId : uui <<FK>>
+  *QuestionnaireId : uuid <<FK>>
+  *QuestionId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -158,9 +158,9 @@ entity "Evaluation.QuestionnaireItem" as questionnaireItem #SkyBlue{
 entity "Evaluation.QuestionnaireResult" as questionnaireResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *QuestionnaireId : uui <<FK>>
-  ProfileId : uui <<FK>>
-  CustomerId : uui <<FK>>
+  *QuestionnaireId : uuid <<FK>>
+  ProfileId : uuid <<FK>>
+  CustomerId : uuid <<FK>>
   *QuestionnaireDate : date
   *TotalScore : integer
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -173,9 +173,9 @@ entity "Evaluation.QuestionnaireResult" as questionnaireResult #SkyBlue{
 entity "Evaluation.QuestionnaireResultDetail" as questionnaireResultDetail #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *QuestionnaireResultId : uui <<FK>>
-  *QuestionnaireItemId : uui <<FK>>
-  ChoosedQuestionOptionId : uui <<FK>>
+  *QuestionnaireResultId : uuid <<FK>>
+  *QuestionnaireItemId : uuid <<FK>>
+  ChoosedQuestionOptionId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -187,8 +187,8 @@ entity "Evaluation.QuestionnaireResultDetail" as questionnaireResultDetail #SkyB
 entity "Evaluation.CustomerFeedback" as customerFeedback #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *CustomerId : uui <<FK>>
-  *ProjectId : uui <<FK>>
+  *CustomerId : uuid <<FK>>
+  *ProjectId : uuid <<FK>>
   *FeedbackDate : date
   *FeedbackValue : numeric(2,2) <<between 1 and 10>>
   Description : varchar(4000)
@@ -202,7 +202,7 @@ entity "Evaluation.CustomerFeedback" as customerFeedback #SkyBlue{
 entity "Evaluation.StaffSatisfactionEvaluationResult" as staffSatisfactionEvaluationResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
   *EvalationDate : date
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
@@ -216,7 +216,7 @@ entity "Evaluation.StaffSatisfactionEvaluationResult" as staffSatisfactionEvalua
 entity "Evaluation.ProjectProductivityEvaluationResult" as projectProductivityEvaluationResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProjectId : uui <<FK>>
+  *ProjectId : uuid <<FK>>
   *EvalationDate : datetime
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)
@@ -230,8 +230,8 @@ entity "Evaluation.ProjectProductivityEvaluationResult" as projectProductivityEv
 entity "Evaluation.CustomerSatisfactionEvaluationResult" as customerSatisfactionEvaluationResult #SkyBlue{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *CustomerId : uui <<FK>>
-  *ProjectId : uui <<FK>>
+  *CustomerId : uuid <<FK>>
+  *ProjectId : uuid <<FK>>
   *EvalationDate : datetime
   *EvaluatedValue : numeric(3,2) <<between 1 and 100>>
   Description : varchar(4000)

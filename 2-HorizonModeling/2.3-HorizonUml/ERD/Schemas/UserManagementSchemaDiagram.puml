@@ -12,8 +12,8 @@ entity "HumanResource.Position" as position #Lavender{
   --
   *Title : varchar(50)
   *Code : varchar(20) <<unique>>
-  *DepartmentId : uui <<FK>>
-  ParentId : uui <<FK>>
+  *DepartmentId : uuid <<FK>>
+  ParentId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -64,8 +64,8 @@ entity "UserManagement.Form" as form #Violet{
 entity "UserManagement.FormPermission" as formPermission #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *FormId : uui <<FK>>
-  *PermissionId : uui <<FK>>
+  *FormId : uuid <<FK>>
+  *PermissionId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -76,8 +76,8 @@ entity "UserManagement.FormPermission" as formPermission #Violet{
 entity "UserManagement.GroupPermission" as groupPermission #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *GroupId : uui <<FK>>
-  *FormPermissionId : uui <<FK>>
+  *GroupId : uuid <<FK>>
+  *FormPermissionId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -88,8 +88,8 @@ entity "UserManagement.GroupPermission" as groupPermission #Violet{
 entity "UserManagement.ProfilePermission" as profilePermission #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
-  *PermissionId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
+  *PermissionId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -106,7 +106,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
-  PositionId : uui <<FK>>
+  PositionId : uuid <<FK>>
   Avatar : text
   Birthday : date
   PhoneNumber : varchar(20)
@@ -130,7 +130,7 @@ entity "UserManagement.Profile" as profile #Violet{
 entity "UserManagement.UserToken" as userToken #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
   *ClientSecret : varchar(255)
   *ClientIp : varchar(255)
   *Token : varchar(1000)
@@ -147,8 +147,8 @@ entity "UserManagement.UserToken" as userToken #Violet{
 entity "UserManagement.ProfileGroup" as profileGroup #Violet{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
-  *GroupId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
+  *GroupId : uuid <<FK>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)

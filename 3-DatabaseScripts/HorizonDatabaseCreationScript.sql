@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.11.13
+	Last Version : 26.11.14
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -29,6 +29,7 @@ CREATE TYPE holidayType AS ENUM ('National', 'GovernmentOrFederal', 'ProvincialO
 CREATE TYPE linkedIssueType AS ENUM ('Blocks', 'RelatesTo', 'Duplicates', 'Clones');
 CREATE TYPE questionnaireAduience AS ENUM ('Staffs', 'Customers', 'Stackholders', 'SeniorManagers');
 CREATE TYPE answerType AS ENUM ('SignleChoice', 'MultiChoice', 'Description');
+CREATE TYPE issueChangeType AS ENUM ('UpdateDate', 'ChangeStatus', 'ChangeResolution', 'Deactivation', 'Activation', 'ChangeAssignee', 'MoveToAnotherProject');
 
 
 
@@ -739,6 +740,40 @@ CREATE TABLE ProjectManagement.Issue(
 	FOREIGN KEY (ParentIssueId) REFERENCES ProjectManagement.Issue(Id)
 );
 
+CREATE TABLE ProjectManagement.IssueWorkflowHistory(
+    Id uuid NOT NULL DEFAULT gen_random_uuid(), 
+	IssueId uuid NOT NULL,
+	IssueChangeType issueChangeType NOT NULL,
+	ProjectWorkflowProgressId uuid,
+	StatusFromId uuid.
+	StatusToId uuid,
+	ResolutionFromId uuid.
+	ResolutionToId uuid,
+	AssigneeFromId uuid,
+	AssigneeToId uuid,
+	ProjectFromId uuid,
+	ProjectToId uuid,
+	IssueActiveStatusFrom activeStatus,
+	IssueActiveStatusTo activeStatus,	
+	ChangeDataJson varchar(4000),
+    ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
+    CreateDate timestamp NOT NULL DEFAULT NOW(),
+	CreatorId uuid NOT NULL,
+	PRIMARY KEY(Id),
+	FOREIGN KEY (IssueId) REFERENCES ProjectManagement.Issue(Id),
+	FOREIGN KEY (StatusFromId) REFERENCES ProjectManagement.ProjectWorkflowStatus(Id),
+	FOREIGN KEY (StatusToId) REFERENCES ProjectManagement.ProjectWorkflowStatus(Id),
+	FOREIGN KEY (WorkflowProgressId) REFERENCES ProjectManagement.ProjectWorkflowProgress(Id),
+	FOREIGN KEY (ResolutionFromId) REFERENCES ProjectManagement.ProjectWorkflowResolution(Id),
+	FOREIGN KEY (ResolutionToId) REFERENCES ProjectManagement.ProjectWorkflowResolution(Id),
+	FOREIGN KEY (AssigneeFromId) REFERENCES UserManagement.Profile(Id),
+	FOREIGN KEY (AssigneeToId) REFERENCES UserManagement.Profile(Id),
+	FOREIGN KEY (ProjectFromId) REFERENCES ProjectManagement.Project(Id),
+	FOREIGN KEY (ProjectToId) REFERENCES ProjectManagement.Project(Id)
+);
+
+
+
 CREATE TABLE ProjectManagement.IssueComment(
     Id uuid NOT NULL DEFAULT gen_random_uuid(), 
 	IssueId uuid NOT NULL,
@@ -846,26 +881,6 @@ CREATE TABLE ProjectManagement.WorkflowAllowedDocumentType(
 	FOREIGN KEY (DocumentTypeId) REFERENCES DocumentManagement.DocumentType(Id),
 	FOREIGN KEY (ProjectWorkflowId) REFERENCES ProjectManagement.ProjectWorkflow(Id),
 	UNIQUE(DocumentTypeId, ProjectWorkflowId)
-);
-
-CREATE TABLE ProjectManagement.IssueWorkflowHistory(
-    Id uuid NOT NULL DEFAULT gen_random_uuid(), 
-	IssueId uuid NOT NULL,
-	StartStatusId uuid NOT NULL,
-	EndStatusId uuid NOT NULL,
-	ProjectWorkflowProgressId uuid NOT NULL,
-	ProjectWorkflowResolutionId uuid,
-    ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
-    CreateDate timestamp NOT NULL DEFAULT NOW(),
-	CreatorId uuid NOT NULL,
-    ModifyDate timestamp,
-	ModifierId uuid,
-	PRIMARY KEY(Id),
-	FOREIGN KEY (IssueId) REFERENCES ProjectManagement.Issue(Id),
-	FOREIGN KEY (StartStatusId) REFERENCES ProjectManagement.StartStatus(Id),
-	FOREIGN KEY (EndStatusId) REFERENCES ProjectManagement.EndStatus(Id),
-	FOREIGN KEY (ProjectWorkflowProgressId) REFERENCES ProjectManagement.ProjectWorkflowProgress(Id),
-	FOREIGN KEY (ProjectWorkflowResolutionId) REFERENCES ProjectManagement.ProjectWorkflowResolution(Id)
 );
 
 CREATE TABLE ProjectManagement.ProjectMeeting(

@@ -120,7 +120,7 @@ entity "Basic.Status" as status #LightPink{
   ModifierId : bigint(19)
 }
 
-entity "Basic.Resolvation" as resolvation #LightPink{
+entity "Basic.Resolution" as resolution #LightPink{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *Title : varchar(200)

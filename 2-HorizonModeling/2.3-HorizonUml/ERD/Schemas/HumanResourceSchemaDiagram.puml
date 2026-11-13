@@ -38,8 +38,8 @@ entity "DocumentManagement.Document" as document #Gold{
   --
   *TableName : varchar(255)
   *TableId : bigint(19)
-  *DocumentTypeId : uui <<FK>>
-  *FileExtensionId : uui <<FK>>
+  *DocumentTypeId : uuid <<FK>>
+  *FileExtensionId : uuid <<FK>>
   *FileAddress: varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -57,7 +57,7 @@ entity "UserManagement.Profile" as profile #Violet{
   *StaffNumber : varchar(20) <<unique>>
   *ActiveFrom : timestamp
   ActiveTo : timestamp
-  PositionId : uui <<FK>>
+  PositionId : uuid <<FK>>
   Avatar : text
   Birthday : date
   PhoneNumber : varchar(20)
@@ -97,8 +97,8 @@ entity "HumanResource.Position" as position #Lavender{
   --
   *Title : varchar(50)
   *Code : varchar(20) <<unique>>
-  *DepartmentId : uui <<FK>>
-  ParentId : uui <<FK>>
+  *DepartmentId : uuid <<FK>>
+  ParentId : uuid <<FK>>
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
@@ -110,9 +110,9 @@ entity "HumanResource.Position" as position #Lavender{
 entity "HumanResource.ProfileEducation" as profileEducation #Lavender{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
-  *EducatioLevelId : uui <<FK>>
-  DocumentId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
+  *EducatioLevelId : uuid <<FK>>
+  DocumentId : uuid <<FK>>
   *Title : varchar(255)
   CollegeName : varchar(255)
   StartDate : date
@@ -128,7 +128,7 @@ entity "HumanResource.ProfileEducation" as profileEducation #Lavender{
 entity "HumanResource.ProfileJobExperience" as profileJobExperience #Lavender{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
   *JobTitle : varchar(200)
   *CompanyName : varchar(200)
   StartDate : date
@@ -144,13 +144,13 @@ entity "HumanResource.ProfileJobExperience" as profileJobExperience #Lavender{
 entity "HumanResource.ProfileCertificate" as profileCertificate #Lavender{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
   *Title : varchar(200)
   *InstituteName : varchar(200)
   StartDate : date
   EndDate : date
   HasCertificate : boolean
-  DocumentId : uui <<FK>>
+  DocumentId : uuid <<FK>>
   CertificateFileAddress : varchar(4000)
   Description : varchar(4000)
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
@@ -164,7 +164,7 @@ entity "HumanResource.WorkingTimeTable" as workingTimeTable #Lavender{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
   *WorkingDay : enum(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)
-  *StaffContractTypeId : uui <<FK>>
+  *StaffContractTypeId : uuid <<FK>>
   *Title : varchar(200)
   *StartTime : time
   *EndTime : time
@@ -194,7 +194,7 @@ entity "HumanResource.Holidaies" as holidaies #Lavender{
 entity "HumanResource.Attendance" as attendance #Lavender{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
   *WorkingDate : date
   *EnteranceType : enum(enter, exit)
   *EnternaceTime : time
@@ -208,7 +208,7 @@ entity "HumanResource.Attendance" as attendance #Lavender{
 entity "HumanResource.Leave" as leave #Lavender{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
   LeaveType : enum(fulltime, parttime)
   *LeavingStartDate : date
   LeavingEndDate : date
@@ -225,7 +225,7 @@ entity "HumanResource.Leave" as leave #Lavender{
 entity "HumanResource.WorkMission" as workMission #Lavender{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
   --
-  *ProfileId : uui <<FK>>
+  *ProfileId : uuid <<FK>>
   *MissionStartDate : date
   MissionEndDate : date
   *MissionStartTime : time
