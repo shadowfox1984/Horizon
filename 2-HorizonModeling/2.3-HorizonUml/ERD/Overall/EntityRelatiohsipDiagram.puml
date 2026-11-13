@@ -5,7 +5,7 @@ skinparam linetype ortho
 skinparam Shadowing True
 skinparam TitleFontSize 72pt
 
-title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.10.21
+title Horizon Research Project (HRP) \n Overall Entity Relationship Diagram \n Version 26.11.13
 
 entity "Basic.StaffContractType" as staffContractType #LightPink{
   *Id : uuid <<PK>> <<default: gen_random_uuid()>>
@@ -303,6 +303,23 @@ entity "UserManagement.Profile" as profile #Violet{
   *Username : varchar(200) <<unique>>
   *Pass : varchar(255)
   PassSalt : varchar(50)
+  *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
+  *CreateDate : timestamp <<default: now()>>
+  *CreatorId : bigint(19)
+  ModifyDate : timestamp
+  ModifierId : bigint(19)
+}
+
+entity "UserManagement.UserToken" as userToken #Violet{
+  *Id : uuid <<PK>> <<default: gen_random_uuid()>>
+  --
+  *ProfileId : uui <<FK>>
+  *ClientSecret : varchar(255)
+  *ClientIp : varchar(255)
+  *Token : varchar(1000)
+  *ExpireDate : datetime 
+  LastRefreshTime : datetime
+  *RefreshCount : int <<default: 0>>
   *ActiveStaus : enum(Active, Inactive, Deleted) <<default: Active>>
   *CreateDate : timestamp <<default: now()>>
   *CreatorId : bigint(19)
@@ -1482,6 +1499,7 @@ permission ||..o{ profilePermission
 profile ||..o{ profileGroup
 groups ||..o{ profileGroup
 position ||..o{ profile
+profile ||..o{ userToken
 
 documentType ||..o{ document
 fileExtension ||..o{ document

@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.10.21
+	Last Version : 26.11.13
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -359,6 +359,24 @@ CREATE TABLE UserManagement.Profile(
 	ModifierId uuid,
 	PRIMARY KEY(Id),
 	FOREIGN KEY (PositionId) REFERENCES HumanResource.Position(Id)
+);
+
+CREATE TABLE UserManagement.UserToken(
+    Id uuid NOT NULL DEFAULT gen_random_uuid(),  
+	ProfileId uuid NOT NULL,
+	ClientSecret varchar(255) NOT NULL,
+	ClientIp varchar(30) NOT NULL,
+	Token varchar(1000) NOT NULL,
+	ExpireDate datetime NOT NULL,
+	LastRefreshTime datetime,
+	RefreshCount int NOT NULL DEFAULT 0,
+    ActiveStatus activeStatus NOT NULL DEFAULT activeStatus.Active,
+    CreateDate timestamp NOT NULL DEFAULT NOW(),
+	CreatorId uuid NOT NULL,
+    ModifyDate timestamp,
+	ModifierId uuid,
+	PRIMARY KEY(Id),
+	FOREIGN KEY (ProfileId) REFERENCES UserManagement.Profile(Id)
 );
 
 CREATE TABLE UserManagement.ProfilePermission(
