@@ -1,6 +1,6 @@
 /* 
 	Note: This script is created specifically for PostgreSQL database.
-	Last Version : 26.11.20
+	Last Version : 26.11.27
 	User Guide for Creating Database : 
 	1. Please create a database with "horizondb" name.
 	2. Open connection to created databse.
@@ -162,7 +162,9 @@ CREATE TABLE Basic.TestApproval(
     Id uuid NOT NULL DEFAULT gen_random_uuid(),  
     Code varchar(20) NOT NULL UNIQUE,
     Title varchar(200) NOT NULL,
-	IsApproved boolean NOT NULL,
+	IsApproved boolean NOT NULL DEFAULT FALSE,
+	IsRejected boolean NOT NULL DEFAULT FALSE,
+	IsIgnored boolean NOT NULL DEFAULT FALSE,
 	Color varchar(10) NOT NULL,
 	Description varchar(4000),
     ActiveStatus activeStatusEnum NOT NULL DEFAULT 'Active',
@@ -170,7 +172,9 @@ CREATE TABLE Basic.TestApproval(
 	CreatorId uuid NOT NULL,
     ModifyDate timestamp,
 	ModifierId uuid,
-	PRIMARY KEY(Id)
+	PRIMARY KEY(Id),
+	CONSTRAINT only_one_true_check 
+    CHECK ( (IsApproved::int + IsRejected::int + IsIgnored::int) = 1 )
 );
 
 CREATE TABLE Basic.TestComplexityLevel(
@@ -651,9 +655,8 @@ CREATE TABLE ProjectManagement.ProjectDepartmentMember(
 	UNIQUE (ProjectId, DepartmentId)
 );
 
-CREATE TABLE ProjectManagement.ProjectWorkflow(
-    Id uuid NOT NULL DEFAULT gen_random_uuid(),  
-	ProjectId uuid NOT NULL,
+CREATE TABLE ProjectManagement.Workflow(
+    Id uuid NOT NULL DEFAULT gen_random_uuid(),
 	Title varchar(255) NOT NULL,
 	Code varchar(20) NOT NULL UNIQUE,
 	Description varchar(4000),
@@ -662,13 +665,13 @@ CREATE TABLE ProjectManagement.ProjectWorkflow(
 	CreatorId uuid NOT NULL,
     ModifyDate timestamp,
 	ModifierId uuid,
-	PRIMARY KEY(Id),
-	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id)
+	PRIMARY KEY(Id)
 );
 
-CREATE TABLE ProjectManagement.ProjectWorkflowStatus(
+
+CREATE TABLE ProjectManagement.WorkflowStatus(
     Id uuid NOT NULL DEFAULT gen_random_uuid(),  
-	ProjectWorkflowId uuid NOT NULL,
+	WorkflowId uuid NOT NULL,
 	StatusId uuid NOT NULL,
     ActiveStatus activeStatusEnum NOT NULL DEFAULT 'Active',
     CreateDate timestamp NOT NULL DEFAULT NOW(),
@@ -676,13 +679,14 @@ CREATE TABLE ProjectManagement.ProjectWorkflowStatus(
     ModifyDate timestamp,
 	ModifierId uuid,
 	PRIMARY KEY(Id),
-	FOREIGN KEY (ProjectWorkflowId) REFERENCES ProjectManagement.ProjectWorkflow(Id),
+	FOREIGN KEY (WorkflowId) REFERENCES ProjectManagement.Workflow(Id),
 	FOREIGN KEY (StatusId) REFERENCES Basic.Status(Id)
 );
 
-CREATE TABLE ProjectManagement.ProjectWorkflowResolution(
+
+CREATE TABLE ProjectManagement.WorkflowResolution(
     Id uuid NOT NULL DEFAULT gen_random_uuid(),  
-	ProjectWorkflowId uuid NOT NULL,
+	WorkflowId uuid NOT NULL,
 	ResolutionId uuid NOT NULL,
     ActiveStatus activeStatusEnum NOT NULL DEFAULT 'Active',
     CreateDate timestamp NOT NULL DEFAULT NOW(),
@@ -690,17 +694,18 @@ CREATE TABLE ProjectManagement.ProjectWorkflowResolution(
     ModifyDate timestamp,
 	ModifierId uuid,
 	PRIMARY KEY(Id),
-	FOREIGN KEY (ProjectWorkflowId) REFERENCES ProjectManagement.ProjectWorkflow(Id),
+	FOREIGN KEY (WorkflowId) REFERENCES ProjectManagement.Workflow(Id),
 	FOREIGN KEY (ResolutionId) REFERENCES Basic.Resolution(Id)
 );
 
-CREATE TABLE ProjectManagement.ProjectWorkflowProgress(
+
+CREATE TABLE ProjectManagement.WorkflowProgress(
     Id uuid NOT NULL DEFAULT gen_random_uuid(), 
 	Title varchar(255) NOT NULL,
-	StartProjectWorkflowStatusId uuid,
+	StartWorkflowStatusId uuid,
 	IsFromStartPoint boolean NOT NULL,
 	CanBeStartedFromAnyStatus boolean NOT NULL,
-	EndProjectWorkflowStatusId uuid,
+	EndWorkflowStatusId uuid,
 	IsWorkflowEndPoint boolean NOT NULL,
     ActiveStatus activeStatusEnum NOT NULL DEFAULT 'Active',
     CreateDate timestamp NOT NULL DEFAULT NOW(),
@@ -708,8 +713,23 @@ CREATE TABLE ProjectManagement.ProjectWorkflowProgress(
     ModifyDate timestamp,
 	ModifierId uuid,
 	PRIMARY KEY(Id),
-	FOREIGN KEY (StartProjectWorkflowStatusId) REFERENCES ProjectManagement.ProjectWorkflowStatus(Id),
-	FOREIGN KEY (EndProjectWorkflowStatusId) REFERENCES ProjectManagement.ProjectWorkflowStatus(Id)
+	FOREIGN KEY (StartWorkflowStatusId) REFERENCES ProjectManagement.WorkflowStatus(Id),
+	FOREIGN KEY (EndWorkflowStatusId) REFERENCES ProjectManagement.WorkflowStatus(Id)
+);
+
+
+CREATE TABLE ProjectManagement.ProjectWorkflow(
+    Id uuid NOT NULL DEFAULT gen_random_uuid(),  
+	ProjectId uuid NOT NULL,
+	WorkflowId uuid NOT NULL,
+    ActiveStatus activeStatusEnum NOT NULL DEFAULT 'Active',
+    CreateDate timestamp NOT NULL DEFAULT NOW(),
+	CreatorId uuid NOT NULL,
+    ModifyDate timestamp,
+	ModifierId uuid,
+	PRIMARY KEY(Id),
+	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id),
+	FOREIGN KEY (WorkflowId) REFERENCES ProjectManagement.Workflow(Id)
 );
 
 
@@ -740,8 +760,8 @@ CREATE TABLE ProjectManagement.Issue(
 	FOREIGN KEY (AssigneeId) REFERENCES UserManagement.Profile(Id),
 	FOREIGN KEY (ProjectId) REFERENCES ProjectManagement.Project(Id),
 	FOREIGN KEY (IssueTypeId) REFERENCES Basic.IssueType(Id),
-	FOREIGN KEY (CurrentStatusId) REFERENCES ProjectManagement.ProjectWorkflowStatus(Id),
-	FOREIGN KEY (CurrentResolutionId) REFERENCES ProjectManagement.ProjectWorkflowResolution(Id),
+	FOREIGN KEY (CurrentStatusId) REFERENCES ProjectManagement.WorkflowStatus(Id),
+	FOREIGN KEY (CurrentResolutionId) REFERENCES ProjectManagement.WorkflowResolution(Id),
 	FOREIGN KEY (LinkedIssueId) REFERENCES ProjectManagement.Issue(Id),
 	FOREIGN KEY (EpicLinkedId) REFERENCES ProjectManagement.Issue(Id),
 	FOREIGN KEY (ParentIssueId) REFERENCES ProjectManagement.Issue(Id)
@@ -768,11 +788,11 @@ CREATE TABLE ProjectManagement.IssueWorkflowHistory(
 	CreatorId uuid NOT NULL,
 	PRIMARY KEY(Id),
 	FOREIGN KEY (IssueId) REFERENCES ProjectManagement.Issue(Id),
-	FOREIGN KEY (StatusFromId) REFERENCES ProjectManagement.ProjectWorkflowStatus(Id),
-	FOREIGN KEY (StatusToId) REFERENCES ProjectManagement.ProjectWorkflowStatus(Id),
-	FOREIGN KEY (ProjectWorkflowProgressId) REFERENCES ProjectManagement.ProjectWorkflowProgress(Id),
-	FOREIGN KEY (ResolutionFromId) REFERENCES ProjectManagement.ProjectWorkflowResolution(Id),
-	FOREIGN KEY (ResolutionToId) REFERENCES ProjectManagement.ProjectWorkflowResolution(Id),
+	FOREIGN KEY (StatusFromId) REFERENCES ProjectManagement.WorkflowStatus(Id),
+	FOREIGN KEY (StatusToId) REFERENCES ProjectManagement.WorkflowStatus(Id),
+	FOREIGN KEY (ProjectWorkflowProgressId) REFERENCES ProjectManagement.WorkflowProgress(Id),
+	FOREIGN KEY (ResolutionFromId) REFERENCES ProjectManagement.WorkflowResolution(Id),
+	FOREIGN KEY (ResolutionToId) REFERENCES ProjectManagement.WorkflowResolution(Id),
 	FOREIGN KEY (AssigneeFromId) REFERENCES UserManagement.Profile(Id),
 	FOREIGN KEY (AssigneeToId) REFERENCES UserManagement.Profile(Id),
 	FOREIGN KEY (ProjectFromId) REFERENCES ProjectManagement.Project(Id),
@@ -1317,6 +1337,10 @@ CREATE TABLE QualityControl.TestResult(
 	TestPlanId uuid NOT NULL,
 	TestDate date NOT NULL,
 	Description varchar(4000),
+	TotalScenarioCount int NOT NULL DEFAULT 0,
+	TotalPassedScenario int NOT NULL DEFAULT 0,
+	TotalFailedScenario int NOT NULL DEFAULT 0,
+	TotalFailedTry int NOT NULL DEFAULT 0,
     ActiveStatus activeStatusEnum NOT NULL DEFAULT 'Active',
     CreateDate timestamp NOT NULL DEFAULT NOW(),
 	CreatorId uuid NOT NULL,
@@ -1460,6 +1484,8 @@ CREATE TABLE Evaluation.StaffSatisfactionEvaluation(
     Id uuid NOT NULL DEFAULT gen_random_uuid(),  
 	ProfileId uuid NOT NULL,
 	EvalationDate date NOT NULL,
+	EvalutionDataFrom date NOT NULL,
+	EvalutionDataTo date NOT NULL,
 	EvaluatedValue numeric(3, 2) NOT NULL CHECK(EvaluatedValue BETWEEN 0 AND 100),
 	Description varchar(4000),
     ActiveStatus activeStatusEnum NOT NULL DEFAULT 'Active',
@@ -1475,6 +1501,8 @@ CREATE TABLE Evaluation.ProjectProductivityEvaluation(
     Id uuid NOT NULL DEFAULT gen_random_uuid(),  
 	ProjectId uuid NOT NULL,
 	EvalationDate date NOT NULL,
+	EvalutionDataFrom date NOT NULL,
+	EvalutionDataTo date NOT NULL,
 	EvaluatedValue numeric(3, 2) NOT NULL CHECK(EvaluatedValue BETWEEN 0 AND 100),
 	Description varchar(4000),
     ActiveStatus activeStatusEnum NOT NULL DEFAULT 'Active',
@@ -1491,6 +1519,8 @@ CREATE TABLE Evaluation.CustomerSatisfactionEvaluation(
 	CustomerId uuid NOT NULL,
 	ProjectId uuid NOT NULL,
 	EvalationDate date NOT NULL,
+	EvalutionDataFrom date NOT NULL,
+	EvalutionDataTo date NOT NULL,
 	EvaluatedValue numeric(3, 2) NOT NULL CHECK(EvaluatedValue BETWEEN 0 AND 100),
 	Description varchar(4000),
     ActiveStatus activeStatusEnum NOT NULL DEFAULT 'Active',

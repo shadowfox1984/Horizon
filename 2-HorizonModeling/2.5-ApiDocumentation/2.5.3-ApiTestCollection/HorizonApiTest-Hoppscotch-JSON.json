@@ -7006,7 +7006,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"isApproved\" : true, \n  \t\"decription\" : \"test\" /*optioanl*/\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"isApproved\" : true,\n  \t\"isRejected\" : false,\n  \t\"isIgnored\" : false,\n  \t\"decription\" : \"test\" /*optioanl*/\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -7059,7 +7059,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"isApproved\" : true, \n  \t\"decription\" : \"test\" /*optioanl*/\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"color\" : \"#FFFFFF\",\n  \t\"isApproved\" : true,\n  \t\"isRejected\" : false,\n  \t\"isIgnored\" : false,\n  \t\"decription\" : \"test\" /*optioanl*/\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -7318,49 +7318,61 @@
                   "key": "title",
                   "value": "test",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
                 },
                 {
                   "key": "code",
                   "value": "123",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
                 },
                 {
                   "key": "color",
                   "value": "FFFFFF",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
                 },
                 {
                   "key": "isApproved",
                   "value": "true/false",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
+                },
+                {
+                  "key": "isRejected",
+                  "value": "true/false",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "isIgnored",
+                  "value": "true/false",
+                  "active": true,
+                  "description": "optional"
                 },
                 {
                   "key": "description",
                   "value": "test",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
                 },
                 {
                   "key": "offset",
                   "value": "0",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
                 },
                 {
                   "key": "limit",
                   "value": "15",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
                 },
                 {
                   "key": "sort_by",
                   "value": "desc(fieldName)",
                   "active": true,
-                  "description": ""
+                  "description": "optional"
                 }
               ],
               "headers": [],
@@ -18537,14 +18549,14 @@
         },
         {
           "v": 12,
-          "name": "S0506 - ProjectWorkflow",
+          "name": "S0506 - Workflow ",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S050601 - AddProjectWorkflow",
+              "name": "S050601 - AddWorkflow",
               "method": "POST",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow",
+              "endpoint": "<<baseUrl>>/projectManagement/workflow",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -18556,7 +18568,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -18595,9 +18607,9 @@
             },
             {
               "v": "17",
-              "name": "S050602 - UpdateProjectWorkflow",
+              "name": "S050602 - UpdateWorkflow",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflow/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -18609,7 +18621,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -18648,9 +18660,9 @@
             },
             {
               "v": "17",
-              "name": "S050603 - DeleteProjectWorkflow",
+              "name": "S050603 - DeleteWorkflow",
               "method": "DELETE",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflow/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -18701,9 +18713,9 @@
             },
             {
               "v": "17",
-              "name": "S050604 - ActiveProjectWorkflow",
+              "name": "S050604 - ActiveWorkflow",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/active/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflow/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -18754,9 +18766,9 @@
             },
             {
               "v": "17",
-              "name": "S050605 - InactiveProjectWorkflow",
+              "name": "S050605 - InactiveWorkflow",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/inactive/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflow/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -18807,9 +18819,9 @@
             },
             {
               "v": "17",
-              "name": "S050606- GetSpecificProjectWorkflow",
+              "name": "S050606- GetSpecificWorkflow",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflow/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -18860,9 +18872,9 @@
             },
             {
               "v": "17",
-              "name": "S050607 - GetAllProjectWorkflow",
+              "name": "S050607 - GetAllWorkflow",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/getAll",
+              "endpoint": "<<baseUrl>>/projectManagement/workflow/getAll",
               "params": [
                 {
                   "key": "code",
@@ -18872,18 +18884,6 @@
                 },
                 {
                   "key": "title",
-                  "value": "test",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "projectId",
-                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "projectTitle",
                   "value": "test",
                   "active": true,
                   "description": "optional"
@@ -19011,9 +19011,9 @@
             },
             {
               "v": "17",
-              "name": "S050608 - GetComaboListProjectWorkflow",
+              "name": "S050608 - GetComaboListWorkflow",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/getComboList",
+              "endpoint": "<<baseUrl>>/projectManagement/workflow/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -19075,14 +19075,14 @@
         },
         {
           "v": 12,
-          "name": "S0507 - WorkflowAllowedFileExtension",
+          "name": "S0507 - WorkflowStatus",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S050701 - AddWorkflowAllowedFileExtension",
+              "name": "S050701 - AddWorkflowStatus",
               "method": "POST",
-              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowStatus",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -19094,1177 +19094,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"fileExtensionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"maxFileSizeForUpload\": 4\n}"
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050701 - AddWorkflowAllowedFileExtension",
-                    "method": "POST",
-                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": "application/json",
-                      "body": "{\n  \"fileExtensionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"maxFileSizeForUpload\": 4\n}"
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050702 - UpdateWorkflowAllowedFileExtension",
-              "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": "application/json",
-                "body": "{\n  \"fileExtensionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"maxFileSizeForUpload\": 4\n}"
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050702 - UpdateWorkflowAllowedFileExtension",
-                    "method": "PUT",
-                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": "application/json",
-                      "body": "{\n  \"fileExtensionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"maxFileSizeForUpload\": 4\n}"
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050703 - DeleteWorkflowAllowedFileExtension",
-              "method": "DELETE",
-              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050703 - DeleteWorkflowAllowedFileExtension",
-                    "method": "DELETE",
-                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050704 - ActiveWorkflowAllowedFileExtension",
-              "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/active/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050704 - ActiveWorkflowAllowedFileExtension",
-                    "method": "PUT",
-                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/active/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050705 - InactiveWorkflowAllowedFileExtension",
-              "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/inactive/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050705 - InactiveWorkflowAllowedFileExtension",
-                    "method": "PUT",
-                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/inactive/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050706 - GetSpecificWorkflowAllowedFileExtension",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050706 - GetSpecificWorkflowAllowedFileExtension",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050707 - GetAllWorkflowAllowedFileExtension",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/getAll",
-              "params": [
-                {
-                  "key": "fileExtensionId",
-                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "fileExtensionTitle",
-                  "value": "test",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "projectWorkflowId",
-                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "projectWorkflowTitle",
-                  "value": "test",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "maxFileSizeForUpload",
-                  "value": "4",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "offset",
-                  "value": "0",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "limit",
-                  "value": "15",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "sort_by",
-                  "value": "desc(fieldName)",
-                  "active": true,
-                  "description": "optional"
-                }
-              ],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050707 - GetAllWorkflowAllowedFileExtension",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/getAll",
-                    "headers": [],
-                    "params": [
-                      {
-                        "key": "fileExtensionId",
-                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "fileExtensionTitle",
-                        "value": "test",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "projectWorkflowId",
-                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "projectWorkflowTitle",
-                        "value": "test",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "maxFileSizeForUpload",
-                        "value": "4",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "offset",
-                        "value": "0",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "limit",
-                        "value": "15",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "sort_by",
-                        "value": "desc(fieldName)",
-                        "active": true,
-                        "description": "optional"
-                      }
-                    ],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050708 - GetComboListWorkflowAllowedFileExtension",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/getComboList",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050708 - GetComboListWorkflowAllowedFileExtension",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/getComboList",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050709 - GetWorkflowAllowedFileExtensionComboListByWorflowId",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/getComboListByWorkflowId/[workflowId]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050709 - GetWorkflowAllowedFileExtensionComboListByWorflowId",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/getComboListByWorkflowId/[workflowId]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            }
-          ],
-          "auth": {
-            "authType": "inherit",
-            "authActive": true
-          },
-          "headers": [],
-          "variables": [],
-          "description": null,
-          "preRequestScript": "",
-          "testScript": ""
-        },
-        {
-          "v": 12,
-          "name": "S0508 - WorkflowAllowedDocumentType",
-          "folders": [],
-          "requests": [
-            {
-              "v": "17",
-              "name": "S050801 - AddWorkflowAllowedDocumentType",
-              "method": "POST",
-              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": "application/json",
-                "body": "{\n  \"documentTypeId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050801 - AddWorkflowAllowedDocumentType",
-                    "method": "POST",
-                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": "application/json",
-                      "body": "{\n  \"documentTypeId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050802 - UpdateWorkflowAllowedDocumentType",
-              "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": "application/json",
-                "body": "{\n  \"documentTypeId\": 123,\n  \"projectWorkflowId\": 123\n}"
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050802 - UpdateWorkflowAllowedDocumentType",
-                    "method": "PUT",
-                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": "application/json",
-                      "body": "{\n  \"documentTypeId\": 123,\n  \"projectWorkflowId\": 123\n}"
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050803 - DeleteWorkflowAllowedDocumentType",
-              "method": "DELETE",
-              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050803 - DeleteWorkflowAllowedDocumentType",
-                    "method": "DELETE",
-                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050804 - ActiveWorkflowAllowedDocumentType",
-              "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/active/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050804 - ActiveWorkflowAllowedDocumentType",
-                    "method": "PUT",
-                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/active/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050805 - InactiveWorkflowAllowedDocumentType",
-              "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/inactive/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050805 - InactiveWorkflowAllowedDocumentType",
-                    "method": "PUT",
-                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/inactive/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050806 - GetSpecificWorkflowAllowedDocumentType",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/[id]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050806 - GetSpecificWorkflowAllowedDocumentType",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/[id]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050807 - GetAllWorkflowAllowedDocumentType",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/getAll",
-              "params": [
-                {
-                  "key": "documentTypeId",
-                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "documentTypeTitle",
-                  "value": "test",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "drojectWorkflowId",
-                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "projectWorkflowTitle",
-                  "value": "test",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "offset",
-                  "value": "0",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "limit",
-                  "value": "15",
-                  "active": true,
-                  "description": "optional"
-                },
-                {
-                  "key": "sort_by",
-                  "value": "desc(fieldName)",
-                  "active": true,
-                  "description": "optional"
-                }
-              ],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050807 - GetAllWorkflowAllowedDocumentType",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/getAll",
-                    "headers": [],
-                    "params": [
-                      {
-                        "key": "documentTypeId",
-                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "documentTypeTitle",
-                        "value": "test",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "drojectWorkflowId",
-                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "projectWorkflowTitle",
-                        "value": "test",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "offset",
-                        "value": "0",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "limit",
-                        "value": "15",
-                        "active": true,
-                        "description": "optional"
-                      },
-                      {
-                        "key": "sort_by",
-                        "value": "desc(fieldName)",
-                        "active": true,
-                        "description": "optional"
-                      }
-                    ],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050808 - GetComboListWorkflowAllowedDocumentType",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/getComboList",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050808 - GetComboListWorkflowAllowedDocumentType",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/getComboList",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            },
-            {
-              "v": "17",
-              "name": "S050809 - GetComboListWorkflowAllowedDocumentTypeByWorkflowId",
-              "method": "GET",
-              "endpoint": "<<baseUrl>>//[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/getComboListByWorkflowId/[workflowId]",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": null,
-                "body": null
-              },
-              "requestVariables": [],
-              "responses": {
-                "Successful response": {
-                  "name": "Successful response",
-                  "originalRequest": {
-                    "v": "6",
-                    "name": "S050809 - GetComboListWorkflowAllowedDocumentTypeByWorkflowId",
-                    "method": "GET",
-                    "endpoint": "<<baseUrl>>//[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/getComboListByWorkflowId/[workflowId]",
-                    "headers": [],
-                    "params": [],
-                    "body": {
-                      "contentType": null,
-                      "body": null
-                    },
-                    "auth": {
-                      "authType": "bearer",
-                      "token": "<<jwtToken>>",
-                      "authActive": true
-                    },
-                    "requestVariables": []
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "headers": [
-                    {
-                      "key": "content-type",
-                      "value": "application/json"
-                    }
-                  ],
-                  "body": ""
-                }
-              },
-              "description": null
-            }
-          ],
-          "auth": {
-            "authType": "inherit",
-            "authActive": true
-          },
-          "headers": [],
-          "variables": [],
-          "description": null,
-          "preRequestScript": "",
-          "testScript": ""
-        },
-        {
-          "v": 12,
-          "name": "S0509 - ProjectWorkflowStatus",
-          "folders": [],
-          "requests": [
-            {
-              "v": "17",
-              "name": "S050901 - AddProjectWorkflowStatus",
-              "method": "POST",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowStatus",
-              "params": [],
-              "headers": [],
-              "preRequestScript": "",
-              "testScript": "",
-              "auth": {
-                "authType": "bearer",
-                "token": "<<jwtToken>>",
-                "authActive": true
-              },
-              "body": {
-                "contentType": "application/json",
-                "body": "{\n  \"statusId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+                "body": "{\n  \"statusId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"workflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -20303,9 +19133,9 @@
             },
             {
               "v": "17",
-              "name": "S050902 - UpdateProjectWorkflowStatus",
+              "name": "S050702 - UpdateWorkflowStatus",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowStatus/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowStatus/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -20317,7 +19147,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"statusId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+                "body": "{\n  \"statusId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"workflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -20356,9 +19186,9 @@
             },
             {
               "v": "17",
-              "name": "S050903 - DeleteProjectWorkflowStatus",
+              "name": "S050703 - DeleteWorkflowStatus",
               "method": "DELETE",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowStatus/[id]",
+              "endpoint": "<<baseUrl>>/projectManagementworkflowStatus/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -20409,9 +19239,9 @@
             },
             {
               "v": "17",
-              "name": "S050904 - ActiveProjectWorkflowStatus",
+              "name": "S050704 - ActiveWorkflowStatus",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowStatus/active/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowStatus/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -20462,9 +19292,9 @@
             },
             {
               "v": "17",
-              "name": "S050905 - InactiveProjectWorkflowStatus",
+              "name": "S050705 - InactiveWorkflowStatus",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowStatus/inactive/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowStatus/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -20515,7 +19345,7 @@
             },
             {
               "v": "17",
-              "name": "S050906 - GetSpecificProjectWorkflowStatus",
+              "name": "S050706 - GetSpecificWorkflowStatus",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowStatus/[id]",
               "params": [],
@@ -20568,9 +19398,9 @@
             },
             {
               "v": "17",
-              "name": "S050907 - GetAllProjectWorkflowStatus",
+              "name": "S050707 - GetAllWorkflowStatus",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowStatus/getAll",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowStatus/getAll",
               "params": [
                 {
                   "key": "statusId",
@@ -20585,13 +19415,13 @@
                   "description": "optional"
                 },
                 {
-                  "key": "projectWorkflowId",
+                  "key": "workflowId",
                   "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                   "active": true,
                   "description": "optional"
                 },
                 {
-                  "key": "projectWorkflowTitle",
+                  "key": "workflowTitle",
                   "value": "test",
                   "active": true,
                   "description": "optional"
@@ -20707,9 +19537,9 @@
             },
             {
               "v": "17",
-              "name": "S050908 - GetComaboListProjectWorkflowStatus",
+              "name": "S050708 - GetComaboListWorkflowStatus",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowStatus/getComboList",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowStatus/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -20771,14 +19601,14 @@
         },
         {
           "v": 12,
-          "name": "S0510 - ProjectWorkflowResolution",
+          "name": "S0508 - WorkflowResolution",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S051001 - AddProjectWorkflowResolution",
+              "name": "S050801 - AddWorkflowResolution",
               "method": "POST",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowResolution",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowResolution",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -20790,7 +19620,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"resolutionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+                "body": "{\n  \"resolutionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"workflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -20829,9 +19659,9 @@
             },
             {
               "v": "17",
-              "name": "S051002 - UpdateProjectWorkflowResolution",
+              "name": "S050802 - UpdateWorkflowResolution",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowResolution/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowResolution/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -20843,7 +19673,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"resolutionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+                "body": "{\n  \"resolutionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"workflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -20882,9 +19712,9 @@
             },
             {
               "v": "17",
-              "name": "S051003 - DeleteProjectWorkflowResolution",
+              "name": "S050803 - DeleteWorkflowResolution",
               "method": "DELETE",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowResolution/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowResolution/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -20935,9 +19765,9 @@
             },
             {
               "v": "17",
-              "name": "S051004 - ActiveProjectWorkflowResolution",
+              "name": "S050804 - ActiveWorkflowResolution",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowResolution/active/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowResolution/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -20988,9 +19818,9 @@
             },
             {
               "v": "17",
-              "name": "S051005 - InactiveProjectWorkflowResolution",
+              "name": "S050805 - InactiveWorkflowResolution",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowResolution/inactive/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowResolution/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -21041,9 +19871,9 @@
             },
             {
               "v": "17",
-              "name": "S051006 - GetSpecificProjectWorkflowResolution",
+              "name": "S050806 - GetSpecificWorkflowResolution",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowResolution/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowResolution/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -21094,9 +19924,9 @@
             },
             {
               "v": "17",
-              "name": "S051007 - GetAllProjectWorkflowResolution",
+              "name": "S050807 - GetAllWorkflowResolution",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowResolution/getAll",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowResolution/getAll",
               "params": [
                 {
                   "key": "resolutionId",
@@ -21111,13 +19941,13 @@
                   "description": "optional"
                 },
                 {
-                  "key": "projectWorkflowId",
+                  "key": "workflowId",
                   "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                   "active": true,
                   "description": "optional"
                 },
                 {
-                  "key": "projectWorkflowTitle",
+                  "key": "workflowTitle",
                   "value": "test",
                   "active": true,
                   "description": "optional"
@@ -21233,9 +20063,9 @@
             },
             {
               "v": "17",
-              "name": "S051008 - GetComboListProjectWorkflowResolution",
+              "name": "S050808 - GetComboListWorkflowResolution",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowResolution/getComboList",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowResolution/getComboList",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -21297,14 +20127,14 @@
         },
         {
           "v": 12,
-          "name": "S0511 - ProjectWorkflowProgress",
+          "name": "S0509 - WorkflowProgress",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S051101 - AddProjetWorkflowProgress",
+              "name": "S050901 - AddWorkflowProgress",
               "method": "POST",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowProgress",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowProgress",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -21316,7 +20146,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"title\": \"test\",\n  \"startProjectWorkflowStatusId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"isFromStartPoint\": true,\n  \"canBeStartedFromAnyStatus\": true,\n  \"endProjectWorkflowStatusId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"isWorkflowEndPoint\": true,\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+                "body": "{\n  \"title\": \"test\",\n  \"startWorkflowStatusId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"isFromStartPoint\": true,\n  \"canBeStartedFromAnyStatus\": true,\n  \"endWorkflowStatusId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"isWorkflowEndPoint\": true,\n  \"workflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -21355,9 +20185,9 @@
             },
             {
               "v": "17",
-              "name": "S051102 - UpdateProjetWorkflowProgress",
+              "name": "S050902 - UpdateWorkflowProgress",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowProgress/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowProgress/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -21369,7 +20199,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"title\": \"test\",\n  \"startProjectWorkflowStatusId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"isFromStartPoint\": true,\n  \"canBeStartedFromAnyStatus\": true,\n  \"endProjectWorkflowStatusId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"isWorkflowEndPoint\": true,\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+                "body": "{\n  \"title\": \"test\",\n  \"startProjectWorkflowStatusId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"isFromStartPoint\": true,\n  \"canBeStartedFromAnyStatus\": true,\n  \"endProjectWorkflowStatusId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"isWorkflowEndPoint\": true,\n  \"workflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -21408,9 +20238,9 @@
             },
             {
               "v": "17",
-              "name": "S051103 - DeleteProjectWorkflowProgressee",
+              "name": "S050903 - DeleteWorkflowProgressee",
               "method": "DELETE",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowProgress/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowProgress/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -21461,9 +20291,9 @@
             },
             {
               "v": "17",
-              "name": "S051104 - ActiveProjectWorkflowProgress",
+              "name": "S050904 - ActiveWorkflowProgress",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowProgress/active/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowProgress/active/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -21514,9 +20344,9 @@
             },
             {
               "v": "17",
-              "name": "S051105 - InactiveProjectWorkflowProgress",
+              "name": "S050905 - InactiveWorkflowProgress",
               "method": "PUT",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowProgress/inactive/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowProgress/inactive/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -21567,9 +20397,9 @@
             },
             {
               "v": "17",
-              "name": "S051106 - GetSpecificProjectWorkflowProgress",
+              "name": "S050906 - GetSpecificWorkflowProgress",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowProgress/[id]",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowProgress/[id]",
               "params": [],
               "headers": [],
               "preRequestScript": "",
@@ -21620,9 +20450,9 @@
             },
             {
               "v": "17",
-              "name": "S051107 - GetAllProjectWorkflowProgress",
+              "name": "S050907 - GetAllWorkflowProgress",
               "method": "GET",
-              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowProgress/getAll",
+              "endpoint": "<<baseUrl>>/projectManagement/workflowProgress/getAll",
               "params": [
                 {
                   "key": "title",
@@ -21631,37 +20461,37 @@
                   "description": "optional"
                 },
                 {
-                  "key": "startProjectWorkflowStatusId",
+                  "key": "startWorkflowStatusId",
                   "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                   "active": true,
                   "description": "optional"
                 },
                 {
-                  "key": "startProjectWorkflowStatusTitle",
+                  "key": "startWorkflowStatusTitle",
                   "value": "test",
                   "active": true,
                   "description": "optional"
                 },
                 {
-                  "key": "endProjectWorkflowStatusId",
+                  "key": "endWorkflowStatusId",
                   "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                   "active": true,
                   "description": "optional"
                 },
                 {
-                  "key": "endProjectWorkflowStatusTitle",
+                  "key": "endWorkflowStatusTitle",
                   "value": "test",
                   "active": true,
                   "description": "optional"
                 },
                 {
-                  "key": "projectWorkflowId",
+                  "key": "workflowId",
                   "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
                   "active": true,
                   "description": "optional"
                 },
                 {
-                  "key": "projectWorkflowTitle",
+                  "key": "workflowTitle",
                   "value": "test",
                   "active": true,
                   "description": "optional"
@@ -21831,7 +20661,7 @@
             },
             {
               "v": "17",
-              "name": "S051108 - GetComboListProjectWorkflowProgress",
+              "name": "S050908 - GetComboListWorkflowProgress",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/projectWorkflowProgress/getComboList",
               "params": [],
@@ -21895,12 +20725,1714 @@
         },
         {
           "v": 12,
-          "name": "S0512 - Issue",
+          "name": "S0510 - ProjectWorkflow",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S051201 - AddIssue",
+              "name": "S051001 - AddProjectWorkflow",
+              "method": "POST",
+              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"workflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050601 - AddProjectWorkflow",
+                    "method": "POST",
+                    "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": "application/json",
+                      "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051002 - UpdateProjectWorkflow",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \t\"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"workflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050602 - UpdateProjectWorkflow",
+                    "method": "PUT",
+                    "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": "application/json",
+                      "body": "{\n  \t\"code\" : \"123\",\n  \t\"title\" : \"test\",\n  \t\"projectId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \t\"decription\" : \"test\" /*optional*/\n}"
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051003 - DeleteProjectWorkflow",
+              "method": "DELETE",
+              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050603 - DeleteProjectWorkflow",
+                    "method": "DELETE",
+                    "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051004 - ActiveProjectWorkflow",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050604 - ActiveProjectWorkflow",
+                    "method": "PUT",
+                    "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/active/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051005 - InactiveProjectWorkflow",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050605 - InactiveProjectWorkflow",
+                    "method": "PUT",
+                    "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/inactive/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051006- GetSpecificProjectWorkflow",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050606- GetSpecificProjectWorkflow",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051007 - GetAllProjectWorkflow",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/getAll",
+              "params": [
+                {
+                  "key": "projectId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "workflowId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "workflowTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "12",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050607 - GetAllProjectWorkflow",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/getAll",
+                    "headers": [],
+                    "params": [
+                      {
+                        "key": "code",
+                        "value": "123",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "title",
+                        "value": "test",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "projectId",
+                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "projectTitle",
+                        "value": "test",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "decription",
+                        "value": "test",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "offset",
+                        "value": "0",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "limit",
+                        "value": "12",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "sort_by",
+                        "value": "desc(fieldName)",
+                        "active": true,
+                        "description": "optional"
+                      }
+                    ],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051008 - GetComaboListProjectWorkflow",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/getComboList",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050608 - GetComaboListProjectWorkflow",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/projectManagement/projectWorkflow/getComboList",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "description": null,
+          "preRequestScript": "",
+          "testScript": ""
+        },
+        {
+          "v": 12,
+          "name": "S0511 - WorkflowAllowedFileExtension",
+          "folders": [],
+          "requests": [
+            {
+              "v": "17",
+              "name": "S051101 - AddWorkflowAllowedFileExtension",
+              "method": "POST",
+              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"fileExtensionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"maxFileSizeForUpload\": 4\n}"
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050701 - AddWorkflowAllowedFileExtension",
+                    "method": "POST",
+                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": "application/json",
+                      "body": "{\n  \"fileExtensionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"maxFileSizeForUpload\": 4\n}"
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051102 - UpdateWorkflowAllowedFileExtension",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"fileExtensionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"maxFileSizeForUpload\": 4\n}"
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050702 - UpdateWorkflowAllowedFileExtension",
+                    "method": "PUT",
+                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": "application/json",
+                      "body": "{\n  \"fileExtensionId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"maxFileSizeForUpload\": 4\n}"
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051103 - DeleteWorkflowAllowedFileExtension",
+              "method": "DELETE",
+              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050703 - DeleteWorkflowAllowedFileExtension",
+                    "method": "DELETE",
+                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051104 - ActiveWorkflowAllowedFileExtension",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050704 - ActiveWorkflowAllowedFileExtension",
+                    "method": "PUT",
+                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/active/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051105 - InactiveWorkflowAllowedFileExtension",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050705 - InactiveWorkflowAllowedFileExtension",
+                    "method": "PUT",
+                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/inactive/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051106 - GetSpecificWorkflowAllowedFileExtension",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050706 - GetSpecificWorkflowAllowedFileExtension",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051107 - GetAllWorkflowAllowedFileExtension",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/getAll",
+              "params": [
+                {
+                  "key": "fileExtensionId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "fileExtensionTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "maxFileSizeForUpload",
+                  "value": "4",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050707 - GetAllWorkflowAllowedFileExtension",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/getAll",
+                    "headers": [],
+                    "params": [
+                      {
+                        "key": "fileExtensionId",
+                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "fileExtensionTitle",
+                        "value": "test",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "projectWorkflowId",
+                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "projectWorkflowTitle",
+                        "value": "test",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "maxFileSizeForUpload",
+                        "value": "4",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "offset",
+                        "value": "0",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "limit",
+                        "value": "15",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "sort_by",
+                        "value": "desc(fieldName)",
+                        "active": true,
+                        "description": "optional"
+                      }
+                    ],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051108 - GetComboListWorkflowAllowedFileExtension",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/getComboList",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050708 - GetComboListWorkflowAllowedFileExtension",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/getComboList",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051109 - GetWorkflowAllowedFileExtensionComboListByWorflowId",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/getComboListByWorkflowId/[workflowId]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050709 - GetWorkflowAllowedFileExtensionComboListByWorflowId",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/projectMangement/workflowAllowedFileExtension/getComboListByWorkflowId/[workflowId]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "description": null,
+          "preRequestScript": "",
+          "testScript": ""
+        },
+        {
+          "v": 12,
+          "name": "S0512 - WorkflowAllowedDocumentType",
+          "folders": [],
+          "requests": [
+            {
+              "v": "17",
+              "name": "S051201 - AddWorkflowAllowedDocumentType",
+              "method": "POST",
+              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"documentTypeId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050801 - AddWorkflowAllowedDocumentType",
+                    "method": "POST",
+                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": "application/json",
+                      "body": "{\n  \"documentTypeId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"projectWorkflowId\": \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\"\n}"
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051202 - UpdateWorkflowAllowedDocumentType",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"documentTypeId\": 123,\n  \"projectWorkflowId\": 123\n}"
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050802 - UpdateWorkflowAllowedDocumentType",
+                    "method": "PUT",
+                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": "application/json",
+                      "body": "{\n  \"documentTypeId\": 123,\n  \"projectWorkflowId\": 123\n}"
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051203 - DeleteWorkflowAllowedDocumentType",
+              "method": "DELETE",
+              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050803 - DeleteWorkflowAllowedDocumentType",
+                    "method": "DELETE",
+                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051204 - ActiveWorkflowAllowedDocumentType",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/active/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050804 - ActiveWorkflowAllowedDocumentType",
+                    "method": "PUT",
+                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/active/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051205 - InactiveWorkflowAllowedDocumentType",
+              "method": "PUT",
+              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/inactive/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050805 - InactiveWorkflowAllowedDocumentType",
+                    "method": "PUT",
+                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/inactive/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051206 - GetSpecificWorkflowAllowedDocumentType",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/[id]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050806 - GetSpecificWorkflowAllowedDocumentType",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/[id]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051207 - GetAllWorkflowAllowedDocumentType",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/getAll",
+              "params": [
+                {
+                  "key": "documentTypeId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "documentTypeTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "drojectWorkflowId",
+                  "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "projectWorkflowTitle",
+                  "value": "test",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "limit",
+                  "value": "15",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "sort_by",
+                  "value": "desc(fieldName)",
+                  "active": true,
+                  "description": "optional"
+                }
+              ],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050807 - GetAllWorkflowAllowedDocumentType",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/getAll",
+                    "headers": [],
+                    "params": [
+                      {
+                        "key": "documentTypeId",
+                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "documentTypeTitle",
+                        "value": "test",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "drojectWorkflowId",
+                        "value": "d6eb621f-6dd0-4cdc-93f5-07f51b249b51",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "projectWorkflowTitle",
+                        "value": "test",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "offset",
+                        "value": "0",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "limit",
+                        "value": "15",
+                        "active": true,
+                        "description": "optional"
+                      },
+                      {
+                        "key": "sort_by",
+                        "value": "desc(fieldName)",
+                        "active": true,
+                        "description": "optional"
+                      }
+                    ],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051208 - GetComboListWorkflowAllowedDocumentType",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/getComboList",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050808 - GetComboListWorkflowAllowedDocumentType",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>/projectMangement/addWorkflowAllowedDocumentType/getComboList",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            },
+            {
+              "v": "17",
+              "name": "S051209 - GetComboListWorkflowAllowedDocumentTypeByWorkflowId",
+              "method": "GET",
+              "endpoint": "<<baseUrl>>//[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/getComboListByWorkflowId/[workflowId]",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "bearer",
+                "token": "<<jwtToken>>",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {
+                "Successful response": {
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "v": "6",
+                    "name": "S050809 - GetComboListWorkflowAllowedDocumentTypeByWorkflowId",
+                    "method": "GET",
+                    "endpoint": "<<baseUrl>>//[MainDomian]/api/projectMangement/addWorkflowAllowedDocumentType/getComboListByWorkflowId/[workflowId]",
+                    "headers": [],
+                    "params": [],
+                    "body": {
+                      "contentType": null,
+                      "body": null
+                    },
+                    "auth": {
+                      "authType": "bearer",
+                      "token": "<<jwtToken>>",
+                      "authActive": true
+                    },
+                    "requestVariables": []
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "headers": [
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": ""
+                }
+              },
+              "description": null
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "description": null,
+          "preRequestScript": "",
+          "testScript": ""
+        },
+        {
+          "v": 12,
+          "name": "S0513 - Issue",
+          "folders": [],
+          "requests": [
+            {
+              "v": "17",
+              "name": "S051301 - AddIssue",
               "method": "POST",
               "endpoint": "<<baseUrl>>/projectManagement/issue",
               "params": [],
@@ -21953,7 +22485,7 @@
             },
             {
               "v": "17",
-              "name": "S051202 - UpdateIssue",
+              "name": "S051302 - UpdateIssue",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/issue/[id]",
               "params": [],
@@ -22006,7 +22538,7 @@
             },
             {
               "v": "17",
-              "name": "S051203 - DeleteIssue",
+              "name": "S051303 - DeleteIssue",
               "method": "DELETE",
               "endpoint": "<<baseUrl>>/projectManagement/issue/[id]",
               "params": [],
@@ -22059,7 +22591,7 @@
             },
             {
               "v": "17",
-              "name": "S051204 - ActiveIssue",
+              "name": "S051304 - ActiveIssue",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/issue/active/[id]",
               "params": [],
@@ -22112,7 +22644,7 @@
             },
             {
               "v": "17",
-              "name": "S051205 - InactiveIssue",
+              "name": "S051305 - InactiveIssue",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/issue/incative/[id]",
               "params": [],
@@ -22165,7 +22697,7 @@
             },
             {
               "v": "17",
-              "name": "S051206 - GetSpecificIssue",
+              "name": "S051306 - GetSpecificIssue",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/issue/[id]",
               "params": [],
@@ -22218,7 +22750,7 @@
             },
             {
               "v": "17",
-              "name": "S051207 - GetAllIssue",
+              "name": "S051307 - GetAllIssue",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/issue/getAll",
               "params": [
@@ -22585,7 +23117,7 @@
             },
             {
               "v": "17",
-              "name": "S051208 - GetComboListIssue",
+              "name": "S051308 - GetComboListIssue",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/issue/getComboList",
               "params": [],
@@ -22649,12 +23181,12 @@
         },
         {
           "v": 12,
-          "name": "S0513 - IssueComment",
+          "name": "S0514 - IssueComment",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S051301 - AddIssueComment",
+              "name": "S051401 - AddIssueComment",
               "method": "POST",
               "endpoint": "<<baseUrl>>/projectManagement/issueComment",
               "params": [],
@@ -22707,7 +23239,7 @@
             },
             {
               "v": "17",
-              "name": "S051302 - UpdateIssueComment",
+              "name": "S051402 - UpdateIssueComment",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/issueComment/[id]",
               "params": [],
@@ -22760,7 +23292,7 @@
             },
             {
               "v": "17",
-              "name": "S051303 - DeleteIssueComment",
+              "name": "S051403 - DeleteIssueComment",
               "method": "DELETE",
               "endpoint": "<<baseUrl>>/projectManagement/issueComment/[id]",
               "params": [],
@@ -22813,7 +23345,7 @@
             },
             {
               "v": "17",
-              "name": "S051304 - ActiveIssueComment",
+              "name": "S051404 - ActiveIssueComment",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/issueComment/active/[id]",
               "params": [],
@@ -22866,7 +23398,7 @@
             },
             {
               "v": "17",
-              "name": "S051305 - InactiveIssueComment",
+              "name": "S051405 - InactiveIssueComment",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/issueComment/inactive/[id]",
               "params": [],
@@ -22919,7 +23451,7 @@
             },
             {
               "v": "17",
-              "name": "S051306 - GetSpecificIssueComment",
+              "name": "S051406 - GetSpecificIssueComment",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/issueComment/[id]",
               "params": [],
@@ -22972,7 +23504,7 @@
             },
             {
               "v": "17",
-              "name": "S051307 - GetAllIssueComment",
+              "name": "S051407 - GetAllIssueComment",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/issueComment/getAll",
               "params": [
@@ -23123,7 +23655,7 @@
             },
             {
               "v": "17",
-              "name": "S051308 - GetComboListIssueComment",
+              "name": "S051408 - GetComboListIssueComment",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/issueComment/getComboList",
               "params": [],
@@ -23187,12 +23719,12 @@
         },
         {
           "v": 12,
-          "name": "S0514 - IssueAttachment",
+          "name": "S0515 - IssueAttachment",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S051401 - AddIssueAttachment",
+              "name": "S051501 - AddIssueAttachment",
               "method": "POST",
               "endpoint": "<<baseUrl>>/projectManagement/issueAttachment",
               "params": [],
@@ -23245,7 +23777,7 @@
             },
             {
               "v": "17",
-              "name": "S051402 - UpdateIssueAttachment",
+              "name": "S051502 - UpdateIssueAttachment",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/issueAttachment/[id]",
               "params": [],
@@ -23298,7 +23830,7 @@
             },
             {
               "v": "17",
-              "name": "S051403 - DeleteIssueAttachment",
+              "name": "S051503 - DeleteIssueAttachment",
               "method": "DELETE",
               "endpoint": "<<baseUrl>>/projectManagement/issueAttachment/[id]",
               "params": [],
@@ -23351,7 +23883,7 @@
             },
             {
               "v": "17",
-              "name": "S051404 - ActiveIssueAttachment",
+              "name": "S051504 - ActiveIssueAttachment",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/issueAttachment/active/[id]",
               "params": [],
@@ -23404,7 +23936,7 @@
             },
             {
               "v": "17",
-              "name": "S051405 - InactiveIssueAttachment",
+              "name": "S051505 - InactiveIssueAttachment",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/issueAttachment/inactive/[id]",
               "params": [],
@@ -23457,7 +23989,7 @@
             },
             {
               "v": "17",
-              "name": "S051406 - GetSpecificIssueAttachment",
+              "name": "S051506 - GetSpecificIssueAttachment",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/issueAttachment/[id]",
               "params": [],
@@ -23510,7 +24042,7 @@
             },
             {
               "v": "17",
-              "name": "S051407 - GetAllIssueAttachment",
+              "name": "S051507 - GetAllIssueAttachment",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/issueAttachment/getAll",
               "params": [
@@ -23673,7 +24205,7 @@
             },
             {
               "v": "17",
-              "name": "S051408 - GetComboListIssueAttachment",
+              "name": "S051508 - GetComboListIssueAttachment",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/issueAttachment/getComboList",
               "params": [],
@@ -23737,12 +24269,12 @@
         },
         {
           "v": 12,
-          "name": "S0515 - ProjectRelease",
+          "name": "S0516 - ProjectRelease",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S051501 - AddProjectRelease",
+              "name": "S051601 - AddProjectRelease",
               "method": "POST",
               "endpoint": "<<baseUrl>>/projectManagement/projectRelease",
               "params": [],
@@ -23795,7 +24327,7 @@
             },
             {
               "v": "17",
-              "name": "S051502 - UpdateProjectRelease",
+              "name": "S051602 - UpdateProjectRelease",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/projectRelease/[id]",
               "params": [],
@@ -23848,7 +24380,7 @@
             },
             {
               "v": "17",
-              "name": "S051503 - DeleteProjectRelease",
+              "name": "S051603 - DeleteProjectRelease",
               "method": "DELETE",
               "endpoint": "<<baseUrl>>/projectManagement/projectRelease/[id]",
               "params": [],
@@ -23901,7 +24433,7 @@
             },
             {
               "v": "17",
-              "name": "S051504 - ActiveProjectRelease",
+              "name": "S051604 - ActiveProjectRelease",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/projectRelease/active/[id]",
               "params": [],
@@ -23954,7 +24486,7 @@
             },
             {
               "v": "17",
-              "name": "S051505 - InactiveProjectRelease",
+              "name": "S051605 - InactiveProjectRelease",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/projectRelease/inactive/[id]",
               "params": [],
@@ -24007,7 +24539,7 @@
             },
             {
               "v": "17",
-              "name": "S051506 - GetSpecificProjectRelease",
+              "name": "S051606 - GetSpecificProjectRelease",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/projectRelease/[id]",
               "params": [],
@@ -24060,7 +24592,7 @@
             },
             {
               "v": "17",
-              "name": "S051507 - GetAllProjectRelease",
+              "name": "S051607 - GetAllProjectRelease",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/projectRelease/getAll",
               "params": [
@@ -24211,7 +24743,7 @@
             },
             {
               "v": "17",
-              "name": "S051508 - GetComboListProjectRelease",
+              "name": "S051608 - GetComboListProjectRelease",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/projectRelease/getComboList",
               "params": [],
@@ -24275,12 +24807,12 @@
         },
         {
           "v": 12,
-          "name": "S0516 - WorkLog",
+          "name": "S0517 - WorkLog",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S051601 - AddWorkLog",
+              "name": "S051701 - AddWorkLog",
               "method": "POST",
               "endpoint": "<<baseUrl>>/projectManagement/workLog",
               "params": [],
@@ -24333,7 +24865,7 @@
             },
             {
               "v": "17",
-              "name": "S051602 - UpdateWorkLog",
+              "name": "S051702 - UpdateWorkLog",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/workLog/[id]",
               "params": [],
@@ -24386,7 +24918,7 @@
             },
             {
               "v": "17",
-              "name": "S051603 - DeleteWorkLog",
+              "name": "S051703 - DeleteWorkLog",
               "method": "DELETE",
               "endpoint": "<<baseUrl>>/projectManagement/workLog/[id]",
               "params": [],
@@ -24439,7 +24971,7 @@
             },
             {
               "v": "17",
-              "name": "S051604 - ActiveWorkLog",
+              "name": "S051704 - ActiveWorkLog",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/workLog/active/[id]",
               "params": [],
@@ -24492,7 +25024,7 @@
             },
             {
               "v": "17",
-              "name": "S051605 - InactiveWorkLog",
+              "name": "S051705 - InactiveWorkLog",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/workLog/inactive/[id]",
               "params": [],
@@ -24545,7 +25077,7 @@
             },
             {
               "v": "17",
-              "name": "S051606 - GetSpecificWorkLog",
+              "name": "S051706 - GetSpecificWorkLog",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/workLog/[id]",
               "params": [],
@@ -24598,7 +25130,7 @@
             },
             {
               "v": "17",
-              "name": "S051607 - GetAllWoekLog",
+              "name": "S051707 - GetAllWoekLog",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/workLog/getAll",
               "params": [
@@ -24820,12 +25352,12 @@
         },
         {
           "v": 12,
-          "name": "S0517 - IssueWorkflowHistory",
+          "name": "S0518 - IssueWorkflowHistory",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S051701 - AddIssueWorkflowHistory",
+              "name": "S051801 - AddIssueWorkflowHistory",
               "method": "POST",
               "endpoint": "<<baseUrl>>/projectManagement/issueWorkflowHistory",
               "params": [],
@@ -24878,7 +25410,7 @@
             },
             {
               "v": "17",
-              "name": "S051702 - DeleteIssueWorkflowHistory",
+              "name": "S051802 - DeleteIssueWorkflowHistory",
               "method": "DELETE",
               "endpoint": "<<baseUrl>>/projectManagement/issueWorkflowHistory/[id]",
               "params": [],
@@ -24931,7 +25463,7 @@
             },
             {
               "v": "17",
-              "name": "S051703 - GetSpecificIssueWorkflowHistory",
+              "name": "S051803 - GetSpecificIssueWorkflowHistory",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/issueWorkflowHistory/[id]",
               "params": [],
@@ -24984,7 +25516,7 @@
             },
             {
               "v": "17",
-              "name": "S051704 - GetAllIssueWorkflowHistory",
+              "name": "S051804 - GetAllIssueWorkflowHistory",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/issueWorkflowHistory/getAll",
               "params": [
@@ -25194,12 +25726,12 @@
         },
         {
           "v": 12,
-          "name": "S0518 - ProjectMeeting",
+          "name": "S0519 - ProjectMeeting",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S051801 - AddProjectMeeting",
+              "name": "S051901 - AddProjectMeeting",
               "method": "POST",
               "endpoint": "<<baseUrl>>/projectManagement/projectMeeting",
               "params": [],
@@ -25252,7 +25784,7 @@
             },
             {
               "v": "17",
-              "name": "S051802 - UpdateProjectMeeting",
+              "name": "S051902 - UpdateProjectMeeting",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/projectMeeting/[id]",
               "params": [],
@@ -25305,7 +25837,7 @@
             },
             {
               "v": "17",
-              "name": "S051803 - DeleteProjectMeeting",
+              "name": "S051903 - DeleteProjectMeeting",
               "method": "DELETE",
               "endpoint": "<<baseUrl>>/projectManagement/projectMeeting/[id]",
               "params": [],
@@ -25358,7 +25890,7 @@
             },
             {
               "v": "17",
-              "name": "S051804 - ActiveProjectMeeting",
+              "name": "S051904 - ActiveProjectMeeting",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/projectMeeting/active/[id]",
               "params": [],
@@ -25411,7 +25943,7 @@
             },
             {
               "v": "17",
-              "name": "S051805 - InactiveProjectMeeting",
+              "name": "S051905 - InactiveProjectMeeting",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/projectMeeting/inactive/[id]",
               "params": [],
@@ -25464,7 +25996,7 @@
             },
             {
               "v": "17",
-              "name": "S051806 - GetSpecificProjectMeeting",
+              "name": "S051906 - GetSpecificProjectMeeting",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/projectMeeting/[id]",
               "params": [],
@@ -25517,7 +26049,7 @@
             },
             {
               "v": "17",
-              "name": "S051807 - GetAllProjectMeeting",
+              "name": "S051907 - GetAllProjectMeeting",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/projectMeeting/getAll",
               "params": [
@@ -25764,7 +26296,7 @@
             },
             {
               "v": "17",
-              "name": "S051808 - GetComboListProjectMeeting",
+              "name": "S051908 - GetComboListProjectMeeting",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/projectMeeting/getComboList",
               "params": [],
@@ -25828,12 +26360,12 @@
         },
         {
           "v": 12,
-          "name": "S0519 - MeetingInvitees",
+          "name": "S0520 - MeetingInvitees",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S051901 - AddMeetingInvitees",
+              "name": "S052001 - AddMeetingInvitees",
               "method": "POST",
               "endpoint": "<<baseUrl>>/projectManagement/meetingInvitees",
               "params": [],
@@ -25886,7 +26418,7 @@
             },
             {
               "v": "17",
-              "name": "S051902 - UpdateMeetingInvitees",
+              "name": "S052002 - UpdateMeetingInvitees",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/meetingInvitees/[id]",
               "params": [],
@@ -25939,7 +26471,7 @@
             },
             {
               "v": "17",
-              "name": "S051903 - DeleteMeetingInvitees",
+              "name": "S052003 - DeleteMeetingInvitees",
               "method": "DELETE",
               "endpoint": "<<baseUrl>>/projectManagement/meetingInvitees/[id]",
               "params": [],
@@ -25992,7 +26524,7 @@
             },
             {
               "v": "17",
-              "name": "S051904 - ActiveMeetingInvitees",
+              "name": "S052004 - ActiveMeetingInvitees",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/meetingInvitees/active/[id]",
               "params": [],
@@ -26045,7 +26577,7 @@
             },
             {
               "v": "17",
-              "name": "S051905 - InactiveMeetingInvitees",
+              "name": "S052005 - InactiveMeetingInvitees",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/meetingInvitees/inactive/[id]",
               "params": [],
@@ -26098,7 +26630,7 @@
             },
             {
               "v": "17",
-              "name": "S051906 - GetSpecificMeetingInvitees",
+              "name": "S052006 - GetSpecificMeetingInvitees",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/meetingInvitees/[id]",
               "params": [],
@@ -26151,7 +26683,7 @@
             },
             {
               "v": "17",
-              "name": "S051907 - GetAllMeetingInvitee",
+              "name": "S052007 - GetAllMeetingInvitee",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/meetingInvitees/getAll",
               "params": [
@@ -26338,7 +26870,7 @@
             },
             {
               "v": "17",
-              "name": "S051908 - GetComboListMeetingInvitee",
+              "name": "S052008 - GetComboListMeetingInvitee",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/meetingInvitees/getComboList/[ProjectMeetingId]",
               "params": [],
@@ -26402,12 +26934,12 @@
         },
         {
           "v": 12,
-          "name": "S0520 - MeetingMinutes",
+          "name": "S0521 - MeetingMinutes",
           "folders": [],
           "requests": [
             {
               "v": "17",
-              "name": "S052001 - AddMeetingMinutes",
+              "name": "S052101 - AddMeetingMinutes",
               "method": "POST",
               "endpoint": "<<baseUrl>>/projectManagement/meetingMinutes",
               "params": [],
@@ -26460,7 +26992,7 @@
             },
             {
               "v": "17",
-              "name": "S052002 - UpdateMeetingMinutes",
+              "name": "S052102 - UpdateMeetingMinutes",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/meetingMinutes/[id]",
               "params": [],
@@ -26513,7 +27045,7 @@
             },
             {
               "v": "17",
-              "name": "S052003 - DeleteMeetingMinutes",
+              "name": "S052103 - DeleteMeetingMinutes",
               "method": "DELETE",
               "endpoint": "<<baseUrl>>/projectManagement/meetingMinutes/[id]",
               "params": [],
@@ -26566,7 +27098,7 @@
             },
             {
               "v": "17",
-              "name": "S052004 - ActiveMeetingMinutes",
+              "name": "S052104 - ActiveMeetingMinutes",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/meetingMinutes/active/[id]",
               "params": [],
@@ -26619,7 +27151,7 @@
             },
             {
               "v": "17",
-              "name": "S052005 - InactiveMeetingMinutes",
+              "name": "S052105 - InactiveMeetingMinutes",
               "method": "PUT",
               "endpoint": "<<baseUrl>>/projectManagement/meetingMinutes/inactive/[id]",
               "params": [],
@@ -26672,7 +27204,7 @@
             },
             {
               "v": "17",
-              "name": "S052006 - GetSpecificMeetingMinutes",
+              "name": "S052106 - GetSpecificMeetingMinutes",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/meetingMinutes/[id]",
               "params": [],
@@ -26725,7 +27257,7 @@
             },
             {
               "v": "17",
-              "name": "S052007 - GetAllMeetingMinutes",
+              "name": "S052107 - GetAllMeetingMinutes",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/meetingMinutes/getAll",
               "params": [
@@ -26912,7 +27444,7 @@
             },
             {
               "v": "17",
-              "name": "S052008 - GetComboListMeetingMinutes",
+              "name": "S052108 - GetComboListMeetingMinutes",
               "method": "GET",
               "endpoint": "<<baseUrl>>/projectManagement/meetingMinutes/[ProjectMeetingId]",
               "params": [],
@@ -38366,6 +38898,30 @@
                   "description": "optional"
                 },
                 {
+                  "key": "totalScenarioCount",
+                  "value": "100",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "totalPassedScenario",
+                  "value": "10",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "totalFailedScenario",
+                  "value": "5",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "totalFailedTry",
+                  "value": "5",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
                   "key": "offset",
                   "value": "0",
                   "active": true,
@@ -43029,7 +43585,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"evalationDate\" : \"2026-06-29\",\n  \"evaluatedValue\" : 100.0,\n  \"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"evalationDate\" : \"2026-06-29\",\n  \"evaluatedValue\" : 100.0,\n  \"evalutionDataFrom\" : \"2026-01-01\",\n  \"evalutionDataTo\" : \"2026-06-29\",\n  \"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -43082,7 +43638,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"evalationDate\" : \"2026-06-29\",\n  \"evaluatedValue\" : 100.0,\n  \"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \"profileId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"evalationDate\" : \"2026-06-29\",\n  \"evaluatedValue\" : 100.0,\n  \"evalutionDataFrom\" : \"2026-01-01\",\n  \"evalutionDataTo\" : \"2026-06-29\",\n  \"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -43384,6 +43940,18 @@
                   "value": "desc(fieldName)",
                   "active": true,
                   "description": "optional"
+                },
+                {
+                  "key": "evalutionDataFrom",
+                  "value": "2026-01-01",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "evalutionDataTo",
+                  "value": "2026-06-29",
+                  "active": true,
+                  "description": "optional"
                 }
               ],
               "headers": [],
@@ -43567,7 +44135,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"evalationDate\" : \"2026-06-29\",\n  \"evaluatedValue\" : 100.0,\n  \"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"evalationDate\" : \"2026-06-29\",\n  \"evaluatedValue\" : 100.0,\n  \"evalutionDataFrom\" : \"2026-01-01\",\n  \"evalutionDataTo\" : \"2026-06-29\",\n  \"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -43620,7 +44188,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"evalationDate\" : \"2026-06-29\",\n  \"evaluatedValue\" : 100.0,\n  \"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \"projectId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"evalationDate\" : \"2026-06-29\",\n  \"evaluatedValue\" : 100.0,\n  \"evalutionDataFrom\" : \"2026-01-01\",\n  \"evalutionDataTo\" : \"2026-06-29\",\n  \"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -43900,6 +44468,18 @@
                   "description": "optional"
                 },
                 {
+                  "key": "evalutionDataFrom",
+                  "value": "2026-01-01",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "evalutionDataTo",
+                  "value": "2026-06-29",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
                   "key": "evaluatedValue",
                   "value": "100.0",
                   "active": true,
@@ -44117,7 +44697,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"customerId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"evalationDate\" : \"2026-06-29\",\n  \"evaluatedValue\" : 100.0,\n  \"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \"customerId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"evalationDate\" : \"2026-06-29\",\n  \"evaluatedValue\" : 100.0,\n  \"evalutionDataFrom\" : \"2026-01-01\",\n  \"evalutionDataTo\" : \"2026-06-29\",\n  \"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -44170,7 +44750,7 @@
               },
               "body": {
                 "contentType": "application/json",
-                "body": "{\n  \"customerId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"evalationDate\" : \"2026-06-29\",\n  \"evaluatedValue\" : 100.0,\n  \"description\" : \"test\" /*optional*/\n}"
+                "body": "{\n  \"customerId\" : \"d6eb621f-6dd0-4cdc-93f5-07f51b249b51\",\n  \"evalationDate\" : \"2026-06-29\",\n  \"evaluatedValue\" : 100.0,\n  \"evalutionDataFrom\" : \"2026-01-01\",\n  \"evalutionDataTo\" : \"2026-06-29\",\n  \"description\" : \"test\" /*optional*/\n}"
               },
               "requestVariables": [],
               "responses": {
@@ -44440,6 +45020,18 @@
                 {
                   "key": "evalationDate",
                   "value": "2026-08-10",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "evalutionDataFrom",
+                  "value": "2026-01-01",
+                  "active": true,
+                  "description": "optional"
+                },
+                {
+                  "key": "evalutionDataTo",
+                  "value": "2026-06-29",
                   "active": true,
                   "description": "optional"
                 },
